@@ -1,0 +1,22 @@
+{
+  "units": "nm",
+  "precision_nm": 0.1,
+  "polygon_count": 24,
+  "cell_count": 2,
+  "area_nm2": 3455.9999999999995,
+  "gds_readback_verified": true,
+  "patterns": [
+    {
+      "cell": "P00000",
+      "id": "8ee98db2e97b",
+      "name": "Contact 阵列",
+      "pattern": "",
+      "params": {},
+      "metadata": {
+        "calibrated": true,
+        "library_id": 24
+      }
+    }
+  ],
+  "document_metadata": {}
+}

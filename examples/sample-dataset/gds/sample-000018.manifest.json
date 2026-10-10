@@ -1,0 +1,22 @@
+{
+  "units": "nm",
+  "precision_nm": 0.1,
+  "polygon_count": 1,
+  "cell_count": 2,
+  "area_nm2": 13199.999999999998,
+  "gds_readback_verified": true,
+  "patterns": [
+    {
+      "cell": "P00000",
+      "id": "04f61180871c",
+      "name": "蛇形线",
+      "pattern": "",
+      "params": {},
+      "metadata": {
+        "calibrated": true,
+        "library_id": 18
+      }
+    }
+  ],
+  "document_metadata": {}
+}

@@ -1,0 +1,11 @@
+PySide6==6.8.3
+PySide6-Essentials==6.8.3
+PySide6-Addons==6.8.3
+shiboken6==6.8.3
+gdstk==1.0.1
+numpy==2.5.3
+shapely==2.2.0
+opencv-python-headless==4.14.0.94
+pytest==9.1.1
+klayout==0.30.12
+pyinstaller==6.22.3

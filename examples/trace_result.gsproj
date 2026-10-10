@@ -1,0 +1,493 @@
+{
+  "format": "gds-studio",
+  "version": 1,
+  "units": "nm",
+  "name": "标定截图轮廓",
+  "shapes": [
+    {
+      "id": "0ce80b065584",
+      "name": "图片轮廓 1",
+      "pattern": "",
+      "params": {},
+      "polygons": [
+        [
+          [
+            17.5,
+            41.5
+          ],
+          [
+            17.5,
+            36.0
+          ],
+          [
+            115.0,
+            36.0
+          ],
+          [
+            115.0,
+            41.5
+          ]
+        ]
+      ],
+      "x": 0,
+      "y": 0,
+      "angle": 0,
+      "sx": 1,
+      "sy": 1,
+      "mirror": false,
+      "layer": 1,
+      "datatype": 0,
+      "metadata": {
+        "source_image": "C:\\Users\\zhuyu\\Desktop\\XKL\\版图设计\\GDS\\examples\\trace_input.png",
+        "calibrated": true,
+        "nm_per_pixel": 0.5,
+        "trace_threshold": 150,
+        "trace_polarity": "dark",
+        "trace_tolerance_px": 0.5,
+        "trace_roi_px": null,
+        "trace_report": {
+          "count": 7,
+          "rejected": 0,
+          "roi_origin_px": [
+            0,
+            0
+          ],
+          "image_height_px": 360
+        }
+      }
+    },
+    {
+      "id": "b60cb342f7a9",
+      "name": "图片轮廓 2",
+      "pattern": "",
+      "params": {},
+      "polygons": [
+        [
+          [
+            17.5,
+            58.5
+          ],
+          [
+            17.5,
+            53.0
+          ],
+          [
+            115.0,
+            53.0
+          ],
+          [
+            115.0,
+            58.5
+          ]
+        ]
+      ],
+      "x": 0,
+      "y": 0,
+      "angle": 0,
+      "sx": 1,
+      "sy": 1,
+      "mirror": false,
+      "layer": 1,
+      "datatype": 0,
+      "metadata": {
+        "source_image": "C:\\Users\\zhuyu\\Desktop\\XKL\\版图设计\\GDS\\examples\\trace_input.png",
+        "calibrated": true,
+        "nm_per_pixel": 0.5,
+        "trace_threshold": 150,
+        "trace_polarity": "dark",
+        "trace_tolerance_px": 0.5,
+        "trace_roi_px": null,
+        "trace_report": {
+          "count": 7,
+          "rejected": 0,
+          "roi_origin_px": [
+            0,
+            0
+          ],
+          "image_height_px": 360
+        }
+      }
+    },
+    {
+      "id": "2caad3f18545",
+      "name": "图片轮廓 3",
+      "pattern": "",
+      "params": {},
+      "polygons": [
+        [
+          [
+            17.5,
+            75.5
+          ],
+          [
+            17.5,
+            70.0
+          ],
+          [
+            115.0,
+            70.0
+          ],
+          [
+            115.0,
+            75.5
+          ]
+        ]
+      ],
+      "x": 0,
+      "y": 0,
+      "angle": 0,
+      "sx": 1,
+      "sy": 1,
+      "mirror": false,
+      "layer": 1,
+      "datatype": 0,
+      "metadata": {
+        "source_image": "C:\\Users\\zhuyu\\Desktop\\XKL\\版图设计\\GDS\\examples\\trace_input.png",
+        "calibrated": true,
+        "nm_per_pixel": 0.5,
+        "trace_threshold": 150,
+        "trace_polarity": "dark",
+        "trace_tolerance_px": 0.5,
+        "trace_roi_px": null,
+        "trace_report": {
+          "count": 7,
+          "rejected": 0,
+          "roi_origin_px": [
+            0,
+            0
+          ],
+          "image_height_px": 360
+        }
+      }
+    },
+    {
+      "id": "ae453f5c1a38",
+      "name": "图片轮廓 4",
+      "pattern": "",
+      "params": {},
+      "polygons": [
+        [
+          [
+            17.5,
+            92.5
+          ],
+          [
+            17.5,
+            87.0
+          ],
+          [
+            115.0,
+            87.0
+          ],
+          [
+            115.0,
+            92.5
+          ]
+        ]
+      ],
+      "x": 0,
+      "y": 0,
+      "angle": 0,
+      "sx": 1,
+      "sy": 1,
+      "mirror": false,
+      "layer": 1,
+      "datatype": 0,
+      "metadata": {
+        "source_image": "C:\\Users\\zhuyu\\Desktop\\XKL\\版图设计\\GDS\\examples\\trace_input.png",
+        "calibrated": true,
+        "nm_per_pixel": 0.5,
+        "trace_threshold": 150,
+        "trace_polarity": "dark",
+        "trace_tolerance_px": 0.5,
+        "trace_roi_px": null,
+        "trace_report": {
+          "count": 7,
+          "rejected": 0,
+          "roi_origin_px": [
+            0,
+            0
+          ],
+          "image_height_px": 360
+        }
+      }
+    },
+    {
+      "id": "ac66d2087841",
+      "name": "图片轮廓 5",
+      "pattern": "",
+      "params": {},
+      "polygons": [
+        [
+          [
+            17.5,
+            109.5
+          ],
+          [
+            17.5,
+            104.0
+          ],
+          [
+            115.0,
+            104.0
+          ],
+          [
+            115.0,
+            109.5
+          ]
+        ]
+      ],
+      "x": 0,
+      "y": 0,
+      "angle": 0,
+      "sx": 1,
+      "sy": 1,
+      "mirror": false,
+      "layer": 1,
+      "datatype": 0,
+      "metadata": {
+        "source_image": "C:\\Users\\zhuyu\\Desktop\\XKL\\版图设计\\GDS\\examples\\trace_input.png",
+        "calibrated": true,
+        "nm_per_pixel": 0.5,
+        "trace_threshold": 150,
+        "trace_polarity": "dark",
+        "trace_tolerance_px": 0.5,
+        "trace_roi_px": null,
+        "trace_report": {
+          "count": 7,
+          "rejected": 0,
+          "roi_origin_px": [
+            0,
+            0
+          ],
+          "image_height_px": 360
+        }
+      }
+    },
+    {
+      "id": "17a81e878c41",
+      "name": "图片轮廓 6",
+      "pattern": "",
+      "params": {},
+      "polygons": [
+        [
+          [
+            255.0,
+            159.5
+          ],
+          [
+            150.0,
+            159.5
+          ],
+          [
+            150.0,
+            59.5
+          ],
+          [
+            164.5,
+            59.5
+          ],
+          [
+            164.5,
+            144.5
+          ],
+          [
+            165.0,
+            145.0
+          ],
+          [
+            240.0,
+            145.0
+          ],
+          [
+            240.5,
+            144.5
+          ],
+          [
+            240.5,
+            59.5
+          ],
+          [
+            240.0,
+            59.0
+          ],
+          [
+            165.0,
+            59.0
+          ],
+          [
+            164.5,
+            59.5
+          ],
+          [
+            150.0,
+            59.5
+          ],
+          [
+            150.0,
+            44.5
+          ],
+          [
+            255.0,
+            44.5
+          ]
+        ]
+      ],
+      "x": 0,
+      "y": 0,
+      "angle": 0,
+      "sx": 1,
+      "sy": 1,
+      "mirror": false,
+      "layer": 1,
+      "datatype": 0,
+      "metadata": {
+        "source_image": "C:\\Users\\zhuyu\\Desktop\\XKL\\版图设计\\GDS\\examples\\trace_input.png",
+        "calibrated": true,
+        "nm_per_pixel": 0.5,
+        "trace_threshold": 150,
+        "trace_polarity": "dark",
+        "trace_tolerance_px": 0.5,
+        "trace_roi_px": null,
+        "trace_report": {
+          "count": 7,
+          "rejected": 0,
+          "roi_origin_px": [
+            0,
+            0
+          ],
+          "image_height_px": 360
+        }
+      }
+    },
+    {
+      "id": "8ff228d6a482",
+      "name": "图片轮廓 7",
+      "pattern": "",
+      "params": {},
+      "polygons": [
+        [
+          [
+            12.5,
+            169.5
+          ],
+          [
+            12.5,
+            132.0
+          ],
+          [
+            25.0,
+            132.0
+          ],
+          [
+            25.0,
+            141.5
+          ],
+          [
+            25.5,
+            142.0
+          ],
+          [
+            92.0,
+            142.0
+          ],
+          [
+            92.5,
+            141.5
+          ],
+          [
+            92.5,
+            132.0
+          ],
+          [
+            105.0,
+            132.0
+          ],
+          [
+            105.0,
+            169.5
+          ],
+          [
+            92.5,
+            169.5
+          ],
+          [
+            92.5,
+            160.0
+          ],
+          [
+            92.0,
+            159.5
+          ],
+          [
+            25.5,
+            159.5
+          ],
+          [
+            25.0,
+            160.0
+          ],
+          [
+            25.0,
+            169.5
+          ]
+        ]
+      ],
+      "x": 0,
+      "y": 0,
+      "angle": 0,
+      "sx": 1,
+      "sy": 1,
+      "mirror": false,
+      "layer": 1,
+      "datatype": 0,
+      "metadata": {
+        "source_image": "C:\\Users\\zhuyu\\Desktop\\XKL\\版图设计\\GDS\\examples\\trace_input.png",
+        "calibrated": true,
+        "nm_per_pixel": 0.5,
+        "trace_threshold": 150,
+        "trace_polarity": "dark",
+        "trace_tolerance_px": 0.5,
+        "trace_roi_px": null,
+        "trace_report": {
+          "count": 7,
+          "rejected": 0,
+          "roi_origin_px": [
+            0,
+            0
+          ],
+          "image_height_px": 360
+        }
+      }
+    }
+  ],
+  "layers": [
+    {
+      "number": 1,
+      "datatype": 0,
+      "name": "主图形",
+      "color": "#3285b5",
+      "visible": true,
+      "locked": false
+    },
+    {
+      "number": 2,
+      "datatype": 0,
+      "name": "辅助 / Cut",
+      "color": "#d4973c",
+      "visible": true,
+      "locked": false
+    },
+    {
+      "number": 3,
+      "datatype": 0,
+      "name": "参考",
+      "color": "#8b78b4",
+      "visible": true,
+      "locked": false
+    }
+  ],
+  "grid": 1.0,
+  "constraint": "orthogonal",
+  "metadata": {}
+}

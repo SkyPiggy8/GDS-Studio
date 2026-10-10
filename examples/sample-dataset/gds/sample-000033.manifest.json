@@ -1,0 +1,22 @@
+{
+  "units": "nm",
+  "precision_nm": 0.1,
+  "polygon_count": 5,
+  "cell_count": 2,
+  "area_nm2": 11711.999999999998,
+  "gds_readback_verified": true,
+  "patterns": [
+    {
+      "cell": "P00000",
+      "id": "30c8ed8c05e2",
+      "name": "微桥样本",
+      "pattern": "",
+      "params": {},
+      "metadata": {
+        "calibrated": true,
+        "library_id": 33
+      }
+    }
+  ],
+  "document_metadata": {}
+}

@@ -1,0 +1,22 @@
+{
+  "units": "nm",
+  "precision_nm": 0.1,
+  "polygon_count": 1,
+  "cell_count": 2,
+  "area_nm2": 143.99999999999997,
+  "gds_readback_verified": true,
+  "patterns": [
+    {
+      "cell": "P00000",
+      "id": "d097de606c96",
+      "name": "Via / 包围层",
+      "pattern": "",
+      "params": {},
+      "metadata": {
+        "calibrated": true,
+        "library_id": 27
+      }
+    }
+  ],
+  "document_metadata": {}
+}

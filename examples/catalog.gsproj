@@ -1,0 +1,950 @@
+{
+  "format": "gds-studio",
+  "version": 1,
+  "units": "nm",
+  "name": "41 类结构总览",
+  "shapes": [
+    {
+      "id": "e971fe9bb89e",
+      "name": "矩形",
+      "pattern": "rectangle",
+      "params": {
+        "length": 160,
+        "height": 100
+      },
+      "polygons": [],
+      "x": 0.0,
+      "y": 0.0,
+      "angle": 0,
+      "sx": 1,
+      "sy": 1,
+      "mirror": false,
+      "layer": 1,
+      "datatype": 0,
+      "metadata": {
+        "catalog_key": "rectangle"
+      }
+    },
+    {
+      "id": "11069e8c4c50",
+      "name": "孤立线",
+      "pattern": "line",
+      "params": {
+        "width": 12,
+        "length": 160
+      },
+      "polygons": [],
+      "x": 850.0,
+      "y": 0.0,
+      "angle": 0,
+      "sx": 1,
+      "sy": 1,
+      "mirror": false,
+      "layer": 1,
+      "datatype": 0,
+      "metadata": {
+        "catalog_key": "line"
+      }
+    },
+    {
+      "id": "c48e6b437bf8",
+      "name": "Line / Space",
+      "pattern": "line_space",
+      "params": {
+        "width": 12,
+        "gap": 16,
+        "length": 160,
+        "count": 6
+      },
+      "polygons": [],
+      "x": 1700.0,
+      "y": 0.0,
+      "angle": 0,
+      "sx": 1,
+      "sy": 1,
+      "mirror": false,
+      "layer": 1,
+      "datatype": 0,
+      "metadata": {
+        "catalog_key": "line_space"
+      }
+    },
+    {
+      "id": "03ba6d6a1795",
+      "name": "密集 / 孤立对比",
+      "pattern": "dense_iso",
+      "params": {
+        "width": 12,
+        "gap": 16,
+        "length": 160,
+        "count": 6
+      },
+      "polygons": [],
+      "x": 2550.0,
+      "y": 0.0,
+      "angle": 0,
+      "sx": 1,
+      "sy": 1,
+      "mirror": false,
+      "layer": 1,
+      "datatype": 0,
+      "metadata": {
+        "catalog_key": "dense_iso"
+      }
+    },
+    {
+      "id": "329d9fe98a14",
+      "name": "Tip-to-Tip",
+      "pattern": "tip_tip",
+      "params": {
+        "width": 12,
+        "gap": 16,
+        "length": 160,
+        "count": 6
+      },
+      "polygons": [],
+      "x": 3400.0,
+      "y": 0.0,
+      "angle": 0,
+      "sx": 1,
+      "sy": 1,
+      "mirror": false,
+      "layer": 1,
+      "datatype": 0,
+      "metadata": {
+        "catalog_key": "tip_tip"
+      }
+    },
+    {
+      "id": "0cf8a022cf53",
+      "name": "Tip-to-Side",
+      "pattern": "tip_side",
+      "params": {
+        "width": 12,
+        "gap": 16,
+        "length": 160,
+        "count": 6
+      },
+      "polygons": [],
+      "x": 4250.0,
+      "y": 0.0,
+      "angle": 0,
+      "sx": 1,
+      "sy": 1,
+      "mirror": false,
+      "layer": 1,
+      "datatype": 0,
+      "metadata": {
+        "catalog_key": "tip_side"
+      }
+    },
+    {
+      "id": "2cc50c4e23ee",
+      "name": "交错线端",
+      "pattern": "staggered",
+      "params": {
+        "width": 12,
+        "gap": 16,
+        "length": 160,
+        "count": 6
+      },
+      "polygons": [],
+      "x": 0.0,
+      "y": 600.0,
+      "angle": 0,
+      "sx": 1,
+      "sy": 1,
+      "mirror": false,
+      "layer": 1,
+      "datatype": 0,
+      "metadata": {
+        "catalog_key": "staggered"
+      }
+    },
+    {
+      "id": "224ca5e158f2",
+      "name": "锤头 Hammerhead",
+      "pattern": "hammerhead",
+      "params": {
+        "width": 12,
+        "length": 160
+      },
+      "polygons": [],
+      "x": 862.0,
+      "y": 612.0,
+      "angle": 0,
+      "sx": 1,
+      "sy": 1,
+      "mirror": false,
+      "layer": 1,
+      "datatype": 0,
+      "metadata": {
+        "catalog_key": "hammerhead"
+      }
+    },
+    {
+      "id": "19f4a2f00d67",
+      "name": "狗骨 Dogbone",
+      "pattern": "dogbone",
+      "params": {
+        "width": 12,
+        "length": 160
+      },
+      "polygons": [],
+      "x": 1712.0,
+      "y": 612.0,
+      "angle": 0,
+      "sx": 1,
+      "sy": 1,
+      "mirror": false,
+      "layer": 1,
+      "datatype": 0,
+      "metadata": {
+        "catalog_key": "dogbone"
+      }
+    },
+    {
+      "id": "c60181aaf68c",
+      "name": "角部 Serif",
+      "pattern": "serif",
+      "params": {
+        "width": 12,
+        "length": 160
+      },
+      "polygons": [],
+      "x": 2556.0,
+      "y": 606.0,
+      "angle": 0,
+      "sx": 1,
+      "sy": 1,
+      "mirror": false,
+      "layer": 1,
+      "datatype": 0,
+      "metadata": {
+        "catalog_key": "serif"
+      }
+    },
+    {
+      "id": "a223b03e52ef",
+      "name": "辅助线 SRAF",
+      "pattern": "sraf",
+      "params": {
+        "width": 12,
+        "gap": 16,
+        "length": 160
+      },
+      "polygons": [],
+      "x": 3400.0,
+      "y": 620.0,
+      "angle": 0,
+      "sx": 1,
+      "sy": 1,
+      "mirror": false,
+      "layer": 1,
+      "datatype": 0,
+      "metadata": {
+        "catalog_key": "sraf"
+      }
+    },
+    {
+      "id": "519d2d013eaf",
+      "name": "L 型拐角",
+      "pattern": "l_corner",
+      "params": {
+        "width": 12,
+        "length": 160,
+        "height": 100
+      },
+      "polygons": [],
+      "x": 4250.0,
+      "y": 606.0,
+      "angle": 0,
+      "sx": 1,
+      "sy": 1,
+      "mirror": false,
+      "layer": 1,
+      "datatype": 0,
+      "metadata": {
+        "catalog_key": "l_corner"
+      }
+    },
+    {
+      "id": "e79f4cdd0ddb",
+      "name": "U 型回折",
+      "pattern": "u_corner",
+      "params": {
+        "width": 12,
+        "length": 160,
+        "height": 100
+      },
+      "polygons": [],
+      "x": 6.0,
+      "y": 1206.0,
+      "angle": 0,
+      "sx": 1,
+      "sy": 1,
+      "mirror": false,
+      "layer": 1,
+      "datatype": 0,
+      "metadata": {
+        "catalog_key": "u_corner"
+      }
+    },
+    {
+      "id": "84b161caf969",
+      "name": "T 型连接",
+      "pattern": "t_junction",
+      "params": {
+        "width": 12,
+        "length": 160,
+        "height": 100
+      },
+      "polygons": [],
+      "x": 850.0,
+      "y": 1200.0,
+      "angle": 0,
+      "sx": 1,
+      "sy": 1,
+      "mirror": false,
+      "layer": 1,
+      "datatype": 0,
+      "metadata": {
+        "catalog_key": "t_junction"
+      }
+    },
+    {
+      "id": "76604d99dd4f",
+      "name": "十字连接",
+      "pattern": "cross",
+      "params": {
+        "width": 12,
+        "length": 160,
+        "height": 100
+      },
+      "polygons": [],
+      "x": 1700.0,
+      "y": 1200.0,
+      "angle": 0,
+      "sx": 1,
+      "sy": 1,
+      "mirror": false,
+      "layer": 1,
+      "datatype": 0,
+      "metadata": {
+        "catalog_key": "cross"
+      }
+    },
+    {
+      "id": "bbacb5f32512",
+      "name": "H 型连接",
+      "pattern": "h_bridge",
+      "params": {
+        "width": 12,
+        "length": 160,
+        "height": 100
+      },
+      "polygons": [],
+      "x": 2550.0,
+      "y": 1200.0,
+      "angle": 0,
+      "sx": 1,
+      "sy": 1,
+      "mirror": false,
+      "layer": 1,
+      "datatype": 0,
+      "metadata": {
+        "catalog_key": "h_bridge"
+      }
+    },
+    {
+      "id": "2af5bfceb530",
+      "name": "Z 型 Jog",
+      "pattern": "z_jog",
+      "params": {
+        "width": 12,
+        "length": 160,
+        "height": 100
+      },
+      "polygons": [],
+      "x": 3400.0,
+      "y": 1206.0,
+      "angle": 0,
+      "sx": 1,
+      "sy": 1,
+      "mirror": false,
+      "layer": 1,
+      "datatype": 0,
+      "metadata": {
+        "catalog_key": "z_jog"
+      }
+    },
+    {
+      "id": "7a4170332f1a",
+      "name": "蛇形线",
+      "pattern": "serpentine",
+      "params": {
+        "width": 12,
+        "gap": 16,
+        "length": 160,
+        "count": 6
+      },
+      "polygons": [],
+      "x": 4256.0,
+      "y": 1206.0,
+      "angle": 0,
+      "sx": 1,
+      "sy": 1,
+      "mirror": false,
+      "layer": 1,
+      "datatype": 0,
+      "metadata": {
+        "catalog_key": "serpentine"
+      }
+    },
+    {
+      "id": "c467f9a60e28",
+      "name": "阶梯线",
+      "pattern": "staircase",
+      "params": {
+        "width": 12,
+        "gap": 16,
+        "count": 6
+      },
+      "polygons": [],
+      "x": 0.0,
+      "y": 1806.0,
+      "angle": 0,
+      "sx": 1,
+      "sy": 1,
+      "mirror": false,
+      "layer": 1,
+      "datatype": 0,
+      "metadata": {
+        "catalog_key": "staircase"
+      }
+    },
+    {
+      "id": "eb7de196c81a",
+      "name": "45° 斜线",
+      "pattern": "diagonal",
+      "params": {
+        "width": 12,
+        "length": 160
+      },
+      "polygons": [],
+      "x": 854.2,
+      "y": 1804.2,
+      "angle": 0,
+      "sx": 1,
+      "sy": 1,
+      "mirror": false,
+      "layer": 1,
+      "datatype": 0,
+      "metadata": {
+        "catalog_key": "diagonal"
+      }
+    },
+    {
+      "id": "8d43378c1f33",
+      "name": "45° 倒角",
+      "pattern": "chamfer",
+      "params": {
+        "width": 12,
+        "length": 160,
+        "height": 100
+      },
+      "polygons": [],
+      "x": 1700.0,
+      "y": 1806.0,
+      "angle": 0,
+      "sx": 1,
+      "sy": 1,
+      "mirror": false,
+      "layer": 1,
+      "datatype": 0,
+      "metadata": {
+        "catalog_key": "chamfer"
+      }
+    },
+    {
+      "id": "64fd3f4c4aa1",
+      "name": "Y 型连接",
+      "pattern": "y_junction",
+      "params": {
+        "width": 12,
+        "length": 160,
+        "height": 100
+      },
+      "polygons": [],
+      "x": 2634.2,
+      "y": 1800.0,
+      "angle": 0,
+      "sx": 1,
+      "sy": 1,
+      "mirror": false,
+      "layer": 1,
+      "datatype": 0,
+      "metadata": {
+        "catalog_key": "y_junction"
+      }
+    },
+    {
+      "id": "e39e0999581e",
+      "name": "方形 Contact",
+      "pattern": "square_contact",
+      "params": {
+        "width": 12
+      },
+      "polygons": [],
+      "x": 3400.0,
+      "y": 1800.0,
+      "angle": 0,
+      "sx": 1,
+      "sy": 1,
+      "mirror": false,
+      "layer": 1,
+      "datatype": 0,
+      "metadata": {
+        "catalog_key": "square_contact"
+      }
+    },
+    {
+      "id": "bb4dd56d756b",
+      "name": "Contact 阵列",
+      "pattern": "contact_array",
+      "params": {
+        "width": 12,
+        "gap": 16,
+        "count": 6,
+        "rows": 4
+      },
+      "polygons": [],
+      "x": 4250.0,
+      "y": 1800.0,
+      "angle": 0,
+      "sx": 1,
+      "sy": 1,
+      "mirror": false,
+      "layer": 1,
+      "datatype": 0,
+      "metadata": {
+        "catalog_key": "contact_array"
+      }
+    },
+    {
+      "id": "6963a65a297d",
+      "name": "交错孔阵列",
+      "pattern": "staggered_contact",
+      "params": {
+        "width": 12,
+        "gap": 16,
+        "count": 6,
+        "rows": 4
+      },
+      "polygons": [],
+      "x": 0.0,
+      "y": 2400.0,
+      "angle": 0,
+      "sx": 1,
+      "sy": 1,
+      "mirror": false,
+      "layer": 1,
+      "datatype": 0,
+      "metadata": {
+        "catalog_key": "staggered_contact"
+      }
+    },
+    {
+      "id": "c27946826966",
+      "name": "长孔 Slot",
+      "pattern": "slot_contact",
+      "params": {
+        "width": 12,
+        "length": 160
+      },
+      "polygons": [],
+      "x": 850.0,
+      "y": 2400.0,
+      "angle": 0,
+      "sx": 1,
+      "sy": 1,
+      "mirror": false,
+      "layer": 1,
+      "datatype": 0,
+      "metadata": {
+        "catalog_key": "slot_contact"
+      }
+    },
+    {
+      "id": "d721e9a7aa6c",
+      "name": "Via / 包围层",
+      "pattern": "via_enclosure",
+      "params": {
+        "width": 12,
+        "gap": 16
+      },
+      "polygons": [],
+      "x": 1700.0,
+      "y": 2400.0,
+      "angle": 0,
+      "sx": 1,
+      "sy": 1,
+      "mirror": false,
+      "layer": 1,
+      "datatype": 0,
+      "metadata": {
+        "catalog_key": "via_enclosure"
+      }
+    },
+    {
+      "id": "43ceff54d3a1",
+      "name": "矩形环",
+      "pattern": "ring",
+      "params": {
+        "width": 12,
+        "length": 160,
+        "height": 100
+      },
+      "polygons": [],
+      "x": 2550.0,
+      "y": 2400.0,
+      "angle": 0,
+      "sx": 1,
+      "sy": 1,
+      "mirror": false,
+      "layer": 1,
+      "datatype": 0,
+      "metadata": {
+        "catalog_key": "ring"
+      }
+    },
+    {
+      "id": "05eecbb9e588",
+      "name": "梳齿",
+      "pattern": "comb",
+      "params": {
+        "width": 12,
+        "gap": 16,
+        "length": 160,
+        "count": 6
+      },
+      "polygons": [],
+      "x": 3400.0,
+      "y": 2400.0,
+      "angle": 0,
+      "sx": 1,
+      "sy": 1,
+      "mirror": false,
+      "layer": 1,
+      "datatype": 0,
+      "metadata": {
+        "catalog_key": "comb"
+      }
+    },
+    {
+      "id": "ba3a54ab1819",
+      "name": "交指梳齿",
+      "pattern": "interdigital",
+      "params": {
+        "width": 12,
+        "gap": 16,
+        "length": 160,
+        "count": 6
+      },
+      "polygons": [],
+      "x": 4250.0,
+      "y": 2400.0,
+      "angle": 0,
+      "sx": 1,
+      "sy": 1,
+      "mirror": false,
+      "layer": 1,
+      "datatype": 0,
+      "metadata": {
+        "catalog_key": "interdigital"
+      }
+    },
+    {
+      "id": "ee7630686997",
+      "name": "凹槽 Notch",
+      "pattern": "notch",
+      "params": {
+        "width": 12,
+        "gap": 16,
+        "length": 160,
+        "height": 100
+      },
+      "polygons": [],
+      "x": 0.0,
+      "y": 3000.0,
+      "angle": 0,
+      "sx": 1,
+      "sy": 1,
+      "mirror": false,
+      "layer": 1,
+      "datatype": 0,
+      "metadata": {
+        "catalog_key": "notch"
+      }
+    },
+    {
+      "id": "13888920f6fc",
+      "name": "颈缩 Neck",
+      "pattern": "neck",
+      "params": {
+        "width": 12,
+        "gap": 16,
+        "length": 160,
+        "height": 100
+      },
+      "polygons": [],
+      "x": 850.0,
+      "y": 3000.0,
+      "angle": 0,
+      "sx": 1,
+      "sy": 1,
+      "mirror": false,
+      "layer": 1,
+      "datatype": 0,
+      "metadata": {
+        "catalog_key": "neck"
+      }
+    },
+    {
+      "id": "da20aff7a516",
+      "name": "微桥样本",
+      "pattern": "bridge_defect",
+      "params": {
+        "width": 12,
+        "gap": 16,
+        "length": 160,
+        "count": 6
+      },
+      "polygons": [],
+      "x": 1700.0,
+      "y": 3000.0,
+      "angle": 0,
+      "sx": 1,
+      "sy": 1,
+      "mirror": false,
+      "layer": 1,
+      "datatype": 0,
+      "metadata": {
+        "catalog_key": "bridge_defect"
+      }
+    },
+    {
+      "id": "8e06dcfc3d5f",
+      "name": "断线样本",
+      "pattern": "break_defect",
+      "params": {
+        "width": 12,
+        "gap": 16,
+        "length": 160,
+        "count": 6
+      },
+      "polygons": [],
+      "x": 2550.0,
+      "y": 3000.0,
+      "angle": 0,
+      "sx": 1,
+      "sy": 1,
+      "mirror": false,
+      "layer": 1,
+      "datatype": 0,
+      "metadata": {
+        "catalog_key": "break_defect"
+      }
+    },
+    {
+      "id": "f249c975328a",
+      "name": "缺孔样本",
+      "pattern": "missing_contact",
+      "params": {
+        "width": 12,
+        "gap": 16,
+        "count": 6,
+        "rows": 4
+      },
+      "polygons": [],
+      "x": 3400.0,
+      "y": 3000.0,
+      "angle": 0,
+      "sx": 1,
+      "sy": 1,
+      "mirror": false,
+      "layer": 1,
+      "datatype": 0,
+      "metadata": {
+        "catalog_key": "missing_contact"
+      }
+    },
+    {
+      "id": "2b88a41fd49a",
+      "name": "并孔样本",
+      "pattern": "merged_contact",
+      "params": {
+        "width": 12,
+        "gap": 16,
+        "count": 6,
+        "rows": 4
+      },
+      "polygons": [],
+      "x": 4250.0,
+      "y": 3000.0,
+      "angle": 0,
+      "sx": 1,
+      "sy": 1,
+      "mirror": false,
+      "layer": 1,
+      "datatype": 0,
+      "metadata": {
+        "catalog_key": "merged_contact"
+      }
+    },
+    {
+      "id": "aadc24788201",
+      "name": "Dummy Fill",
+      "pattern": "dummy_fill",
+      "params": {
+        "width": 12,
+        "gap": 16,
+        "count": 6,
+        "rows": 4
+      },
+      "polygons": [],
+      "x": 0.0,
+      "y": 3600.0,
+      "angle": 0,
+      "sx": 1,
+      "sy": 1,
+      "mirror": false,
+      "layer": 1,
+      "datatype": 0,
+      "metadata": {
+        "catalog_key": "dummy_fill"
+      }
+    },
+    {
+      "id": "b19df1d0462a",
+      "name": "对准十字",
+      "pattern": "alignment",
+      "params": {
+        "width": 12,
+        "length": 160,
+        "height": 100
+      },
+      "polygons": [],
+      "x": 930.0,
+      "y": 3650.0,
+      "angle": 0,
+      "sx": 1,
+      "sy": 1,
+      "mirror": false,
+      "layer": 1,
+      "datatype": 0,
+      "metadata": {
+        "catalog_key": "alignment"
+      }
+    },
+    {
+      "id": "7dbdbc9af7c6",
+      "name": "游标 Vernier",
+      "pattern": "vernier",
+      "params": {
+        "width": 12,
+        "gap": 16,
+        "height": 100,
+        "count": 6,
+        "delta": 1
+      },
+      "polygons": [],
+      "x": 1700.0,
+      "y": 3600.0,
+      "angle": 0,
+      "sx": 1,
+      "sy": 1,
+      "mirror": false,
+      "layer": 1,
+      "datatype": 0,
+      "metadata": {
+        "catalog_key": "vernier"
+      }
+    },
+    {
+      "id": "3d7ab94de4c9",
+      "name": "Line / Cut",
+      "pattern": "line_cut",
+      "params": {
+        "width": 12,
+        "gap": 16,
+        "length": 160,
+        "count": 6
+      },
+      "polygons": [],
+      "x": 2550.0,
+      "y": 3600.0,
+      "angle": 0,
+      "sx": 1,
+      "sy": 1,
+      "mirror": false,
+      "layer": 1,
+      "datatype": 0,
+      "metadata": {
+        "catalog_key": "line_cut"
+      }
+    },
+    {
+      "id": "809086d44e50",
+      "name": "Gate / Active 示意",
+      "pattern": "gate_active",
+      "params": {
+        "width": 12,
+        "gap": 16,
+        "height": 100,
+        "count": 6
+      },
+      "polygons": [],
+      "x": 3400.0,
+      "y": 3600.0,
+      "angle": 0,
+      "sx": 1,
+      "sy": 1,
+      "mirror": false,
+      "layer": 1,
+      "datatype": 0,
+      "metadata": {
+        "catalog_key": "gate_active"
+      }
+    }
+  ],
+  "layers": [
+    {
+      "number": 1,
+      "datatype": 0,
+      "name": "主图形",
+      "color": "#3285b5",
+      "visible": true,
+      "locked": false
+    },
+    {
+      "number": 2,
+      "datatype": 0,
+      "name": "辅助 / Cut",
+      "color": "#d4973c",
+      "visible": true,
+      "locked": false
+    },
+    {
+      "number": 3,
+      "datatype": 0,
+      "name": "参考",
+      "color": "#8b78b4",
+      "visible": true,
+      "locked": false
+    }
+  ],
+  "grid": 1.0,
+  "constraint": "orthogonal",
+  "metadata": {}
+}

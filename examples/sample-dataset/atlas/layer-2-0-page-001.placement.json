@@ -1,0 +1,26 @@
+[
+  {
+    "id": 27,
+    "offset_nm": [
+      -16.0,
+      -16.0
+    ],
+    "calibrated": true
+  },
+  {
+    "id": 38,
+    "offset_nm": [
+      141.79999999999998,
+      16.0
+    ],
+    "calibrated": true
+  },
+  {
+    "id": 40,
+    "offset_nm": [
+      459.59999999999997,
+      -33.3333333
+    ],
+    "calibrated": true
+  }
+]

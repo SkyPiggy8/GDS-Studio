@@ -1,0 +1,6174 @@
+{
+  "format": "gds-studio-dataset",
+  "version": 1,
+  "foreground": 255,
+  "background": 0,
+  "matching": "translation / D4 / uniform scale; fingerprints quantized to 0.1 nm or 1e-5 relative",
+  "split_policy": "unassigned; keep each leakage_group in one split; groups join same-shape families and shared sources",
+  "samples": [
+    {
+      "id": 1,
+      "name": "矩形",
+      "layer": 1,
+      "datatype": 0,
+      "calibrated": 1,
+      "width": 160.0,
+      "height": 100.0,
+      "area": 16000.0,
+      "components": 1,
+      "holes": 0,
+      "strict": "a4ca64a5ad10cae15ff34efbbb9392e1907074e2b5384348a4ac0f64f7efde9d",
+      "congruent": "a4ca64a5ad10cae15ff34efbbb9392e1907074e2b5384348a4ac0f64f7efde9d",
+      "same_shape": "b4b0495cab6443eca718cc1a6d44f98e16c07eeadc22750ffee8cdbcba7b9317",
+      "tags": "",
+      "review": "draft",
+      "origins": [
+        {
+          "metadata": {
+            "shape_id": "07943080f3fa",
+            "shape_metadata": {
+              "calibrated": true,
+              "source": "illustrative parametric catalog; not foundry rules"
+            },
+            "method": "editor_object"
+          },
+          "path": "内置可调结构",
+          "kind": "catalog",
+          "source_metadata": {
+            "node": "illustrative, not a process design kit"
+          }
+        },
+        {
+          "metadata": {
+            "shape_id": "e971fe9bb89e",
+            "shape_metadata": {
+              "catalog_key": "rectangle"
+            },
+            "method": "editor_object"
+          },
+          "path": "C:\\Users\\zhuyu\\Desktop\\XKL\\版图设计\\GDS\\examples\\catalog.gsproj",
+          "kind": "project",
+          "source_metadata": {
+            "bundled_example": true
+          }
+        }
+      ],
+      "mask": "masks/sample-000001.png",
+      "gds": "gds/sample-000001.gds",
+      "render": {
+        "coordinate_bounds_nm": [
+          0.0,
+          0.0,
+          160.0,
+          100.0
+        ],
+        "coordinate_units_per_pixel": 0.7174887892376681,
+        "padding_px": 16
+      },
+      "nm_per_pixel": 0.7174887892376681,
+      "units": "nm",
+      "leakage_group": "group-000001",
+      "split": "unassigned"
+    },
+    {
+      "id": 2,
+      "name": "孤立线",
+      "layer": 1,
+      "datatype": 0,
+      "calibrated": 1,
+      "width": 160.0,
+      "height": 12.0,
+      "area": 1920.0,
+      "components": 1,
+      "holes": 0,
+      "strict": "b5c0cc38728a3036748ef9c8573ebed27946b9b9400d0528e600e737565b0ba2",
+      "congruent": "b5c0cc38728a3036748ef9c8573ebed27946b9b9400d0528e600e737565b0ba2",
+      "same_shape": "b59ae5ecabb52754a836581d395d8bb09f5da66659cc6accd78f49d1bd955884",
+      "tags": "",
+      "review": "draft",
+      "origins": [
+        {
+          "metadata": {
+            "shape_id": "96a9c611965c",
+            "shape_metadata": {
+              "calibrated": true,
+              "source": "illustrative parametric catalog; not foundry rules"
+            },
+            "method": "editor_object"
+          },
+          "path": "内置可调结构",
+          "kind": "catalog",
+          "source_metadata": {
+            "node": "illustrative, not a process design kit"
+          }
+        },
+        {
+          "metadata": {
+            "shape_id": "013c5f68b947",
+            "shape_metadata": {
+              "calibrated": true,
+              "source": "illustrative parametric catalog; not foundry rules"
+            },
+            "method": "editor_object"
+          },
+          "path": "内置可调结构",
+          "kind": "catalog",
+          "source_metadata": {
+            "node": "illustrative, not a process design kit"
+          }
+        },
+        {
+          "metadata": {
+            "shape_id": "11069e8c4c50",
+            "shape_metadata": {
+              "catalog_key": "line"
+            },
+            "method": "editor_object"
+          },
+          "path": "C:\\Users\\zhuyu\\Desktop\\XKL\\版图设计\\GDS\\examples\\catalog.gsproj",
+          "kind": "project",
+          "source_metadata": {
+            "bundled_example": true
+          }
+        },
+        {
+          "metadata": {
+            "shape_id": "c27946826966",
+            "shape_metadata": {
+              "catalog_key": "slot_contact"
+            },
+            "method": "editor_object"
+          },
+          "path": "C:\\Users\\zhuyu\\Desktop\\XKL\\版图设计\\GDS\\examples\\catalog.gsproj",
+          "kind": "project",
+          "source_metadata": {
+            "bundled_example": true
+          }
+        }
+      ],
+      "mask": "masks/sample-000002.png",
+      "gds": "gds/sample-000002.gds",
+      "render": {
+        "coordinate_bounds_nm": [
+          0.0,
+          0.0,
+          160.0,
+          12.0
+        ],
+        "coordinate_units_per_pixel": 0.7174887892376681,
+        "padding_px": 16
+      },
+      "nm_per_pixel": 0.7174887892376681,
+      "units": "nm",
+      "leakage_group": "group-000001",
+      "split": "unassigned"
+    },
+    {
+      "id": 3,
+      "name": "Line / Space",
+      "layer": 1,
+      "datatype": 0,
+      "calibrated": 1,
+      "width": 160.0,
+      "height": 152.0,
+      "area": 11520.0,
+      "components": 6,
+      "holes": 0,
+      "strict": "0e2041d96392244c4889aa5d13face14e8e1f85bf5be4a6dab73fc1a3f8a15eb",
+      "congruent": "0e2041d96392244c4889aa5d13face14e8e1f85bf5be4a6dab73fc1a3f8a15eb",
+      "same_shape": "9c48d7f6a2633d318480e306733492e2daa5780633adaecd30905629d0fc9337",
+      "tags": "",
+      "review": "draft",
+      "origins": [
+        {
+          "metadata": {
+            "shape_id": "d65bff6f8281",
+            "shape_metadata": {
+              "calibrated": true,
+              "source": "illustrative parametric catalog; not foundry rules"
+            },
+            "method": "editor_object"
+          },
+          "path": "内置可调结构",
+          "kind": "catalog",
+          "source_metadata": {
+            "node": "illustrative, not a process design kit"
+          }
+        },
+        {
+          "metadata": {
+            "shape_id": "4e0f13d55749",
+            "shape_metadata": {
+              "calibrated": true,
+              "source": "illustrative parametric catalog; not foundry rules"
+            },
+            "method": "editor_object"
+          },
+          "path": "内置可调结构",
+          "kind": "catalog",
+          "source_metadata": {
+            "node": "illustrative, not a process design kit"
+          }
+        },
+        {
+          "metadata": {
+            "shape_id": "c48e6b437bf8",
+            "shape_metadata": {
+              "catalog_key": "line_space"
+            },
+            "method": "editor_object"
+          },
+          "path": "C:\\Users\\zhuyu\\Desktop\\XKL\\版图设计\\GDS\\examples\\catalog.gsproj",
+          "kind": "project",
+          "source_metadata": {
+            "bundled_example": true
+          }
+        },
+        {
+          "metadata": {
+            "shape_id": "3d7ab94de4c9",
+            "shape_metadata": {
+              "catalog_key": "line_cut"
+            },
+            "method": "editor_object"
+          },
+          "path": "C:\\Users\\zhuyu\\Desktop\\XKL\\版图设计\\GDS\\examples\\catalog.gsproj",
+          "kind": "project",
+          "source_metadata": {
+            "bundled_example": true
+          }
+        },
+        {
+          "metadata": {
+            "shape_id": "c5b54925d4fc",
+            "shape_metadata": {},
+            "method": "editor_object"
+          },
+          "path": "C:\\Users\\zhuyu\\Desktop\\XKL\\版图设计\\GDS\\examples\\starter.gsproj",
+          "kind": "project",
+          "source_metadata": {
+            "bundled_example": true
+          }
+        }
+      ],
+      "mask": "masks/sample-000003.png",
+      "gds": "gds/sample-000003.gds",
+      "render": {
+        "coordinate_bounds_nm": [
+          0.0,
+          0.0,
+          160.0,
+          152.0
+        ],
+        "coordinate_units_per_pixel": 0.7174887892376681,
+        "padding_px": 16
+      },
+      "nm_per_pixel": 0.7174887892376681,
+      "units": "nm",
+      "leakage_group": "group-000001",
+      "split": "unassigned"
+    },
+    {
+      "id": 4,
+      "name": "密集 / 孤立对比",
+      "layer": 1,
+      "datatype": 0,
+      "calibrated": 1,
+      "width": 368.0,
+      "height": 152.0,
+      "area": 13440.0,
+      "components": 7,
+      "holes": 0,
+      "strict": "a8d45bba6f9b2c2f39876deef379e14deaa5edd793314efd40c7eef90e54a4d3",
+      "congruent": "a8d45bba6f9b2c2f39876deef379e14deaa5edd793314efd40c7eef90e54a4d3",
+      "same_shape": "66a0153ab379afa83178b0290bfda8268efa360b835ffae49d4ed7b6a801ec37",
+      "tags": "",
+      "review": "draft",
+      "origins": [
+        {
+          "metadata": {
+            "shape_id": "4f96afd42dc9",
+            "shape_metadata": {
+              "calibrated": true,
+              "source": "illustrative parametric catalog; not foundry rules"
+            },
+            "method": "editor_object"
+          },
+          "path": "内置可调结构",
+          "kind": "catalog",
+          "source_metadata": {
+            "node": "illustrative, not a process design kit"
+          }
+        },
+        {
+          "metadata": {
+            "shape_id": "03ba6d6a1795",
+            "shape_metadata": {
+              "catalog_key": "dense_iso"
+            },
+            "method": "editor_object"
+          },
+          "path": "C:\\Users\\zhuyu\\Desktop\\XKL\\版图设计\\GDS\\examples\\catalog.gsproj",
+          "kind": "project",
+          "source_metadata": {
+            "bundled_example": true
+          }
+        }
+      ],
+      "mask": "masks/sample-000004.png",
+      "gds": "gds/sample-000004.gds",
+      "render": {
+        "coordinate_bounds_nm": [
+          0.0,
+          0.0,
+          368.0,
+          152.0
+        ],
+        "coordinate_units_per_pixel": 1.6502242152466369,
+        "padding_px": 16
+      },
+      "nm_per_pixel": 1.6502242152466369,
+      "units": "nm",
+      "leakage_group": "group-000001",
+      "split": "unassigned"
+    },
+    {
+      "id": 5,
+      "name": "Tip-to-Tip",
+      "layer": 1,
+      "datatype": 0,
+      "calibrated": 1,
+      "width": 336.0,
+      "height": 152.0,
+      "area": 23040.0,
+      "components": 12,
+      "holes": 0,
+      "strict": "3a81b42db7ae57d6e1a05587924203526f51e52af23e7d1b302a86876a9c7df8",
+      "congruent": "3a81b42db7ae57d6e1a05587924203526f51e52af23e7d1b302a86876a9c7df8",
+      "same_shape": "b51d5963f707f70f464fc76fd5b85ef34731e580f1c035fa3793bfcb56f8ff9c",
+      "tags": "",
+      "review": "draft",
+      "origins": [
+        {
+          "metadata": {
+            "shape_id": "6baed499e1c6",
+            "shape_metadata": {
+              "calibrated": true,
+              "source": "illustrative parametric catalog; not foundry rules"
+            },
+            "method": "editor_object"
+          },
+          "path": "内置可调结构",
+          "kind": "catalog",
+          "source_metadata": {
+            "node": "illustrative, not a process design kit"
+          }
+        },
+        {
+          "metadata": {
+            "shape_id": "329d9fe98a14",
+            "shape_metadata": {
+              "catalog_key": "tip_tip"
+            },
+            "method": "editor_object"
+          },
+          "path": "C:\\Users\\zhuyu\\Desktop\\XKL\\版图设计\\GDS\\examples\\catalog.gsproj",
+          "kind": "project",
+          "source_metadata": {
+            "bundled_example": true
+          }
+        },
+        {
+          "metadata": {
+            "shape_id": "77870df5cf99",
+            "shape_metadata": {},
+            "method": "editor_object"
+          },
+          "path": "C:\\Users\\zhuyu\\Desktop\\XKL\\版图设计\\GDS\\examples\\starter.gsproj",
+          "kind": "project",
+          "source_metadata": {
+            "bundled_example": true
+          }
+        }
+      ],
+      "mask": "masks/sample-000005.png",
+      "gds": "gds/sample-000005.gds",
+      "render": {
+        "coordinate_bounds_nm": [
+          0.0,
+          0.0,
+          336.0,
+          152.0
+        ],
+        "coordinate_units_per_pixel": 1.5067264573991033,
+        "padding_px": 16
+      },
+      "nm_per_pixel": 1.5067264573991033,
+      "units": "nm",
+      "leakage_group": "group-000001",
+      "split": "unassigned"
+    },
+    {
+      "id": 6,
+      "name": "Tip-to-Side",
+      "layer": 1,
+      "datatype": 0,
+      "calibrated": 1,
+      "width": 188.0,
+      "height": 152.0,
+      "area": 13344.0,
+      "components": 7,
+      "holes": 0,
+      "strict": "c6e691199ab38090fbe06ecc3aa690835a0ffab161badf61c3529ab3f05ad338",
+      "congruent": "670123d3da0504e6b5955a794a0eb2a5ca226f747cdd23ddff7a167ce38fbe0d",
+      "same_shape": "c061d72fa0d1bb2571ec8fcb15badef439d3b663f03a6f274e165067d597ad23",
+      "tags": "",
+      "review": "draft",
+      "origins": [
+        {
+          "metadata": {
+            "shape_id": "c1dbd6e65681",
+            "shape_metadata": {
+              "calibrated": true,
+              "source": "illustrative parametric catalog; not foundry rules"
+            },
+            "method": "editor_object"
+          },
+          "path": "内置可调结构",
+          "kind": "catalog",
+          "source_metadata": {
+            "node": "illustrative, not a process design kit"
+          }
+        },
+        {
+          "metadata": {
+            "shape_id": "0cf8a022cf53",
+            "shape_metadata": {
+              "catalog_key": "tip_side"
+            },
+            "method": "editor_object"
+          },
+          "path": "C:\\Users\\zhuyu\\Desktop\\XKL\\版图设计\\GDS\\examples\\catalog.gsproj",
+          "kind": "project",
+          "source_metadata": {
+            "bundled_example": true
+          }
+        }
+      ],
+      "mask": "masks/sample-000006.png",
+      "gds": "gds/sample-000006.gds",
+      "render": {
+        "coordinate_bounds_nm": [
+          0.0,
+          0.0,
+          188.0,
+          152.0
+        ],
+        "coordinate_units_per_pixel": 0.8430493273542601,
+        "padding_px": 16
+      },
+      "nm_per_pixel": 0.8430493273542601,
+      "units": "nm",
+      "leakage_group": "group-000001",
+      "split": "unassigned"
+    },
+    {
+      "id": 7,
+      "name": "交错线端",
+      "layer": 1,
+      "datatype": 0,
+      "calibrated": 1,
+      "width": 176.0,
+      "height": 152.0,
+      "area": 11520.0,
+      "components": 6,
+      "holes": 0,
+      "strict": "e9b21f52cf0af64328b4cf22a900ec26a0854367e788184c5bb8bdbe1b9d379a",
+      "congruent": "e9b21f52cf0af64328b4cf22a900ec26a0854367e788184c5bb8bdbe1b9d379a",
+      "same_shape": "91f25e31a13a9cd0bb08c7e59b34966586939eee7b9af6d429e62252415da80a",
+      "tags": "",
+      "review": "draft",
+      "origins": [
+        {
+          "metadata": {
+            "shape_id": "3b77944af0b9",
+            "shape_metadata": {
+              "calibrated": true,
+              "source": "illustrative parametric catalog; not foundry rules"
+            },
+            "method": "editor_object"
+          },
+          "path": "内置可调结构",
+          "kind": "catalog",
+          "source_metadata": {
+            "node": "illustrative, not a process design kit"
+          }
+        },
+        {
+          "metadata": {
+            "shape_id": "2cc50c4e23ee",
+            "shape_metadata": {
+              "catalog_key": "staggered"
+            },
+            "method": "editor_object"
+          },
+          "path": "C:\\Users\\zhuyu\\Desktop\\XKL\\版图设计\\GDS\\examples\\catalog.gsproj",
+          "kind": "project",
+          "source_metadata": {
+            "bundled_example": true
+          }
+        }
+      ],
+      "mask": "masks/sample-000007.png",
+      "gds": "gds/sample-000007.gds",
+      "render": {
+        "coordinate_bounds_nm": [
+          0.0,
+          0.0,
+          176.0,
+          152.0
+        ],
+        "coordinate_units_per_pixel": 0.7892376681614349,
+        "padding_px": 16
+      },
+      "nm_per_pixel": 0.7892376681614349,
+      "units": "nm",
+      "leakage_group": "group-000001",
+      "split": "unassigned"
+    },
+    {
+      "id": 8,
+      "name": "锤头 Hammerhead",
+      "layer": 1,
+      "datatype": 0,
+      "calibrated": 1,
+      "width": 184.0,
+      "height": 36.0,
+      "area": 2784.0,
+      "components": 1,
+      "holes": 0,
+      "strict": "48236ec14948a746a4019a6db4665fff67c3cbea057dfede59cda18af670aa84",
+      "congruent": "488284f4435d2f323f42c6002fe5e7143aebc22e4904516559a9f67b0c8b952b",
+      "same_shape": "52e3e1475e910ec5bcdbfbf5de0b1743a1385140f15f288bb5c4ef4cc2ac4da2",
+      "tags": "",
+      "review": "draft",
+      "origins": [
+        {
+          "metadata": {
+            "shape_id": "de54dfa6ba3a",
+            "shape_metadata": {
+              "calibrated": true,
+              "source": "illustrative parametric catalog; not foundry rules"
+            },
+            "method": "editor_object"
+          },
+          "path": "内置可调结构",
+          "kind": "catalog",
+          "source_metadata": {
+            "node": "illustrative, not a process design kit"
+          }
+        },
+        {
+          "metadata": {
+            "shape_id": "224ca5e158f2",
+            "shape_metadata": {
+              "catalog_key": "hammerhead"
+            },
+            "method": "editor_object"
+          },
+          "path": "C:\\Users\\zhuyu\\Desktop\\XKL\\版图设计\\GDS\\examples\\catalog.gsproj",
+          "kind": "project",
+          "source_metadata": {
+            "bundled_example": true
+          }
+        },
+        {
+          "metadata": {
+            "shape_id": "a47876c346d2",
+            "shape_metadata": {},
+            "method": "editor_object"
+          },
+          "path": "C:\\Users\\zhuyu\\Desktop\\XKL\\版图设计\\GDS\\examples\\starter.gsproj",
+          "kind": "project",
+          "source_metadata": {
+            "bundled_example": true
+          }
+        }
+      ],
+      "mask": "masks/sample-000008.png",
+      "gds": "gds/sample-000008.gds",
+      "render": {
+        "coordinate_bounds_nm": [
+          -12.0,
+          -12.0,
+          172.0,
+          24.0
+        ],
+        "coordinate_units_per_pixel": 0.8251121076233184,
+        "padding_px": 16
+      },
+      "nm_per_pixel": 0.8251121076233184,
+      "units": "nm",
+      "leakage_group": "group-000001",
+      "split": "unassigned"
+    },
+    {
+      "id": 9,
+      "name": "狗骨 Dogbone",
+      "layer": 1,
+      "datatype": 0,
+      "calibrated": 1,
+      "width": 196.0,
+      "height": 36.0,
+      "area": 4080.0,
+      "components": 1,
+      "holes": 0,
+      "strict": "d07f6497c732cf9c36c450fe5dc24200ddc5890c8f6f9e181122020ad5d7a0f5",
+      "congruent": "2d830fe5ebc5375ba63b4e63dfdf25ddb3bb49820e1c25eeb3f2b317d393f754",
+      "same_shape": "751094ffd97f3f9e07b237f6ee8448f446c7547c8890e4f25ec4cf926ccd6b6b",
+      "tags": "",
+      "review": "draft",
+      "origins": [
+        {
+          "metadata": {
+            "shape_id": "545de4806115",
+            "shape_metadata": {
+              "calibrated": true,
+              "source": "illustrative parametric catalog; not foundry rules"
+            },
+            "method": "editor_object"
+          },
+          "path": "内置可调结构",
+          "kind": "catalog",
+          "source_metadata": {
+            "node": "illustrative, not a process design kit"
+          }
+        },
+        {
+          "metadata": {
+            "shape_id": "19f4a2f00d67",
+            "shape_metadata": {
+              "catalog_key": "dogbone"
+            },
+            "method": "editor_object"
+          },
+          "path": "C:\\Users\\zhuyu\\Desktop\\XKL\\版图设计\\GDS\\examples\\catalog.gsproj",
+          "kind": "project",
+          "source_metadata": {
+            "bundled_example": true
+          }
+        },
+        {
+          "metadata": {
+            "shape_id": "62687ed563b2",
+            "shape_metadata": {},
+            "method": "editor_object"
+          },
+          "path": "C:\\Users\\zhuyu\\Desktop\\XKL\\版图设计\\GDS\\examples\\starter.gsproj",
+          "kind": "project",
+          "source_metadata": {
+            "bundled_example": true
+          }
+        }
+      ],
+      "mask": "masks/sample-000009.png",
+      "gds": "gds/sample-000009.gds",
+      "render": {
+        "coordinate_bounds_nm": [
+          -12.0,
+          -12.0,
+          184.0,
+          24.0
+        ],
+        "coordinate_units_per_pixel": 0.8789237668161435,
+        "padding_px": 16
+      },
+      "nm_per_pixel": 0.8789237668161435,
+      "units": "nm",
+      "leakage_group": "group-000001",
+      "split": "unassigned"
+    },
+    {
+      "id": 10,
+      "name": "角部 Serif",
+      "layer": 1,
+      "datatype": 0,
+      "calibrated": 1,
+      "width": 172.0,
+      "height": 24.0,
+      "area": 2352.0,
+      "components": 1,
+      "holes": 0,
+      "strict": "86bc5da61d5026e14f61fdfc38662d6980a2c89e2a324bddd48516cacf4043b4",
+      "congruent": "76b6eb485cdc98514bfb48970108a81e9461486e7e462bbf809a685b741a3112",
+      "same_shape": "bad4b1a26bf680750f0c659d1e1de5a50d51f0563e072d97153bf69c0ff36323",
+      "tags": "",
+      "review": "draft",
+      "origins": [
+        {
+          "metadata": {
+            "shape_id": "23a8e052ee74",
+            "shape_metadata": {
+              "calibrated": true,
+              "source": "illustrative parametric catalog; not foundry rules"
+            },
+            "method": "editor_object"
+          },
+          "path": "内置可调结构",
+          "kind": "catalog",
+          "source_metadata": {
+            "node": "illustrative, not a process design kit"
+          }
+        },
+        {
+          "metadata": {
+            "shape_id": "c60181aaf68c",
+            "shape_metadata": {
+              "catalog_key": "serif"
+            },
+            "method": "editor_object"
+          },
+          "path": "C:\\Users\\zhuyu\\Desktop\\XKL\\版图设计\\GDS\\examples\\catalog.gsproj",
+          "kind": "project",
+          "source_metadata": {
+            "bundled_example": true
+          }
+        }
+      ],
+      "mask": "masks/sample-000010.png",
+      "gds": "gds/sample-000010.gds",
+      "render": {
+        "coordinate_bounds_nm": [
+          -6.0,
+          -6.0,
+          166.0,
+          18.0
+        ],
+        "coordinate_units_per_pixel": 0.7713004484304933,
+        "padding_px": 16
+      },
+      "nm_per_pixel": 0.7713004484304933,
+      "units": "nm",
+      "leakage_group": "group-000001",
+      "split": "unassigned"
+    },
+    {
+      "id": 11,
+      "name": "辅助线 SRAF",
+      "layer": 1,
+      "datatype": 0,
+      "calibrated": 1,
+      "width": 160.0,
+      "height": 52.0,
+      "area": 3200.0,
+      "components": 3,
+      "holes": 0,
+      "strict": "df4881c2bd714f3bcd2517b0db41945f85991716b9cabde0ec6b1732ff7b598a",
+      "congruent": "df4881c2bd714f3bcd2517b0db41945f85991716b9cabde0ec6b1732ff7b598a",
+      "same_shape": "32ad4d7213160534a56bfcf0f642f41d7bcd78644ddbdc7f69005c42f7c764f4",
+      "tags": "",
+      "review": "draft",
+      "origins": [
+        {
+          "metadata": {
+            "shape_id": "5cd777d9e0b6",
+            "shape_metadata": {
+              "calibrated": true,
+              "source": "illustrative parametric catalog; not foundry rules"
+            },
+            "method": "editor_object"
+          },
+          "path": "内置可调结构",
+          "kind": "catalog",
+          "source_metadata": {
+            "node": "illustrative, not a process design kit"
+          }
+        },
+        {
+          "metadata": {
+            "shape_id": "a223b03e52ef",
+            "shape_metadata": {
+              "catalog_key": "sraf"
+            },
+            "method": "editor_object"
+          },
+          "path": "C:\\Users\\zhuyu\\Desktop\\XKL\\版图设计\\GDS\\examples\\catalog.gsproj",
+          "kind": "project",
+          "source_metadata": {
+            "bundled_example": true
+          }
+        }
+      ],
+      "mask": "masks/sample-000011.png",
+      "gds": "gds/sample-000011.gds",
+      "render": {
+        "coordinate_bounds_nm": [
+          0.0,
+          -20.0,
+          160.0,
+          32.0
+        ],
+        "coordinate_units_per_pixel": 0.7174887892376681,
+        "padding_px": 16
+      },
+      "nm_per_pixel": 0.7174887892376681,
+      "units": "nm",
+      "leakage_group": "group-000001",
+      "split": "unassigned"
+    },
+    {
+      "id": 12,
+      "name": "L 型拐角",
+      "layer": 1,
+      "datatype": 0,
+      "calibrated": 1,
+      "width": 166.0,
+      "height": 106.0,
+      "area": 3120.0,
+      "components": 1,
+      "holes": 0,
+      "strict": "361eabd0b9db69f619c9f58323571103ed058f747e61c194072adaeb512a97a1",
+      "congruent": "be1483f6dfc5efd38066ded6d27a9f88098b8b58f232cade065d0e934c350012",
+      "same_shape": "53d72d082ae1bf7a67e712a5670d866852e53389aee6ccff6b1b389d5c27e0a9",
+      "tags": "",
+      "review": "draft",
+      "origins": [
+        {
+          "metadata": {
+            "shape_id": "0a9fc09e8be9",
+            "shape_metadata": {
+              "calibrated": true,
+              "source": "illustrative parametric catalog; not foundry rules"
+            },
+            "method": "editor_object"
+          },
+          "path": "内置可调结构",
+          "kind": "catalog",
+          "source_metadata": {
+            "node": "illustrative, not a process design kit"
+          }
+        },
+        {
+          "metadata": {
+            "shape_id": "519d2d013eaf",
+            "shape_metadata": {
+              "catalog_key": "l_corner"
+            },
+            "method": "editor_object"
+          },
+          "path": "C:\\Users\\zhuyu\\Desktop\\XKL\\版图设计\\GDS\\examples\\catalog.gsproj",
+          "kind": "project",
+          "source_metadata": {
+            "bundled_example": true
+          }
+        },
+        {
+          "metadata": {
+            "shape_id": "5486c0e71fa7",
+            "shape_metadata": {},
+            "method": "editor_object"
+          },
+          "path": "C:\\Users\\zhuyu\\Desktop\\XKL\\版图设计\\GDS\\examples\\starter.gsproj",
+          "kind": "project",
+          "source_metadata": {
+            "bundled_example": true
+          }
+        }
+      ],
+      "mask": "masks/sample-000012.png",
+      "gds": "gds/sample-000012.gds",
+      "render": {
+        "coordinate_bounds_nm": [
+          0.0,
+          -6.0,
+          166.0,
+          100.0
+        ],
+        "coordinate_units_per_pixel": 0.7443946188340806,
+        "padding_px": 16
+      },
+      "nm_per_pixel": 0.7443946188340806,
+      "units": "nm",
+      "leakage_group": "group-000001",
+      "split": "unassigned"
+    },
+    {
+      "id": 13,
+      "name": "U 型回折",
+      "layer": 1,
+      "datatype": 0,
+      "calibrated": 1,
+      "width": 172.0,
+      "height": 106.0,
+      "area": 4320.0,
+      "components": 1,
+      "holes": 0,
+      "strict": "c46fa15c0d65078fd1583d799bb465b8b07d4f02a831c5c157963e9a80971481",
+      "congruent": "eaae19f39a248dea6a0816a8b3dd404b68c4978ad0d812331da257ce6ab2a87e",
+      "same_shape": "8c94d852f6ff10b769a4715c316cd456db330348d2f0db8b9bbdb4a9a62b513d",
+      "tags": "",
+      "review": "draft",
+      "origins": [
+        {
+          "metadata": {
+            "shape_id": "40777593210d",
+            "shape_metadata": {
+              "calibrated": true,
+              "source": "illustrative parametric catalog; not foundry rules"
+            },
+            "method": "editor_object"
+          },
+          "path": "内置可调结构",
+          "kind": "catalog",
+          "source_metadata": {
+            "node": "illustrative, not a process design kit"
+          }
+        },
+        {
+          "metadata": {
+            "shape_id": "e79f4cdd0ddb",
+            "shape_metadata": {
+              "catalog_key": "u_corner"
+            },
+            "method": "editor_object"
+          },
+          "path": "C:\\Users\\zhuyu\\Desktop\\XKL\\版图设计\\GDS\\examples\\catalog.gsproj",
+          "kind": "project",
+          "source_metadata": {
+            "bundled_example": true
+          }
+        }
+      ],
+      "mask": "masks/sample-000013.png",
+      "gds": "gds/sample-000013.gds",
+      "render": {
+        "coordinate_bounds_nm": [
+          -6.0,
+          -6.0,
+          166.0,
+          100.0
+        ],
+        "coordinate_units_per_pixel": 0.7713004484304933,
+        "padding_px": 16
+      },
+      "nm_per_pixel": 0.7713004484304933,
+      "units": "nm",
+      "leakage_group": "group-000001",
+      "split": "unassigned"
+    },
+    {
+      "id": 14,
+      "name": "T 型连接",
+      "layer": 1,
+      "datatype": 0,
+      "calibrated": 1,
+      "width": 160.0,
+      "height": 100.0,
+      "area": 2976.0,
+      "components": 1,
+      "holes": 0,
+      "strict": "369d7921cb39c2fff1317b8b7a4b4711fced00f4e6c49a3d54d3ef9d4544b86e",
+      "congruent": "3466b4c739ded440148af2d530b8b4efe88488c1427cadd05a4c4dbf155bfd6e",
+      "same_shape": "9231f7ed1d1fbb5e021c653e9b4bc57ae6281a99e97bd07e7956a3d411574ade",
+      "tags": "",
+      "review": "draft",
+      "origins": [
+        {
+          "metadata": {
+            "shape_id": "f75970511191",
+            "shape_metadata": {
+              "calibrated": true,
+              "source": "illustrative parametric catalog; not foundry rules"
+            },
+            "method": "editor_object"
+          },
+          "path": "内置可调结构",
+          "kind": "catalog",
+          "source_metadata": {
+            "node": "illustrative, not a process design kit"
+          }
+        },
+        {
+          "metadata": {
+            "shape_id": "84b161caf969",
+            "shape_metadata": {
+              "catalog_key": "t_junction"
+            },
+            "method": "editor_object"
+          },
+          "path": "C:\\Users\\zhuyu\\Desktop\\XKL\\版图设计\\GDS\\examples\\catalog.gsproj",
+          "kind": "project",
+          "source_metadata": {
+            "bundled_example": true
+          }
+        }
+      ],
+      "mask": "masks/sample-000014.png",
+      "gds": "gds/sample-000014.gds",
+      "render": {
+        "coordinate_bounds_nm": [
+          0.0,
+          0.0,
+          160.0,
+          100.0
+        ],
+        "coordinate_units_per_pixel": 0.7174887892376681,
+        "padding_px": 16
+      },
+      "nm_per_pixel": 0.7174887892376681,
+      "units": "nm",
+      "leakage_group": "group-000001",
+      "split": "unassigned"
+    },
+    {
+      "id": 15,
+      "name": "十字连接",
+      "layer": 1,
+      "datatype": 0,
+      "calibrated": 1,
+      "width": 160.0,
+      "height": 100.0,
+      "area": 2976.0,
+      "components": 1,
+      "holes": 0,
+      "strict": "043d33404b2b14052958fe520f6f27b673532c0aea352243c209aca9bc752134",
+      "congruent": "043d33404b2b14052958fe520f6f27b673532c0aea352243c209aca9bc752134",
+      "same_shape": "ff11aedf3e0b0ae3e9b14290e0a89afa2d6ac3d62d9a8e25f17cd1229ddc6308",
+      "tags": "",
+      "review": "draft",
+      "origins": [
+        {
+          "metadata": {
+            "shape_id": "929aa0095c27",
+            "shape_metadata": {
+              "calibrated": true,
+              "source": "illustrative parametric catalog; not foundry rules"
+            },
+            "method": "editor_object"
+          },
+          "path": "内置可调结构",
+          "kind": "catalog",
+          "source_metadata": {
+            "node": "illustrative, not a process design kit"
+          }
+        },
+        {
+          "metadata": {
+            "shape_id": "49eb1ab94991",
+            "shape_metadata": {
+              "calibrated": true,
+              "source": "illustrative parametric catalog; not foundry rules"
+            },
+            "method": "editor_object"
+          },
+          "path": "内置可调结构",
+          "kind": "catalog",
+          "source_metadata": {
+            "node": "illustrative, not a process design kit"
+          }
+        },
+        {
+          "metadata": {
+            "shape_id": "76604d99dd4f",
+            "shape_metadata": {
+              "catalog_key": "cross"
+            },
+            "method": "editor_object"
+          },
+          "path": "C:\\Users\\zhuyu\\Desktop\\XKL\\版图设计\\GDS\\examples\\catalog.gsproj",
+          "kind": "project",
+          "source_metadata": {
+            "bundled_example": true
+          }
+        },
+        {
+          "metadata": {
+            "shape_id": "b19df1d0462a",
+            "shape_metadata": {
+              "catalog_key": "alignment"
+            },
+            "method": "editor_object"
+          },
+          "path": "C:\\Users\\zhuyu\\Desktop\\XKL\\版图设计\\GDS\\examples\\catalog.gsproj",
+          "kind": "project",
+          "source_metadata": {
+            "bundled_example": true
+          }
+        }
+      ],
+      "mask": "masks/sample-000015.png",
+      "gds": "gds/sample-000015.gds",
+      "render": {
+        "coordinate_bounds_nm": [
+          0.0,
+          0.0,
+          160.0,
+          100.0
+        ],
+        "coordinate_units_per_pixel": 0.7174887892376681,
+        "padding_px": 16
+      },
+      "nm_per_pixel": 0.7174887892376681,
+      "units": "nm",
+      "leakage_group": "group-000001",
+      "split": "unassigned"
+    },
+    {
+      "id": 16,
+      "name": "H 型连接",
+      "layer": 1,
+      "datatype": 0,
+      "calibrated": 1,
+      "width": 160.0,
+      "height": 100.0,
+      "area": 4032.0,
+      "components": 1,
+      "holes": 0,
+      "strict": "f026ee7c53e8847ba0c90a518cc0cc835666446b9973de0703251d7bb18e0822",
+      "congruent": "4626c964be250db0d7cd3bab4b9ea5d49bb395f6c96cd6204ef74c7102c131eb",
+      "same_shape": "a41b89d2562198bb1de55c5ccb4c8e1a1169ffa191f7d9101d07ff3dbfbfa26b",
+      "tags": "",
+      "review": "draft",
+      "origins": [
+        {
+          "metadata": {
+            "shape_id": "d3e2d16451cd",
+            "shape_metadata": {
+              "calibrated": true,
+              "source": "illustrative parametric catalog; not foundry rules"
+            },
+            "method": "editor_object"
+          },
+          "path": "内置可调结构",
+          "kind": "catalog",
+          "source_metadata": {
+            "node": "illustrative, not a process design kit"
+          }
+        },
+        {
+          "metadata": {
+            "shape_id": "bbacb5f32512",
+            "shape_metadata": {
+              "catalog_key": "h_bridge"
+            },
+            "method": "editor_object"
+          },
+          "path": "C:\\Users\\zhuyu\\Desktop\\XKL\\版图设计\\GDS\\examples\\catalog.gsproj",
+          "kind": "project",
+          "source_metadata": {
+            "bundled_example": true
+          }
+        }
+      ],
+      "mask": "masks/sample-000016.png",
+      "gds": "gds/sample-000016.gds",
+      "render": {
+        "coordinate_bounds_nm": [
+          0.0,
+          0.0,
+          160.0,
+          100.0
+        ],
+        "coordinate_units_per_pixel": 0.7174887892376681,
+        "padding_px": 16
+      },
+      "nm_per_pixel": 0.7174887892376681,
+      "units": "nm",
+      "leakage_group": "group-000001",
+      "split": "unassigned"
+    },
+    {
+      "id": 17,
+      "name": "Z 型 Jog",
+      "layer": 1,
+      "datatype": 0,
+      "calibrated": 1,
+      "width": 160.0,
+      "height": 112.0,
+      "area": 3120.0,
+      "components": 1,
+      "holes": 0,
+      "strict": "bc90957643d44c81ee23b5ed5573bdc3e807a4b50ff408991a73fa04cc106295",
+      "congruent": "bc90957643d44c81ee23b5ed5573bdc3e807a4b50ff408991a73fa04cc106295",
+      "same_shape": "b9a45cfe0b8edc6b17fbd766845dbf24c877f5c91cbee1aead291eecc3c91360",
+      "tags": "",
+      "review": "draft",
+      "origins": [
+        {
+          "metadata": {
+            "shape_id": "01fda2604e0c",
+            "shape_metadata": {
+              "calibrated": true,
+              "source": "illustrative parametric catalog; not foundry rules"
+            },
+            "method": "editor_object"
+          },
+          "path": "内置可调结构",
+          "kind": "catalog",
+          "source_metadata": {
+            "node": "illustrative, not a process design kit"
+          }
+        },
+        {
+          "metadata": {
+            "shape_id": "2af5bfceb530",
+            "shape_metadata": {
+              "catalog_key": "z_jog"
+            },
+            "method": "editor_object"
+          },
+          "path": "C:\\Users\\zhuyu\\Desktop\\XKL\\版图设计\\GDS\\examples\\catalog.gsproj",
+          "kind": "project",
+          "source_metadata": {
+            "bundled_example": true
+          }
+        }
+      ],
+      "mask": "masks/sample-000017.png",
+      "gds": "gds/sample-000017.gds",
+      "render": {
+        "coordinate_bounds_nm": [
+          0.0,
+          -6.0,
+          160.0,
+          106.0
+        ],
+        "coordinate_units_per_pixel": 0.7174887892376681,
+        "padding_px": 16
+      },
+      "nm_per_pixel": 0.7174887892376681,
+      "units": "nm",
+      "leakage_group": "group-000001",
+      "split": "unassigned"
+    },
+    {
+      "id": 18,
+      "name": "蛇形线",
+      "layer": 1,
+      "datatype": 0,
+      "calibrated": 1,
+      "width": 172.0,
+      "height": 152.0,
+      "area": 13200.0,
+      "components": 1,
+      "holes": 0,
+      "strict": "f3259b756d172d7729cbe8617e3d01eb03c89c39264045a4b578de7ee62f9496",
+      "congruent": "d98d67ed3ab15eb0ac0aa52d49385c53a5d63686706f9f3b1f24cc3b0f7381b3",
+      "same_shape": "3634bcb67ba5bad88d4386121c31d68a848a78e844377886e9075022a71a5248",
+      "tags": "",
+      "review": "draft",
+      "origins": [
+        {
+          "metadata": {
+            "shape_id": "942135467690",
+            "shape_metadata": {
+              "calibrated": true,
+              "source": "illustrative parametric catalog; not foundry rules"
+            },
+            "method": "editor_object"
+          },
+          "path": "内置可调结构",
+          "kind": "catalog",
+          "source_metadata": {
+            "node": "illustrative, not a process design kit"
+          }
+        },
+        {
+          "metadata": {
+            "shape_id": "7a4170332f1a",
+            "shape_metadata": {
+              "catalog_key": "serpentine"
+            },
+            "method": "editor_object"
+          },
+          "path": "C:\\Users\\zhuyu\\Desktop\\XKL\\版图设计\\GDS\\examples\\catalog.gsproj",
+          "kind": "project",
+          "source_metadata": {
+            "bundled_example": true
+          }
+        },
+        {
+          "metadata": {
+            "shape_id": "1c664b4ec215",
+            "shape_metadata": {},
+            "method": "editor_object"
+          },
+          "path": "C:\\Users\\zhuyu\\Desktop\\XKL\\版图设计\\GDS\\examples\\starter.gsproj",
+          "kind": "project",
+          "source_metadata": {
+            "bundled_example": true
+          }
+        }
+      ],
+      "mask": "masks/sample-000018.png",
+      "gds": "gds/sample-000018.gds",
+      "render": {
+        "coordinate_bounds_nm": [
+          -6.0,
+          -6.0,
+          166.0,
+          146.0
+        ],
+        "coordinate_units_per_pixel": 0.7713004484304933,
+        "padding_px": 16
+      },
+      "nm_per_pixel": 0.7713004484304933,
+      "units": "nm",
+      "leakage_group": "group-000001",
+      "split": "unassigned"
+    },
+    {
+      "id": 19,
+      "name": "阶梯线",
+      "layer": 1,
+      "datatype": 0,
+      "calibrated": 1,
+      "width": 102.0,
+      "height": 102.0,
+      "area": 2304.0,
+      "components": 1,
+      "holes": 0,
+      "strict": "ec01a23767a4234b7e3113f3554af19c55044c24d48dade6b79e7542170ceb61",
+      "congruent": "ec01a23767a4234b7e3113f3554af19c55044c24d48dade6b79e7542170ceb61",
+      "same_shape": "196ff4c9364dc92e9c87d1549e9adacc0d031d80f7399ee5cfad8f253a1befbe",
+      "tags": "",
+      "review": "draft",
+      "origins": [
+        {
+          "metadata": {
+            "shape_id": "2b9fc90e7c3a",
+            "shape_metadata": {
+              "calibrated": true,
+              "source": "illustrative parametric catalog; not foundry rules"
+            },
+            "method": "editor_object"
+          },
+          "path": "内置可调结构",
+          "kind": "catalog",
+          "source_metadata": {
+            "node": "illustrative, not a process design kit"
+          }
+        },
+        {
+          "metadata": {
+            "shape_id": "c467f9a60e28",
+            "shape_metadata": {
+              "catalog_key": "staircase"
+            },
+            "method": "editor_object"
+          },
+          "path": "C:\\Users\\zhuyu\\Desktop\\XKL\\版图设计\\GDS\\examples\\catalog.gsproj",
+          "kind": "project",
+          "source_metadata": {
+            "bundled_example": true
+          }
+        }
+      ],
+      "mask": "masks/sample-000019.png",
+      "gds": "gds/sample-000019.gds",
+      "render": {
+        "coordinate_bounds_nm": [
+          0.0,
+          -6.0,
+          102.0,
+          96.0
+        ],
+        "coordinate_units_per_pixel": 0.4573991031390135,
+        "padding_px": 16
+      },
+      "nm_per_pixel": 0.4573991031390135,
+      "units": "nm",
+      "leakage_group": "group-000001",
+      "split": "unassigned"
+    },
+    {
+      "id": 20,
+      "name": "45° 斜线",
+      "layer": 1,
+      "datatype": 0,
+      "calibrated": 1,
+      "width": 121.60000000000001,
+      "height": 121.60000000000001,
+      "area": 1912.2350000000006,
+      "components": 1,
+      "holes": 0,
+      "strict": "0c2c89206370ca96bcc1ffac060e769498741615564378569331fe1b40e43ee9",
+      "congruent": "0c2c89206370ca96bcc1ffac060e769498741615564378569331fe1b40e43ee9",
+      "same_shape": "444f63cc5df9b90db23038acbb04919b329a54b23e662afc9db156df24fc875a",
+      "tags": "",
+      "review": "draft",
+      "origins": [
+        {
+          "metadata": {
+            "shape_id": "fc34dbe54019",
+            "shape_metadata": {
+              "calibrated": true,
+              "source": "illustrative parametric catalog; not foundry rules"
+            },
+            "method": "editor_object"
+          },
+          "path": "内置可调结构",
+          "kind": "catalog",
+          "source_metadata": {
+            "node": "illustrative, not a process design kit"
+          }
+        },
+        {
+          "metadata": {
+            "shape_id": "eb7de196c81a",
+            "shape_metadata": {
+              "catalog_key": "diagonal"
+            },
+            "method": "editor_object"
+          },
+          "path": "C:\\Users\\zhuyu\\Desktop\\XKL\\版图设计\\GDS\\examples\\catalog.gsproj",
+          "kind": "project",
+          "source_metadata": {
+            "bundled_example": true
+          }
+        }
+      ],
+      "mask": "masks/sample-000020.png",
+      "gds": "gds/sample-000020.gds",
+      "render": {
+        "coordinate_bounds_nm": [
+          -4.2,
+          -4.2,
+          117.4,
+          117.4
+        ],
+        "coordinate_units_per_pixel": 0.5452914798206279,
+        "padding_px": 16
+      },
+      "nm_per_pixel": 0.5452914798206279,
+      "units": "nm",
+      "leakage_group": "group-000001",
+      "split": "unassigned"
+    },
+    {
+      "id": 21,
+      "name": "45° 倒角",
+      "layer": 1,
+      "datatype": 0,
+      "calibrated": 1,
+      "width": 136.0,
+      "height": 106.0,
+      "area": 2410.0,
+      "components": 1,
+      "holes": 0,
+      "strict": "449d612edaa71191d8e6497f6b08ab9d3af319203a8fb415d581447a9e99a29e",
+      "congruent": "f33d2be8fa840b5f616860df9d3e402d5c131ccc4e7735eb4d24a9e4058de141",
+      "same_shape": "dd833b36792c251e5b5f6b2d1c5984da8509422c2b03465013d048f1087f8d03",
+      "tags": "",
+      "review": "draft",
+      "origins": [
+        {
+          "metadata": {
+            "shape_id": "427568a33abd",
+            "shape_metadata": {
+              "calibrated": true,
+              "source": "illustrative parametric catalog; not foundry rules"
+            },
+            "method": "editor_object"
+          },
+          "path": "内置可调结构",
+          "kind": "catalog",
+          "source_metadata": {
+            "node": "illustrative, not a process design kit"
+          }
+        },
+        {
+          "metadata": {
+            "shape_id": "8d43378c1f33",
+            "shape_metadata": {
+              "catalog_key": "chamfer"
+            },
+            "method": "editor_object"
+          },
+          "path": "C:\\Users\\zhuyu\\Desktop\\XKL\\版图设计\\GDS\\examples\\catalog.gsproj",
+          "kind": "project",
+          "source_metadata": {
+            "bundled_example": true
+          }
+        }
+      ],
+      "mask": "masks/sample-000021.png",
+      "gds": "gds/sample-000021.gds",
+      "render": {
+        "coordinate_bounds_nm": [
+          0.0,
+          -6.0,
+          136.0,
+          100.0
+        ],
+        "coordinate_units_per_pixel": 0.6098654708520179,
+        "padding_px": 16
+      },
+      "nm_per_pixel": 0.6098654708520179,
+      "units": "nm",
+      "leakage_group": "group-000001",
+      "split": "unassigned"
+    },
+    {
+      "id": 22,
+      "name": "Y 型连接",
+      "layer": 1,
+      "datatype": 0,
+      "calibrated": 1,
+      "width": 168.4,
+      "height": 134.2,
+      "area": 3227.1099999999988,
+      "components": 1,
+      "holes": 0,
+      "strict": "556e8edad4a1151875bed3ad82be8c6eba0de29c31ad28759a41dd04f1bcda12",
+      "congruent": "decd0f135fbb1e7f5157a723bd7fd70d9df6eb4911cbb7a79e9b5167c6fb9ac4",
+      "same_shape": "8d9318a38fe6ba9bcea4471b3ecd96789604574f9bd7e74fd6b5d46c19179152",
+      "tags": "",
+      "review": "draft",
+      "origins": [
+        {
+          "metadata": {
+            "shape_id": "f51c2430d23c",
+            "shape_metadata": {
+              "calibrated": true,
+              "source": "illustrative parametric catalog; not foundry rules"
+            },
+            "method": "editor_object"
+          },
+          "path": "内置可调结构",
+          "kind": "catalog",
+          "source_metadata": {
+            "node": "illustrative, not a process design kit"
+          }
+        },
+        {
+          "metadata": {
+            "shape_id": "64fd3f4c4aa1",
+            "shape_metadata": {
+              "catalog_key": "y_junction"
+            },
+            "method": "editor_object"
+          },
+          "path": "C:\\Users\\zhuyu\\Desktop\\XKL\\版图设计\\GDS\\examples\\catalog.gsproj",
+          "kind": "project",
+          "source_metadata": {
+            "bundled_example": true
+          }
+        }
+      ],
+      "mask": "masks/sample-000022.png",
+      "gds": "gds/sample-000022.gds",
+      "render": {
+        "coordinate_bounds_nm": [
+          -84.2,
+          0.0,
+          84.2,
+          134.2
+        ],
+        "coordinate_units_per_pixel": 0.7551569506726458,
+        "padding_px": 16
+      },
+      "nm_per_pixel": 0.7551569506726458,
+      "units": "nm",
+      "leakage_group": "group-000001",
+      "split": "unassigned"
+    },
+    {
+      "id": 23,
+      "name": "方形 Contact",
+      "layer": 1,
+      "datatype": 0,
+      "calibrated": 1,
+      "width": 12.0,
+      "height": 12.0,
+      "area": 144.0,
+      "components": 1,
+      "holes": 0,
+      "strict": "fdb236020c9a2ca0087d396aa3abc405900f7291421c878af9d7b002d6661aa7",
+      "congruent": "fdb236020c9a2ca0087d396aa3abc405900f7291421c878af9d7b002d6661aa7",
+      "same_shape": "337372bef396203df85cd7d3cc8d1ebee7d84adc8c53c7cc95e62aa819309fa3",
+      "tags": "",
+      "review": "draft",
+      "origins": [
+        {
+          "metadata": {
+            "shape_id": "9d1f00f352f5",
+            "shape_metadata": {
+              "calibrated": true,
+              "source": "illustrative parametric catalog; not foundry rules"
+            },
+            "method": "editor_object"
+          },
+          "path": "内置可调结构",
+          "kind": "catalog",
+          "source_metadata": {
+            "node": "illustrative, not a process design kit"
+          }
+        },
+        {
+          "metadata": {
+            "shape_id": "e39e0999581e",
+            "shape_metadata": {
+              "catalog_key": "square_contact"
+            },
+            "method": "editor_object"
+          },
+          "path": "C:\\Users\\zhuyu\\Desktop\\XKL\\版图设计\\GDS\\examples\\catalog.gsproj",
+          "kind": "project",
+          "source_metadata": {
+            "bundled_example": true
+          }
+        }
+      ],
+      "mask": "masks/sample-000023.png",
+      "gds": "gds/sample-000023.gds",
+      "render": {
+        "coordinate_bounds_nm": [
+          0.0,
+          0.0,
+          12.0,
+          12.0
+        ],
+        "coordinate_units_per_pixel": 0.053811659192825115,
+        "padding_px": 16
+      },
+      "nm_per_pixel": 0.053811659192825115,
+      "units": "nm",
+      "leakage_group": "group-000001",
+      "split": "unassigned"
+    },
+    {
+      "id": 24,
+      "name": "Contact 阵列",
+      "layer": 1,
+      "datatype": 0,
+      "calibrated": 1,
+      "width": 152.0,
+      "height": 96.0,
+      "area": 3456.0,
+      "components": 24,
+      "holes": 0,
+      "strict": "eea8ac281f963aa401a877d628451b19ed9aede0ad363011b5c2dd7746803f19",
+      "congruent": "7778005570d0d550aba5021b81c2819e3b6ef6fee8cb9e079712843dc3b2e348",
+      "same_shape": "4ba2fbed6bd5cfde332a05d5f0ac76994bcc1c5c0903447804eefd1feba78b5d",
+      "tags": "",
+      "review": "draft",
+      "origins": [
+        {
+          "metadata": {
+            "shape_id": "16a100cbd7b2",
+            "shape_metadata": {
+              "calibrated": true,
+              "source": "illustrative parametric catalog; not foundry rules"
+            },
+            "method": "editor_object"
+          },
+          "path": "内置可调结构",
+          "kind": "catalog",
+          "source_metadata": {
+            "node": "illustrative, not a process design kit"
+          }
+        },
+        {
+          "metadata": {
+            "shape_id": "ee694bc5f262",
+            "shape_metadata": {
+              "calibrated": true,
+              "source": "illustrative parametric catalog; not foundry rules"
+            },
+            "method": "editor_object"
+          },
+          "path": "内置可调结构",
+          "kind": "catalog",
+          "source_metadata": {
+            "node": "illustrative, not a process design kit"
+          }
+        },
+        {
+          "metadata": {
+            "shape_id": "bb4dd56d756b",
+            "shape_metadata": {
+              "catalog_key": "contact_array"
+            },
+            "method": "editor_object"
+          },
+          "path": "C:\\Users\\zhuyu\\Desktop\\XKL\\版图设计\\GDS\\examples\\catalog.gsproj",
+          "kind": "project",
+          "source_metadata": {
+            "bundled_example": true
+          }
+        },
+        {
+          "metadata": {
+            "shape_id": "aadc24788201",
+            "shape_metadata": {
+              "catalog_key": "dummy_fill"
+            },
+            "method": "editor_object"
+          },
+          "path": "C:\\Users\\zhuyu\\Desktop\\XKL\\版图设计\\GDS\\examples\\catalog.gsproj",
+          "kind": "project",
+          "source_metadata": {
+            "bundled_example": true
+          }
+        },
+        {
+          "metadata": {
+            "shape_id": "26d9542bd964",
+            "shape_metadata": {},
+            "method": "editor_object"
+          },
+          "path": "C:\\Users\\zhuyu\\Desktop\\XKL\\版图设计\\GDS\\examples\\starter.gsproj",
+          "kind": "project",
+          "source_metadata": {
+            "bundled_example": true
+          }
+        }
+      ],
+      "mask": "masks/sample-000024.png",
+      "gds": "gds/sample-000024.gds",
+      "render": {
+        "coordinate_bounds_nm": [
+          0.0,
+          0.0,
+          152.0,
+          96.0
+        ],
+        "coordinate_units_per_pixel": 0.6816143497757847,
+        "padding_px": 16
+      },
+      "nm_per_pixel": 0.6816143497757847,
+      "units": "nm",
+      "leakage_group": "group-000001",
+      "split": "unassigned"
+    },
+    {
+      "id": 25,
+      "name": "交错孔阵列",
+      "layer": 1,
+      "datatype": 0,
+      "calibrated": 1,
+      "width": 166.0,
+      "height": 96.0,
+      "area": 3456.0,
+      "components": 24,
+      "holes": 0,
+      "strict": "35b1f212ac0f7cd580ce7e7bfe9e8756d8188eaa9ffb35372a98cc2abef55547",
+      "congruent": "05ad26ebe8251aa1b50a3f6edab88fb1e07a6fb1dab4864e67769ee2189f9729",
+      "same_shape": "b27d7fa3bbf41abe7427f7b9fcc4343a2c2343f8457eedd64c13ca61505e9520",
+      "tags": "",
+      "review": "draft",
+      "origins": [
+        {
+          "metadata": {
+            "shape_id": "8057c1c518b9",
+            "shape_metadata": {
+              "calibrated": true,
+              "source": "illustrative parametric catalog; not foundry rules"
+            },
+            "method": "editor_object"
+          },
+          "path": "内置可调结构",
+          "kind": "catalog",
+          "source_metadata": {
+            "node": "illustrative, not a process design kit"
+          }
+        },
+        {
+          "metadata": {
+            "shape_id": "6963a65a297d",
+            "shape_metadata": {
+              "catalog_key": "staggered_contact"
+            },
+            "method": "editor_object"
+          },
+          "path": "C:\\Users\\zhuyu\\Desktop\\XKL\\版图设计\\GDS\\examples\\catalog.gsproj",
+          "kind": "project",
+          "source_metadata": {
+            "bundled_example": true
+          }
+        }
+      ],
+      "mask": "masks/sample-000025.png",
+      "gds": "gds/sample-000025.gds",
+      "render": {
+        "coordinate_bounds_nm": [
+          0.0,
+          0.0,
+          166.0,
+          96.0
+        ],
+        "coordinate_units_per_pixel": 0.7443946188340806,
+        "padding_px": 16
+      },
+      "nm_per_pixel": 0.7443946188340806,
+      "units": "nm",
+      "leakage_group": "group-000001",
+      "split": "unassigned"
+    },
+    {
+      "id": 26,
+      "name": "Via / 包围层",
+      "layer": 1,
+      "datatype": 0,
+      "calibrated": 1,
+      "width": 44.0,
+      "height": 44.0,
+      "area": 1936.0,
+      "components": 1,
+      "holes": 0,
+      "strict": "7580d8f72e85ecc7751e3764c323d740effe35c7f3bfba36a0e4562f08db4e15",
+      "congruent": "7580d8f72e85ecc7751e3764c323d740effe35c7f3bfba36a0e4562f08db4e15",
+      "same_shape": "337372bef396203df85cd7d3cc8d1ebee7d84adc8c53c7cc95e62aa819309fa3",
+      "tags": "",
+      "review": "draft",
+      "origins": [
+        {
+          "metadata": {
+            "shape_id": "e90133446d71",
+            "shape_metadata": {
+              "calibrated": true,
+              "source": "illustrative parametric catalog; not foundry rules"
+            },
+            "method": "editor_object"
+          },
+          "path": "内置可调结构",
+          "kind": "catalog",
+          "source_metadata": {
+            "node": "illustrative, not a process design kit"
+          }
+        },
+        {
+          "metadata": {
+            "shape_id": "d721e9a7aa6c",
+            "shape_metadata": {
+              "catalog_key": "via_enclosure"
+            },
+            "method": "editor_object"
+          },
+          "path": "C:\\Users\\zhuyu\\Desktop\\XKL\\版图设计\\GDS\\examples\\catalog.gsproj",
+          "kind": "project",
+          "source_metadata": {
+            "bundled_example": true
+          }
+        }
+      ],
+      "mask": "masks/sample-000026.png",
+      "gds": "gds/sample-000026.gds",
+      "render": {
+        "coordinate_bounds_nm": [
+          0.0,
+          0.0,
+          44.0,
+          44.0
+        ],
+        "coordinate_units_per_pixel": 0.19730941704035873,
+        "padding_px": 16
+      },
+      "nm_per_pixel": 0.19730941704035873,
+      "units": "nm",
+      "leakage_group": "group-000001",
+      "split": "unassigned"
+    },
+    {
+      "id": 28,
+      "name": "矩形环",
+      "layer": 1,
+      "datatype": 0,
+      "calibrated": 1,
+      "width": 160.0,
+      "height": 100.0,
+      "area": 5664.0,
+      "components": 1,
+      "holes": 1,
+      "strict": "715ec4423d1d6b7700d8a1b5c09e134e778dbf5b698b928629558713468fe4d4",
+      "congruent": "715ec4423d1d6b7700d8a1b5c09e134e778dbf5b698b928629558713468fe4d4",
+      "same_shape": "cf3ead2f9c7dc1002d32057b05f8b61fafa734551a3f09167eee1ca396fc99bb",
+      "tags": "",
+      "review": "draft",
+      "origins": [
+        {
+          "metadata": {
+            "shape_id": "4e654549f364",
+            "shape_metadata": {
+              "calibrated": true,
+              "source": "illustrative parametric catalog; not foundry rules"
+            },
+            "method": "editor_object"
+          },
+          "path": "内置可调结构",
+          "kind": "catalog",
+          "source_metadata": {
+            "node": "illustrative, not a process design kit"
+          }
+        },
+        {
+          "metadata": {
+            "shape_id": "43ceff54d3a1",
+            "shape_metadata": {
+              "catalog_key": "ring"
+            },
+            "method": "editor_object"
+          },
+          "path": "C:\\Users\\zhuyu\\Desktop\\XKL\\版图设计\\GDS\\examples\\catalog.gsproj",
+          "kind": "project",
+          "source_metadata": {
+            "bundled_example": true
+          }
+        },
+        {
+          "metadata": {
+            "shape_id": "3108df66112a",
+            "shape_metadata": {},
+            "method": "editor_object"
+          },
+          "path": "C:\\Users\\zhuyu\\Desktop\\XKL\\版图设计\\GDS\\examples\\starter.gsproj",
+          "kind": "project",
+          "source_metadata": {
+            "bundled_example": true
+          }
+        }
+      ],
+      "mask": "masks/sample-000028.png",
+      "gds": "gds/sample-000028.gds",
+      "render": {
+        "coordinate_bounds_nm": [
+          0.0,
+          0.0,
+          160.0,
+          100.0
+        ],
+        "coordinate_units_per_pixel": 0.7174887892376681,
+        "padding_px": 16
+      },
+      "nm_per_pixel": 0.7174887892376681,
+      "units": "nm",
+      "leakage_group": "group-000001",
+      "split": "unassigned"
+    },
+    {
+      "id": 29,
+      "name": "梳齿",
+      "layer": 1,
+      "datatype": 0,
+      "calibrated": 1,
+      "width": 160.0,
+      "height": 168.0,
+      "area": 12672.0,
+      "components": 1,
+      "holes": 0,
+      "strict": "d3ff752ed5534c59758e0d320e3df33afe2bf16c855575a85b03923bb822fb60",
+      "congruent": "837e4b5505f77f2d3708c8f11891e42ac9bae140583795aa9d3c3f0701313f06",
+      "same_shape": "8a6571f0cc10df18b90a43de634c2b06d60dd12272b5f4679d5dbc19f4a38576",
+      "tags": "",
+      "review": "draft",
+      "origins": [
+        {
+          "metadata": {
+            "shape_id": "ee7b47ee7143",
+            "shape_metadata": {
+              "calibrated": true,
+              "source": "illustrative parametric catalog; not foundry rules"
+            },
+            "method": "editor_object"
+          },
+          "path": "内置可调结构",
+          "kind": "catalog",
+          "source_metadata": {
+            "node": "illustrative, not a process design kit"
+          }
+        },
+        {
+          "metadata": {
+            "shape_id": "05eecbb9e588",
+            "shape_metadata": {
+              "catalog_key": "comb"
+            },
+            "method": "editor_object"
+          },
+          "path": "C:\\Users\\zhuyu\\Desktop\\XKL\\版图设计\\GDS\\examples\\catalog.gsproj",
+          "kind": "project",
+          "source_metadata": {
+            "bundled_example": true
+          }
+        }
+      ],
+      "mask": "masks/sample-000029.png",
+      "gds": "gds/sample-000029.gds",
+      "render": {
+        "coordinate_bounds_nm": [
+          0.0,
+          0.0,
+          160.0,
+          168.0
+        ],
+        "coordinate_units_per_pixel": 0.7533632286995516,
+        "padding_px": 16
+      },
+      "nm_per_pixel": 0.7533632286995516,
+      "units": "nm",
+      "leakage_group": "group-000001",
+      "split": "unassigned"
+    },
+    {
+      "id": 30,
+      "name": "交指梳齿",
+      "layer": 1,
+      "datatype": 0,
+      "calibrated": 1,
+      "width": 332.0,
+      "height": 336.0,
+      "area": 29088.0,
+      "components": 2,
+      "holes": 0,
+      "strict": "510777b0820ba29e28506961126ea7b6b7b876cf1113d03203e538ea43867ed5",
+      "congruent": "e4211644d9f10a5e27955932342b31a8da09e7e2252988cc455638df86fb362f",
+      "same_shape": "868551214f8bcb6fd72593405e93bffc62dc42e46df6ee2a0c6d102890510414",
+      "tags": "",
+      "review": "draft",
+      "origins": [
+        {
+          "metadata": {
+            "shape_id": "8a530ca8155c",
+            "shape_metadata": {
+              "calibrated": true,
+              "source": "illustrative parametric catalog; not foundry rules"
+            },
+            "method": "editor_object"
+          },
+          "path": "内置可调结构",
+          "kind": "catalog",
+          "source_metadata": {
+            "node": "illustrative, not a process design kit"
+          }
+        },
+        {
+          "metadata": {
+            "shape_id": "ba3a54ab1819",
+            "shape_metadata": {
+              "catalog_key": "interdigital"
+            },
+            "method": "editor_object"
+          },
+          "path": "C:\\Users\\zhuyu\\Desktop\\XKL\\版图设计\\GDS\\examples\\catalog.gsproj",
+          "kind": "project",
+          "source_metadata": {
+            "bundled_example": true
+          }
+        }
+      ],
+      "mask": "masks/sample-000030.png",
+      "gds": "gds/sample-000030.gds",
+      "render": {
+        "coordinate_bounds_nm": [
+          0.0,
+          0.0,
+          332.0,
+          336.0
+        ],
+        "coordinate_units_per_pixel": 1.5067264573991033,
+        "padding_px": 16
+      },
+      "nm_per_pixel": 1.5067264573991033,
+      "units": "nm",
+      "leakage_group": "group-000001",
+      "split": "unassigned"
+    },
+    {
+      "id": 31,
+      "name": "凹槽 Notch",
+      "layer": 1,
+      "datatype": 0,
+      "calibrated": 1,
+      "width": 160.0,
+      "height": 100.0,
+      "area": 15808.0,
+      "components": 1,
+      "holes": 0,
+      "strict": "02fa741612aa1919b35940f878cc957e7cf58fb63f12b27f7c89c74078edf2c1",
+      "congruent": "929536f929ca7ac4a42cb3c460d8fe54ac9f31e275d2a9c2f431d8b019c3e663",
+      "same_shape": "0dd6f1c3cef237f7d2bab56a1881d8a627ede201046ea7022e13a79f3b2d6afd",
+      "tags": "",
+      "review": "draft",
+      "origins": [
+        {
+          "metadata": {
+            "shape_id": "d92110d28d5a",
+            "shape_metadata": {
+              "calibrated": true,
+              "source": "illustrative parametric catalog; not foundry rules"
+            },
+            "method": "editor_object"
+          },
+          "path": "内置可调结构",
+          "kind": "catalog",
+          "source_metadata": {
+            "node": "illustrative, not a process design kit"
+          }
+        },
+        {
+          "metadata": {
+            "shape_id": "ee7630686997",
+            "shape_metadata": {
+              "catalog_key": "notch"
+            },
+            "method": "editor_object"
+          },
+          "path": "C:\\Users\\zhuyu\\Desktop\\XKL\\版图设计\\GDS\\examples\\catalog.gsproj",
+          "kind": "project",
+          "source_metadata": {
+            "bundled_example": true
+          }
+        }
+      ],
+      "mask": "masks/sample-000031.png",
+      "gds": "gds/sample-000031.gds",
+      "render": {
+        "coordinate_bounds_nm": [
+          0.0,
+          0.0,
+          160.0,
+          100.0
+        ],
+        "coordinate_units_per_pixel": 0.7174887892376681,
+        "padding_px": 16
+      },
+      "nm_per_pixel": 0.7174887892376681,
+      "units": "nm",
+      "leakage_group": "group-000001",
+      "split": "unassigned"
+    },
+    {
+      "id": 32,
+      "name": "颈缩 Neck",
+      "layer": 1,
+      "datatype": 0,
+      "calibrated": 1,
+      "width": 336.0,
+      "height": 100.0,
+      "area": 32192.0,
+      "components": 1,
+      "holes": 0,
+      "strict": "56ac98965753edef804ffce0bbbf7f4b411f0473e3f22b4d85acbe194a6be00b",
+      "congruent": "56ac98965753edef804ffce0bbbf7f4b411f0473e3f22b4d85acbe194a6be00b",
+      "same_shape": "75d2d1bd766349c6fe3bcc60a34b47d64ec06a3fa5e365d5d9a6dfbdce693ce6",
+      "tags": "",
+      "review": "draft",
+      "origins": [
+        {
+          "metadata": {
+            "shape_id": "44fad9660158",
+            "shape_metadata": {
+              "calibrated": true,
+              "source": "illustrative parametric catalog; not foundry rules"
+            },
+            "method": "editor_object"
+          },
+          "path": "内置可调结构",
+          "kind": "catalog",
+          "source_metadata": {
+            "node": "illustrative, not a process design kit"
+          }
+        },
+        {
+          "metadata": {
+            "shape_id": "13888920f6fc",
+            "shape_metadata": {
+              "catalog_key": "neck"
+            },
+            "method": "editor_object"
+          },
+          "path": "C:\\Users\\zhuyu\\Desktop\\XKL\\版图设计\\GDS\\examples\\catalog.gsproj",
+          "kind": "project",
+          "source_metadata": {
+            "bundled_example": true
+          }
+        }
+      ],
+      "mask": "masks/sample-000032.png",
+      "gds": "gds/sample-000032.gds",
+      "render": {
+        "coordinate_bounds_nm": [
+          0.0,
+          0.0,
+          336.0,
+          100.0
+        ],
+        "coordinate_units_per_pixel": 1.5067264573991033,
+        "padding_px": 16
+      },
+      "nm_per_pixel": 1.5067264573991033,
+      "units": "nm",
+      "leakage_group": "group-000001",
+      "split": "unassigned"
+    },
+    {
+      "id": 33,
+      "name": "微桥样本",
+      "layer": 1,
+      "datatype": 0,
+      "calibrated": 1,
+      "width": 160.0,
+      "height": 152.0,
+      "area": 11712.0,
+      "components": 5,
+      "holes": 0,
+      "strict": "9fe74afea5c38bf095ffe60017886e9a9634b232318fdbe8c2411df0a22c8b15",
+      "congruent": "c1a991f1bba5771a69c4302bc4b675af0aa2fe90905e008f5fa30f7b3783087c",
+      "same_shape": "6b3fce2803c389e85d4bacf6b2725a2bf4e985f1d641f5c71a827f231bdb13bd",
+      "tags": "",
+      "review": "draft",
+      "origins": [
+        {
+          "metadata": {
+            "shape_id": "526c1be8505b",
+            "shape_metadata": {
+              "calibrated": true,
+              "source": "illustrative parametric catalog; not foundry rules"
+            },
+            "method": "editor_object"
+          },
+          "path": "内置可调结构",
+          "kind": "catalog",
+          "source_metadata": {
+            "node": "illustrative, not a process design kit"
+          }
+        },
+        {
+          "metadata": {
+            "shape_id": "da20aff7a516",
+            "shape_metadata": {
+              "catalog_key": "bridge_defect"
+            },
+            "method": "editor_object"
+          },
+          "path": "C:\\Users\\zhuyu\\Desktop\\XKL\\版图设计\\GDS\\examples\\catalog.gsproj",
+          "kind": "project",
+          "source_metadata": {
+            "bundled_example": true
+          }
+        }
+      ],
+      "mask": "masks/sample-000033.png",
+      "gds": "gds/sample-000033.gds",
+      "render": {
+        "coordinate_bounds_nm": [
+          0.0,
+          0.0,
+          160.0,
+          152.0
+        ],
+        "coordinate_units_per_pixel": 0.7174887892376681,
+        "padding_px": 16
+      },
+      "nm_per_pixel": 0.7174887892376681,
+      "units": "nm",
+      "leakage_group": "group-000001",
+      "split": "unassigned"
+    },
+    {
+      "id": 34,
+      "name": "断线样本",
+      "layer": 1,
+      "datatype": 0,
+      "calibrated": 1,
+      "width": 160.0,
+      "height": 152.0,
+      "area": 11328.0,
+      "components": 7,
+      "holes": 0,
+      "strict": "256c1704940bc1953bdfa47dba5ae94996d271d12dfa65692730c344f2577bd1",
+      "congruent": "65d89ba71856bb5f19ce34f184c312f45dde9085dda959baca55088df2436a22",
+      "same_shape": "cc5ed3ca0104223a2bc4daa6d6e470c9045a3f8b6432c93a82416c25cd79063e",
+      "tags": "",
+      "review": "draft",
+      "origins": [
+        {
+          "metadata": {
+            "shape_id": "5fdde2fd7a0b",
+            "shape_metadata": {
+              "calibrated": true,
+              "source": "illustrative parametric catalog; not foundry rules"
+            },
+            "method": "editor_object"
+          },
+          "path": "内置可调结构",
+          "kind": "catalog",
+          "source_metadata": {
+            "node": "illustrative, not a process design kit"
+          }
+        },
+        {
+          "metadata": {
+            "shape_id": "8e06dcfc3d5f",
+            "shape_metadata": {
+              "catalog_key": "break_defect"
+            },
+            "method": "editor_object"
+          },
+          "path": "C:\\Users\\zhuyu\\Desktop\\XKL\\版图设计\\GDS\\examples\\catalog.gsproj",
+          "kind": "project",
+          "source_metadata": {
+            "bundled_example": true
+          }
+        }
+      ],
+      "mask": "masks/sample-000034.png",
+      "gds": "gds/sample-000034.gds",
+      "render": {
+        "coordinate_bounds_nm": [
+          0.0,
+          0.0,
+          160.0,
+          152.0
+        ],
+        "coordinate_units_per_pixel": 0.7174887892376681,
+        "padding_px": 16
+      },
+      "nm_per_pixel": 0.7174887892376681,
+      "units": "nm",
+      "leakage_group": "group-000001",
+      "split": "unassigned"
+    },
+    {
+      "id": 35,
+      "name": "缺孔样本",
+      "layer": 1,
+      "datatype": 0,
+      "calibrated": 1,
+      "width": 152.0,
+      "height": 96.0,
+      "area": 3312.0,
+      "components": 23,
+      "holes": 0,
+      "strict": "ca5772e5679f6f8288d2d60550566372b93a023300ca25ee07c4ceecd64f29d1",
+      "congruent": "e00a4f5ed9f6f91df393033c129cbeb714dde34ec602c8c0ea8cb67c17b059c3",
+      "same_shape": "cd06c608137729207146ded8bc9b8242e55c00d4876f38f6cbfc57a3640c07e7",
+      "tags": "",
+      "review": "draft",
+      "origins": [
+        {
+          "metadata": {
+            "shape_id": "07daa4c871b4",
+            "shape_metadata": {
+              "calibrated": true,
+              "source": "illustrative parametric catalog; not foundry rules"
+            },
+            "method": "editor_object"
+          },
+          "path": "内置可调结构",
+          "kind": "catalog",
+          "source_metadata": {
+            "node": "illustrative, not a process design kit"
+          }
+        },
+        {
+          "metadata": {
+            "shape_id": "f249c975328a",
+            "shape_metadata": {
+              "catalog_key": "missing_contact"
+            },
+            "method": "editor_object"
+          },
+          "path": "C:\\Users\\zhuyu\\Desktop\\XKL\\版图设计\\GDS\\examples\\catalog.gsproj",
+          "kind": "project",
+          "source_metadata": {
+            "bundled_example": true
+          }
+        }
+      ],
+      "mask": "masks/sample-000035.png",
+      "gds": "gds/sample-000035.gds",
+      "render": {
+        "coordinate_bounds_nm": [
+          0.0,
+          0.0,
+          152.0,
+          96.0
+        ],
+        "coordinate_units_per_pixel": 0.6816143497757847,
+        "padding_px": 16
+      },
+      "nm_per_pixel": 0.6816143497757847,
+      "units": "nm",
+      "leakage_group": "group-000001",
+      "split": "unassigned"
+    },
+    {
+      "id": 36,
+      "name": "并孔样本",
+      "layer": 1,
+      "datatype": 0,
+      "calibrated": 1,
+      "width": 152.0,
+      "height": 96.0,
+      "area": 3520.0,
+      "components": 23,
+      "holes": 0,
+      "strict": "691fb7d93ad75c1ac99221debf3856cadafa5716902a541df54b8653a6701415",
+      "congruent": "fc614417d5d82d30d3cf814f9f449f257f0083b8fb31d4b6d64b98f8d318dd05",
+      "same_shape": "559616e2c0bb0cb325272de1e7f5b5de24d7f79230cd43b07a23c83c7667d748",
+      "tags": "",
+      "review": "draft",
+      "origins": [
+        {
+          "metadata": {
+            "shape_id": "dd695ab898e8",
+            "shape_metadata": {
+              "calibrated": true,
+              "source": "illustrative parametric catalog; not foundry rules"
+            },
+            "method": "editor_object"
+          },
+          "path": "内置可调结构",
+          "kind": "catalog",
+          "source_metadata": {
+            "node": "illustrative, not a process design kit"
+          }
+        },
+        {
+          "metadata": {
+            "shape_id": "2b88a41fd49a",
+            "shape_metadata": {
+              "catalog_key": "merged_contact"
+            },
+            "method": "editor_object"
+          },
+          "path": "C:\\Users\\zhuyu\\Desktop\\XKL\\版图设计\\GDS\\examples\\catalog.gsproj",
+          "kind": "project",
+          "source_metadata": {
+            "bundled_example": true
+          }
+        }
+      ],
+      "mask": "masks/sample-000036.png",
+      "gds": "gds/sample-000036.gds",
+      "render": {
+        "coordinate_bounds_nm": [
+          0.0,
+          0.0,
+          152.0,
+          96.0
+        ],
+        "coordinate_units_per_pixel": 0.6816143497757847,
+        "padding_px": 16
+      },
+      "nm_per_pixel": 0.6816143497757847,
+      "units": "nm",
+      "leakage_group": "group-000001",
+      "split": "unassigned"
+    },
+    {
+      "id": 37,
+      "name": "游标 Vernier",
+      "layer": 1,
+      "datatype": 0,
+      "calibrated": 1,
+      "width": 157.0,
+      "height": 116.0,
+      "area": 7200.0,
+      "components": 12,
+      "holes": 0,
+      "strict": "00115efa59f80b2de4dddd8aa435c4bc53f6a9378f3751e9666ed9ccca25bcfb",
+      "congruent": "31e8ab4981d3618ffa449e4ce2defe541656114b4930a601b9f239a52bf439e5",
+      "same_shape": "35c75c227f57e66470f4495148fd35cfcbe6bd92362486dea623da7e75fa8759",
+      "tags": "",
+      "review": "draft",
+      "origins": [
+        {
+          "metadata": {
+            "shape_id": "125cc330a01f",
+            "shape_metadata": {
+              "calibrated": true,
+              "source": "illustrative parametric catalog; not foundry rules"
+            },
+            "method": "editor_object"
+          },
+          "path": "内置可调结构",
+          "kind": "catalog",
+          "source_metadata": {
+            "node": "illustrative, not a process design kit"
+          }
+        },
+        {
+          "metadata": {
+            "shape_id": "7dbdbc9af7c6",
+            "shape_metadata": {
+              "catalog_key": "vernier"
+            },
+            "method": "editor_object"
+          },
+          "path": "C:\\Users\\zhuyu\\Desktop\\XKL\\版图设计\\GDS\\examples\\catalog.gsproj",
+          "kind": "project",
+          "source_metadata": {
+            "bundled_example": true
+          }
+        }
+      ],
+      "mask": "masks/sample-000037.png",
+      "gds": "gds/sample-000037.gds",
+      "render": {
+        "coordinate_bounds_nm": [
+          0.0,
+          0.0,
+          157.0,
+          116.0
+        ],
+        "coordinate_units_per_pixel": 0.7040358744394619,
+        "padding_px": 16
+      },
+      "nm_per_pixel": 0.7040358744394619,
+      "units": "nm",
+      "leakage_group": "group-000001",
+      "split": "unassigned"
+    },
+    {
+      "id": 39,
+      "name": "Gate / Active 示意",
+      "layer": 1,
+      "datatype": 0,
+      "calibrated": 1,
+      "width": 152.0,
+      "height": 100.0,
+      "area": 7200.0,
+      "components": 6,
+      "holes": 0,
+      "strict": "1eba3d66214330b25e7008bdcd163531e326d6b7ab6626160dfd7135f6b97305",
+      "congruent": "f4a0e9dd8a38d6a8aea982d5a56dced0f19d483bed905d1d6d7957acb3351503",
+      "same_shape": "f817966782d6b3596d45f1f89279e3174b955605b24e71c914bed449dd49d66b",
+      "tags": "",
+      "review": "draft",
+      "origins": [
+        {
+          "metadata": {
+            "shape_id": "a47d8aca5986",
+            "shape_metadata": {
+              "calibrated": true,
+              "source": "illustrative parametric catalog; not foundry rules"
+            },
+            "method": "editor_object"
+          },
+          "path": "内置可调结构",
+          "kind": "catalog",
+          "source_metadata": {
+            "node": "illustrative, not a process design kit"
+          }
+        },
+        {
+          "metadata": {
+            "shape_id": "809086d44e50",
+            "shape_metadata": {
+              "catalog_key": "gate_active"
+            },
+            "method": "editor_object"
+          },
+          "path": "C:\\Users\\zhuyu\\Desktop\\XKL\\版图设计\\GDS\\examples\\catalog.gsproj",
+          "kind": "project",
+          "source_metadata": {
+            "bundled_example": true
+          }
+        }
+      ],
+      "mask": "masks/sample-000039.png",
+      "gds": "gds/sample-000039.gds",
+      "render": {
+        "coordinate_bounds_nm": [
+          0.0,
+          0.0,
+          152.0,
+          100.0
+        ],
+        "coordinate_units_per_pixel": 0.6816143497757847,
+        "padding_px": 16
+      },
+      "nm_per_pixel": 0.6816143497757847,
+      "units": "nm",
+      "leakage_group": "group-000001",
+      "split": "unassigned"
+    },
+    {
+      "id": 41,
+      "name": "Line / Space",
+      "layer": 1,
+      "datatype": 0,
+      "calibrated": 1,
+      "width": 160.0,
+      "height": 120.0,
+      "area": 10240.0,
+      "components": 8,
+      "holes": 0,
+      "strict": "afdef507d7f95bfdc61a47c993249c06010a3c0a6ca707c09a0a98c33f6efc39",
+      "congruent": "afdef507d7f95bfdc61a47c993249c06010a3c0a6ca707c09a0a98c33f6efc39",
+      "same_shape": "905946a6168c6b481486d28e083eaf1800e193eb40ed595c78ffe964d70195c2",
+      "tags": "",
+      "review": "draft",
+      "origins": [
+        {
+          "metadata": {
+            "shape_id": "26d895e4ae68",
+            "shape_metadata": {
+              "sweep": {
+                "width_nm": 8,
+                "gap_nm": 8
+              }
+            },
+            "method": "editor_object"
+          },
+          "path": "C:\\Users\\zhuyu\\Desktop\\XKL\\版图设计\\GDS\\examples\\line_space_sweep.gsproj",
+          "kind": "project",
+          "source_metadata": {
+            "bundled_example": true
+          }
+        }
+      ],
+      "mask": "masks/sample-000041.png",
+      "gds": "gds/sample-000041.gds",
+      "render": {
+        "coordinate_bounds_nm": [
+          0.0,
+          0.0,
+          160.0,
+          120.0
+        ],
+        "coordinate_units_per_pixel": 0.7174887892376681,
+        "padding_px": 16
+      },
+      "nm_per_pixel": 0.7174887892376681,
+      "units": "nm",
+      "leakage_group": "group-000041",
+      "split": "unassigned"
+    },
+    {
+      "id": 42,
+      "name": "Line / Space",
+      "layer": 1,
+      "datatype": 0,
+      "calibrated": 1,
+      "width": 160.0,
+      "height": 136.0,
+      "area": 12800.0,
+      "components": 8,
+      "holes": 0,
+      "strict": "447a5ee0057f48eb3e4e40f00622436ed1dc3e51d562606574250bd1b656b81c",
+      "congruent": "447a5ee0057f48eb3e4e40f00622436ed1dc3e51d562606574250bd1b656b81c",
+      "same_shape": "8fe5b80e00a51dd4e44d28efd002d6eeaea3a1208d4e16dceaa5cae52b3775e2",
+      "tags": "",
+      "review": "draft",
+      "origins": [
+        {
+          "metadata": {
+            "shape_id": "7ab13c6ce127",
+            "shape_metadata": {
+              "sweep": {
+                "width_nm": 10,
+                "gap_nm": 8
+              }
+            },
+            "method": "editor_object"
+          },
+          "path": "C:\\Users\\zhuyu\\Desktop\\XKL\\版图设计\\GDS\\examples\\line_space_sweep.gsproj",
+          "kind": "project",
+          "source_metadata": {
+            "bundled_example": true
+          }
+        }
+      ],
+      "mask": "masks/sample-000042.png",
+      "gds": "gds/sample-000042.gds",
+      "render": {
+        "coordinate_bounds_nm": [
+          280.0,
+          0.0,
+          440.0,
+          136.0
+        ],
+        "coordinate_units_per_pixel": 0.7174887892376681,
+        "padding_px": 16
+      },
+      "nm_per_pixel": 0.7174887892376681,
+      "units": "nm",
+      "leakage_group": "group-000041",
+      "split": "unassigned"
+    },
+    {
+      "id": 43,
+      "name": "Line / Space",
+      "layer": 1,
+      "datatype": 0,
+      "calibrated": 1,
+      "width": 160.0,
+      "height": 152.0,
+      "area": 15360.0,
+      "components": 8,
+      "holes": 0,
+      "strict": "25461f282209305608bcf8e037b74dc077efa2fecab7b0eae968758a6f6b559a",
+      "congruent": "25461f282209305608bcf8e037b74dc077efa2fecab7b0eae968758a6f6b559a",
+      "same_shape": "9c38aec14334c52cbd7fef65ae719ff8e7241f070a101103cb2c2017bcbab196",
+      "tags": "",
+      "review": "draft",
+      "origins": [
+        {
+          "metadata": {
+            "shape_id": "569ddd4000b6",
+            "shape_metadata": {
+              "sweep": {
+                "width_nm": 12,
+                "gap_nm": 8
+              }
+            },
+            "method": "editor_object"
+          },
+          "path": "C:\\Users\\zhuyu\\Desktop\\XKL\\版图设计\\GDS\\examples\\line_space_sweep.gsproj",
+          "kind": "project",
+          "source_metadata": {
+            "bundled_example": true
+          }
+        }
+      ],
+      "mask": "masks/sample-000043.png",
+      "gds": "gds/sample-000043.gds",
+      "render": {
+        "coordinate_bounds_nm": [
+          560.0,
+          0.0,
+          720.0,
+          152.0
+        ],
+        "coordinate_units_per_pixel": 0.7174887892376681,
+        "padding_px": 16
+      },
+      "nm_per_pixel": 0.7174887892376681,
+      "units": "nm",
+      "leakage_group": "group-000041",
+      "split": "unassigned"
+    },
+    {
+      "id": 44,
+      "name": "Line / Space",
+      "layer": 1,
+      "datatype": 0,
+      "calibrated": 1,
+      "width": 160.0,
+      "height": 184.0,
+      "area": 20480.0,
+      "components": 8,
+      "holes": 0,
+      "strict": "96cff9236d095aa62ed03eabe5d442e9bddf647d167852c249705c2e7297b6b9",
+      "congruent": "96cff9236d095aa62ed03eabe5d442e9bddf647d167852c249705c2e7297b6b9",
+      "same_shape": "57bb823f6516baa202070740d82f1399942cd0d7dc36b18026ecc52d66227c90",
+      "tags": "",
+      "review": "draft",
+      "origins": [
+        {
+          "metadata": {
+            "shape_id": "af578dc9ade8",
+            "shape_metadata": {
+              "sweep": {
+                "width_nm": 16,
+                "gap_nm": 8
+              }
+            },
+            "method": "editor_object"
+          },
+          "path": "C:\\Users\\zhuyu\\Desktop\\XKL\\版图设计\\GDS\\examples\\line_space_sweep.gsproj",
+          "kind": "project",
+          "source_metadata": {
+            "bundled_example": true
+          }
+        }
+      ],
+      "mask": "masks/sample-000044.png",
+      "gds": "gds/sample-000044.gds",
+      "render": {
+        "coordinate_bounds_nm": [
+          840.0,
+          0.0,
+          1000.0,
+          184.0
+        ],
+        "coordinate_units_per_pixel": 0.8251121076233184,
+        "padding_px": 16
+      },
+      "nm_per_pixel": 0.8251121076233184,
+      "units": "nm",
+      "leakage_group": "group-000041",
+      "split": "unassigned"
+    },
+    {
+      "id": 45,
+      "name": "Line / Space",
+      "layer": 1,
+      "datatype": 0,
+      "calibrated": 1,
+      "width": 160.0,
+      "height": 216.0,
+      "area": 25600.0,
+      "components": 8,
+      "holes": 0,
+      "strict": "2e7bc55680fa6b6822eeb94d9a2ad198c22d2d8aa30a0453f1718b824e6c4b70",
+      "congruent": "2e7bc55680fa6b6822eeb94d9a2ad198c22d2d8aa30a0453f1718b824e6c4b70",
+      "same_shape": "2609cc01f64bdb4467ea30e4e9d57ec3c4f4f7bf70791b9749ef6aa11d1aa009",
+      "tags": "",
+      "review": "draft",
+      "origins": [
+        {
+          "metadata": {
+            "shape_id": "1980636c2254",
+            "shape_metadata": {
+              "sweep": {
+                "width_nm": 20,
+                "gap_nm": 8
+              }
+            },
+            "method": "editor_object"
+          },
+          "path": "C:\\Users\\zhuyu\\Desktop\\XKL\\版图设计\\GDS\\examples\\line_space_sweep.gsproj",
+          "kind": "project",
+          "source_metadata": {
+            "bundled_example": true
+          }
+        }
+      ],
+      "mask": "masks/sample-000045.png",
+      "gds": "gds/sample-000045.gds",
+      "render": {
+        "coordinate_bounds_nm": [
+          1120.0,
+          0.0,
+          1280.0,
+          216.0
+        ],
+        "coordinate_units_per_pixel": 0.968609865470852,
+        "padding_px": 16
+      },
+      "nm_per_pixel": 0.968609865470852,
+      "units": "nm",
+      "leakage_group": "group-000041",
+      "split": "unassigned"
+    },
+    {
+      "id": 46,
+      "name": "Line / Space",
+      "layer": 1,
+      "datatype": 0,
+      "calibrated": 1,
+      "width": 160.0,
+      "height": 148.0,
+      "area": 10240.0,
+      "components": 8,
+      "holes": 0,
+      "strict": "dcce8eda11708dcb8176289397ba65dd573c185fc4eed9453d15830145e83bc4",
+      "congruent": "dcce8eda11708dcb8176289397ba65dd573c185fc4eed9453d15830145e83bc4",
+      "same_shape": "08825396df64cdd787347c52c6fda25691bc6ec5edbc768cb567f0b49c841ee7",
+      "tags": "",
+      "review": "draft",
+      "origins": [
+        {
+          "metadata": {
+            "shape_id": "7cf2a0f9452a",
+            "shape_metadata": {
+              "sweep": {
+                "width_nm": 8,
+                "gap_nm": 12
+              }
+            },
+            "method": "editor_object"
+          },
+          "path": "C:\\Users\\zhuyu\\Desktop\\XKL\\版图设计\\GDS\\examples\\line_space_sweep.gsproj",
+          "kind": "project",
+          "source_metadata": {
+            "bundled_example": true
+          }
+        }
+      ],
+      "mask": "masks/sample-000046.png",
+      "gds": "gds/sample-000046.gds",
+      "render": {
+        "coordinate_bounds_nm": [
+          0.0,
+          300.0,
+          160.0,
+          448.0
+        ],
+        "coordinate_units_per_pixel": 0.7174887892376681,
+        "padding_px": 16
+      },
+      "nm_per_pixel": 0.7174887892376681,
+      "units": "nm",
+      "leakage_group": "group-000041",
+      "split": "unassigned"
+    },
+    {
+      "id": 47,
+      "name": "Line / Space",
+      "layer": 1,
+      "datatype": 0,
+      "calibrated": 1,
+      "width": 160.0,
+      "height": 164.0,
+      "area": 12800.0,
+      "components": 8,
+      "holes": 0,
+      "strict": "074156d24e7fe49bcfc0c2d58ab766093b3187c5429b9d447449d13dc517e948",
+      "congruent": "074156d24e7fe49bcfc0c2d58ab766093b3187c5429b9d447449d13dc517e948",
+      "same_shape": "1b5d4dbc2462d9b617a58224024ff17e467d016e538bcf791ab366cf4b2a3fd7",
+      "tags": "",
+      "review": "draft",
+      "origins": [
+        {
+          "metadata": {
+            "shape_id": "94f69eed8201",
+            "shape_metadata": {
+              "sweep": {
+                "width_nm": 10,
+                "gap_nm": 12
+              }
+            },
+            "method": "editor_object"
+          },
+          "path": "C:\\Users\\zhuyu\\Desktop\\XKL\\版图设计\\GDS\\examples\\line_space_sweep.gsproj",
+          "kind": "project",
+          "source_metadata": {
+            "bundled_example": true
+          }
+        }
+      ],
+      "mask": "masks/sample-000047.png",
+      "gds": "gds/sample-000047.gds",
+      "render": {
+        "coordinate_bounds_nm": [
+          280.0,
+          300.0,
+          440.0,
+          464.0
+        ],
+        "coordinate_units_per_pixel": 0.7354260089686098,
+        "padding_px": 16
+      },
+      "nm_per_pixel": 0.7354260089686098,
+      "units": "nm",
+      "leakage_group": "group-000041",
+      "split": "unassigned"
+    },
+    {
+      "id": 48,
+      "name": "Line / Space",
+      "layer": 1,
+      "datatype": 0,
+      "calibrated": 1,
+      "width": 160.0,
+      "height": 180.0,
+      "area": 15360.0,
+      "components": 8,
+      "holes": 0,
+      "strict": "eef94186b5391223e52eedf249ea2a9207793715d3bc25175cafcbc520c225d7",
+      "congruent": "eef94186b5391223e52eedf249ea2a9207793715d3bc25175cafcbc520c225d7",
+      "same_shape": "a37a3b584b43081e31b7a10aceeceba0695c6460bebf6362918024dd32848f5f",
+      "tags": "",
+      "review": "draft",
+      "origins": [
+        {
+          "metadata": {
+            "shape_id": "cff38952e7e9",
+            "shape_metadata": {
+              "sweep": {
+                "width_nm": 12,
+                "gap_nm": 12
+              }
+            },
+            "method": "editor_object"
+          },
+          "path": "C:\\Users\\zhuyu\\Desktop\\XKL\\版图设计\\GDS\\examples\\line_space_sweep.gsproj",
+          "kind": "project",
+          "source_metadata": {
+            "bundled_example": true
+          }
+        }
+      ],
+      "mask": "masks/sample-000048.png",
+      "gds": "gds/sample-000048.gds",
+      "render": {
+        "coordinate_bounds_nm": [
+          560.0,
+          300.0,
+          720.0,
+          480.0
+        ],
+        "coordinate_units_per_pixel": 0.8071748878923767,
+        "padding_px": 16
+      },
+      "nm_per_pixel": 0.8071748878923767,
+      "units": "nm",
+      "leakage_group": "group-000041",
+      "split": "unassigned"
+    },
+    {
+      "id": 49,
+      "name": "Line / Space",
+      "layer": 1,
+      "datatype": 0,
+      "calibrated": 1,
+      "width": 160.0,
+      "height": 212.0,
+      "area": 20480.0,
+      "components": 8,
+      "holes": 0,
+      "strict": "92157d5b05cb9f4456a7f673c07f2b44415fb8fab02b497049e2c6ad788ec63d",
+      "congruent": "92157d5b05cb9f4456a7f673c07f2b44415fb8fab02b497049e2c6ad788ec63d",
+      "same_shape": "02d34a96aa9197fce3c8e9242e23ad33fc968c37b134101be36526f73b194c71",
+      "tags": "",
+      "review": "draft",
+      "origins": [
+        {
+          "metadata": {
+            "shape_id": "42962baef7a5",
+            "shape_metadata": {
+              "sweep": {
+                "width_nm": 16,
+                "gap_nm": 12
+              }
+            },
+            "method": "editor_object"
+          },
+          "path": "C:\\Users\\zhuyu\\Desktop\\XKL\\版图设计\\GDS\\examples\\line_space_sweep.gsproj",
+          "kind": "project",
+          "source_metadata": {
+            "bundled_example": true
+          }
+        }
+      ],
+      "mask": "masks/sample-000049.png",
+      "gds": "gds/sample-000049.gds",
+      "render": {
+        "coordinate_bounds_nm": [
+          840.0,
+          300.0,
+          1000.0,
+          512.0
+        ],
+        "coordinate_units_per_pixel": 0.9506726457399104,
+        "padding_px": 16
+      },
+      "nm_per_pixel": 0.9506726457399104,
+      "units": "nm",
+      "leakage_group": "group-000041",
+      "split": "unassigned"
+    },
+    {
+      "id": 50,
+      "name": "Line / Space",
+      "layer": 1,
+      "datatype": 0,
+      "calibrated": 1,
+      "width": 160.0,
+      "height": 244.0,
+      "area": 25600.0,
+      "components": 8,
+      "holes": 0,
+      "strict": "5df3213f3ada2c7b41cd12001575c888eef262800263770e0ab17d5c4caabcd5",
+      "congruent": "5df3213f3ada2c7b41cd12001575c888eef262800263770e0ab17d5c4caabcd5",
+      "same_shape": "d456e065085843e98f909ec7e7f5e17e16c485f7aa9544bfe93c765c1ee2d8e0",
+      "tags": "",
+      "review": "draft",
+      "origins": [
+        {
+          "metadata": {
+            "shape_id": "9afa1b3eb57c",
+            "shape_metadata": {
+              "sweep": {
+                "width_nm": 20,
+                "gap_nm": 12
+              }
+            },
+            "method": "editor_object"
+          },
+          "path": "C:\\Users\\zhuyu\\Desktop\\XKL\\版图设计\\GDS\\examples\\line_space_sweep.gsproj",
+          "kind": "project",
+          "source_metadata": {
+            "bundled_example": true
+          }
+        }
+      ],
+      "mask": "masks/sample-000050.png",
+      "gds": "gds/sample-000050.gds",
+      "render": {
+        "coordinate_bounds_nm": [
+          1120.0,
+          300.0,
+          1280.0,
+          544.0
+        ],
+        "coordinate_units_per_pixel": 1.094170403587444,
+        "padding_px": 16
+      },
+      "nm_per_pixel": 1.094170403587444,
+      "units": "nm",
+      "leakage_group": "group-000041",
+      "split": "unassigned"
+    },
+    {
+      "id": 51,
+      "name": "Line / Space",
+      "layer": 1,
+      "datatype": 0,
+      "calibrated": 1,
+      "width": 160.0,
+      "height": 176.0,
+      "area": 10240.0,
+      "components": 8,
+      "holes": 0,
+      "strict": "e3d0a1f7efd67ee784943012741ac7cea8b975e09b809f5b5935f28d3a8b5a9d",
+      "congruent": "e3d0a1f7efd67ee784943012741ac7cea8b975e09b809f5b5935f28d3a8b5a9d",
+      "same_shape": "bf9ec65fa7c0d9297e1a1fb8001f6b7999810340a61acdeefd141dcd8994f07d",
+      "tags": "",
+      "review": "draft",
+      "origins": [
+        {
+          "metadata": {
+            "shape_id": "a5c391711307",
+            "shape_metadata": {
+              "sweep": {
+                "width_nm": 8,
+                "gap_nm": 16
+              }
+            },
+            "method": "editor_object"
+          },
+          "path": "C:\\Users\\zhuyu\\Desktop\\XKL\\版图设计\\GDS\\examples\\line_space_sweep.gsproj",
+          "kind": "project",
+          "source_metadata": {
+            "bundled_example": true
+          }
+        }
+      ],
+      "mask": "masks/sample-000051.png",
+      "gds": "gds/sample-000051.gds",
+      "render": {
+        "coordinate_bounds_nm": [
+          0.0,
+          600.0,
+          160.0,
+          776.0
+        ],
+        "coordinate_units_per_pixel": 0.7892376681614349,
+        "padding_px": 16
+      },
+      "nm_per_pixel": 0.7892376681614349,
+      "units": "nm",
+      "leakage_group": "group-000041",
+      "split": "unassigned"
+    },
+    {
+      "id": 52,
+      "name": "Line / Space",
+      "layer": 1,
+      "datatype": 0,
+      "calibrated": 1,
+      "width": 160.0,
+      "height": 192.0,
+      "area": 12800.0,
+      "components": 8,
+      "holes": 0,
+      "strict": "4b307ff7d44f9c4727a169377f903a5b4d9ca934280ff035c356c35eb887a054",
+      "congruent": "4b307ff7d44f9c4727a169377f903a5b4d9ca934280ff035c356c35eb887a054",
+      "same_shape": "42d9619df531497cd95340afe78757499405287e6c8cc20618a367f8b0d01aa0",
+      "tags": "",
+      "review": "draft",
+      "origins": [
+        {
+          "metadata": {
+            "shape_id": "c5199a4da826",
+            "shape_metadata": {
+              "sweep": {
+                "width_nm": 10,
+                "gap_nm": 16
+              }
+            },
+            "method": "editor_object"
+          },
+          "path": "C:\\Users\\zhuyu\\Desktop\\XKL\\版图设计\\GDS\\examples\\line_space_sweep.gsproj",
+          "kind": "project",
+          "source_metadata": {
+            "bundled_example": true
+          }
+        }
+      ],
+      "mask": "masks/sample-000052.png",
+      "gds": "gds/sample-000052.gds",
+      "render": {
+        "coordinate_bounds_nm": [
+          280.0,
+          600.0,
+          440.0,
+          792.0
+        ],
+        "coordinate_units_per_pixel": 0.8609865470852018,
+        "padding_px": 16
+      },
+      "nm_per_pixel": 0.8609865470852018,
+      "units": "nm",
+      "leakage_group": "group-000041",
+      "split": "unassigned"
+    },
+    {
+      "id": 53,
+      "name": "Line / Space",
+      "layer": 1,
+      "datatype": 0,
+      "calibrated": 1,
+      "width": 160.0,
+      "height": 208.0,
+      "area": 15360.0,
+      "components": 8,
+      "holes": 0,
+      "strict": "93267ee3d01889badf98a99eaa3ac221b27f1bf8160a8c8e353fd4469100e50c",
+      "congruent": "93267ee3d01889badf98a99eaa3ac221b27f1bf8160a8c8e353fd4469100e50c",
+      "same_shape": "b6c1dc16e70c6b69609aa9efc25507cbcedbfc6cc8bde69ac6cd348c89426799",
+      "tags": "",
+      "review": "draft",
+      "origins": [
+        {
+          "metadata": {
+            "shape_id": "3aa4c3024a16",
+            "shape_metadata": {
+              "sweep": {
+                "width_nm": 12,
+                "gap_nm": 16
+              }
+            },
+            "method": "editor_object"
+          },
+          "path": "C:\\Users\\zhuyu\\Desktop\\XKL\\版图设计\\GDS\\examples\\line_space_sweep.gsproj",
+          "kind": "project",
+          "source_metadata": {
+            "bundled_example": true
+          }
+        }
+      ],
+      "mask": "masks/sample-000053.png",
+      "gds": "gds/sample-000053.gds",
+      "render": {
+        "coordinate_bounds_nm": [
+          560.0,
+          600.0,
+          720.0,
+          808.0
+        ],
+        "coordinate_units_per_pixel": 0.9327354260089686,
+        "padding_px": 16
+      },
+      "nm_per_pixel": 0.9327354260089686,
+      "units": "nm",
+      "leakage_group": "group-000041",
+      "split": "unassigned"
+    },
+    {
+      "id": 54,
+      "name": "Line / Space",
+      "layer": 1,
+      "datatype": 0,
+      "calibrated": 1,
+      "width": 160.0,
+      "height": 240.0,
+      "area": 20480.0,
+      "components": 8,
+      "holes": 0,
+      "strict": "f7e0295c18b8431fe3011a431da7006f30b145ca884e6a7b5934ae5bccd0ac85",
+      "congruent": "f7e0295c18b8431fe3011a431da7006f30b145ca884e6a7b5934ae5bccd0ac85",
+      "same_shape": "ffa2766391af4de4f8f5fb1b9388fb126ef303aa683e9e31e812e7b913879bc2",
+      "tags": "",
+      "review": "draft",
+      "origins": [
+        {
+          "metadata": {
+            "shape_id": "a540eee6ae24",
+            "shape_metadata": {
+              "sweep": {
+                "width_nm": 16,
+                "gap_nm": 16
+              }
+            },
+            "method": "editor_object"
+          },
+          "path": "C:\\Users\\zhuyu\\Desktop\\XKL\\版图设计\\GDS\\examples\\line_space_sweep.gsproj",
+          "kind": "project",
+          "source_metadata": {
+            "bundled_example": true
+          }
+        }
+      ],
+      "mask": "masks/sample-000054.png",
+      "gds": "gds/sample-000054.gds",
+      "render": {
+        "coordinate_bounds_nm": [
+          840.0,
+          600.0,
+          1000.0,
+          840.0
+        ],
+        "coordinate_units_per_pixel": 1.0762331838565022,
+        "padding_px": 16
+      },
+      "nm_per_pixel": 1.0762331838565022,
+      "units": "nm",
+      "leakage_group": "group-000041",
+      "split": "unassigned"
+    },
+    {
+      "id": 55,
+      "name": "Line / Space",
+      "layer": 1,
+      "datatype": 0,
+      "calibrated": 1,
+      "width": 160.0,
+      "height": 272.0,
+      "area": 25600.0,
+      "components": 8,
+      "holes": 0,
+      "strict": "c922377363d074eb69eda7111cbbe750a7b68a60b12cbcb6631ce92b415ab155",
+      "congruent": "c922377363d074eb69eda7111cbbe750a7b68a60b12cbcb6631ce92b415ab155",
+      "same_shape": "f3e58f5c8ad8db9d7fa854c4dbc731349d4851a567ab989fe1ff2ee147e849cd",
+      "tags": "",
+      "review": "draft",
+      "origins": [
+        {
+          "metadata": {
+            "shape_id": "3994e640d1f0",
+            "shape_metadata": {
+              "sweep": {
+                "width_nm": 20,
+                "gap_nm": 16
+              }
+            },
+            "method": "editor_object"
+          },
+          "path": "C:\\Users\\zhuyu\\Desktop\\XKL\\版图设计\\GDS\\examples\\line_space_sweep.gsproj",
+          "kind": "project",
+          "source_metadata": {
+            "bundled_example": true
+          }
+        }
+      ],
+      "mask": "masks/sample-000055.png",
+      "gds": "gds/sample-000055.gds",
+      "render": {
+        "coordinate_bounds_nm": [
+          1120.0,
+          600.0,
+          1280.0,
+          872.0
+        ],
+        "coordinate_units_per_pixel": 1.2197309417040358,
+        "padding_px": 16
+      },
+      "nm_per_pixel": 1.2197309417040358,
+      "units": "nm",
+      "leakage_group": "group-000041",
+      "split": "unassigned"
+    },
+    {
+      "id": 56,
+      "name": "Line / Space",
+      "layer": 1,
+      "datatype": 0,
+      "calibrated": 1,
+      "width": 160.0,
+      "height": 232.0,
+      "area": 10240.0,
+      "components": 8,
+      "holes": 0,
+      "strict": "6acbf420b03a18cb26e663a1b7186b8c44e2fad3f38e318ae0973ef100d9c00b",
+      "congruent": "6acbf420b03a18cb26e663a1b7186b8c44e2fad3f38e318ae0973ef100d9c00b",
+      "same_shape": "6d35e3a05267a67a34f4bd2ee14a21c837812f166ddaf3e56123709abd16d65e",
+      "tags": "",
+      "review": "draft",
+      "origins": [
+        {
+          "metadata": {
+            "shape_id": "99f13940a42f",
+            "shape_metadata": {
+              "sweep": {
+                "width_nm": 8,
+                "gap_nm": 24
+              }
+            },
+            "method": "editor_object"
+          },
+          "path": "C:\\Users\\zhuyu\\Desktop\\XKL\\版图设计\\GDS\\examples\\line_space_sweep.gsproj",
+          "kind": "project",
+          "source_metadata": {
+            "bundled_example": true
+          }
+        }
+      ],
+      "mask": "masks/sample-000056.png",
+      "gds": "gds/sample-000056.gds",
+      "render": {
+        "coordinate_bounds_nm": [
+          0.0,
+          900.0,
+          160.0,
+          1132.0
+        ],
+        "coordinate_units_per_pixel": 1.040358744394619,
+        "padding_px": 16
+      },
+      "nm_per_pixel": 1.040358744394619,
+      "units": "nm",
+      "leakage_group": "group-000041",
+      "split": "unassigned"
+    },
+    {
+      "id": 57,
+      "name": "Line / Space",
+      "layer": 1,
+      "datatype": 0,
+      "calibrated": 1,
+      "width": 160.0,
+      "height": 248.0,
+      "area": 12800.0,
+      "components": 8,
+      "holes": 0,
+      "strict": "d7670a920eeb1a7a2fdd3caa122e4f7a2c694343063a951647114743da4b94a9",
+      "congruent": "d7670a920eeb1a7a2fdd3caa122e4f7a2c694343063a951647114743da4b94a9",
+      "same_shape": "66c0b87e3be807500643bb713a8014d4eb53428d800da75eb463303e86b4dfab",
+      "tags": "",
+      "review": "draft",
+      "origins": [
+        {
+          "metadata": {
+            "shape_id": "0ac5d786a14c",
+            "shape_metadata": {
+              "sweep": {
+                "width_nm": 10,
+                "gap_nm": 24
+              }
+            },
+            "method": "editor_object"
+          },
+          "path": "C:\\Users\\zhuyu\\Desktop\\XKL\\版图设计\\GDS\\examples\\line_space_sweep.gsproj",
+          "kind": "project",
+          "source_metadata": {
+            "bundled_example": true
+          }
+        }
+      ],
+      "mask": "masks/sample-000057.png",
+      "gds": "gds/sample-000057.gds",
+      "render": {
+        "coordinate_bounds_nm": [
+          280.0,
+          900.0,
+          440.0,
+          1148.0
+        ],
+        "coordinate_units_per_pixel": 1.1121076233183858,
+        "padding_px": 16
+      },
+      "nm_per_pixel": 1.1121076233183858,
+      "units": "nm",
+      "leakage_group": "group-000041",
+      "split": "unassigned"
+    },
+    {
+      "id": 58,
+      "name": "Line / Space",
+      "layer": 1,
+      "datatype": 0,
+      "calibrated": 1,
+      "width": 160.0,
+      "height": 264.0,
+      "area": 15360.0,
+      "components": 8,
+      "holes": 0,
+      "strict": "a3810ff5f07ca6ab2daab4efb6fc10597d324656aed360acb581cd371f45c629",
+      "congruent": "a3810ff5f07ca6ab2daab4efb6fc10597d324656aed360acb581cd371f45c629",
+      "same_shape": "3fb6830f460a622f05eeecf31f42c04295d5984a95123a265d3d7e345308da74",
+      "tags": "",
+      "review": "draft",
+      "origins": [
+        {
+          "metadata": {
+            "shape_id": "ff3d4e420897",
+            "shape_metadata": {
+              "sweep": {
+                "width_nm": 12,
+                "gap_nm": 24
+              }
+            },
+            "method": "editor_object"
+          },
+          "path": "C:\\Users\\zhuyu\\Desktop\\XKL\\版图设计\\GDS\\examples\\line_space_sweep.gsproj",
+          "kind": "project",
+          "source_metadata": {
+            "bundled_example": true
+          }
+        }
+      ],
+      "mask": "masks/sample-000058.png",
+      "gds": "gds/sample-000058.gds",
+      "render": {
+        "coordinate_bounds_nm": [
+          560.0,
+          900.0,
+          720.0,
+          1164.0
+        ],
+        "coordinate_units_per_pixel": 1.1838565022421523,
+        "padding_px": 16
+      },
+      "nm_per_pixel": 1.1838565022421523,
+      "units": "nm",
+      "leakage_group": "group-000041",
+      "split": "unassigned"
+    },
+    {
+      "id": 59,
+      "name": "Line / Space",
+      "layer": 1,
+      "datatype": 0,
+      "calibrated": 1,
+      "width": 160.0,
+      "height": 296.0,
+      "area": 20480.0,
+      "components": 8,
+      "holes": 0,
+      "strict": "e8e19b0bc4b14ed9045ab9ace61792bac2feb133b3d1ac83171a84818f48f4ea",
+      "congruent": "e8e19b0bc4b14ed9045ab9ace61792bac2feb133b3d1ac83171a84818f48f4ea",
+      "same_shape": "f207f55a6ecb8cb0c03e581c1802131f29e56a5715b84f1ebdc222836147d4c8",
+      "tags": "",
+      "review": "draft",
+      "origins": [
+        {
+          "metadata": {
+            "shape_id": "b7c451a8df89",
+            "shape_metadata": {
+              "sweep": {
+                "width_nm": 16,
+                "gap_nm": 24
+              }
+            },
+            "method": "editor_object"
+          },
+          "path": "C:\\Users\\zhuyu\\Desktop\\XKL\\版图设计\\GDS\\examples\\line_space_sweep.gsproj",
+          "kind": "project",
+          "source_metadata": {
+            "bundled_example": true
+          }
+        }
+      ],
+      "mask": "masks/sample-000059.png",
+      "gds": "gds/sample-000059.gds",
+      "render": {
+        "coordinate_bounds_nm": [
+          840.0,
+          900.0,
+          1000.0,
+          1196.0
+        ],
+        "coordinate_units_per_pixel": 1.3273542600896862,
+        "padding_px": 16
+      },
+      "nm_per_pixel": 1.3273542600896862,
+      "units": "nm",
+      "leakage_group": "group-000041",
+      "split": "unassigned"
+    },
+    {
+      "id": 60,
+      "name": "Line / Space",
+      "layer": 1,
+      "datatype": 0,
+      "calibrated": 1,
+      "width": 160.0,
+      "height": 328.0,
+      "area": 25600.0,
+      "components": 8,
+      "holes": 0,
+      "strict": "94517721e057631aeb96abc600cf9d2796f8483f498a8148fedd27adbb4b14d7",
+      "congruent": "94517721e057631aeb96abc600cf9d2796f8483f498a8148fedd27adbb4b14d7",
+      "same_shape": "36e6701864e1d2eabf8eaa2cc36f7c954a833f67ffa3ff6db75e4f5650c0e3ec",
+      "tags": "",
+      "review": "draft",
+      "origins": [
+        {
+          "metadata": {
+            "shape_id": "658da523008c",
+            "shape_metadata": {
+              "sweep": {
+                "width_nm": 20,
+                "gap_nm": 24
+              }
+            },
+            "method": "editor_object"
+          },
+          "path": "C:\\Users\\zhuyu\\Desktop\\XKL\\版图设计\\GDS\\examples\\line_space_sweep.gsproj",
+          "kind": "project",
+          "source_metadata": {
+            "bundled_example": true
+          }
+        }
+      ],
+      "mask": "masks/sample-000060.png",
+      "gds": "gds/sample-000060.gds",
+      "render": {
+        "coordinate_bounds_nm": [
+          1120.0,
+          900.0,
+          1280.0,
+          1228.0
+        ],
+        "coordinate_units_per_pixel": 1.4708520179372195,
+        "padding_px": 16
+      },
+      "nm_per_pixel": 1.4708520179372195,
+      "units": "nm",
+      "leakage_group": "group-000041",
+      "split": "unassigned"
+    },
+    {
+      "id": 61,
+      "name": "论文 Fig4a 完整结构（未标定）",
+      "layer": 1,
+      "datatype": 0,
+      "calibrated": 0,
+      "width": 208.0,
+      "height": 191.0,
+      "area": 7949.5,
+      "components": 31,
+      "holes": 0,
+      "strict": "0fb186c0d28dfef28e56d81e0b33a25cd4b79d35628f50a20e8f20d46634a94f",
+      "congruent": "7dcf138fe03d4bb7b50408fc72dad22cc87d0718883fb5b8d365b74391019548",
+      "same_shape": "66b0c657dd3dd81c00577467cf356d13fefcaf7547d08c9ae567b460d3f53d48",
+      "tags": "",
+      "review": "draft",
+      "origins": [
+        {
+          "metadata": {
+            "shape_id": "6131ec2dd960",
+            "shape_metadata": {
+              "calibrated": false,
+              "nm_per_pixel": null,
+              "citation": "Duan, Liang, Chen, Li, Zhou, Zhao. Diffraction-limit-breaking digital projection lithography via multi-exposure strategies for high-density nanopatterning. Research Square preprint, 2025.",
+              "doi": "10.21203/rs.3.rs-7290332/v1",
+              "url": "https://doi.org/10.21203/rs.3.rs-7290332/v1",
+              "license": "CC BY 4.0",
+              "license_url": "https://creativecommons.org/licenses/by/4.0/",
+              "page": 14,
+              "figure": "4(a)",
+              "roi_px": [
+                264,
+                1131,
+                210,
+                210
+              ],
+              "render_dpi": 180,
+              "modifications": "cropped target-mask panel, OpenCV light-foreground threshold=90, simplified contours; uncalibrated; not manually reviewed",
+              "node": "not a 3 nm process layout",
+              "trace_report": {
+                "count": 31,
+                "rejected": 0,
+                "roi_origin_px": [
+                  0,
+                  0
+                ],
+                "image_height_px": 210
+              }
+            },
+            "method": "editor_object"
+          },
+          "path": "C:\\Users\\zhuyu\\Desktop\\XKL\\版图设计\\GDS\\examples\\paper-fig4a.gsproj",
+          "kind": "project",
+          "source_metadata": {
+            "bundled_example": true
+          }
+        }
+      ],
+      "mask": "masks/sample-000061.png",
+      "gds": "gds/sample-000061.gds",
+      "render": {
+        "coordinate_bounds_nm": [
+          0.0,
+          1.0,
+          208.0,
+          192.0
+        ],
+        "coordinate_units_per_pixel": 0.9327354260089686,
+        "padding_px": 16
+      },
+      "nm_per_pixel": null,
+      "units": "nominal_unscaled",
+      "leakage_group": "group-000061",
+      "split": "unassigned"
+    },
+    {
+      "id": 62,
+      "name": "论文 Fig4a 轮廓 1",
+      "layer": 1,
+      "datatype": 0,
+      "calibrated": 0,
+      "width": 208.0,
+      "height": 2.0,
+      "area": 416.0,
+      "components": 1,
+      "holes": 0,
+      "strict": "b15ccc734148c8c8e7f5b6db0395cedb217318bd9c250190f60ec6d91344773e",
+      "congruent": "b15ccc734148c8c8e7f5b6db0395cedb217318bd9c250190f60ec6d91344773e",
+      "same_shape": "518be95656fed38fc3b0937fef235c976a59e5b285ef4485d7f79a23b1b926fb",
+      "tags": "",
+      "review": "draft",
+      "origins": [
+        {
+          "metadata": {
+            "shape_id": "cd05136cbf22",
+            "shape_metadata": {
+              "calibrated": false,
+              "nm_per_pixel": null,
+              "citation": "Duan, Liang, Chen, Li, Zhou, Zhao. Diffraction-limit-breaking digital projection lithography via multi-exposure strategies for high-density nanopatterning. Research Square preprint, 2025.",
+              "doi": "10.21203/rs.3.rs-7290332/v1",
+              "url": "https://doi.org/10.21203/rs.3.rs-7290332/v1",
+              "license": "CC BY 4.0",
+              "license_url": "https://creativecommons.org/licenses/by/4.0/",
+              "page": 14,
+              "figure": "4(a)",
+              "roi_px": [
+                264,
+                1131,
+                210,
+                210
+              ],
+              "render_dpi": 180,
+              "modifications": "cropped target-mask panel, OpenCV light-foreground threshold=90, simplified contours; uncalibrated; not manually reviewed",
+              "node": "not a 3 nm process layout",
+              "trace_report": {
+                "count": 31,
+                "rejected": 0,
+                "roi_origin_px": [
+                  0,
+                  0
+                ],
+                "image_height_px": 210
+              },
+              "contour_index": 0
+            },
+            "method": "editor_object"
+          },
+          "path": "C:\\Users\\zhuyu\\Desktop\\XKL\\版图设计\\GDS\\examples\\paper-fig4a.gsproj",
+          "kind": "project",
+          "source_metadata": {
+            "bundled_example": true
+          }
+        },
+        {
+          "metadata": {
+            "shape_id": "bf1bdcf8e429",
+            "shape_metadata": {
+              "calibrated": false,
+              "nm_per_pixel": null,
+              "citation": "Duan, Liang, Chen, Li, Zhou, Zhao. Diffraction-limit-breaking digital projection lithography via multi-exposure strategies for high-density nanopatterning. Research Square preprint, 2025.",
+              "doi": "10.21203/rs.3.rs-7290332/v1",
+              "url": "https://doi.org/10.21203/rs.3.rs-7290332/v1",
+              "license": "CC BY 4.0",
+              "license_url": "https://creativecommons.org/licenses/by/4.0/",
+              "page": 14,
+              "figure": "4(a)",
+              "roi_px": [
+                264,
+                1131,
+                210,
+                210
+              ],
+              "render_dpi": 180,
+              "modifications": "cropped target-mask panel, OpenCV light-foreground threshold=90, simplified contours; uncalibrated; not manually reviewed",
+              "node": "not a 3 nm process layout",
+              "trace_report": {
+                "count": 31,
+                "rejected": 0,
+                "roi_origin_px": [
+                  0,
+                  0
+                ],
+                "image_height_px": 210
+              },
+              "contour_index": 1
+            },
+            "method": "editor_object"
+          },
+          "path": "C:\\Users\\zhuyu\\Desktop\\XKL\\版图设计\\GDS\\examples\\paper-fig4a.gsproj",
+          "kind": "project",
+          "source_metadata": {
+            "bundled_example": true
+          }
+        },
+        {
+          "metadata": {
+            "shape_id": "8400130ba422",
+            "shape_metadata": {
+              "calibrated": false,
+              "nm_per_pixel": null,
+              "citation": "Duan, Liang, Chen, Li, Zhou, Zhao. Diffraction-limit-breaking digital projection lithography via multi-exposure strategies for high-density nanopatterning. Research Square preprint, 2025.",
+              "doi": "10.21203/rs.3.rs-7290332/v1",
+              "url": "https://doi.org/10.21203/rs.3.rs-7290332/v1",
+              "license": "CC BY 4.0",
+              "license_url": "https://creativecommons.org/licenses/by/4.0/",
+              "page": 14,
+              "figure": "4(a)",
+              "roi_px": [
+                264,
+                1131,
+                210,
+                210
+              ],
+              "render_dpi": 180,
+              "modifications": "cropped target-mask panel, OpenCV light-foreground threshold=90, simplified contours; uncalibrated; not manually reviewed",
+              "node": "not a 3 nm process layout",
+              "trace_report": {
+                "count": 31,
+                "rejected": 0,
+                "roi_origin_px": [
+                  0,
+                  0
+                ],
+                "image_height_px": 210
+              },
+              "contour_index": 4
+            },
+            "method": "editor_object"
+          },
+          "path": "C:\\Users\\zhuyu\\Desktop\\XKL\\版图设计\\GDS\\examples\\paper-fig4a.gsproj",
+          "kind": "project",
+          "source_metadata": {
+            "bundled_example": true
+          }
+        },
+        {
+          "metadata": {
+            "shape_id": "5c0e07ad839f",
+            "shape_metadata": {
+              "calibrated": false,
+              "nm_per_pixel": null,
+              "citation": "Duan, Liang, Chen, Li, Zhou, Zhao. Diffraction-limit-breaking digital projection lithography via multi-exposure strategies for high-density nanopatterning. Research Square preprint, 2025.",
+              "doi": "10.21203/rs.3.rs-7290332/v1",
+              "url": "https://doi.org/10.21203/rs.3.rs-7290332/v1",
+              "license": "CC BY 4.0",
+              "license_url": "https://creativecommons.org/licenses/by/4.0/",
+              "page": 14,
+              "figure": "4(a)",
+              "roi_px": [
+                264,
+                1131,
+                210,
+                210
+              ],
+              "render_dpi": 180,
+              "modifications": "cropped target-mask panel, OpenCV light-foreground threshold=90, simplified contours; uncalibrated; not manually reviewed",
+              "node": "not a 3 nm process layout",
+              "trace_report": {
+                "count": 31,
+                "rejected": 0,
+                "roi_origin_px": [
+                  0,
+                  0
+                ],
+                "image_height_px": 210
+              },
+              "contour_index": 5
+            },
+            "method": "editor_object"
+          },
+          "path": "C:\\Users\\zhuyu\\Desktop\\XKL\\版图设计\\GDS\\examples\\paper-fig4a.gsproj",
+          "kind": "project",
+          "source_metadata": {
+            "bundled_example": true
+          }
+        },
+        {
+          "metadata": {
+            "shape_id": "ce6af2b08b69",
+            "shape_metadata": {
+              "calibrated": false,
+              "nm_per_pixel": null,
+              "citation": "Duan, Liang, Chen, Li, Zhou, Zhao. Diffraction-limit-breaking digital projection lithography via multi-exposure strategies for high-density nanopatterning. Research Square preprint, 2025.",
+              "doi": "10.21203/rs.3.rs-7290332/v1",
+              "url": "https://doi.org/10.21203/rs.3.rs-7290332/v1",
+              "license": "CC BY 4.0",
+              "license_url": "https://creativecommons.org/licenses/by/4.0/",
+              "page": 14,
+              "figure": "4(a)",
+              "roi_px": [
+                264,
+                1131,
+                210,
+                210
+              ],
+              "render_dpi": 180,
+              "modifications": "cropped target-mask panel, OpenCV light-foreground threshold=90, simplified contours; uncalibrated; not manually reviewed",
+              "node": "not a 3 nm process layout",
+              "trace_report": {
+                "count": 31,
+                "rejected": 0,
+                "roi_origin_px": [
+                  0,
+                  0
+                ],
+                "image_height_px": 210
+              },
+              "contour_index": 8
+            },
+            "method": "editor_object"
+          },
+          "path": "C:\\Users\\zhuyu\\Desktop\\XKL\\版图设计\\GDS\\examples\\paper-fig4a.gsproj",
+          "kind": "project",
+          "source_metadata": {
+            "bundled_example": true
+          }
+        },
+        {
+          "metadata": {
+            "shape_id": "63bba6db75c4",
+            "shape_metadata": {
+              "calibrated": false,
+              "nm_per_pixel": null,
+              "citation": "Duan, Liang, Chen, Li, Zhou, Zhao. Diffraction-limit-breaking digital projection lithography via multi-exposure strategies for high-density nanopatterning. Research Square preprint, 2025.",
+              "doi": "10.21203/rs.3.rs-7290332/v1",
+              "url": "https://doi.org/10.21203/rs.3.rs-7290332/v1",
+              "license": "CC BY 4.0",
+              "license_url": "https://creativecommons.org/licenses/by/4.0/",
+              "page": 14,
+              "figure": "4(a)",
+              "roi_px": [
+                264,
+                1131,
+                210,
+                210
+              ],
+              "render_dpi": 180,
+              "modifications": "cropped target-mask panel, OpenCV light-foreground threshold=90, simplified contours; uncalibrated; not manually reviewed",
+              "node": "not a 3 nm process layout",
+              "trace_report": {
+                "count": 31,
+                "rejected": 0,
+                "roi_origin_px": [
+                  0,
+                  0
+                ],
+                "image_height_px": 210
+              },
+              "contour_index": 11
+            },
+            "method": "editor_object"
+          },
+          "path": "C:\\Users\\zhuyu\\Desktop\\XKL\\版图设计\\GDS\\examples\\paper-fig4a.gsproj",
+          "kind": "project",
+          "source_metadata": {
+            "bundled_example": true
+          }
+        },
+        {
+          "metadata": {
+            "shape_id": "491d21e18ca3",
+            "shape_metadata": {
+              "calibrated": false,
+              "nm_per_pixel": null,
+              "citation": "Duan, Liang, Chen, Li, Zhou, Zhao. Diffraction-limit-breaking digital projection lithography via multi-exposure strategies for high-density nanopatterning. Research Square preprint, 2025.",
+              "doi": "10.21203/rs.3.rs-7290332/v1",
+              "url": "https://doi.org/10.21203/rs.3.rs-7290332/v1",
+              "license": "CC BY 4.0",
+              "license_url": "https://creativecommons.org/licenses/by/4.0/",
+              "page": 14,
+              "figure": "4(a)",
+              "roi_px": [
+                264,
+                1131,
+                210,
+                210
+              ],
+              "render_dpi": 180,
+              "modifications": "cropped target-mask panel, OpenCV light-foreground threshold=90, simplified contours; uncalibrated; not manually reviewed",
+              "node": "not a 3 nm process layout",
+              "trace_report": {
+                "count": 31,
+                "rejected": 0,
+                "roi_origin_px": [
+                  0,
+                  0
+                ],
+                "image_height_px": 210
+              },
+              "contour_index": 19
+            },
+            "method": "editor_object"
+          },
+          "path": "C:\\Users\\zhuyu\\Desktop\\XKL\\版图设计\\GDS\\examples\\paper-fig4a.gsproj",
+          "kind": "project",
+          "source_metadata": {
+            "bundled_example": true
+          }
+        },
+        {
+          "metadata": {
+            "shape_id": "b5a4c0d56dc3",
+            "shape_metadata": {
+              "calibrated": false,
+              "nm_per_pixel": null,
+              "citation": "Duan, Liang, Chen, Li, Zhou, Zhao. Diffraction-limit-breaking digital projection lithography via multi-exposure strategies for high-density nanopatterning. Research Square preprint, 2025.",
+              "doi": "10.21203/rs.3.rs-7290332/v1",
+              "url": "https://doi.org/10.21203/rs.3.rs-7290332/v1",
+              "license": "CC BY 4.0",
+              "license_url": "https://creativecommons.org/licenses/by/4.0/",
+              "page": 14,
+              "figure": "4(a)",
+              "roi_px": [
+                264,
+                1131,
+                210,
+                210
+              ],
+              "render_dpi": 180,
+              "modifications": "cropped target-mask panel, OpenCV light-foreground threshold=90, simplified contours; uncalibrated; not manually reviewed",
+              "node": "not a 3 nm process layout",
+              "trace_report": {
+                "count": 31,
+                "rejected": 0,
+                "roi_origin_px": [
+                  0,
+                  0
+                ],
+                "image_height_px": 210
+              },
+              "contour_index": 21
+            },
+            "method": "editor_object"
+          },
+          "path": "C:\\Users\\zhuyu\\Desktop\\XKL\\版图设计\\GDS\\examples\\paper-fig4a.gsproj",
+          "kind": "project",
+          "source_metadata": {
+            "bundled_example": true
+          }
+        },
+        {
+          "metadata": {
+            "shape_id": "e21828119cbe",
+            "shape_metadata": {
+              "calibrated": false,
+              "nm_per_pixel": null,
+              "citation": "Duan, Liang, Chen, Li, Zhou, Zhao. Diffraction-limit-breaking digital projection lithography via multi-exposure strategies for high-density nanopatterning. Research Square preprint, 2025.",
+              "doi": "10.21203/rs.3.rs-7290332/v1",
+              "url": "https://doi.org/10.21203/rs.3.rs-7290332/v1",
+              "license": "CC BY 4.0",
+              "license_url": "https://creativecommons.org/licenses/by/4.0/",
+              "page": 14,
+              "figure": "4(a)",
+              "roi_px": [
+                264,
+                1131,
+                210,
+                210
+              ],
+              "render_dpi": 180,
+              "modifications": "cropped target-mask panel, OpenCV light-foreground threshold=90, simplified contours; uncalibrated; not manually reviewed",
+              "node": "not a 3 nm process layout",
+              "trace_report": {
+                "count": 31,
+                "rejected": 0,
+                "roi_origin_px": [
+                  0,
+                  0
+                ],
+                "image_height_px": 210
+              },
+              "contour_index": 22
+            },
+            "method": "editor_object"
+          },
+          "path": "C:\\Users\\zhuyu\\Desktop\\XKL\\版图设计\\GDS\\examples\\paper-fig4a.gsproj",
+          "kind": "project",
+          "source_metadata": {
+            "bundled_example": true
+          }
+        },
+        {
+          "metadata": {
+            "shape_id": "3a0618a8a6a5",
+            "shape_metadata": {
+              "calibrated": false,
+              "nm_per_pixel": null,
+              "citation": "Duan, Liang, Chen, Li, Zhou, Zhao. Diffraction-limit-breaking digital projection lithography via multi-exposure strategies for high-density nanopatterning. Research Square preprint, 2025.",
+              "doi": "10.21203/rs.3.rs-7290332/v1",
+              "url": "https://doi.org/10.21203/rs.3.rs-7290332/v1",
+              "license": "CC BY 4.0",
+              "license_url": "https://creativecommons.org/licenses/by/4.0/",
+              "page": 14,
+              "figure": "4(a)",
+              "roi_px": [
+                264,
+                1131,
+                210,
+                210
+              ],
+              "render_dpi": 180,
+              "modifications": "cropped target-mask panel, OpenCV light-foreground threshold=90, simplified contours; uncalibrated; not manually reviewed",
+              "node": "not a 3 nm process layout",
+              "trace_report": {
+                "count": 31,
+                "rejected": 0,
+                "roi_origin_px": [
+                  0,
+                  0
+                ],
+                "image_height_px": 210
+              },
+              "contour_index": 27
+            },
+            "method": "editor_object"
+          },
+          "path": "C:\\Users\\zhuyu\\Desktop\\XKL\\版图设计\\GDS\\examples\\paper-fig4a.gsproj",
+          "kind": "project",
+          "source_metadata": {
+            "bundled_example": true
+          }
+        }
+      ],
+      "mask": "masks/sample-000062.png",
+      "gds": "gds/sample-000062.gds",
+      "render": {
+        "coordinate_bounds_nm": [
+          300.0,
+          1.0,
+          508.0,
+          3.0
+        ],
+        "coordinate_units_per_pixel": 0.9327354260089686,
+        "padding_px": 16
+      },
+      "nm_per_pixel": null,
+      "units": "nominal_unscaled",
+      "leakage_group": "group-000061",
+      "split": "unassigned"
+    },
+    {
+      "id": 63,
+      "name": "论文 Fig4a 轮廓 3",
+      "layer": 1,
+      "datatype": 0,
+      "calibrated": 0,
+      "width": 36.0,
+      "height": 3.0,
+      "area": 106.0,
+      "components": 1,
+      "holes": 0,
+      "strict": "5ce4bee86eb24200a33b93d68b1d14d5675966b37e806bb0706d6b6694f17478",
+      "congruent": "92686b0b59f1d3a9446b479a81487d03438e27e7de87b87df542b6b56d7a1fc1",
+      "same_shape": "41569488fc82504f9e32d8c488238a989c5bd30c08762596305c26ffc636ce76",
+      "tags": "",
+      "review": "draft",
+      "origins": [
+        {
+          "metadata": {
+            "shape_id": "46252fa9c155",
+            "shape_metadata": {
+              "calibrated": false,
+              "nm_per_pixel": null,
+              "citation": "Duan, Liang, Chen, Li, Zhou, Zhao. Diffraction-limit-breaking digital projection lithography via multi-exposure strategies for high-density nanopatterning. Research Square preprint, 2025.",
+              "doi": "10.21203/rs.3.rs-7290332/v1",
+              "url": "https://doi.org/10.21203/rs.3.rs-7290332/v1",
+              "license": "CC BY 4.0",
+              "license_url": "https://creativecommons.org/licenses/by/4.0/",
+              "page": 14,
+              "figure": "4(a)",
+              "roi_px": [
+                264,
+                1131,
+                210,
+                210
+              ],
+              "render_dpi": 180,
+              "modifications": "cropped target-mask panel, OpenCV light-foreground threshold=90, simplified contours; uncalibrated; not manually reviewed",
+              "node": "not a 3 nm process layout",
+              "trace_report": {
+                "count": 31,
+                "rejected": 0,
+                "roi_origin_px": [
+                  0,
+                  0
+                ],
+                "image_height_px": 210
+              },
+              "contour_index": 2
+            },
+            "method": "editor_object"
+          },
+          "path": "C:\\Users\\zhuyu\\Desktop\\XKL\\版图设计\\GDS\\examples\\paper-fig4a.gsproj",
+          "kind": "project",
+          "source_metadata": {
+            "bundled_example": true
+          }
+        }
+      ],
+      "mask": "masks/sample-000063.png",
+      "gds": "gds/sample-000063.gds",
+      "render": {
+        "coordinate_bounds_nm": [
+          790.0,
+          14.0,
+          826.0,
+          17.0
+        ],
+        "coordinate_units_per_pixel": 0.16143497757847533,
+        "padding_px": 16
+      },
+      "nm_per_pixel": null,
+      "units": "nominal_unscaled",
+      "leakage_group": "group-000061",
+      "split": "unassigned"
+    },
+    {
+      "id": 64,
+      "name": "论文 Fig4a 轮廓 4",
+      "layer": 1,
+      "datatype": 0,
+      "calibrated": 0,
+      "width": 208.0,
+      "height": 1.0,
+      "area": 208.0,
+      "components": 1,
+      "holes": 0,
+      "strict": "b826c0b2fd35ddadd608f32fdb70c6a3ad703e93dc5e613c1aa947af035edd73",
+      "congruent": "b826c0b2fd35ddadd608f32fdb70c6a3ad703e93dc5e613c1aa947af035edd73",
+      "same_shape": "8a0bc2a88c403249a61e45610ab01d679a3c3ce9430c85b6e5d899580ecb5d14",
+      "tags": "",
+      "review": "draft",
+      "origins": [
+        {
+          "metadata": {
+            "shape_id": "cfdf9e53eb64",
+            "shape_metadata": {
+              "calibrated": false,
+              "nm_per_pixel": null,
+              "citation": "Duan, Liang, Chen, Li, Zhou, Zhao. Diffraction-limit-breaking digital projection lithography via multi-exposure strategies for high-density nanopatterning. Research Square preprint, 2025.",
+              "doi": "10.21203/rs.3.rs-7290332/v1",
+              "url": "https://doi.org/10.21203/rs.3.rs-7290332/v1",
+              "license": "CC BY 4.0",
+              "license_url": "https://creativecommons.org/licenses/by/4.0/",
+              "page": 14,
+              "figure": "4(a)",
+              "roi_px": [
+                264,
+                1131,
+                210,
+                210
+              ],
+              "render_dpi": 180,
+              "modifications": "cropped target-mask panel, OpenCV light-foreground threshold=90, simplified contours; uncalibrated; not manually reviewed",
+              "node": "not a 3 nm process layout",
+              "trace_report": {
+                "count": 31,
+                "rejected": 0,
+                "roi_origin_px": [
+                  0,
+                  0
+                ],
+                "image_height_px": 210
+              },
+              "contour_index": 3
+            },
+            "method": "editor_object"
+          },
+          "path": "C:\\Users\\zhuyu\\Desktop\\XKL\\版图设计\\GDS\\examples\\paper-fig4a.gsproj",
+          "kind": "project",
+          "source_metadata": {
+            "bundled_example": true
+          }
+        },
+        {
+          "metadata": {
+            "shape_id": "aa32261b9232",
+            "shape_metadata": {
+              "calibrated": false,
+              "nm_per_pixel": null,
+              "citation": "Duan, Liang, Chen, Li, Zhou, Zhao. Diffraction-limit-breaking digital projection lithography via multi-exposure strategies for high-density nanopatterning. Research Square preprint, 2025.",
+              "doi": "10.21203/rs.3.rs-7290332/v1",
+              "url": "https://doi.org/10.21203/rs.3.rs-7290332/v1",
+              "license": "CC BY 4.0",
+              "license_url": "https://creativecommons.org/licenses/by/4.0/",
+              "page": 14,
+              "figure": "4(a)",
+              "roi_px": [
+                264,
+                1131,
+                210,
+                210
+              ],
+              "render_dpi": 180,
+              "modifications": "cropped target-mask panel, OpenCV light-foreground threshold=90, simplified contours; uncalibrated; not manually reviewed",
+              "node": "not a 3 nm process layout",
+              "trace_report": {
+                "count": 31,
+                "rejected": 0,
+                "roi_origin_px": [
+                  0,
+                  0
+                ],
+                "image_height_px": 210
+              },
+              "contour_index": 6
+            },
+            "method": "editor_object"
+          },
+          "path": "C:\\Users\\zhuyu\\Desktop\\XKL\\版图设计\\GDS\\examples\\paper-fig4a.gsproj",
+          "kind": "project",
+          "source_metadata": {
+            "bundled_example": true
+          }
+        },
+        {
+          "metadata": {
+            "shape_id": "a0a18d3823cf",
+            "shape_metadata": {
+              "calibrated": false,
+              "nm_per_pixel": null,
+              "citation": "Duan, Liang, Chen, Li, Zhou, Zhao. Diffraction-limit-breaking digital projection lithography via multi-exposure strategies for high-density nanopatterning. Research Square preprint, 2025.",
+              "doi": "10.21203/rs.3.rs-7290332/v1",
+              "url": "https://doi.org/10.21203/rs.3.rs-7290332/v1",
+              "license": "CC BY 4.0",
+              "license_url": "https://creativecommons.org/licenses/by/4.0/",
+              "page": 14,
+              "figure": "4(a)",
+              "roi_px": [
+                264,
+                1131,
+                210,
+                210
+              ],
+              "render_dpi": 180,
+              "modifications": "cropped target-mask panel, OpenCV light-foreground threshold=90, simplified contours; uncalibrated; not manually reviewed",
+              "node": "not a 3 nm process layout",
+              "trace_report": {
+                "count": 31,
+                "rejected": 0,
+                "roi_origin_px": [
+                  0,
+                  0
+                ],
+                "image_height_px": 210
+              },
+              "contour_index": 15
+            },
+            "method": "editor_object"
+          },
+          "path": "C:\\Users\\zhuyu\\Desktop\\XKL\\版图设计\\GDS\\examples\\paper-fig4a.gsproj",
+          "kind": "project",
+          "source_metadata": {
+            "bundled_example": true
+          }
+        },
+        {
+          "metadata": {
+            "shape_id": "d02b98daba78",
+            "shape_metadata": {
+              "calibrated": false,
+              "nm_per_pixel": null,
+              "citation": "Duan, Liang, Chen, Li, Zhou, Zhao. Diffraction-limit-breaking digital projection lithography via multi-exposure strategies for high-density nanopatterning. Research Square preprint, 2025.",
+              "doi": "10.21203/rs.3.rs-7290332/v1",
+              "url": "https://doi.org/10.21203/rs.3.rs-7290332/v1",
+              "license": "CC BY 4.0",
+              "license_url": "https://creativecommons.org/licenses/by/4.0/",
+              "page": 14,
+              "figure": "4(a)",
+              "roi_px": [
+                264,
+                1131,
+                210,
+                210
+              ],
+              "render_dpi": 180,
+              "modifications": "cropped target-mask panel, OpenCV light-foreground threshold=90, simplified contours; uncalibrated; not manually reviewed",
+              "node": "not a 3 nm process layout",
+              "trace_report": {
+                "count": 31,
+                "rejected": 0,
+                "roi_origin_px": [
+                  0,
+                  0
+                ],
+                "image_height_px": 210
+              },
+              "contour_index": 23
+            },
+            "method": "editor_object"
+          },
+          "path": "C:\\Users\\zhuyu\\Desktop\\XKL\\版图设计\\GDS\\examples\\paper-fig4a.gsproj",
+          "kind": "project",
+          "source_metadata": {
+            "bundled_example": true
+          }
+        }
+      ],
+      "mask": "masks/sample-000064.png",
+      "gds": "gds/sample-000064.gds",
+      "render": {
+        "coordinate_bounds_nm": [
+          1020.0,
+          21.0,
+          1228.0,
+          22.0
+        ],
+        "coordinate_units_per_pixel": 0.9327354260089686,
+        "padding_px": 16
+      },
+      "nm_per_pixel": null,
+      "units": "nominal_unscaled",
+      "leakage_group": "group-000061",
+      "split": "unassigned"
+    },
+    {
+      "id": 65,
+      "name": "论文 Fig4a 轮廓 8",
+      "layer": 1,
+      "datatype": 0,
+      "calibrated": 0,
+      "width": 104.0,
+      "height": 2.0,
+      "area": 208.0,
+      "components": 1,
+      "holes": 0,
+      "strict": "fac1de7ed9a2b5ade8e8d1f64d16462bcd07781018dff5ace8a7656d293f389d",
+      "congruent": "fac1de7ed9a2b5ade8e8d1f64d16462bcd07781018dff5ace8a7656d293f389d",
+      "same_shape": "eefcebe9d9b5eff2f790db00727c97fdc0e87174f00e7d69f71981892034ef97",
+      "tags": "",
+      "review": "draft",
+      "origins": [
+        {
+          "metadata": {
+            "shape_id": "81934ddce91b",
+            "shape_metadata": {
+              "calibrated": false,
+              "nm_per_pixel": null,
+              "citation": "Duan, Liang, Chen, Li, Zhou, Zhao. Diffraction-limit-breaking digital projection lithography via multi-exposure strategies for high-density nanopatterning. Research Square preprint, 2025.",
+              "doi": "10.21203/rs.3.rs-7290332/v1",
+              "url": "https://doi.org/10.21203/rs.3.rs-7290332/v1",
+              "license": "CC BY 4.0",
+              "license_url": "https://creativecommons.org/licenses/by/4.0/",
+              "page": 14,
+              "figure": "4(a)",
+              "roi_px": [
+                264,
+                1131,
+                210,
+                210
+              ],
+              "render_dpi": 180,
+              "modifications": "cropped target-mask panel, OpenCV light-foreground threshold=90, simplified contours; uncalibrated; not manually reviewed",
+              "node": "not a 3 nm process layout",
+              "trace_report": {
+                "count": 31,
+                "rejected": 0,
+                "roi_origin_px": [
+                  0,
+                  0
+                ],
+                "image_height_px": 210
+              },
+              "contour_index": 7
+            },
+            "method": "editor_object"
+          },
+          "path": "C:\\Users\\zhuyu\\Desktop\\XKL\\版图设计\\GDS\\examples\\paper-fig4a.gsproj",
+          "kind": "project",
+          "source_metadata": {
+            "bundled_example": true
+          }
+        }
+      ],
+      "mask": "masks/sample-000065.png",
+      "gds": "gds/sample-000065.gds",
+      "render": {
+        "coordinate_bounds_nm": [
+          1124.0,
+          102.0,
+          1228.0,
+          104.0
+        ],
+        "coordinate_units_per_pixel": 0.4663677130044843,
+        "padding_px": 16
+      },
+      "nm_per_pixel": null,
+      "units": "nominal_unscaled",
+      "leakage_group": "group-000061",
+      "split": "unassigned"
+    },
+    {
+      "id": 66,
+      "name": "论文 Fig4a 轮廓 10",
+      "layer": 1,
+      "datatype": 0,
+      "calibrated": 0,
+      "width": 29.0,
+      "height": 1.0,
+      "area": 29.0,
+      "components": 1,
+      "holes": 0,
+      "strict": "e5f0fb76789bee7b3ef587f5943a9dbbc643fc5380771686d499522311e96b04",
+      "congruent": "e5f0fb76789bee7b3ef587f5943a9dbbc643fc5380771686d499522311e96b04",
+      "same_shape": "8459b2a9a4526c7f338921a95ffb9513137905786ad36666443e625da969190b",
+      "tags": "",
+      "review": "draft",
+      "origins": [
+        {
+          "metadata": {
+            "shape_id": "d4036b7cdd6b",
+            "shape_metadata": {
+              "calibrated": false,
+              "nm_per_pixel": null,
+              "citation": "Duan, Liang, Chen, Li, Zhou, Zhao. Diffraction-limit-breaking digital projection lithography via multi-exposure strategies for high-density nanopatterning. Research Square preprint, 2025.",
+              "doi": "10.21203/rs.3.rs-7290332/v1",
+              "url": "https://doi.org/10.21203/rs.3.rs-7290332/v1",
+              "license": "CC BY 4.0",
+              "license_url": "https://creativecommons.org/licenses/by/4.0/",
+              "page": 14,
+              "figure": "4(a)",
+              "roi_px": [
+                264,
+                1131,
+                210,
+                210
+              ],
+              "render_dpi": 180,
+              "modifications": "cropped target-mask panel, OpenCV light-foreground threshold=90, simplified contours; uncalibrated; not manually reviewed",
+              "node": "not a 3 nm process layout",
+              "trace_report": {
+                "count": 31,
+                "rejected": 0,
+                "roi_origin_px": [
+                  0,
+                  0
+                ],
+                "image_height_px": 210
+              },
+              "contour_index": 9
+            },
+            "method": "editor_object"
+          },
+          "path": "C:\\Users\\zhuyu\\Desktop\\XKL\\版图设计\\GDS\\examples\\paper-fig4a.gsproj",
+          "kind": "project",
+          "source_metadata": {
+            "bundled_example": true
+          }
+        },
+        {
+          "metadata": {
+            "shape_id": "e9d2710774f9",
+            "shape_metadata": {
+              "calibrated": false,
+              "nm_per_pixel": null,
+              "citation": "Duan, Liang, Chen, Li, Zhou, Zhao. Diffraction-limit-breaking digital projection lithography via multi-exposure strategies for high-density nanopatterning. Research Square preprint, 2025.",
+              "doi": "10.21203/rs.3.rs-7290332/v1",
+              "url": "https://doi.org/10.21203/rs.3.rs-7290332/v1",
+              "license": "CC BY 4.0",
+              "license_url": "https://creativecommons.org/licenses/by/4.0/",
+              "page": 14,
+              "figure": "4(a)",
+              "roi_px": [
+                264,
+                1131,
+                210,
+                210
+              ],
+              "render_dpi": 180,
+              "modifications": "cropped target-mask panel, OpenCV light-foreground threshold=90, simplified contours; uncalibrated; not manually reviewed",
+              "node": "not a 3 nm process layout",
+              "trace_report": {
+                "count": 31,
+                "rejected": 0,
+                "roi_origin_px": [
+                  0,
+                  0
+                ],
+                "image_height_px": 210
+              },
+              "contour_index": 29
+            },
+            "method": "editor_object"
+          },
+          "path": "C:\\Users\\zhuyu\\Desktop\\XKL\\版图设计\\GDS\\examples\\paper-fig4a.gsproj",
+          "kind": "project",
+          "source_metadata": {
+            "bundled_example": true
+          }
+        }
+      ],
+      "mask": "masks/sample-000066.png",
+      "gds": "gds/sample-000066.gds",
+      "render": {
+        "coordinate_bounds_nm": [
+          719.0,
+          168.0,
+          748.0,
+          169.0
+        ],
+        "coordinate_units_per_pixel": 0.13004484304932737,
+        "padding_px": 16
+      },
+      "nm_per_pixel": null,
+      "units": "nominal_unscaled",
+      "leakage_group": "group-000061",
+      "split": "unassigned"
+    },
+    {
+      "id": 67,
+      "name": "论文 Fig4a 轮廓 11",
+      "layer": 1,
+      "datatype": 0,
+      "calibrated": 0,
+      "width": 110.0,
+      "height": 1.0,
+      "area": 110.0,
+      "components": 1,
+      "holes": 0,
+      "strict": "47e6f0b87a736076da242de578299bc7e070d7ea8360dcfc16490b75cf6285e0",
+      "congruent": "47e6f0b87a736076da242de578299bc7e070d7ea8360dcfc16490b75cf6285e0",
+      "same_shape": "672cc2a884017d04c86609f744f72f634f063eb741f99635f691949285bf5c0a",
+      "tags": "",
+      "review": "draft",
+      "origins": [
+        {
+          "metadata": {
+            "shape_id": "ebefd4b6f1e8",
+            "shape_metadata": {
+              "calibrated": false,
+              "nm_per_pixel": null,
+              "citation": "Duan, Liang, Chen, Li, Zhou, Zhao. Diffraction-limit-breaking digital projection lithography via multi-exposure strategies for high-density nanopatterning. Research Square preprint, 2025.",
+              "doi": "10.21203/rs.3.rs-7290332/v1",
+              "url": "https://doi.org/10.21203/rs.3.rs-7290332/v1",
+              "license": "CC BY 4.0",
+              "license_url": "https://creativecommons.org/licenses/by/4.0/",
+              "page": 14,
+              "figure": "4(a)",
+              "roi_px": [
+                264,
+                1131,
+                210,
+                210
+              ],
+              "render_dpi": 180,
+              "modifications": "cropped target-mask panel, OpenCV light-foreground threshold=90, simplified contours; uncalibrated; not manually reviewed",
+              "node": "not a 3 nm process layout",
+              "trace_report": {
+                "count": 31,
+                "rejected": 0,
+                "roi_origin_px": [
+                  0,
+                  0
+                ],
+                "image_height_px": 210
+              },
+              "contour_index": 10
+            },
+            "method": "editor_object"
+          },
+          "path": "C:\\Users\\zhuyu\\Desktop\\XKL\\版图设计\\GDS\\examples\\paper-fig4a.gsproj",
+          "kind": "project",
+          "source_metadata": {
+            "bundled_example": true
+          }
+        }
+      ],
+      "mask": "masks/sample-000067.png",
+      "gds": "gds/sample-000067.gds",
+      "render": {
+        "coordinate_bounds_nm": [
+          780.0,
+          176.0,
+          890.0,
+          177.0
+        ],
+        "coordinate_units_per_pixel": 0.49327354260089684,
+        "padding_px": 16
+      },
+      "nm_per_pixel": null,
+      "units": "nominal_unscaled",
+      "leakage_group": "group-000061",
+      "split": "unassigned"
+    },
+    {
+      "id": 68,
+      "name": "论文 Fig4a 轮廓 13",
+      "layer": 1,
+      "datatype": 0,
+      "calibrated": 0,
+      "width": 36.0,
+      "height": 3.0,
+      "area": 108.0,
+      "components": 1,
+      "holes": 0,
+      "strict": "6f163d249c46e48de340ed84363bae1fa65a1eceb2af055e4da5fd23206618ec",
+      "congruent": "6f163d249c46e48de340ed84363bae1fa65a1eceb2af055e4da5fd23206618ec",
+      "same_shape": "0a7346258e65fd19a5a250e59383242f2bc99946e3c7da3a73e52b42e3789573",
+      "tags": "",
+      "review": "draft",
+      "origins": [
+        {
+          "metadata": {
+            "shape_id": "09abaef170b9",
+            "shape_metadata": {
+              "calibrated": false,
+              "nm_per_pixel": null,
+              "citation": "Duan, Liang, Chen, Li, Zhou, Zhao. Diffraction-limit-breaking digital projection lithography via multi-exposure strategies for high-density nanopatterning. Research Square preprint, 2025.",
+              "doi": "10.21203/rs.3.rs-7290332/v1",
+              "url": "https://doi.org/10.21203/rs.3.rs-7290332/v1",
+              "license": "CC BY 4.0",
+              "license_url": "https://creativecommons.org/licenses/by/4.0/",
+              "page": 14,
+              "figure": "4(a)",
+              "roi_px": [
+                264,
+                1131,
+                210,
+                210
+              ],
+              "render_dpi": 180,
+              "modifications": "cropped target-mask panel, OpenCV light-foreground threshold=90, simplified contours; uncalibrated; not manually reviewed",
+              "node": "not a 3 nm process layout",
+              "trace_report": {
+                "count": 31,
+                "rejected": 0,
+                "roi_origin_px": [
+                  0,
+                  0
+                ],
+                "image_height_px": 210
+              },
+              "contour_index": 12
+            },
+            "method": "editor_object"
+          },
+          "path": "C:\\Users\\zhuyu\\Desktop\\XKL\\版图设计\\GDS\\examples\\paper-fig4a.gsproj",
+          "kind": "project",
+          "source_metadata": {
+            "bundled_example": true
+          }
+        }
+      ],
+      "mask": "masks/sample-000068.png",
+      "gds": "gds/sample-000068.gds",
+      "render": {
+        "coordinate_bounds_nm": [
+          310.0,
+          235.0,
+          346.0,
+          238.0
+        ],
+        "coordinate_units_per_pixel": 0.16143497757847533,
+        "padding_px": 16
+      },
+      "nm_per_pixel": null,
+      "units": "nominal_unscaled",
+      "leakage_group": "group-000061",
+      "split": "unassigned"
+    },
+    {
+      "id": 69,
+      "name": "论文 Fig4a 轮廓 14",
+      "layer": 1,
+      "datatype": 0,
+      "calibrated": 0,
+      "width": 9.0,
+      "height": 2.0,
+      "area": 16.5,
+      "components": 1,
+      "holes": 0,
+      "strict": "be0834ebeb57ca9cd259cc21355b4d8480d93dd3ff7f6bd5e5595d274b739d59",
+      "congruent": "be0834ebeb57ca9cd259cc21355b4d8480d93dd3ff7f6bd5e5595d274b739d59",
+      "same_shape": "45830e0baab9ed157f79562c1fe98e606c9550bd3ec9a91f508477fdb2204ff7",
+      "tags": "",
+      "review": "draft",
+      "origins": [
+        {
+          "metadata": {
+            "shape_id": "e80bf39a6725",
+            "shape_metadata": {
+              "calibrated": false,
+              "nm_per_pixel": null,
+              "citation": "Duan, Liang, Chen, Li, Zhou, Zhao. Diffraction-limit-breaking digital projection lithography via multi-exposure strategies for high-density nanopatterning. Research Square preprint, 2025.",
+              "doi": "10.21203/rs.3.rs-7290332/v1",
+              "url": "https://doi.org/10.21203/rs.3.rs-7290332/v1",
+              "license": "CC BY 4.0",
+              "license_url": "https://creativecommons.org/licenses/by/4.0/",
+              "page": 14,
+              "figure": "4(a)",
+              "roi_px": [
+                264,
+                1131,
+                210,
+                210
+              ],
+              "render_dpi": 180,
+              "modifications": "cropped target-mask panel, OpenCV light-foreground threshold=90, simplified contours; uncalibrated; not manually reviewed",
+              "node": "not a 3 nm process layout",
+              "trace_report": {
+                "count": 31,
+                "rejected": 0,
+                "roi_origin_px": [
+                  0,
+                  0
+                ],
+                "image_height_px": 210
+              },
+              "contour_index": 13
+            },
+            "method": "editor_object"
+          },
+          "path": "C:\\Users\\zhuyu\\Desktop\\XKL\\版图设计\\GDS\\examples\\paper-fig4a.gsproj",
+          "kind": "project",
+          "source_metadata": {
+            "bundled_example": true
+          }
+        }
+      ],
+      "mask": "masks/sample-000069.png",
+      "gds": "gds/sample-000069.gds",
+      "render": {
+        "coordinate_bounds_nm": [
+          739.0,
+          238.0,
+          748.0,
+          240.0
+        ],
+        "coordinate_units_per_pixel": 0.04035874439461883,
+        "padding_px": 16
+      },
+      "nm_per_pixel": null,
+      "units": "nominal_unscaled",
+      "leakage_group": "group-000061",
+      "split": "unassigned"
+    },
+    {
+      "id": 70,
+      "name": "论文 Fig4a 轮廓 15",
+      "layer": 1,
+      "datatype": 0,
+      "calibrated": 0,
+      "width": 14.0,
+      "height": 2.0,
+      "area": 28.0,
+      "components": 1,
+      "holes": 0,
+      "strict": "896f8717a1852e4ecc59bbbc9708ca0f3514a27fb649133313020bfa32abd13c",
+      "congruent": "896f8717a1852e4ecc59bbbc9708ca0f3514a27fb649133313020bfa32abd13c",
+      "same_shape": "363c69a77a247f80f61c120f052775bfdc4cb494c8e769b6e3f3fe79d2de1d54",
+      "tags": "",
+      "review": "draft",
+      "origins": [
+        {
+          "metadata": {
+            "shape_id": "af05fc23062e",
+            "shape_metadata": {
+              "calibrated": false,
+              "nm_per_pixel": null,
+              "citation": "Duan, Liang, Chen, Li, Zhou, Zhao. Diffraction-limit-breaking digital projection lithography via multi-exposure strategies for high-density nanopatterning. Research Square preprint, 2025.",
+              "doi": "10.21203/rs.3.rs-7290332/v1",
+              "url": "https://doi.org/10.21203/rs.3.rs-7290332/v1",
+              "license": "CC BY 4.0",
+              "license_url": "https://creativecommons.org/licenses/by/4.0/",
+              "page": 14,
+              "figure": "4(a)",
+              "roi_px": [
+                264,
+                1131,
+                210,
+                210
+              ],
+              "render_dpi": 180,
+              "modifications": "cropped target-mask panel, OpenCV light-foreground threshold=90, simplified contours; uncalibrated; not manually reviewed",
+              "node": "not a 3 nm process layout",
+              "trace_report": {
+                "count": 31,
+                "rejected": 0,
+                "roi_origin_px": [
+                  0,
+                  0
+                ],
+                "image_height_px": 210
+              },
+              "contour_index": 14
+            },
+            "method": "editor_object"
+          },
+          "path": "C:\\Users\\zhuyu\\Desktop\\XKL\\版图设计\\GDS\\examples\\paper-fig4a.gsproj",
+          "kind": "project",
+          "source_metadata": {
+            "bundled_example": true
+          }
+        }
+      ],
+      "mask": "masks/sample-000070.png",
+      "gds": "gds/sample-000070.gds",
+      "render": {
+        "coordinate_bounds_nm": [
+          912.0,
+          238.0,
+          926.0,
+          240.0
+        ],
+        "coordinate_units_per_pixel": 0.06278026905829596,
+        "padding_px": 16
+      },
+      "nm_per_pixel": null,
+      "units": "nominal_unscaled",
+      "leakage_group": "group-000061",
+      "split": "unassigned"
+    },
+    {
+      "id": 71,
+      "name": "论文 Fig4a 轮廓 17",
+      "layer": 1,
+      "datatype": 0,
+      "calibrated": 0,
+      "width": 188.0,
+      "height": 6.0,
+      "area": 281.0,
+      "components": 1,
+      "holes": 0,
+      "strict": "934474036370175582b1326397ce238e46410ffbbc1f5d9982430def349d9d31",
+      "congruent": "768fba86975659085a822ea7a27a7ef84c07f91a2816f7f81d7e4ce51f86cc61",
+      "same_shape": "b3cb57ca356aaa51eca932193016cb00d812be01a62f4342f265f9b5c7545722",
+      "tags": "",
+      "review": "draft",
+      "origins": [
+        {
+          "metadata": {
+            "shape_id": "34ef7b83660b",
+            "shape_metadata": {
+              "calibrated": false,
+              "nm_per_pixel": null,
+              "citation": "Duan, Liang, Chen, Li, Zhou, Zhao. Diffraction-limit-breaking digital projection lithography via multi-exposure strategies for high-density nanopatterning. Research Square preprint, 2025.",
+              "doi": "10.21203/rs.3.rs-7290332/v1",
+              "url": "https://doi.org/10.21203/rs.3.rs-7290332/v1",
+              "license": "CC BY 4.0",
+              "license_url": "https://creativecommons.org/licenses/by/4.0/",
+              "page": 14,
+              "figure": "4(a)",
+              "roi_px": [
+                264,
+                1131,
+                210,
+                210
+              ],
+              "render_dpi": 180,
+              "modifications": "cropped target-mask panel, OpenCV light-foreground threshold=90, simplified contours; uncalibrated; not manually reviewed",
+              "node": "not a 3 nm process layout",
+              "trace_report": {
+                "count": 31,
+                "rejected": 0,
+                "roi_origin_px": [
+                  0,
+                  0
+                ],
+                "image_height_px": 210
+              },
+              "contour_index": 16
+            },
+            "method": "editor_object"
+          },
+          "path": "C:\\Users\\zhuyu\\Desktop\\XKL\\版图设计\\GDS\\examples\\paper-fig4a.gsproj",
+          "kind": "project",
+          "source_metadata": {
+            "bundled_example": true
+          }
+        }
+      ],
+      "mask": "masks/sample-000071.png",
+      "gds": "gds/sample-000071.gds",
+      "render": {
+        "coordinate_bounds_nm": [
+          300.0,
+          299.0,
+          488.0,
+          305.0
+        ],
+        "coordinate_units_per_pixel": 0.8430493273542601,
+        "padding_px": 16
+      },
+      "nm_per_pixel": null,
+      "units": "nominal_unscaled",
+      "leakage_group": "group-000061",
+      "split": "unassigned"
+    },
+    {
+      "id": 72,
+      "name": "论文 Fig4a 轮廓 18",
+      "layer": 1,
+      "datatype": 0,
+      "calibrated": 0,
+      "width": 163.0,
+      "height": 2.0,
+      "area": 325.0,
+      "components": 1,
+      "holes": 0,
+      "strict": "a9f786e681fdd52acd13250cad9d8eafb0120f3771ea28b1a960689083ed4628",
+      "congruent": "e870f9ba43ccb4c6f833fc2618d063bedff83b87aef70c029391f1d7e66a6dcf",
+      "same_shape": "cac1ead4e2eef795500e2bee91674156e60beccb4b0a0aec0b1c20d3feb9d9d6",
+      "tags": "",
+      "review": "draft",
+      "origins": [
+        {
+          "metadata": {
+            "shape_id": "c0587f240781",
+            "shape_metadata": {
+              "calibrated": false,
+              "nm_per_pixel": null,
+              "citation": "Duan, Liang, Chen, Li, Zhou, Zhao. Diffraction-limit-breaking digital projection lithography via multi-exposure strategies for high-density nanopatterning. Research Square preprint, 2025.",
+              "doi": "10.21203/rs.3.rs-7290332/v1",
+              "url": "https://doi.org/10.21203/rs.3.rs-7290332/v1",
+              "license": "CC BY 4.0",
+              "license_url": "https://creativecommons.org/licenses/by/4.0/",
+              "page": 14,
+              "figure": "4(a)",
+              "roi_px": [
+                264,
+                1131,
+                210,
+                210
+              ],
+              "render_dpi": 180,
+              "modifications": "cropped target-mask panel, OpenCV light-foreground threshold=90, simplified contours; uncalibrated; not manually reviewed",
+              "node": "not a 3 nm process layout",
+              "trace_report": {
+                "count": 31,
+                "rejected": 0,
+                "roi_origin_px": [
+                  0,
+                  0
+                ],
+                "image_height_px": 210
+              },
+              "contour_index": 17
+            },
+            "method": "editor_object"
+          },
+          "path": "C:\\Users\\zhuyu\\Desktop\\XKL\\版图设计\\GDS\\examples\\paper-fig4a.gsproj",
+          "kind": "project",
+          "source_metadata": {
+            "bundled_example": true
+          }
+        }
+      ],
+      "mask": "masks/sample-000072.png",
+      "gds": "gds/sample-000072.gds",
+      "render": {
+        "coordinate_bounds_nm": [
+          585.0,
+          311.0,
+          748.0,
+          313.0
+        ],
+        "coordinate_units_per_pixel": 0.7309417040358744,
+        "padding_px": 16
+      },
+      "nm_per_pixel": null,
+      "units": "nominal_unscaled",
+      "leakage_group": "group-000061",
+      "split": "unassigned"
+    },
+    {
+      "id": 73,
+      "name": "论文 Fig4a 轮廓 19",
+      "layer": 1,
+      "datatype": 0,
+      "calibrated": 0,
+      "width": 208.0,
+      "height": 9.0,
+      "area": 334.0,
+      "components": 1,
+      "holes": 0,
+      "strict": "b4759a85cc35b2d108464e99832dea2abef53c8529592c9d05cc6528ecfb1580",
+      "congruent": "05b3eefe04c16055a08f15b33c5b41ff8bea1f296fee08bec58130bd780a318f",
+      "same_shape": "be7d129e736937367f0d26bffd0a5c1d43275f66f8c9f4951667a065a2f764b3",
+      "tags": "",
+      "review": "draft",
+      "origins": [
+        {
+          "metadata": {
+            "shape_id": "46ce584ad579",
+            "shape_metadata": {
+              "calibrated": false,
+              "nm_per_pixel": null,
+              "citation": "Duan, Liang, Chen, Li, Zhou, Zhao. Diffraction-limit-breaking digital projection lithography via multi-exposure strategies for high-density nanopatterning. Research Square preprint, 2025.",
+              "doi": "10.21203/rs.3.rs-7290332/v1",
+              "url": "https://doi.org/10.21203/rs.3.rs-7290332/v1",
+              "license": "CC BY 4.0",
+              "license_url": "https://creativecommons.org/licenses/by/4.0/",
+              "page": 14,
+              "figure": "4(a)",
+              "roi_px": [
+                264,
+                1131,
+                210,
+                210
+              ],
+              "render_dpi": 180,
+              "modifications": "cropped target-mask panel, OpenCV light-foreground threshold=90, simplified contours; uncalibrated; not manually reviewed",
+              "node": "not a 3 nm process layout",
+              "trace_report": {
+                "count": 31,
+                "rejected": 0,
+                "roi_origin_px": [
+                  0,
+                  0
+                ],
+                "image_height_px": 210
+              },
+              "contour_index": 18
+            },
+            "method": "editor_object"
+          },
+          "path": "C:\\Users\\zhuyu\\Desktop\\XKL\\版图设计\\GDS\\examples\\paper-fig4a.gsproj",
+          "kind": "project",
+          "source_metadata": {
+            "bundled_example": true
+          }
+        }
+      ],
+      "mask": "masks/sample-000073.png",
+      "gds": "gds/sample-000073.gds",
+      "render": {
+        "coordinate_bounds_nm": [
+          780.0,
+          304.0,
+          988.0,
+          313.0
+        ],
+        "coordinate_units_per_pixel": 0.9327354260089686,
+        "padding_px": 16
+      },
+      "nm_per_pixel": null,
+      "units": "nominal_unscaled",
+      "leakage_group": "group-000061",
+      "split": "unassigned"
+    },
+    {
+      "id": 74,
+      "name": "论文 Fig4a 轮廓 21",
+      "layer": 1,
+      "datatype": 0,
+      "calibrated": 0,
+      "width": 194.0,
+      "height": 2.0,
+      "area": 388.0,
+      "components": 1,
+      "holes": 0,
+      "strict": "80f4c0d2f44db9ec5490e79dcb2a5629b979337c08a7efa5fa0e090787a81a38",
+      "congruent": "80f4c0d2f44db9ec5490e79dcb2a5629b979337c08a7efa5fa0e090787a81a38",
+      "same_shape": "7c642edb0cc54029e9be83285fa14045406051f39e88c34452bdad4c8aaba0a8",
+      "tags": "",
+      "review": "draft",
+      "origins": [
+        {
+          "metadata": {
+            "shape_id": "e12cf4a2a1fa",
+            "shape_metadata": {
+              "calibrated": false,
+              "nm_per_pixel": null,
+              "citation": "Duan, Liang, Chen, Li, Zhou, Zhao. Diffraction-limit-breaking digital projection lithography via multi-exposure strategies for high-density nanopatterning. Research Square preprint, 2025.",
+              "doi": "10.21203/rs.3.rs-7290332/v1",
+              "url": "https://doi.org/10.21203/rs.3.rs-7290332/v1",
+              "license": "CC BY 4.0",
+              "license_url": "https://creativecommons.org/licenses/by/4.0/",
+              "page": 14,
+              "figure": "4(a)",
+              "roi_px": [
+                264,
+                1131,
+                210,
+                210
+              ],
+              "render_dpi": 180,
+              "modifications": "cropped target-mask panel, OpenCV light-foreground threshold=90, simplified contours; uncalibrated; not manually reviewed",
+              "node": "not a 3 nm process layout",
+              "trace_report": {
+                "count": 31,
+                "rejected": 0,
+                "roi_origin_px": [
+                  0,
+                  0
+                ],
+                "image_height_px": 210
+              },
+              "contour_index": 20
+            },
+            "method": "editor_object"
+          },
+          "path": "C:\\Users\\zhuyu\\Desktop\\XKL\\版图设计\\GDS\\examples\\paper-fig4a.gsproj",
+          "kind": "project",
+          "source_metadata": {
+            "bundled_example": true
+          }
+        }
+      ],
+      "mask": "masks/sample-000074.png",
+      "gds": "gds/sample-000074.gds",
+      "render": {
+        "coordinate_bounds_nm": [
+          314.0,
+          377.0,
+          508.0,
+          379.0
+        ],
+        "coordinate_units_per_pixel": 0.8699551569506727,
+        "padding_px": 16
+      },
+      "nm_per_pixel": null,
+      "units": "nominal_unscaled",
+      "leakage_group": "group-000061",
+      "split": "unassigned"
+    },
+    {
+      "id": 75,
+      "name": "论文 Fig4a 轮廓 25",
+      "layer": 1,
+      "datatype": 0,
+      "calibrated": 0,
+      "width": 36.0,
+      "height": 3.0,
+      "area": 105.0,
+      "components": 1,
+      "holes": 0,
+      "strict": "b794e241a7da8ef9776c06e43f2ba37cb9158d267ad2ca8f0d3866b134a4842f",
+      "congruent": "b794e241a7da8ef9776c06e43f2ba37cb9158d267ad2ca8f0d3866b134a4842f",
+      "same_shape": "734c4ff954759e0f1668c6a5d869b0f71de92529daf01566efd589328d55038d",
+      "tags": "",
+      "review": "draft",
+      "origins": [
+        {
+          "metadata": {
+            "shape_id": "6bca5621c373",
+            "shape_metadata": {
+              "calibrated": false,
+              "nm_per_pixel": null,
+              "citation": "Duan, Liang, Chen, Li, Zhou, Zhao. Diffraction-limit-breaking digital projection lithography via multi-exposure strategies for high-density nanopatterning. Research Square preprint, 2025.",
+              "doi": "10.21203/rs.3.rs-7290332/v1",
+              "url": "https://doi.org/10.21203/rs.3.rs-7290332/v1",
+              "license": "CC BY 4.0",
+              "license_url": "https://creativecommons.org/licenses/by/4.0/",
+              "page": 14,
+              "figure": "4(a)",
+              "roi_px": [
+                264,
+                1131,
+                210,
+                210
+              ],
+              "render_dpi": 180,
+              "modifications": "cropped target-mask panel, OpenCV light-foreground threshold=90, simplified contours; uncalibrated; not manually reviewed",
+              "node": "not a 3 nm process layout",
+              "trace_report": {
+                "count": 31,
+                "rejected": 0,
+                "roi_origin_px": [
+                  0,
+                  0
+                ],
+                "image_height_px": 210
+              },
+              "contour_index": 24
+            },
+            "method": "editor_object"
+          },
+          "path": "C:\\Users\\zhuyu\\Desktop\\XKL\\版图设计\\GDS\\examples\\paper-fig4a.gsproj",
+          "kind": "project",
+          "source_metadata": {
+            "bundled_example": true
+          }
+        }
+      ],
+      "mask": "masks/sample-000075.png",
+      "gds": "gds/sample-000075.gds",
+      "render": {
+        "coordinate_bounds_nm": [
+          310.0,
+          456.0,
+          346.0,
+          459.0
+        ],
+        "coordinate_units_per_pixel": 0.16143497757847533,
+        "padding_px": 16
+      },
+      "nm_per_pixel": null,
+      "units": "nominal_unscaled",
+      "leakage_group": "group-000061",
+      "split": "unassigned"
+    },
+    {
+      "id": 76,
+      "name": "论文 Fig4a 轮廓 26",
+      "layer": 1,
+      "datatype": 0,
+      "calibrated": 0,
+      "width": 41.0,
+      "height": 5.0,
+      "area": 58.0,
+      "components": 1,
+      "holes": 0,
+      "strict": "1409b44e1f4a5b11500fb7414b5dbabdf83a9ba4ab72b1fffaf1702a35cb6f9c",
+      "congruent": "c0dd11d90c646637a5374f6b16737589f1059f799a3531e77940c48e02cfa482",
+      "same_shape": "a507d3979f16f8e5172dc429381088476e998da20269706bce50eb4b9859f97b",
+      "tags": "",
+      "review": "draft",
+      "origins": [
+        {
+          "metadata": {
+            "shape_id": "f51ced8291a6",
+            "shape_metadata": {
+              "calibrated": false,
+              "nm_per_pixel": null,
+              "citation": "Duan, Liang, Chen, Li, Zhou, Zhao. Diffraction-limit-breaking digital projection lithography via multi-exposure strategies for high-density nanopatterning. Research Square preprint, 2025.",
+              "doi": "10.21203/rs.3.rs-7290332/v1",
+              "url": "https://doi.org/10.21203/rs.3.rs-7290332/v1",
+              "license": "CC BY 4.0",
+              "license_url": "https://creativecommons.org/licenses/by/4.0/",
+              "page": 14,
+              "figure": "4(a)",
+              "roi_px": [
+                264,
+                1131,
+                210,
+                210
+              ],
+              "render_dpi": 180,
+              "modifications": "cropped target-mask panel, OpenCV light-foreground threshold=90, simplified contours; uncalibrated; not manually reviewed",
+              "node": "not a 3 nm process layout",
+              "trace_report": {
+                "count": 31,
+                "rejected": 0,
+                "roi_origin_px": [
+                  0,
+                  0
+                ],
+                "image_height_px": 210
+              },
+              "contour_index": 25
+            },
+            "method": "editor_object"
+          },
+          "path": "C:\\Users\\zhuyu\\Desktop\\XKL\\版图设计\\GDS\\examples\\paper-fig4a.gsproj",
+          "kind": "project",
+          "source_metadata": {
+            "bundled_example": true
+          }
+        }
+      ],
+      "mask": "masks/sample-000076.png",
+      "gds": "gds/sample-000076.gds",
+      "render": {
+        "coordinate_bounds_nm": [
+          707.0,
+          459.0,
+          748.0,
+          464.0
+        ],
+        "coordinate_units_per_pixel": 0.18385650224215244,
+        "padding_px": 16
+      },
+      "nm_per_pixel": null,
+      "units": "nominal_unscaled",
+      "leakage_group": "group-000061",
+      "split": "unassigned"
+    },
+    {
+      "id": 77,
+      "name": "论文 Fig4a 轮廓 27",
+      "layer": 1,
+      "datatype": 0,
+      "calibrated": 0,
+      "width": 208.0,
+      "height": 6.0,
+      "area": 431.5,
+      "components": 1,
+      "holes": 0,
+      "strict": "cf3e2f006a824fe2f4e0476dbae9e2b5cbca813b4468c041c9c90bf71f268b25",
+      "congruent": "1d10b291a333e468eeb26e4e9475d34ef588b661ab4c99347e0c03e3e6d2c0a2",
+      "same_shape": "cb87c5ada6d85bbf001f5c77f9ada1a3c521d8a49053273ff253f6df9323adad",
+      "tags": "",
+      "review": "draft",
+      "origins": [
+        {
+          "metadata": {
+            "shape_id": "cb113b5317fd",
+            "shape_metadata": {
+              "calibrated": false,
+              "nm_per_pixel": null,
+              "citation": "Duan, Liang, Chen, Li, Zhou, Zhao. Diffraction-limit-breaking digital projection lithography via multi-exposure strategies for high-density nanopatterning. Research Square preprint, 2025.",
+              "doi": "10.21203/rs.3.rs-7290332/v1",
+              "url": "https://doi.org/10.21203/rs.3.rs-7290332/v1",
+              "license": "CC BY 4.0",
+              "license_url": "https://creativecommons.org/licenses/by/4.0/",
+              "page": 14,
+              "figure": "4(a)",
+              "roi_px": [
+                264,
+                1131,
+                210,
+                210
+              ],
+              "render_dpi": 180,
+              "modifications": "cropped target-mask panel, OpenCV light-foreground threshold=90, simplified contours; uncalibrated; not manually reviewed",
+              "node": "not a 3 nm process layout",
+              "trace_report": {
+                "count": 31,
+                "rejected": 0,
+                "roi_origin_px": [
+                  0,
+                  0
+                ],
+                "image_height_px": 210
+              },
+              "contour_index": 26
+            },
+            "method": "editor_object"
+          },
+          "path": "C:\\Users\\zhuyu\\Desktop\\XKL\\版图设计\\GDS\\examples\\paper-fig4a.gsproj",
+          "kind": "project",
+          "source_metadata": {
+            "bundled_example": true
+          }
+        }
+      ],
+      "mask": "masks/sample-000077.png",
+      "gds": "gds/sample-000077.gds",
+      "render": {
+        "coordinate_bounds_nm": [
+          780.0,
+          462.0,
+          988.0,
+          468.0
+        ],
+        "coordinate_units_per_pixel": 0.9327354260089686,
+        "padding_px": 16
+      },
+      "nm_per_pixel": null,
+      "units": "nominal_unscaled",
+      "leakage_group": "group-000061",
+      "split": "unassigned"
+    },
+    {
+      "id": 78,
+      "name": "论文 Fig4a 轮廓 29",
+      "layer": 1,
+      "datatype": 0,
+      "calibrated": 0,
+      "width": 13.0,
+      "height": 2.0,
+      "area": 24.5,
+      "components": 1,
+      "holes": 0,
+      "strict": "c9676bcba93e6caa11ae1d58d00cfa5eff65f6af675231d81c45ad9655443b8b",
+      "congruent": "64ddc41701f5335ded6a873be08752b3e0a99bab839bc12e8fbc0f705656212a",
+      "same_shape": "715060029cfaee2395883dffeabc6dae3bb9810689f3468642c62fc9e21ba046",
+      "tags": "",
+      "review": "draft",
+      "origins": [
+        {
+          "metadata": {
+            "shape_id": "27708336450b",
+            "shape_metadata": {
+              "calibrated": false,
+              "nm_per_pixel": null,
+              "citation": "Duan, Liang, Chen, Li, Zhou, Zhao. Diffraction-limit-breaking digital projection lithography via multi-exposure strategies for high-density nanopatterning. Research Square preprint, 2025.",
+              "doi": "10.21203/rs.3.rs-7290332/v1",
+              "url": "https://doi.org/10.21203/rs.3.rs-7290332/v1",
+              "license": "CC BY 4.0",
+              "license_url": "https://creativecommons.org/licenses/by/4.0/",
+              "page": 14,
+              "figure": "4(a)",
+              "roi_px": [
+                264,
+                1131,
+                210,
+                210
+              ],
+              "render_dpi": 180,
+              "modifications": "cropped target-mask panel, OpenCV light-foreground threshold=90, simplified contours; uncalibrated; not manually reviewed",
+              "node": "not a 3 nm process layout",
+              "trace_report": {
+                "count": 31,
+                "rejected": 0,
+                "roi_origin_px": [
+                  0,
+                  0
+                ],
+                "image_height_px": 210
+              },
+              "contour_index": 28
+            },
+            "method": "editor_object"
+          },
+          "path": "C:\\Users\\zhuyu\\Desktop\\XKL\\版图设计\\GDS\\examples\\paper-fig4a.gsproj",
+          "kind": "project",
+          "source_metadata": {
+            "bundled_example": true
+          }
+        }
+      ],
+      "mask": "masks/sample-000078.png",
+      "gds": "gds/sample-000078.gds",
+      "render": {
+        "coordinate_bounds_nm": [
+          495.0,
+          528.0,
+          508.0,
+          530.0
+        ],
+        "coordinate_units_per_pixel": 0.05829596412556054,
+        "padding_px": 16
+      },
+      "nm_per_pixel": null,
+      "units": "nominal_unscaled",
+      "leakage_group": "group-000061",
+      "split": "unassigned"
+    },
+    {
+      "id": 79,
+      "name": "论文 Fig4a 轮廓 31",
+      "layer": 1,
+      "datatype": 0,
+      "calibrated": 0,
+      "width": 200.0,
+      "height": 6.0,
+      "area": 376.0,
+      "components": 1,
+      "holes": 0,
+      "strict": "79b611044c4519bf3c9df40e1e70bdcd8e6ba4136d519c47a4d06cb48ae21691",
+      "congruent": "d69049c824c70d69cfcaad2e24378abe29d9790ae89105e2f4e321dde8867b95",
+      "same_shape": "260c101ce97b54b7e811642c49f6c7d0ef3e1f4551206d6c07b6d80b151d4a02",
+      "tags": "",
+      "review": "draft",
+      "origins": [
+        {
+          "metadata": {
+            "shape_id": "d1636febed90",
+            "shape_metadata": {
+              "calibrated": false,
+              "nm_per_pixel": null,
+              "citation": "Duan, Liang, Chen, Li, Zhou, Zhao. Diffraction-limit-breaking digital projection lithography via multi-exposure strategies for high-density nanopatterning. Research Square preprint, 2025.",
+              "doi": "10.21203/rs.3.rs-7290332/v1",
+              "url": "https://doi.org/10.21203/rs.3.rs-7290332/v1",
+              "license": "CC BY 4.0",
+              "license_url": "https://creativecommons.org/licenses/by/4.0/",
+              "page": 14,
+              "figure": "4(a)",
+              "roi_px": [
+                264,
+                1131,
+                210,
+                210
+              ],
+              "render_dpi": 180,
+              "modifications": "cropped target-mask panel, OpenCV light-foreground threshold=90, simplified contours; uncalibrated; not manually reviewed",
+              "node": "not a 3 nm process layout",
+              "trace_report": {
+                "count": 31,
+                "rejected": 0,
+                "roi_origin_px": [
+                  0,
+                  0
+                ],
+                "image_height_px": 210
+              },
+              "contour_index": 30
+            },
+            "method": "editor_object"
+          },
+          "path": "C:\\Users\\zhuyu\\Desktop\\XKL\\版图设计\\GDS\\examples\\paper-fig4a.gsproj",
+          "kind": "project",
+          "source_metadata": {
+            "bundled_example": true
+          }
+        }
+      ],
+      "mask": "masks/sample-000079.png",
+      "gds": "gds/sample-000079.gds",
+      "render": {
+        "coordinate_bounds_nm": [
+          780.0,
+          536.0,
+          980.0,
+          542.0
+        ],
+        "coordinate_units_per_pixel": 0.8968609865470852,
+        "padding_px": 16
+      },
+      "nm_per_pixel": null,
+      "units": "nominal_unscaled",
+      "leakage_group": "group-000061",
+      "split": "unassigned"
+    },
+    {
+      "id": 80,
+      "name": "图片轮廓 1",
+      "layer": 1,
+      "datatype": 0,
+      "calibrated": 1,
+      "width": 97.5,
+      "height": 5.5,
+      "area": 536.25,
+      "components": 1,
+      "holes": 0,
+      "strict": "315e83de0d1e130ab141673f031c48352869ab39fa18ff5d474f81d883ffd38f",
+      "congruent": "315e83de0d1e130ab141673f031c48352869ab39fa18ff5d474f81d883ffd38f",
+      "same_shape": "299a0e7f305ea43a53113e25afe27327234e5d64a063f0aa9e03cb4139e8bfdf",
+      "tags": "",
+      "review": "draft",
+      "origins": [
+        {
+          "metadata": {
+            "shape_id": "0ce80b065584",
+            "shape_metadata": {
+              "source_image": "C:\\Users\\zhuyu\\Desktop\\XKL\\版图设计\\GDS\\examples\\trace_input.png",
+              "calibrated": true,
+              "nm_per_pixel": 0.5,
+              "trace_threshold": 150,
+              "trace_polarity": "dark",
+              "trace_tolerance_px": 0.5,
+              "trace_roi_px": null,
+              "trace_report": {
+                "count": 7,
+                "rejected": 0,
+                "roi_origin_px": [
+                  0,
+                  0
+                ],
+                "image_height_px": 360
+              }
+            },
+            "method": "editor_object"
+          },
+          "path": "C:\\Users\\zhuyu\\Desktop\\XKL\\版图设计\\GDS\\examples\\trace_result.gsproj",
+          "kind": "project",
+          "source_metadata": {
+            "bundled_example": true
+          }
+        },
+        {
+          "metadata": {
+            "shape_id": "b60cb342f7a9",
+            "shape_metadata": {
+              "source_image": "C:\\Users\\zhuyu\\Desktop\\XKL\\版图设计\\GDS\\examples\\trace_input.png",
+              "calibrated": true,
+              "nm_per_pixel": 0.5,
+              "trace_threshold": 150,
+              "trace_polarity": "dark",
+              "trace_tolerance_px": 0.5,
+              "trace_roi_px": null,
+              "trace_report": {
+                "count": 7,
+                "rejected": 0,
+                "roi_origin_px": [
+                  0,
+                  0
+                ],
+                "image_height_px": 360
+              }
+            },
+            "method": "editor_object"
+          },
+          "path": "C:\\Users\\zhuyu\\Desktop\\XKL\\版图设计\\GDS\\examples\\trace_result.gsproj",
+          "kind": "project",
+          "source_metadata": {
+            "bundled_example": true
+          }
+        },
+        {
+          "metadata": {
+            "shape_id": "2caad3f18545",
+            "shape_metadata": {
+              "source_image": "C:\\Users\\zhuyu\\Desktop\\XKL\\版图设计\\GDS\\examples\\trace_input.png",
+              "calibrated": true,
+              "nm_per_pixel": 0.5,
+              "trace_threshold": 150,
+              "trace_polarity": "dark",
+              "trace_tolerance_px": 0.5,
+              "trace_roi_px": null,
+              "trace_report": {
+                "count": 7,
+                "rejected": 0,
+                "roi_origin_px": [
+                  0,
+                  0
+                ],
+                "image_height_px": 360
+              }
+            },
+            "method": "editor_object"
+          },
+          "path": "C:\\Users\\zhuyu\\Desktop\\XKL\\版图设计\\GDS\\examples\\trace_result.gsproj",
+          "kind": "project",
+          "source_metadata": {
+            "bundled_example": true
+          }
+        },
+        {
+          "metadata": {
+            "shape_id": "ae453f5c1a38",
+            "shape_metadata": {
+              "source_image": "C:\\Users\\zhuyu\\Desktop\\XKL\\版图设计\\GDS\\examples\\trace_input.png",
+              "calibrated": true,
+              "nm_per_pixel": 0.5,
+              "trace_threshold": 150,
+              "trace_polarity": "dark",
+              "trace_tolerance_px": 0.5,
+              "trace_roi_px": null,
+              "trace_report": {
+                "count": 7,
+                "rejected": 0,
+                "roi_origin_px": [
+                  0,
+                  0
+                ],
+                "image_height_px": 360
+              }
+            },
+            "method": "editor_object"
+          },
+          "path": "C:\\Users\\zhuyu\\Desktop\\XKL\\版图设计\\GDS\\examples\\trace_result.gsproj",
+          "kind": "project",
+          "source_metadata": {
+            "bundled_example": true
+          }
+        },
+        {
+          "metadata": {
+            "shape_id": "ac66d2087841",
+            "shape_metadata": {
+              "source_image": "C:\\Users\\zhuyu\\Desktop\\XKL\\版图设计\\GDS\\examples\\trace_input.png",
+              "calibrated": true,
+              "nm_per_pixel": 0.5,
+              "trace_threshold": 150,
+              "trace_polarity": "dark",
+              "trace_tolerance_px": 0.5,
+              "trace_roi_px": null,
+              "trace_report": {
+                "count": 7,
+                "rejected": 0,
+                "roi_origin_px": [
+                  0,
+                  0
+                ],
+                "image_height_px": 360
+              }
+            },
+            "method": "editor_object"
+          },
+          "path": "C:\\Users\\zhuyu\\Desktop\\XKL\\版图设计\\GDS\\examples\\trace_result.gsproj",
+          "kind": "project",
+          "source_metadata": {
+            "bundled_example": true
+          }
+        }
+      ],
+      "mask": "masks/sample-000080.png",
+      "gds": "gds/sample-000080.gds",
+      "render": {
+        "coordinate_bounds_nm": [
+          17.5,
+          36.0,
+          115.0,
+          41.5
+        ],
+        "coordinate_units_per_pixel": 0.4372197309417041,
+        "padding_px": 16
+      },
+      "nm_per_pixel": 0.4372197309417041,
+      "units": "nm",
+      "leakage_group": "group-000080",
+      "split": "unassigned"
+    },
+    {
+      "id": 81,
+      "name": "图片轮廓 6",
+      "layer": 1,
+      "datatype": 0,
+      "calibrated": 1,
+      "width": 105.0,
+      "height": 115.0,
+      "area": 5539.5,
+      "components": 1,
+      "holes": 1,
+      "strict": "3916815f86aaabaf3b9b94429feef94ff51fdbcf097375d39dc30b71b4bbbed3",
+      "congruent": "5a079cc71479907409a3d2f693c1e133cb0faa5922afd32ed3f869f3d43a8575",
+      "same_shape": "beb9dcfed67af70f758cea37c06b6bbf4a4f54c7e01bc59e8dfec522579cbece",
+      "tags": "",
+      "review": "draft",
+      "origins": [
+        {
+          "metadata": {
+            "shape_id": "17a81e878c41",
+            "shape_metadata": {
+              "source_image": "C:\\Users\\zhuyu\\Desktop\\XKL\\版图设计\\GDS\\examples\\trace_input.png",
+              "calibrated": true,
+              "nm_per_pixel": 0.5,
+              "trace_threshold": 150,
+              "trace_polarity": "dark",
+              "trace_tolerance_px": 0.5,
+              "trace_roi_px": null,
+              "trace_report": {
+                "count": 7,
+                "rejected": 0,
+                "roi_origin_px": [
+                  0,
+                  0
+                ],
+                "image_height_px": 360
+              }
+            },
+            "method": "editor_object"
+          },
+          "path": "C:\\Users\\zhuyu\\Desktop\\XKL\\版图设计\\GDS\\examples\\trace_result.gsproj",
+          "kind": "project",
+          "source_metadata": {
+            "bundled_example": true
+          }
+        }
+      ],
+      "mask": "masks/sample-000081.png",
+      "gds": "gds/sample-000081.gds",
+      "render": {
+        "coordinate_bounds_nm": [
+          150.0,
+          44.5,
+          255.0,
+          159.5
+        ],
+        "coordinate_units_per_pixel": 0.515695067264574,
+        "padding_px": 16
+      },
+      "nm_per_pixel": 0.515695067264574,
+      "units": "nm",
+      "leakage_group": "group-000080",
+      "split": "unassigned"
+    },
+    {
+      "id": 82,
+      "name": "图片轮廓 7",
+      "layer": 1,
+      "datatype": 0,
+      "calibrated": 1,
+      "width": 92.5,
+      "height": 37.5,
+      "area": 2119.25,
+      "components": 1,
+      "holes": 0,
+      "strict": "30cab406ac2b837ca6185a7bf40657c08306fb53bc6c9467361bdad6fb8c6753",
+      "congruent": "02f28958d83448e5b46228cda23759495b91450167e79312279263340dc0fee3",
+      "same_shape": "9c3628588468745c265ef41a1a0b5ed619c5988aac793b500c4d73467188a629",
+      "tags": "",
+      "review": "draft",
+      "origins": [
+        {
+          "metadata": {
+            "shape_id": "8ff228d6a482",
+            "shape_metadata": {
+              "source_image": "C:\\Users\\zhuyu\\Desktop\\XKL\\版图设计\\GDS\\examples\\trace_input.png",
+              "calibrated": true,
+              "nm_per_pixel": 0.5,
+              "trace_threshold": 150,
+              "trace_polarity": "dark",
+              "trace_tolerance_px": 0.5,
+              "trace_roi_px": null,
+              "trace_report": {
+                "count": 7,
+                "rejected": 0,
+                "roi_origin_px": [
+                  0,
+                  0
+                ],
+                "image_height_px": 360
+              }
+            },
+            "method": "editor_object"
+          },
+          "path": "C:\\Users\\zhuyu\\Desktop\\XKL\\版图设计\\GDS\\examples\\trace_result.gsproj",
+          "kind": "project",
+          "source_metadata": {
+            "bundled_example": true
+          }
+        }
+      ],
+      "mask": "masks/sample-000082.png",
+      "gds": "gds/sample-000082.gds",
+      "render": {
+        "coordinate_bounds_nm": [
+          12.5,
+          132.0,
+          105.0,
+          169.5
+        ],
+        "coordinate_units_per_pixel": 0.41479820627802694,
+        "padding_px": 16
+      },
+      "nm_per_pixel": 0.41479820627802694,
+      "units": "nm",
+      "leakage_group": "group-000080",
+      "split": "unassigned"
+    },
+    {
+      "id": 83,
+      "name": "TOP · region 1",
+      "layer": 1,
+      "datatype": 0,
+      "calibrated": 1,
+      "width": 1000.0,
+      "height": 416.0,
+      "area": 50544.0,
+      "components": 22,
+      "holes": 0,
+      "strict": "fae7e13ef931450930e581cccf927186a4e497cbb164d1dfb5dbe94a8f94271b",
+      "congruent": "7d3b8527a0777feced9a0ee924b1d522847649948ff8cda01eee28e2d3959cce",
+      "same_shape": "f6d914915849740fca211f6171874da44112b9a30f95b74489bb899980caa2e7",
+      "tags": "",
+      "review": "draft",
+      "origins": [
+        {
+          "metadata": {
+            "cell": "TOP",
+            "source_cells": [
+              "P00000",
+              "P00001",
+              "P00002",
+              "P00004",
+              "P00005",
+              "P00006"
+            ],
+            "layer": 1,
+            "datatype": 0,
+            "mode": "region",
+            "recursive": true,
+            "roi_nm": [
+              0.0,
+              0.0,
+              1000.0,
+              1000.0
+            ],
+            "index": 0,
+            "labels": [],
+            "labels_capped": false,
+            "labels_scope": "unique_cell_definitions; not ROI-clipped or array-expanded"
+          },
+          "path": "C:\\Users\\zhuyu\\Desktop\\XKL\\版图设计\\GDS\\examples\\starter.gds",
+          "kind": "gds",
+          "source_metadata": {
+            "dbu_nm": 0.1,
+            "file_bytes": 4048
+          }
+        }
+      ],
+      "mask": "masks/sample-000083.png",
+      "gds": "gds/sample-000083.gds",
+      "render": {
+        "coordinate_bounds_nm": [
+          0.0,
+          0.0,
+          1000.0,
+          416.0
+        ],
+        "coordinate_units_per_pixel": 4.484304932735426,
+        "padding_px": 16
+      },
+      "nm_per_pixel": 4.484304932735426,
+      "units": "nm",
+      "leakage_group": "group-000083",
+      "split": "unassigned"
+    },
+    {
+      "id": 27,
+      "name": "Via / 包围层",
+      "layer": 2,
+      "datatype": 0,
+      "calibrated": 1,
+      "width": 12.0,
+      "height": 12.0,
+      "area": 144.0,
+      "components": 1,
+      "holes": 0,
+      "strict": "fdb236020c9a2ca0087d396aa3abc405900f7291421c878af9d7b002d6661aa7",
+      "congruent": "fdb236020c9a2ca0087d396aa3abc405900f7291421c878af9d7b002d6661aa7",
+      "same_shape": "337372bef396203df85cd7d3cc8d1ebee7d84adc8c53c7cc95e62aa819309fa3",
+      "tags": "",
+      "review": "draft",
+      "origins": [
+        {
+          "metadata": {
+            "shape_id": "e90133446d71",
+            "shape_metadata": {
+              "calibrated": true,
+              "source": "illustrative parametric catalog; not foundry rules"
+            },
+            "method": "editor_object"
+          },
+          "path": "内置可调结构",
+          "kind": "catalog",
+          "source_metadata": {
+            "node": "illustrative, not a process design kit"
+          }
+        },
+        {
+          "metadata": {
+            "shape_id": "d721e9a7aa6c",
+            "shape_metadata": {
+              "catalog_key": "via_enclosure"
+            },
+            "method": "editor_object"
+          },
+          "path": "C:\\Users\\zhuyu\\Desktop\\XKL\\版图设计\\GDS\\examples\\catalog.gsproj",
+          "kind": "project",
+          "source_metadata": {
+            "bundled_example": true
+          }
+        }
+      ],
+      "mask": "masks/sample-000027.png",
+      "gds": "gds/sample-000027.gds",
+      "render": {
+        "coordinate_bounds_nm": [
+          16.0,
+          16.0,
+          28.0,
+          28.0
+        ],
+        "coordinate_units_per_pixel": 0.053811659192825115,
+        "padding_px": 16
+      },
+      "nm_per_pixel": 0.053811659192825115,
+      "units": "nm",
+      "leakage_group": "group-000001",
+      "split": "unassigned"
+    },
+    {
+      "id": 38,
+      "name": "Line / Cut",
+      "layer": 2,
+      "datatype": 0,
+      "calibrated": 1,
+      "width": 16.0,
+      "height": 184.0,
+      "area": 2944.0,
+      "components": 1,
+      "holes": 0,
+      "strict": "b670e4671e628954d19c879085f9a1018d5637c9757523b2518fefc41a85840f",
+      "congruent": "4473290e4fc77fde3d3a7fbc76c98a831e46d797d591cb716799c676bc5ac19c",
+      "same_shape": "8b59cca6fb92a72019c460ed36975e8e00e4bdbc06a7715bd818ff2e5b50316f",
+      "tags": "",
+      "review": "draft",
+      "origins": [
+        {
+          "metadata": {
+            "shape_id": "4e0f13d55749",
+            "shape_metadata": {
+              "calibrated": true,
+              "source": "illustrative parametric catalog; not foundry rules"
+            },
+            "method": "editor_object"
+          },
+          "path": "内置可调结构",
+          "kind": "catalog",
+          "source_metadata": {
+            "node": "illustrative, not a process design kit"
+          }
+        },
+        {
+          "metadata": {
+            "shape_id": "3d7ab94de4c9",
+            "shape_metadata": {
+              "catalog_key": "line_cut"
+            },
+            "method": "editor_object"
+          },
+          "path": "C:\\Users\\zhuyu\\Desktop\\XKL\\版图设计\\GDS\\examples\\catalog.gsproj",
+          "kind": "project",
+          "source_metadata": {
+            "bundled_example": true
+          }
+        }
+      ],
+      "mask": "masks/sample-000038.png",
+      "gds": "gds/sample-000038.gds",
+      "render": {
+        "coordinate_bounds_nm": [
+          80.0,
+          -16.0,
+          96.0,
+          168.0
+        ],
+        "coordinate_units_per_pixel": 0.8251121076233184,
+        "padding_px": 16
+      },
+      "nm_per_pixel": 0.8251121076233184,
+      "units": "nm",
+      "leakage_group": "group-000001",
+      "split": "unassigned"
+    },
+    {
+      "id": 40,
+      "name": "Gate / Active 示意",
+      "layer": 2,
+      "datatype": 0,
+      "calibrated": 1,
+      "width": 184.0,
+      "height": 24.0,
+      "area": 4416.0,
+      "components": 1,
+      "holes": 0,
+      "strict": "1ef796dc37d3dabbcecb4c0d546272133f3566ec094c7fe204e65360e53cf7ba",
+      "congruent": "1ef796dc37d3dabbcecb4c0d546272133f3566ec094c7fe204e65360e53cf7ba",
+      "same_shape": "aa863529d6f4065dff2de97a96b1031d38c3922ec4575af0e2309781e110d245",
+      "tags": "",
+      "review": "draft",
+      "origins": [
+        {
+          "metadata": {
+            "shape_id": "a47d8aca5986",
+            "shape_metadata": {
+              "calibrated": true,
+              "source": "illustrative parametric catalog; not foundry rules"
+            },
+            "method": "editor_object"
+          },
+          "path": "内置可调结构",
+          "kind": "catalog",
+          "source_metadata": {
+            "node": "illustrative, not a process design kit"
+          }
+        },
+        {
+          "metadata": {
+            "shape_id": "809086d44e50",
+            "shape_metadata": {
+              "catalog_key": "gate_active"
+            },
+            "method": "editor_object"
+          },
+          "path": "C:\\Users\\zhuyu\\Desktop\\XKL\\版图设计\\GDS\\examples\\catalog.gsproj",
+          "kind": "project",
+          "source_metadata": {
+            "bundled_example": true
+          }
+        }
+      ],
+      "mask": "masks/sample-000040.png",
+      "gds": "gds/sample-000040.gds",
+      "render": {
+        "coordinate_bounds_nm": [
+          -16.0,
+          33.3333333,
+          168.0,
+          57.3333333
+        ],
+        "coordinate_units_per_pixel": 0.8251121076233184,
+        "padding_px": 16
+      },
+      "nm_per_pixel": 0.8251121076233184,
+      "units": "nm",
+      "leakage_group": "group-000001",
+      "split": "unassigned"
+    }
+  ]
+}

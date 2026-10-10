@@ -1,0 +1,21 @@
+"""Primary-source reading list, checked 2026-10-10. Short original summaries."""
+SOURCES = {
+    "mack2000": ("Chris A. Mack · Corner Rounding and Line-end Shortening in Optical Lithography (2000)", "https://www.lithoguru.com/scientist/litho_papers/2000_103_Corner%20Rounding%20and%20Line-end%20Shortening%20in%20OL.pdf", "论文：解释角部圆化、孔形状与线端缩短。早期光学研究，只借用效应机制，不移植尺寸。"),
+    "de2018": ("Peter De Bisschop · Stochastic effects in EUV lithography (2018)", "https://imec-publications.be/entities/publication/bcb41faf-d258-4974-9b0e-637a72e55f2a", "论文元数据：EUV 随机效应研究。线条和接触孔缺陷对照由 imec 公开技术解读补充。"),
+    "mack2019": ("Chris A. Mack · Metrics for stochastic scaling in EUV lithography (2019)", "https://lithoguru.com/scientist/litho_papers/2019_Metrics%20for%20stochastic%20scaling%20in%20EUV.pdf", "论文：讨论 LWR、LCDU 的随机变异指标；本软件只生成几何，不计算物理概率。"),
+    "overlay2017": ("Impact of stochastic process variations on overlay mark fidelity towards the 5nm node (2017)", "https://lithoguru.com/scientist/litho_papers/2017_Overlay_Mark_Fidelity.pdf", "论文：套刻标记图形保真与工艺变化；示意标记需按实际量测流程另行设计。"),
+    "cmp2004": ("MIT · Modeling of Pattern Dependencies in Abrasive-Free CMP (2001)", "https://mtlsites.mit.edu/researchgroups/Metrology/PAPERS/VMIC2001.pdf", "论文：线宽、图形密度和初始形貌影响 CMP。仅支持设置测试几何，未实现 CMP 模型。"),
+    "etch2025": ("F. Schleicher et al. · Tone reversal patterning for advanced technology nodes (2022)", "https://imec-publications.be/bitstreams/c5d23032-69e9-494b-9cce-03f5fcfa30e5/download", "论文：关注图形转移中的粗糙度与缺陷；不能只以曝光轮廓代表最终加工结果。"),
+    "phidl": ("PHIDL: Python CAD layout and geometry creation for nanolithography (2021)", "https://arxiv.org/abs/2103.01152", "论文：参数化几何与脚本版图工作流。作为插件接口与参数结构的设计参考。"),
+    "imec2018": ("imec · Pushing EUV single-exposure limits (2018)", "https://www.imec-int.com/en/imec-magazine/imec-magazine-march-2018/imec-pushes-the-limits-of-euv-lithography-single-exposure-for-future-logic-and-memory-applications", "研究解读：L/S 微桥与断线、孔缺失与合并；SRAF 与 retargeting 的工艺窗口影响。"),
+    "imec2019": ("imec · Sailing along the stochastic cliffs (2019)", "https://www.imec-int.com/en/imec-magazine/imec-magazine-july-2019/euv-lithography-sailing-along-the-stochastic-cliffs", "研究解读：随机缺陷与节距、剂量、胶材料相关。几何扫描不能代替实验窗口。"),
+    "imec2025": ("imec · Single-patterning High-NA EUV milestones (2025)", "https://www.imec-int.com/en/press/imec-achieves-new-milestones-single-patterning-high-na-euv-lithography-both-damascene-and", "研究公告：20 nm pitch、13 nm tip-to-tip 研究示例。仅说明测试结构意义，非 3 nm PDK 规则。"),
+    "hex2025": ("imec · Printing 28nm Pitch Hexagonal Contact Arrays (2025)", "https://imec-publications.be/entities/publication/b9bb59cd-e1fa-4a1d-9bb1-51323e803060", "论文元数据与摘要：交错接触孔阵列及图形转移后量测。库中的交错方孔是可调测试近似。"),
+    "asml": ("ASML · Computational lithography", "https://www.asml.com/en/products/computational-lithography", "官方说明：模型通过机器与测试晶圆数据标定，再优化掩膜。手工锤头和 serif 属于测试几何。"),
+    "ibmeuv": ("IBM Research · Why we need EUV lithography (2023)", "https://research.ibm.com/blog/what-is-euv-lithography", "官方技术背景：EUV 曝光与多次图形化；节点名称不定义全部版图尺寸。"),
+    "tsmc3": ("TSMC · 3nm Technology / FinFLEX", "https://www.tsmc.com/english/dedicatedFoundry/technology/logic/l_3nm", "厂商背景：N3 系列与 FinFLEX。网页不提供可代用的完整设计规则。"),
+    "samsung3": ("Samsung · 3nm GAA production (2022)", "https://news.samsung.com/global/samsung-begins-chip-production-using-3nm-process-technology-with-gaa-architecture", "厂商背景：3 nm GAA 工艺与可变纳米片通道；与其他厂商结构不同。"),
+    "klayout": ("KLayout · Database API", "https://klayout.de/doc/programming/database_api.html", "官方文档：Cell、图层和数据库单位。用于独立 GDS 回读验证。"),
+    "gdstk": ("GDSTK · C++ / Python GDS toolkit", "https://heitzmann.github.io/gdstk/", "官方文档：GDS I/O、布尔、偏置和路径几何。软件使用库接口，不复制编辑器源码。"),
+    "opencv": ("OpenCV · Contours hierarchy", "https://docs.opencv.org/4.x/d9/d8b/tutorial_py_contours_hierarchy.html", "官方文档：轮廓层级用于保留空洞；标注文字与比例尺需裁剪排除。"),
+}

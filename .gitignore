@@ -1,0 +1,18 @@
+.venv/
+__pycache__/
+.pytest_cache/
+build/
+dist/
+*.spec
+*.egg-info/
+userdata/
+user_plugins/__pycache__/
+*.pyc
+*.log
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+.env
+.env.*
+!.env.example
+/GDS Studio-source.zip

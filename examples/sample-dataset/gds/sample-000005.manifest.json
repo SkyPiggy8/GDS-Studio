@@ -1,0 +1,22 @@
+{
+  "units": "nm",
+  "precision_nm": 0.1,
+  "polygon_count": 12,
+  "cell_count": 2,
+  "area_nm2": 23040.0,
+  "gds_readback_verified": true,
+  "patterns": [
+    {
+      "cell": "P00000",
+      "id": "e41c49f7cd79",
+      "name": "Tip-to-Tip",
+      "pattern": "",
+      "params": {},
+      "metadata": {
+        "calibrated": true,
+        "library_id": 5
+      }
+    }
+  ],
+  "document_metadata": {}
+}

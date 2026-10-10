@@ -1,0 +1,187 @@
+{
+  "units": "nm",
+  "precision_nm": 0.1,
+  "polygon_count": 37,
+  "cell_count": 17,
+  "area_nm2": 61214.5,
+  "gds_readback_verified": true,
+  "patterns": [
+    {
+      "cell": "P00000",
+      "id": "796a7ff587f6",
+      "name": "论文 Fig4a 轮廓 13",
+      "pattern": "",
+      "params": {},
+      "metadata": {
+        "library_id": 68,
+        "calibrated": false
+      }
+    },
+    {
+      "cell": "P00001",
+      "id": "b697d383f15f",
+      "name": "论文 Fig4a 轮廓 14",
+      "pattern": "",
+      "params": {},
+      "metadata": {
+        "library_id": 69,
+        "calibrated": false
+      }
+    },
+    {
+      "cell": "P00002",
+      "id": "6d3ffc84997d",
+      "name": "论文 Fig4a 轮廓 15",
+      "pattern": "",
+      "params": {},
+      "metadata": {
+        "library_id": 70,
+        "calibrated": false
+      }
+    },
+    {
+      "cell": "P00003",
+      "id": "ce4da4400591",
+      "name": "论文 Fig4a 轮廓 17",
+      "pattern": "",
+      "params": {},
+      "metadata": {
+        "library_id": 71,
+        "calibrated": false
+      }
+    },
+    {
+      "cell": "P00004",
+      "id": "9b21f0116512",
+      "name": "论文 Fig4a 轮廓 18",
+      "pattern": "",
+      "params": {},
+      "metadata": {
+        "library_id": 72,
+        "calibrated": false
+      }
+    },
+    {
+      "cell": "P00005",
+      "id": "1c2cf470b9eb",
+      "name": "论文 Fig4a 轮廓 19",
+      "pattern": "",
+      "params": {},
+      "metadata": {
+        "library_id": 73,
+        "calibrated": false
+      }
+    },
+    {
+      "cell": "P00006",
+      "id": "f2e8f535bab6",
+      "name": "论文 Fig4a 轮廓 21",
+      "pattern": "",
+      "params": {},
+      "metadata": {
+        "library_id": 74,
+        "calibrated": false
+      }
+    },
+    {
+      "cell": "P00007",
+      "id": "865a419801e3",
+      "name": "论文 Fig4a 轮廓 25",
+      "pattern": "",
+      "params": {},
+      "metadata": {
+        "library_id": 75,
+        "calibrated": false
+      }
+    },
+    {
+      "cell": "P00008",
+      "id": "4d76f2c75985",
+      "name": "论文 Fig4a 轮廓 26",
+      "pattern": "",
+      "params": {},
+      "metadata": {
+        "library_id": 76,
+        "calibrated": false
+      }
+    },
+    {
+      "cell": "P00009",
+      "id": "c5706d2c0ada",
+      "name": "论文 Fig4a 轮廓 27",
+      "pattern": "",
+      "params": {},
+      "metadata": {
+        "library_id": 77,
+        "calibrated": false
+      }
+    },
+    {
+      "cell": "P00010",
+      "id": "c218feb5404f",
+      "name": "论文 Fig4a 轮廓 29",
+      "pattern": "",
+      "params": {},
+      "metadata": {
+        "library_id": 78,
+        "calibrated": false
+      }
+    },
+    {
+      "cell": "P00011",
+      "id": "14d5f28e83e0",
+      "name": "论文 Fig4a 轮廓 31",
+      "pattern": "",
+      "params": {},
+      "metadata": {
+        "library_id": 79,
+        "calibrated": false
+      }
+    },
+    {
+      "cell": "P00012",
+      "id": "dce13f3c0af6",
+      "name": "图片轮廓 1",
+      "pattern": "",
+      "params": {},
+      "metadata": {
+        "library_id": 80,
+        "calibrated": true
+      }
+    },
+    {
+      "cell": "P00013",
+      "id": "5cd7403ffa4f",
+      "name": "图片轮廓 6",
+      "pattern": "",
+      "params": {},
+      "metadata": {
+        "library_id": 81,
+        "calibrated": true
+      }
+    },
+    {
+      "cell": "P00014",
+      "id": "667721f4e3d9",
+      "name": "图片轮廓 7",
+      "pattern": "",
+      "params": {},
+      "metadata": {
+        "library_id": 82,
+        "calibrated": true
+      }
+    },
+    {
+      "cell": "P00015",
+      "id": "11598c03f5ab",
+      "name": "TOP · region 1",
+      "pattern": "",
+      "params": {},
+      "metadata": {
+        "library_id": 83,
+        "calibrated": true
+      }
+    }
+  ],
+  "document_metadata": {}
+}

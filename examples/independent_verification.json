@@ -1,0 +1,26 @@
+{
+  "catalog.gds": {
+    "dbu_um": 0.0001,
+    "cells": 42,
+    "top_cell": "TOP",
+    "layers": 2
+  },
+  "line_space_sweep.gds": {
+    "dbu_um": 0.0001,
+    "cells": 21,
+    "top_cell": "TOP",
+    "layers": 1
+  },
+  "starter.gds": {
+    "dbu_um": 0.0001,
+    "cells": 9,
+    "top_cell": "TOP",
+    "layers": 1
+  },
+  "trace_result.gds": {
+    "dbu_um": 0.0001,
+    "cells": 8,
+    "top_cell": "TOP",
+    "layers": 1
+  }
+}

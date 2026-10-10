@@ -1,0 +1,22 @@
+{
+  "units": "nm",
+  "precision_nm": 0.1,
+  "polygon_count": 8,
+  "cell_count": 2,
+  "area_nm2": 10240.0,
+  "gds_readback_verified": true,
+  "patterns": [
+    {
+      "cell": "P00000",
+      "id": "36431dc185d2",
+      "name": "Line / Space",
+      "pattern": "",
+      "params": {},
+      "metadata": {
+        "calibrated": true,
+        "library_id": 51
+      }
+    }
+  ],
+  "document_metadata": {}
+}

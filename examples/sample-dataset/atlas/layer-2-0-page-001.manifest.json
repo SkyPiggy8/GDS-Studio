@@ -1,0 +1,44 @@
+{
+  "units": "nm",
+  "precision_nm": 0.1,
+  "polygon_count": 3,
+  "cell_count": 4,
+  "area_nm2": 7503.999999999997,
+  "gds_readback_verified": true,
+  "patterns": [
+    {
+      "cell": "P00000",
+      "id": "1ffd7249cabf",
+      "name": "Via / 包围层",
+      "pattern": "",
+      "params": {},
+      "metadata": {
+        "library_id": 27,
+        "calibrated": true
+      }
+    },
+    {
+      "cell": "P00001",
+      "id": "aad6e173c92a",
+      "name": "Line / Cut",
+      "pattern": "",
+      "params": {},
+      "metadata": {
+        "library_id": 38,
+        "calibrated": true
+      }
+    },
+    {
+      "cell": "P00002",
+      "id": "3d613183457e",
+      "name": "Gate / Active 示意",
+      "pattern": "",
+      "params": {},
+      "metadata": {
+        "library_id": 40,
+        "calibrated": true
+      }
+    }
+  ],
+  "document_metadata": {}
+}

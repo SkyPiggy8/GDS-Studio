@@ -1,0 +1,715 @@
+{
+  "units": "nm",
+  "precision_nm": 0.1,
+  "polygon_count": 386,
+  "cell_count": 65,
+  "area_nm2": 642431.8449999999,
+  "gds_readback_verified": true,
+  "patterns": [
+    {
+      "cell": "P00000",
+      "id": "1ee391c1d29c",
+      "name": "矩形",
+      "pattern": "",
+      "params": {},
+      "metadata": {
+        "library_id": 1,
+        "calibrated": true
+      }
+    },
+    {
+      "cell": "P00001",
+      "id": "b0090cc8cf66",
+      "name": "孤立线",
+      "pattern": "",
+      "params": {},
+      "metadata": {
+        "library_id": 2,
+        "calibrated": true
+      }
+    },
+    {
+      "cell": "P00002",
+      "id": "e5629aef9d76",
+      "name": "Line / Space",
+      "pattern": "",
+      "params": {},
+      "metadata": {
+        "library_id": 3,
+        "calibrated": true
+      }
+    },
+    {
+      "cell": "P00003",
+      "id": "7e201aa6365d",
+      "name": "密集 / 孤立对比",
+      "pattern": "",
+      "params": {},
+      "metadata": {
+        "library_id": 4,
+        "calibrated": true
+      }
+    },
+    {
+      "cell": "P00004",
+      "id": "5ace3139158b",
+      "name": "Tip-to-Tip",
+      "pattern": "",
+      "params": {},
+      "metadata": {
+        "library_id": 5,
+        "calibrated": true
+      }
+    },
+    {
+      "cell": "P00005",
+      "id": "cc7e6b468474",
+      "name": "Tip-to-Side",
+      "pattern": "",
+      "params": {},
+      "metadata": {
+        "library_id": 6,
+        "calibrated": true
+      }
+    },
+    {
+      "cell": "P00006",
+      "id": "3852de4a114c",
+      "name": "交错线端",
+      "pattern": "",
+      "params": {},
+      "metadata": {
+        "library_id": 7,
+        "calibrated": true
+      }
+    },
+    {
+      "cell": "P00007",
+      "id": "97782b5e8713",
+      "name": "锤头 Hammerhead",
+      "pattern": "",
+      "params": {},
+      "metadata": {
+        "library_id": 8,
+        "calibrated": true
+      }
+    },
+    {
+      "cell": "P00008",
+      "id": "e4ed8c743358",
+      "name": "狗骨 Dogbone",
+      "pattern": "",
+      "params": {},
+      "metadata": {
+        "library_id": 9,
+        "calibrated": true
+      }
+    },
+    {
+      "cell": "P00009",
+      "id": "13f05dff8d5c",
+      "name": "角部 Serif",
+      "pattern": "",
+      "params": {},
+      "metadata": {
+        "library_id": 10,
+        "calibrated": true
+      }
+    },
+    {
+      "cell": "P00010",
+      "id": "39bb8c0d78c6",
+      "name": "辅助线 SRAF",
+      "pattern": "",
+      "params": {},
+      "metadata": {
+        "library_id": 11,
+        "calibrated": true
+      }
+    },
+    {
+      "cell": "P00011",
+      "id": "28dfe7c62988",
+      "name": "L 型拐角",
+      "pattern": "",
+      "params": {},
+      "metadata": {
+        "library_id": 12,
+        "calibrated": true
+      }
+    },
+    {
+      "cell": "P00012",
+      "id": "798194513809",
+      "name": "U 型回折",
+      "pattern": "",
+      "params": {},
+      "metadata": {
+        "library_id": 13,
+        "calibrated": true
+      }
+    },
+    {
+      "cell": "P00013",
+      "id": "9ac476d068f1",
+      "name": "T 型连接",
+      "pattern": "",
+      "params": {},
+      "metadata": {
+        "library_id": 14,
+        "calibrated": true
+      }
+    },
+    {
+      "cell": "P00014",
+      "id": "515cce3a1e7d",
+      "name": "十字连接",
+      "pattern": "",
+      "params": {},
+      "metadata": {
+        "library_id": 15,
+        "calibrated": true
+      }
+    },
+    {
+      "cell": "P00015",
+      "id": "7691457516b2",
+      "name": "H 型连接",
+      "pattern": "",
+      "params": {},
+      "metadata": {
+        "library_id": 16,
+        "calibrated": true
+      }
+    },
+    {
+      "cell": "P00016",
+      "id": "32ab15c1c7d6",
+      "name": "Z 型 Jog",
+      "pattern": "",
+      "params": {},
+      "metadata": {
+        "library_id": 17,
+        "calibrated": true
+      }
+    },
+    {
+      "cell": "P00017",
+      "id": "9e372b5e480d",
+      "name": "蛇形线",
+      "pattern": "",
+      "params": {},
+      "metadata": {
+        "library_id": 18,
+        "calibrated": true
+      }
+    },
+    {
+      "cell": "P00018",
+      "id": "a61af58d1d3a",
+      "name": "阶梯线",
+      "pattern": "",
+      "params": {},
+      "metadata": {
+        "library_id": 19,
+        "calibrated": true
+      }
+    },
+    {
+      "cell": "P00019",
+      "id": "4393d463cc4d",
+      "name": "45° 斜线",
+      "pattern": "",
+      "params": {},
+      "metadata": {
+        "library_id": 20,
+        "calibrated": true
+      }
+    },
+    {
+      "cell": "P00020",
+      "id": "6ed7a8a40ad4",
+      "name": "45° 倒角",
+      "pattern": "",
+      "params": {},
+      "metadata": {
+        "library_id": 21,
+        "calibrated": true
+      }
+    },
+    {
+      "cell": "P00021",
+      "id": "5188a818b463",
+      "name": "Y 型连接",
+      "pattern": "",
+      "params": {},
+      "metadata": {
+        "library_id": 22,
+        "calibrated": true
+      }
+    },
+    {
+      "cell": "P00022",
+      "id": "d725dd38a9eb",
+      "name": "方形 Contact",
+      "pattern": "",
+      "params": {},
+      "metadata": {
+        "library_id": 23,
+        "calibrated": true
+      }
+    },
+    {
+      "cell": "P00023",
+      "id": "50aeaed18c0a",
+      "name": "Contact 阵列",
+      "pattern": "",
+      "params": {},
+      "metadata": {
+        "library_id": 24,
+        "calibrated": true
+      }
+    },
+    {
+      "cell": "P00024",
+      "id": "8aa0021b35b9",
+      "name": "交错孔阵列",
+      "pattern": "",
+      "params": {},
+      "metadata": {
+        "library_id": 25,
+        "calibrated": true
+      }
+    },
+    {
+      "cell": "P00025",
+      "id": "f8518154cd57",
+      "name": "Via / 包围层",
+      "pattern": "",
+      "params": {},
+      "metadata": {
+        "library_id": 26,
+        "calibrated": true
+      }
+    },
+    {
+      "cell": "P00026",
+      "id": "645eed5d7796",
+      "name": "矩形环",
+      "pattern": "",
+      "params": {},
+      "metadata": {
+        "library_id": 28,
+        "calibrated": true
+      }
+    },
+    {
+      "cell": "P00027",
+      "id": "ad4f344ccc3a",
+      "name": "梳齿",
+      "pattern": "",
+      "params": {},
+      "metadata": {
+        "library_id": 29,
+        "calibrated": true
+      }
+    },
+    {
+      "cell": "P00028",
+      "id": "de40f4aa1bd9",
+      "name": "交指梳齿",
+      "pattern": "",
+      "params": {},
+      "metadata": {
+        "library_id": 30,
+        "calibrated": true
+      }
+    },
+    {
+      "cell": "P00029",
+      "id": "df3e1e6a909e",
+      "name": "凹槽 Notch",
+      "pattern": "",
+      "params": {},
+      "metadata": {
+        "library_id": 31,
+        "calibrated": true
+      }
+    },
+    {
+      "cell": "P00030",
+      "id": "ec042262f2e3",
+      "name": "颈缩 Neck",
+      "pattern": "",
+      "params": {},
+      "metadata": {
+        "library_id": 32,
+        "calibrated": true
+      }
+    },
+    {
+      "cell": "P00031",
+      "id": "351a367d8f92",
+      "name": "微桥样本",
+      "pattern": "",
+      "params": {},
+      "metadata": {
+        "library_id": 33,
+        "calibrated": true
+      }
+    },
+    {
+      "cell": "P00032",
+      "id": "93cc6b966de6",
+      "name": "断线样本",
+      "pattern": "",
+      "params": {},
+      "metadata": {
+        "library_id": 34,
+        "calibrated": true
+      }
+    },
+    {
+      "cell": "P00033",
+      "id": "2a5c59c17132",
+      "name": "缺孔样本",
+      "pattern": "",
+      "params": {},
+      "metadata": {
+        "library_id": 35,
+        "calibrated": true
+      }
+    },
+    {
+      "cell": "P00034",
+      "id": "b5eccac4f967",
+      "name": "并孔样本",
+      "pattern": "",
+      "params": {},
+      "metadata": {
+        "library_id": 36,
+        "calibrated": true
+      }
+    },
+    {
+      "cell": "P00035",
+      "id": "1edaef942c77",
+      "name": "游标 Vernier",
+      "pattern": "",
+      "params": {},
+      "metadata": {
+        "library_id": 37,
+        "calibrated": true
+      }
+    },
+    {
+      "cell": "P00036",
+      "id": "75197c3ba179",
+      "name": "Gate / Active 示意",
+      "pattern": "",
+      "params": {},
+      "metadata": {
+        "library_id": 39,
+        "calibrated": true
+      }
+    },
+    {
+      "cell": "P00037",
+      "id": "1b0b13ed446d",
+      "name": "Line / Space",
+      "pattern": "",
+      "params": {},
+      "metadata": {
+        "library_id": 41,
+        "calibrated": true
+      }
+    },
+    {
+      "cell": "P00038",
+      "id": "f8a493067fd7",
+      "name": "Line / Space",
+      "pattern": "",
+      "params": {},
+      "metadata": {
+        "library_id": 42,
+        "calibrated": true
+      }
+    },
+    {
+      "cell": "P00039",
+      "id": "cc26abe7e6eb",
+      "name": "Line / Space",
+      "pattern": "",
+      "params": {},
+      "metadata": {
+        "library_id": 43,
+        "calibrated": true
+      }
+    },
+    {
+      "cell": "P00040",
+      "id": "88cc24a06269",
+      "name": "Line / Space",
+      "pattern": "",
+      "params": {},
+      "metadata": {
+        "library_id": 44,
+        "calibrated": true
+      }
+    },
+    {
+      "cell": "P00041",
+      "id": "b834b2c7ff29",
+      "name": "Line / Space",
+      "pattern": "",
+      "params": {},
+      "metadata": {
+        "library_id": 45,
+        "calibrated": true
+      }
+    },
+    {
+      "cell": "P00042",
+      "id": "d1e8583a6ff5",
+      "name": "Line / Space",
+      "pattern": "",
+      "params": {},
+      "metadata": {
+        "library_id": 46,
+        "calibrated": true
+      }
+    },
+    {
+      "cell": "P00043",
+      "id": "39c270fefef6",
+      "name": "Line / Space",
+      "pattern": "",
+      "params": {},
+      "metadata": {
+        "library_id": 47,
+        "calibrated": true
+      }
+    },
+    {
+      "cell": "P00044",
+      "id": "69bd85a17524",
+      "name": "Line / Space",
+      "pattern": "",
+      "params": {},
+      "metadata": {
+        "library_id": 48,
+        "calibrated": true
+      }
+    },
+    {
+      "cell": "P00045",
+      "id": "c73b035a86b8",
+      "name": "Line / Space",
+      "pattern": "",
+      "params": {},
+      "metadata": {
+        "library_id": 49,
+        "calibrated": true
+      }
+    },
+    {
+      "cell": "P00046",
+      "id": "8da8322eaa56",
+      "name": "Line / Space",
+      "pattern": "",
+      "params": {},
+      "metadata": {
+        "library_id": 50,
+        "calibrated": true
+      }
+    },
+    {
+      "cell": "P00047",
+      "id": "699d0833ef3c",
+      "name": "Line / Space",
+      "pattern": "",
+      "params": {},
+      "metadata": {
+        "library_id": 51,
+        "calibrated": true
+      }
+    },
+    {
+      "cell": "P00048",
+      "id": "64acfbcbe386",
+      "name": "Line / Space",
+      "pattern": "",
+      "params": {},
+      "metadata": {
+        "library_id": 52,
+        "calibrated": true
+      }
+    },
+    {
+      "cell": "P00049",
+      "id": "054df597c633",
+      "name": "Line / Space",
+      "pattern": "",
+      "params": {},
+      "metadata": {
+        "library_id": 53,
+        "calibrated": true
+      }
+    },
+    {
+      "cell": "P00050",
+      "id": "c868db4adbae",
+      "name": "Line / Space",
+      "pattern": "",
+      "params": {},
+      "metadata": {
+        "library_id": 54,
+        "calibrated": true
+      }
+    },
+    {
+      "cell": "P00051",
+      "id": "3dbd9a2ff610",
+      "name": "Line / Space",
+      "pattern": "",
+      "params": {},
+      "metadata": {
+        "library_id": 55,
+        "calibrated": true
+      }
+    },
+    {
+      "cell": "P00052",
+      "id": "fb14d0590ad8",
+      "name": "Line / Space",
+      "pattern": "",
+      "params": {},
+      "metadata": {
+        "library_id": 56,
+        "calibrated": true
+      }
+    },
+    {
+      "cell": "P00053",
+      "id": "c5947b1c28bc",
+      "name": "Line / Space",
+      "pattern": "",
+      "params": {},
+      "metadata": {
+        "library_id": 57,
+        "calibrated": true
+      }
+    },
+    {
+      "cell": "P00054",
+      "id": "fd735e233264",
+      "name": "Line / Space",
+      "pattern": "",
+      "params": {},
+      "metadata": {
+        "library_id": 58,
+        "calibrated": true
+      }
+    },
+    {
+      "cell": "P00055",
+      "id": "d6c672847ff1",
+      "name": "Line / Space",
+      "pattern": "",
+      "params": {},
+      "metadata": {
+        "library_id": 59,
+        "calibrated": true
+      }
+    },
+    {
+      "cell": "P00056",
+      "id": "634703666a07",
+      "name": "Line / Space",
+      "pattern": "",
+      "params": {},
+      "metadata": {
+        "library_id": 60,
+        "calibrated": true
+      }
+    },
+    {
+      "cell": "P00057",
+      "id": "8e5f7aedabd0",
+      "name": "论文 Fig4a 完整结构（未标定）",
+      "pattern": "",
+      "params": {},
+      "metadata": {
+        "library_id": 61,
+        "calibrated": false
+      }
+    },
+    {
+      "cell": "P00058",
+      "id": "baaabf302cc3",
+      "name": "论文 Fig4a 轮廓 1",
+      "pattern": "",
+      "params": {},
+      "metadata": {
+        "library_id": 62,
+        "calibrated": false
+      }
+    },
+    {
+      "cell": "P00059",
+      "id": "56371da708cc",
+      "name": "论文 Fig4a 轮廓 3",
+      "pattern": "",
+      "params": {},
+      "metadata": {
+        "library_id": 63,
+        "calibrated": false
+      }
+    },
+    {
+      "cell": "P00060",
+      "id": "30d8a3f677d5",
+      "name": "论文 Fig4a 轮廓 4",
+      "pattern": "",
+      "params": {},
+      "metadata": {
+        "library_id": 64,
+        "calibrated": false
+      }
+    },
+    {
+      "cell": "P00061",
+      "id": "46f31db1e2ab",
+      "name": "论文 Fig4a 轮廓 8",
+      "pattern": "",
+      "params": {},
+      "metadata": {
+        "library_id": 65,
+        "calibrated": false
+      }
+    },
+    {
+      "cell": "P00062",
+      "id": "781c8e1a3338",
+      "name": "论文 Fig4a 轮廓 10",
+      "pattern": "",
+      "params": {},
+      "metadata": {
+        "library_id": 66,
+        "calibrated": false
+      }
+    },
+    {
+      "cell": "P00063",
+      "id": "6341ef433c2d",
+      "name": "论文 Fig4a 轮廓 11",
+      "pattern": "",
+      "params": {},
+      "metadata": {
+        "library_id": 67,
+        "calibrated": false
+      }
+    }
+  ],
+  "document_metadata": {}
+}

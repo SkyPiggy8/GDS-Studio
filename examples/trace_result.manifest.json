@@ -1,0 +1,186 @@
+{
+  "units": "nm",
+  "precision_nm": 0.1,
+  "polygon_count": 7,
+  "cell_count": 8,
+  "area_nm2": 10339.999999999998,
+  "gds_readback_verified": true,
+  "patterns": [
+    {
+      "cell": "P00000",
+      "id": "0ce80b065584",
+      "name": "图片轮廓 1",
+      "pattern": "",
+      "params": {},
+      "metadata": {
+        "source_image": "C:\\Users\\zhuyu\\Desktop\\XKL\\版图设计\\GDS\\examples\\trace_input.png",
+        "calibrated": true,
+        "nm_per_pixel": 0.5,
+        "trace_threshold": 150,
+        "trace_polarity": "dark",
+        "trace_tolerance_px": 0.5,
+        "trace_roi_px": null,
+        "trace_report": {
+          "count": 7,
+          "rejected": 0,
+          "roi_origin_px": [
+            0,
+            0
+          ],
+          "image_height_px": 360
+        }
+      }
+    },
+    {
+      "cell": "P00001",
+      "id": "b60cb342f7a9",
+      "name": "图片轮廓 2",
+      "pattern": "",
+      "params": {},
+      "metadata": {
+        "source_image": "C:\\Users\\zhuyu\\Desktop\\XKL\\版图设计\\GDS\\examples\\trace_input.png",
+        "calibrated": true,
+        "nm_per_pixel": 0.5,
+        "trace_threshold": 150,
+        "trace_polarity": "dark",
+        "trace_tolerance_px": 0.5,
+        "trace_roi_px": null,
+        "trace_report": {
+          "count": 7,
+          "rejected": 0,
+          "roi_origin_px": [
+            0,
+            0
+          ],
+          "image_height_px": 360
+        }
+      }
+    },
+    {
+      "cell": "P00002",
+      "id": "2caad3f18545",
+      "name": "图片轮廓 3",
+      "pattern": "",
+      "params": {},
+      "metadata": {
+        "source_image": "C:\\Users\\zhuyu\\Desktop\\XKL\\版图设计\\GDS\\examples\\trace_input.png",
+        "calibrated": true,
+        "nm_per_pixel": 0.5,
+        "trace_threshold": 150,
+        "trace_polarity": "dark",
+        "trace_tolerance_px": 0.5,
+        "trace_roi_px": null,
+        "trace_report": {
+          "count": 7,
+          "rejected": 0,
+          "roi_origin_px": [
+            0,
+            0
+          ],
+          "image_height_px": 360
+        }
+      }
+    },
+    {
+      "cell": "P00003",
+      "id": "ae453f5c1a38",
+      "name": "图片轮廓 4",
+      "pattern": "",
+      "params": {},
+      "metadata": {
+        "source_image": "C:\\Users\\zhuyu\\Desktop\\XKL\\版图设计\\GDS\\examples\\trace_input.png",
+        "calibrated": true,
+        "nm_per_pixel": 0.5,
+        "trace_threshold": 150,
+        "trace_polarity": "dark",
+        "trace_tolerance_px": 0.5,
+        "trace_roi_px": null,
+        "trace_report": {
+          "count": 7,
+          "rejected": 0,
+          "roi_origin_px": [
+            0,
+            0
+          ],
+          "image_height_px": 360
+        }
+      }
+    },
+    {
+      "cell": "P00004",
+      "id": "ac66d2087841",
+      "name": "图片轮廓 5",
+      "pattern": "",
+      "params": {},
+      "metadata": {
+        "source_image": "C:\\Users\\zhuyu\\Desktop\\XKL\\版图设计\\GDS\\examples\\trace_input.png",
+        "calibrated": true,
+        "nm_per_pixel": 0.5,
+        "trace_threshold": 150,
+        "trace_polarity": "dark",
+        "trace_tolerance_px": 0.5,
+        "trace_roi_px": null,
+        "trace_report": {
+          "count": 7,
+          "rejected": 0,
+          "roi_origin_px": [
+            0,
+            0
+          ],
+          "image_height_px": 360
+        }
+      }
+    },
+    {
+      "cell": "P00005",
+      "id": "17a81e878c41",
+      "name": "图片轮廓 6",
+      "pattern": "",
+      "params": {},
+      "metadata": {
+        "source_image": "C:\\Users\\zhuyu\\Desktop\\XKL\\版图设计\\GDS\\examples\\trace_input.png",
+        "calibrated": true,
+        "nm_per_pixel": 0.5,
+        "trace_threshold": 150,
+        "trace_polarity": "dark",
+        "trace_tolerance_px": 0.5,
+        "trace_roi_px": null,
+        "trace_report": {
+          "count": 7,
+          "rejected": 0,
+          "roi_origin_px": [
+            0,
+            0
+          ],
+          "image_height_px": 360
+        }
+      }
+    },
+    {
+      "cell": "P00006",
+      "id": "8ff228d6a482",
+      "name": "图片轮廓 7",
+      "pattern": "",
+      "params": {},
+      "metadata": {
+        "source_image": "C:\\Users\\zhuyu\\Desktop\\XKL\\版图设计\\GDS\\examples\\trace_input.png",
+        "calibrated": true,
+        "nm_per_pixel": 0.5,
+        "trace_threshold": 150,
+        "trace_polarity": "dark",
+        "trace_tolerance_px": 0.5,
+        "trace_roi_px": null,
+        "trace_report": {
+          "count": 7,
+          "rejected": 0,
+          "roi_origin_px": [
+            0,
+            0
+          ],
+          "image_height_px": 360
+        }
+      }
+    }
+  ],
+  "document_metadata": {}
+}

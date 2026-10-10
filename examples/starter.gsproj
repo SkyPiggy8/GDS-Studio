@@ -1,0 +1,202 @@
+{
+  "format": "gds-studio",
+  "version": 1,
+  "units": "nm",
+  "name": "检测结构 · 起始示例",
+  "shapes": [
+    {
+      "id": "c5b54925d4fc",
+      "name": "Line / Space",
+      "pattern": "line_space",
+      "params": {
+        "width": 12,
+        "gap": 16,
+        "length": 160,
+        "count": 6
+      },
+      "polygons": [],
+      "x": 0,
+      "y": 0,
+      "angle": 0,
+      "sx": 1,
+      "sy": 1,
+      "mirror": false,
+      "layer": 1,
+      "datatype": 0,
+      "metadata": {}
+    },
+    {
+      "id": "a47876c346d2",
+      "name": "锤头 Hammerhead",
+      "pattern": "hammerhead",
+      "params": {
+        "width": 12,
+        "length": 160
+      },
+      "polygons": [],
+      "x": 380,
+      "y": 0,
+      "angle": 0,
+      "sx": 1,
+      "sy": 1,
+      "mirror": false,
+      "layer": 1,
+      "datatype": 0,
+      "metadata": {}
+    },
+    {
+      "id": "77870df5cf99",
+      "name": "Tip-to-Tip",
+      "pattern": "tip_tip",
+      "params": {
+        "width": 12,
+        "gap": 16,
+        "length": 160,
+        "count": 6
+      },
+      "polygons": [],
+      "x": 760,
+      "y": 0,
+      "angle": 0,
+      "sx": 1,
+      "sy": 1,
+      "mirror": false,
+      "layer": 1,
+      "datatype": 0,
+      "metadata": {}
+    },
+    {
+      "id": "26d9542bd964",
+      "name": "Contact 阵列",
+      "pattern": "contact_array",
+      "params": {
+        "width": 12,
+        "gap": 16,
+        "count": 6,
+        "rows": 4
+      },
+      "polygons": [],
+      "x": 1140,
+      "y": 0,
+      "angle": 0,
+      "sx": 1,
+      "sy": 1,
+      "mirror": false,
+      "layer": 1,
+      "datatype": 0,
+      "metadata": {}
+    },
+    {
+      "id": "5486c0e71fa7",
+      "name": "L 型拐角",
+      "pattern": "l_corner",
+      "params": {
+        "width": 12,
+        "length": 160,
+        "height": 100
+      },
+      "polygons": [],
+      "x": 0,
+      "y": 270,
+      "angle": 0,
+      "sx": 1,
+      "sy": 1,
+      "mirror": false,
+      "layer": 1,
+      "datatype": 0,
+      "metadata": {}
+    },
+    {
+      "id": "1c664b4ec215",
+      "name": "蛇形线",
+      "pattern": "serpentine",
+      "params": {
+        "width": 12,
+        "gap": 16,
+        "length": 160,
+        "count": 6
+      },
+      "polygons": [],
+      "x": 380,
+      "y": 270,
+      "angle": 0,
+      "sx": 1,
+      "sy": 1,
+      "mirror": false,
+      "layer": 1,
+      "datatype": 0,
+      "metadata": {}
+    },
+    {
+      "id": "62687ed563b2",
+      "name": "狗骨 Dogbone",
+      "pattern": "dogbone",
+      "params": {
+        "width": 12,
+        "length": 160
+      },
+      "polygons": [],
+      "x": 760,
+      "y": 270,
+      "angle": 0,
+      "sx": 1,
+      "sy": 1,
+      "mirror": false,
+      "layer": 1,
+      "datatype": 0,
+      "metadata": {}
+    },
+    {
+      "id": "3108df66112a",
+      "name": "矩形环",
+      "pattern": "ring",
+      "params": {
+        "width": 12,
+        "length": 160,
+        "height": 100
+      },
+      "polygons": [],
+      "x": 1140,
+      "y": 270,
+      "angle": 0,
+      "sx": 1,
+      "sy": 1,
+      "mirror": false,
+      "layer": 1,
+      "datatype": 0,
+      "metadata": {}
+    }
+  ],
+  "layers": [
+    {
+      "number": 1,
+      "datatype": 0,
+      "name": "主图形",
+      "color": "#3285b5",
+      "visible": true,
+      "locked": false
+    },
+    {
+      "number": 2,
+      "datatype": 0,
+      "name": "辅助 / Cut",
+      "color": "#d4973c",
+      "visible": true,
+      "locked": false
+    },
+    {
+      "number": 3,
+      "datatype": 0,
+      "name": "参考",
+      "color": "#8b78b4",
+      "visible": true,
+      "locked": false
+    }
+  ],
+  "grid": 1.0,
+  "constraint": "orthogonal",
+  "metadata": {
+    "purpose": "inspection_test_patterns",
+    "dimensions": "illustrative, editable; not foundry rules"
+  }
+}

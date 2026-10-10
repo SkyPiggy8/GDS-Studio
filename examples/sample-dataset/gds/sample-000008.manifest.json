@@ -1,0 +1,22 @@
+{
+  "units": "nm",
+  "precision_nm": 0.1,
+  "polygon_count": 1,
+  "cell_count": 2,
+  "area_nm2": 2783.9999999999973,
+  "gds_readback_verified": true,
+  "patterns": [
+    {
+      "cell": "P00000",
+      "id": "6d955b7f760c",
+      "name": "锤头 Hammerhead",
+      "pattern": "",
+      "params": {},
+      "metadata": {
+        "calibrated": true,
+        "library_id": 8
+      }
+    }
+  ],
+  "document_metadata": {}
+}

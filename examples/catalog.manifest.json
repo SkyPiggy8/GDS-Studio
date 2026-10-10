@@ -1,0 +1,596 @@
+{
+  "units": "nm",
+  "precision_nm": 0.1,
+  "polygon_count": 224,
+  "cell_count": 42,
+  "area_nm2": 322861.345,
+  "gds_readback_verified": true,
+  "patterns": [
+    {
+      "cell": "P00000",
+      "id": "e971fe9bb89e",
+      "name": "矩形",
+      "pattern": "rectangle",
+      "params": {
+        "length": 160,
+        "height": 100
+      },
+      "metadata": {
+        "catalog_key": "rectangle"
+      }
+    },
+    {
+      "cell": "P00001",
+      "id": "11069e8c4c50",
+      "name": "孤立线",
+      "pattern": "line",
+      "params": {
+        "width": 12,
+        "length": 160
+      },
+      "metadata": {
+        "catalog_key": "line"
+      }
+    },
+    {
+      "cell": "P00002",
+      "id": "c48e6b437bf8",
+      "name": "Line / Space",
+      "pattern": "line_space",
+      "params": {
+        "width": 12,
+        "gap": 16,
+        "length": 160,
+        "count": 6
+      },
+      "metadata": {
+        "catalog_key": "line_space"
+      }
+    },
+    {
+      "cell": "P00003",
+      "id": "03ba6d6a1795",
+      "name": "密集 / 孤立对比",
+      "pattern": "dense_iso",
+      "params": {
+        "width": 12,
+        "gap": 16,
+        "length": 160,
+        "count": 6
+      },
+      "metadata": {
+        "catalog_key": "dense_iso"
+      }
+    },
+    {
+      "cell": "P00004",
+      "id": "329d9fe98a14",
+      "name": "Tip-to-Tip",
+      "pattern": "tip_tip",
+      "params": {
+        "width": 12,
+        "gap": 16,
+        "length": 160,
+        "count": 6
+      },
+      "metadata": {
+        "catalog_key": "tip_tip"
+      }
+    },
+    {
+      "cell": "P00005",
+      "id": "0cf8a022cf53",
+      "name": "Tip-to-Side",
+      "pattern": "tip_side",
+      "params": {
+        "width": 12,
+        "gap": 16,
+        "length": 160,
+        "count": 6
+      },
+      "metadata": {
+        "catalog_key": "tip_side"
+      }
+    },
+    {
+      "cell": "P00006",
+      "id": "2cc50c4e23ee",
+      "name": "交错线端",
+      "pattern": "staggered",
+      "params": {
+        "width": 12,
+        "gap": 16,
+        "length": 160,
+        "count": 6
+      },
+      "metadata": {
+        "catalog_key": "staggered"
+      }
+    },
+    {
+      "cell": "P00007",
+      "id": "224ca5e158f2",
+      "name": "锤头 Hammerhead",
+      "pattern": "hammerhead",
+      "params": {
+        "width": 12,
+        "length": 160
+      },
+      "metadata": {
+        "catalog_key": "hammerhead"
+      }
+    },
+    {
+      "cell": "P00008",
+      "id": "19f4a2f00d67",
+      "name": "狗骨 Dogbone",
+      "pattern": "dogbone",
+      "params": {
+        "width": 12,
+        "length": 160
+      },
+      "metadata": {
+        "catalog_key": "dogbone"
+      }
+    },
+    {
+      "cell": "P00009",
+      "id": "c60181aaf68c",
+      "name": "角部 Serif",
+      "pattern": "serif",
+      "params": {
+        "width": 12,
+        "length": 160
+      },
+      "metadata": {
+        "catalog_key": "serif"
+      }
+    },
+    {
+      "cell": "P00010",
+      "id": "a223b03e52ef",
+      "name": "辅助线 SRAF",
+      "pattern": "sraf",
+      "params": {
+        "width": 12,
+        "gap": 16,
+        "length": 160
+      },
+      "metadata": {
+        "catalog_key": "sraf"
+      }
+    },
+    {
+      "cell": "P00011",
+      "id": "519d2d013eaf",
+      "name": "L 型拐角",
+      "pattern": "l_corner",
+      "params": {
+        "width": 12,
+        "length": 160,
+        "height": 100
+      },
+      "metadata": {
+        "catalog_key": "l_corner"
+      }
+    },
+    {
+      "cell": "P00012",
+      "id": "e79f4cdd0ddb",
+      "name": "U 型回折",
+      "pattern": "u_corner",
+      "params": {
+        "width": 12,
+        "length": 160,
+        "height": 100
+      },
+      "metadata": {
+        "catalog_key": "u_corner"
+      }
+    },
+    {
+      "cell": "P00013",
+      "id": "84b161caf969",
+      "name": "T 型连接",
+      "pattern": "t_junction",
+      "params": {
+        "width": 12,
+        "length": 160,
+        "height": 100
+      },
+      "metadata": {
+        "catalog_key": "t_junction"
+      }
+    },
+    {
+      "cell": "P00014",
+      "id": "76604d99dd4f",
+      "name": "十字连接",
+      "pattern": "cross",
+      "params": {
+        "width": 12,
+        "length": 160,
+        "height": 100
+      },
+      "metadata": {
+        "catalog_key": "cross"
+      }
+    },
+    {
+      "cell": "P00015",
+      "id": "bbacb5f32512",
+      "name": "H 型连接",
+      "pattern": "h_bridge",
+      "params": {
+        "width": 12,
+        "length": 160,
+        "height": 100
+      },
+      "metadata": {
+        "catalog_key": "h_bridge"
+      }
+    },
+    {
+      "cell": "P00016",
+      "id": "2af5bfceb530",
+      "name": "Z 型 Jog",
+      "pattern": "z_jog",
+      "params": {
+        "width": 12,
+        "length": 160,
+        "height": 100
+      },
+      "metadata": {
+        "catalog_key": "z_jog"
+      }
+    },
+    {
+      "cell": "P00017",
+      "id": "7a4170332f1a",
+      "name": "蛇形线",
+      "pattern": "serpentine",
+      "params": {
+        "width": 12,
+        "gap": 16,
+        "length": 160,
+        "count": 6
+      },
+      "metadata": {
+        "catalog_key": "serpentine"
+      }
+    },
+    {
+      "cell": "P00018",
+      "id": "c467f9a60e28",
+      "name": "阶梯线",
+      "pattern": "staircase",
+      "params": {
+        "width": 12,
+        "gap": 16,
+        "count": 6
+      },
+      "metadata": {
+        "catalog_key": "staircase"
+      }
+    },
+    {
+      "cell": "P00019",
+      "id": "eb7de196c81a",
+      "name": "45° 斜线",
+      "pattern": "diagonal",
+      "params": {
+        "width": 12,
+        "length": 160
+      },
+      "metadata": {
+        "catalog_key": "diagonal"
+      }
+    },
+    {
+      "cell": "P00020",
+      "id": "8d43378c1f33",
+      "name": "45° 倒角",
+      "pattern": "chamfer",
+      "params": {
+        "width": 12,
+        "length": 160,
+        "height": 100
+      },
+      "metadata": {
+        "catalog_key": "chamfer"
+      }
+    },
+    {
+      "cell": "P00021",
+      "id": "64fd3f4c4aa1",
+      "name": "Y 型连接",
+      "pattern": "y_junction",
+      "params": {
+        "width": 12,
+        "length": 160,
+        "height": 100
+      },
+      "metadata": {
+        "catalog_key": "y_junction"
+      }
+    },
+    {
+      "cell": "P00022",
+      "id": "e39e0999581e",
+      "name": "方形 Contact",
+      "pattern": "square_contact",
+      "params": {
+        "width": 12
+      },
+      "metadata": {
+        "catalog_key": "square_contact"
+      }
+    },
+    {
+      "cell": "P00023",
+      "id": "bb4dd56d756b",
+      "name": "Contact 阵列",
+      "pattern": "contact_array",
+      "params": {
+        "width": 12,
+        "gap": 16,
+        "count": 6,
+        "rows": 4
+      },
+      "metadata": {
+        "catalog_key": "contact_array"
+      }
+    },
+    {
+      "cell": "P00024",
+      "id": "6963a65a297d",
+      "name": "交错孔阵列",
+      "pattern": "staggered_contact",
+      "params": {
+        "width": 12,
+        "gap": 16,
+        "count": 6,
+        "rows": 4
+      },
+      "metadata": {
+        "catalog_key": "staggered_contact"
+      }
+    },
+    {
+      "cell": "P00025",
+      "id": "c27946826966",
+      "name": "长孔 Slot",
+      "pattern": "slot_contact",
+      "params": {
+        "width": 12,
+        "length": 160
+      },
+      "metadata": {
+        "catalog_key": "slot_contact"
+      }
+    },
+    {
+      "cell": "P00026",
+      "id": "d721e9a7aa6c",
+      "name": "Via / 包围层",
+      "pattern": "via_enclosure",
+      "params": {
+        "width": 12,
+        "gap": 16
+      },
+      "metadata": {
+        "catalog_key": "via_enclosure"
+      }
+    },
+    {
+      "cell": "P00027",
+      "id": "43ceff54d3a1",
+      "name": "矩形环",
+      "pattern": "ring",
+      "params": {
+        "width": 12,
+        "length": 160,
+        "height": 100
+      },
+      "metadata": {
+        "catalog_key": "ring"
+      }
+    },
+    {
+      "cell": "P00028",
+      "id": "05eecbb9e588",
+      "name": "梳齿",
+      "pattern": "comb",
+      "params": {
+        "width": 12,
+        "gap": 16,
+        "length": 160,
+        "count": 6
+      },
+      "metadata": {
+        "catalog_key": "comb"
+      }
+    },
+    {
+      "cell": "P00029",
+      "id": "ba3a54ab1819",
+      "name": "交指梳齿",
+      "pattern": "interdigital",
+      "params": {
+        "width": 12,
+        "gap": 16,
+        "length": 160,
+        "count": 6
+      },
+      "metadata": {
+        "catalog_key": "interdigital"
+      }
+    },
+    {
+      "cell": "P00030",
+      "id": "ee7630686997",
+      "name": "凹槽 Notch",
+      "pattern": "notch",
+      "params": {
+        "width": 12,
+        "gap": 16,
+        "length": 160,
+        "height": 100
+      },
+      "metadata": {
+        "catalog_key": "notch"
+      }
+    },
+    {
+      "cell": "P00031",
+      "id": "13888920f6fc",
+      "name": "颈缩 Neck",
+      "pattern": "neck",
+      "params": {
+        "width": 12,
+        "gap": 16,
+        "length": 160,
+        "height": 100
+      },
+      "metadata": {
+        "catalog_key": "neck"
+      }
+    },
+    {
+      "cell": "P00032",
+      "id": "da20aff7a516",
+      "name": "微桥样本",
+      "pattern": "bridge_defect",
+      "params": {
+        "width": 12,
+        "gap": 16,
+        "length": 160,
+        "count": 6
+      },
+      "metadata": {
+        "catalog_key": "bridge_defect"
+      }
+    },
+    {
+      "cell": "P00033",
+      "id": "8e06dcfc3d5f",
+      "name": "断线样本",
+      "pattern": "break_defect",
+      "params": {
+        "width": 12,
+        "gap": 16,
+        "length": 160,
+        "count": 6
+      },
+      "metadata": {
+        "catalog_key": "break_defect"
+      }
+    },
+    {
+      "cell": "P00034",
+      "id": "f249c975328a",
+      "name": "缺孔样本",
+      "pattern": "missing_contact",
+      "params": {
+        "width": 12,
+        "gap": 16,
+        "count": 6,
+        "rows": 4
+      },
+      "metadata": {
+        "catalog_key": "missing_contact"
+      }
+    },
+    {
+      "cell": "P00035",
+      "id": "2b88a41fd49a",
+      "name": "并孔样本",
+      "pattern": "merged_contact",
+      "params": {
+        "width": 12,
+        "gap": 16,
+        "count": 6,
+        "rows": 4
+      },
+      "metadata": {
+        "catalog_key": "merged_contact"
+      }
+    },
+    {
+      "cell": "P00036",
+      "id": "aadc24788201",
+      "name": "Dummy Fill",
+      "pattern": "dummy_fill",
+      "params": {
+        "width": 12,
+        "gap": 16,
+        "count": 6,
+        "rows": 4
+      },
+      "metadata": {
+        "catalog_key": "dummy_fill"
+      }
+    },
+    {
+      "cell": "P00037",
+      "id": "b19df1d0462a",
+      "name": "对准十字",
+      "pattern": "alignment",
+      "params": {
+        "width": 12,
+        "length": 160,
+        "height": 100
+      },
+      "metadata": {
+        "catalog_key": "alignment"
+      }
+    },
+    {
+      "cell": "P00038",
+      "id": "7dbdbc9af7c6",
+      "name": "游标 Vernier",
+      "pattern": "vernier",
+      "params": {
+        "width": 12,
+        "gap": 16,
+        "height": 100,
+        "count": 6,
+        "delta": 1
+      },
+      "metadata": {
+        "catalog_key": "vernier"
+      }
+    },
+    {
+      "cell": "P00039",
+      "id": "3d7ab94de4c9",
+      "name": "Line / Cut",
+      "pattern": "line_cut",
+      "params": {
+        "width": 12,
+        "gap": 16,
+        "length": 160,
+        "count": 6
+      },
+      "metadata": {
+        "catalog_key": "line_cut"
+      }
+    },
+    {
+      "cell": "P00040",
+      "id": "809086d44e50",
+      "name": "Gate / Active 示意",
+      "pattern": "gate_active",
+      "params": {
+        "width": 12,
+        "gap": 16,
+        "height": 100,
+        "count": 6
+      },
+      "metadata": {
+        "catalog_key": "gate_active"
+      }
+    }
+  ],
+  "document_metadata": {}
+}

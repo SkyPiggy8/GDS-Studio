@@ -1,0 +1,84 @@
+﻿id,name,layer,datatype,calibrated,review,tags,leakage_group,split,mask,gds
+1,矩形,1,0,1,draft,,group-000001,unassigned,masks/sample-000001.png,gds/sample-000001.gds
+2,孤立线,1,0,1,draft,,group-000001,unassigned,masks/sample-000002.png,gds/sample-000002.gds
+3,Line / Space,1,0,1,draft,,group-000001,unassigned,masks/sample-000003.png,gds/sample-000003.gds
+4,密集 / 孤立对比,1,0,1,draft,,group-000001,unassigned,masks/sample-000004.png,gds/sample-000004.gds
+5,Tip-to-Tip,1,0,1,draft,,group-000001,unassigned,masks/sample-000005.png,gds/sample-000005.gds
+6,Tip-to-Side,1,0,1,draft,,group-000001,unassigned,masks/sample-000006.png,gds/sample-000006.gds
+7,交错线端,1,0,1,draft,,group-000001,unassigned,masks/sample-000007.png,gds/sample-000007.gds
+8,锤头 Hammerhead,1,0,1,draft,,group-000001,unassigned,masks/sample-000008.png,gds/sample-000008.gds
+9,狗骨 Dogbone,1,0,1,draft,,group-000001,unassigned,masks/sample-000009.png,gds/sample-000009.gds
+10,角部 Serif,1,0,1,draft,,group-000001,unassigned,masks/sample-000010.png,gds/sample-000010.gds
+11,辅助线 SRAF,1,0,1,draft,,group-000001,unassigned,masks/sample-000011.png,gds/sample-000011.gds
+12,L 型拐角,1,0,1,draft,,group-000001,unassigned,masks/sample-000012.png,gds/sample-000012.gds
+13,U 型回折,1,0,1,draft,,group-000001,unassigned,masks/sample-000013.png,gds/sample-000013.gds
+14,T 型连接,1,0,1,draft,,group-000001,unassigned,masks/sample-000014.png,gds/sample-000014.gds
+15,十字连接,1,0,1,draft,,group-000001,unassigned,masks/sample-000015.png,gds/sample-000015.gds
+16,H 型连接,1,0,1,draft,,group-000001,unassigned,masks/sample-000016.png,gds/sample-000016.gds
+17,Z 型 Jog,1,0,1,draft,,group-000001,unassigned,masks/sample-000017.png,gds/sample-000017.gds
+18,蛇形线,1,0,1,draft,,group-000001,unassigned,masks/sample-000018.png,gds/sample-000018.gds
+19,阶梯线,1,0,1,draft,,group-000001,unassigned,masks/sample-000019.png,gds/sample-000019.gds
+20,45° 斜线,1,0,1,draft,,group-000001,unassigned,masks/sample-000020.png,gds/sample-000020.gds
+21,45° 倒角,1,0,1,draft,,group-000001,unassigned,masks/sample-000021.png,gds/sample-000021.gds
+22,Y 型连接,1,0,1,draft,,group-000001,unassigned,masks/sample-000022.png,gds/sample-000022.gds
+23,方形 Contact,1,0,1,draft,,group-000001,unassigned,masks/sample-000023.png,gds/sample-000023.gds
+24,Contact 阵列,1,0,1,draft,,group-000001,unassigned,masks/sample-000024.png,gds/sample-000024.gds
+25,交错孔阵列,1,0,1,draft,,group-000001,unassigned,masks/sample-000025.png,gds/sample-000025.gds
+26,Via / 包围层,1,0,1,draft,,group-000001,unassigned,masks/sample-000026.png,gds/sample-000026.gds
+28,矩形环,1,0,1,draft,,group-000001,unassigned,masks/sample-000028.png,gds/sample-000028.gds
+29,梳齿,1,0,1,draft,,group-000001,unassigned,masks/sample-000029.png,gds/sample-000029.gds
+30,交指梳齿,1,0,1,draft,,group-000001,unassigned,masks/sample-000030.png,gds/sample-000030.gds
+31,凹槽 Notch,1,0,1,draft,,group-000001,unassigned,masks/sample-000031.png,gds/sample-000031.gds
+32,颈缩 Neck,1,0,1,draft,,group-000001,unassigned,masks/sample-000032.png,gds/sample-000032.gds
+33,微桥样本,1,0,1,draft,,group-000001,unassigned,masks/sample-000033.png,gds/sample-000033.gds
+34,断线样本,1,0,1,draft,,group-000001,unassigned,masks/sample-000034.png,gds/sample-000034.gds
+35,缺孔样本,1,0,1,draft,,group-000001,unassigned,masks/sample-000035.png,gds/sample-000035.gds
+36,并孔样本,1,0,1,draft,,group-000001,unassigned,masks/sample-000036.png,gds/sample-000036.gds
+37,游标 Vernier,1,0,1,draft,,group-000001,unassigned,masks/sample-000037.png,gds/sample-000037.gds
+39,Gate / Active 示意,1,0,1,draft,,group-000001,unassigned,masks/sample-000039.png,gds/sample-000039.gds
+41,Line / Space,1,0,1,draft,,group-000041,unassigned,masks/sample-000041.png,gds/sample-000041.gds
+42,Line / Space,1,0,1,draft,,group-000041,unassigned,masks/sample-000042.png,gds/sample-000042.gds
+43,Line / Space,1,0,1,draft,,group-000041,unassigned,masks/sample-000043.png,gds/sample-000043.gds
+44,Line / Space,1,0,1,draft,,group-000041,unassigned,masks/sample-000044.png,gds/sample-000044.gds
+45,Line / Space,1,0,1,draft,,group-000041,unassigned,masks/sample-000045.png,gds/sample-000045.gds
+46,Line / Space,1,0,1,draft,,group-000041,unassigned,masks/sample-000046.png,gds/sample-000046.gds
+47,Line / Space,1,0,1,draft,,group-000041,unassigned,masks/sample-000047.png,gds/sample-000047.gds
+48,Line / Space,1,0,1,draft,,group-000041,unassigned,masks/sample-000048.png,gds/sample-000048.gds
+49,Line / Space,1,0,1,draft,,group-000041,unassigned,masks/sample-000049.png,gds/sample-000049.gds
+50,Line / Space,1,0,1,draft,,group-000041,unassigned,masks/sample-000050.png,gds/sample-000050.gds
+51,Line / Space,1,0,1,draft,,group-000041,unassigned,masks/sample-000051.png,gds/sample-000051.gds
+52,Line / Space,1,0,1,draft,,group-000041,unassigned,masks/sample-000052.png,gds/sample-000052.gds
+53,Line / Space,1,0,1,draft,,group-000041,unassigned,masks/sample-000053.png,gds/sample-000053.gds
+54,Line / Space,1,0,1,draft,,group-000041,unassigned,masks/sample-000054.png,gds/sample-000054.gds
+55,Line / Space,1,0,1,draft,,group-000041,unassigned,masks/sample-000055.png,gds/sample-000055.gds
+56,Line / Space,1,0,1,draft,,group-000041,unassigned,masks/sample-000056.png,gds/sample-000056.gds
+57,Line / Space,1,0,1,draft,,group-000041,unassigned,masks/sample-000057.png,gds/sample-000057.gds
+58,Line / Space,1,0,1,draft,,group-000041,unassigned,masks/sample-000058.png,gds/sample-000058.gds
+59,Line / Space,1,0,1,draft,,group-000041,unassigned,masks/sample-000059.png,gds/sample-000059.gds
+60,Line / Space,1,0,1,draft,,group-000041,unassigned,masks/sample-000060.png,gds/sample-000060.gds
+61,论文 Fig4a 完整结构（未标定）,1,0,0,draft,,group-000061,unassigned,masks/sample-000061.png,gds/sample-000061.gds
+62,论文 Fig4a 轮廓 1,1,0,0,draft,,group-000061,unassigned,masks/sample-000062.png,gds/sample-000062.gds
+63,论文 Fig4a 轮廓 3,1,0,0,draft,,group-000061,unassigned,masks/sample-000063.png,gds/sample-000063.gds
+64,论文 Fig4a 轮廓 4,1,0,0,draft,,group-000061,unassigned,masks/sample-000064.png,gds/sample-000064.gds
+65,论文 Fig4a 轮廓 8,1,0,0,draft,,group-000061,unassigned,masks/sample-000065.png,gds/sample-000065.gds
+66,论文 Fig4a 轮廓 10,1,0,0,draft,,group-000061,unassigned,masks/sample-000066.png,gds/sample-000066.gds
+67,论文 Fig4a 轮廓 11,1,0,0,draft,,group-000061,unassigned,masks/sample-000067.png,gds/sample-000067.gds
+68,论文 Fig4a 轮廓 13,1,0,0,draft,,group-000061,unassigned,masks/sample-000068.png,gds/sample-000068.gds
+69,论文 Fig4a 轮廓 14,1,0,0,draft,,group-000061,unassigned,masks/sample-000069.png,gds/sample-000069.gds
+70,论文 Fig4a 轮廓 15,1,0,0,draft,,group-000061,unassigned,masks/sample-000070.png,gds/sample-000070.gds
+71,论文 Fig4a 轮廓 17,1,0,0,draft,,group-000061,unassigned,masks/sample-000071.png,gds/sample-000071.gds
+72,论文 Fig4a 轮廓 18,1,0,0,draft,,group-000061,unassigned,masks/sample-000072.png,gds/sample-000072.gds
+73,论文 Fig4a 轮廓 19,1,0,0,draft,,group-000061,unassigned,masks/sample-000073.png,gds/sample-000073.gds
+74,论文 Fig4a 轮廓 21,1,0,0,draft,,group-000061,unassigned,masks/sample-000074.png,gds/sample-000074.gds
+75,论文 Fig4a 轮廓 25,1,0,0,draft,,group-000061,unassigned,masks/sample-000075.png,gds/sample-000075.gds
+76,论文 Fig4a 轮廓 26,1,0,0,draft,,group-000061,unassigned,masks/sample-000076.png,gds/sample-000076.gds
+77,论文 Fig4a 轮廓 27,1,0,0,draft,,group-000061,unassigned,masks/sample-000077.png,gds/sample-000077.gds
+78,论文 Fig4a 轮廓 29,1,0,0,draft,,group-000061,unassigned,masks/sample-000078.png,gds/sample-000078.gds
+79,论文 Fig4a 轮廓 31,1,0,0,draft,,group-000061,unassigned,masks/sample-000079.png,gds/sample-000079.gds
+80,图片轮廓 1,1,0,1,draft,,group-000080,unassigned,masks/sample-000080.png,gds/sample-000080.gds
+81,图片轮廓 6,1,0,1,draft,,group-000080,unassigned,masks/sample-000081.png,gds/sample-000081.gds
+82,图片轮廓 7,1,0,1,draft,,group-000080,unassigned,masks/sample-000082.png,gds/sample-000082.gds
+83,TOP · region 1,1,0,1,draft,,group-000083,unassigned,masks/sample-000083.png,gds/sample-000083.gds
+27,Via / 包围层,2,0,1,draft,,group-000001,unassigned,masks/sample-000027.png,gds/sample-000027.gds
+38,Line / Cut,2,0,1,draft,,group-000001,unassigned,masks/sample-000038.png,gds/sample-000038.gds
+40,Gate / Active 示意,2,0,1,draft,,group-000001,unassigned,masks/sample-000040.png,gds/sample-000040.gds

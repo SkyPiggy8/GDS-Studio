@@ -1,0 +1,22 @@
+{
+  "units": "nm",
+  "precision_nm": 0.1,
+  "polygon_count": 1,
+  "cell_count": 2,
+  "area_nm2": 2410.000000000001,
+  "gds_readback_verified": true,
+  "patterns": [
+    {
+      "cell": "P00000",
+      "id": "4d29cc79f812",
+      "name": "45° 倒角",
+      "pattern": "",
+      "params": {},
+      "metadata": {
+        "calibrated": true,
+        "library_id": 21
+      }
+    }
+  ],
+  "document_metadata": {}
+}

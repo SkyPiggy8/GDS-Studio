@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gds-studio"
+version = "0.2.0"
+description = "Parametric layout and inspection test-pattern desktop editor"
+requires-python = ">=3.11"
+dependencies = ["PySide6==6.8.3", "gdstk>=0.9.60,<2", "shapely>=2.0,<3", "numpy>=1.26,<3", "opencv-python-headless>=4.10,<5", "klayout>=0.30,<0.31"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "pyinstaller>=6"]
+
+[project.scripts]
+gds-studio = "gds_studio.app:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["gds_studio*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

@@ -1,0 +1,557 @@
+{
+  "format": "gds-studio",
+  "version": 1,
+  "units": "nm",
+  "name": "Line Space · 线宽与间距扫描",
+  "shapes": [
+    {
+      "id": "26d895e4ae68",
+      "name": "Line / Space",
+      "pattern": "line_space",
+      "params": {
+        "width": 8,
+        "gap": 8,
+        "length": 160,
+        "count": 8
+      },
+      "polygons": [],
+      "x": 0,
+      "y": 0,
+      "angle": 0,
+      "sx": 1,
+      "sy": 1,
+      "mirror": false,
+      "layer": 1,
+      "datatype": 0,
+      "metadata": {
+        "sweep": {
+          "width_nm": 8,
+          "gap_nm": 8
+        }
+      }
+    },
+    {
+      "id": "7ab13c6ce127",
+      "name": "Line / Space",
+      "pattern": "line_space",
+      "params": {
+        "width": 10,
+        "gap": 8,
+        "length": 160,
+        "count": 8
+      },
+      "polygons": [],
+      "x": 280,
+      "y": 0,
+      "angle": 0,
+      "sx": 1,
+      "sy": 1,
+      "mirror": false,
+      "layer": 1,
+      "datatype": 0,
+      "metadata": {
+        "sweep": {
+          "width_nm": 10,
+          "gap_nm": 8
+        }
+      }
+    },
+    {
+      "id": "569ddd4000b6",
+      "name": "Line / Space",
+      "pattern": "line_space",
+      "params": {
+        "width": 12,
+        "gap": 8,
+        "length": 160,
+        "count": 8
+      },
+      "polygons": [],
+      "x": 560,
+      "y": 0,
+      "angle": 0,
+      "sx": 1,
+      "sy": 1,
+      "mirror": false,
+      "layer": 1,
+      "datatype": 0,
+      "metadata": {
+        "sweep": {
+          "width_nm": 12,
+          "gap_nm": 8
+        }
+      }
+    },
+    {
+      "id": "af578dc9ade8",
+      "name": "Line / Space",
+      "pattern": "line_space",
+      "params": {
+        "width": 16,
+        "gap": 8,
+        "length": 160,
+        "count": 8
+      },
+      "polygons": [],
+      "x": 840,
+      "y": 0,
+      "angle": 0,
+      "sx": 1,
+      "sy": 1,
+      "mirror": false,
+      "layer": 1,
+      "datatype": 0,
+      "metadata": {
+        "sweep": {
+          "width_nm": 16,
+          "gap_nm": 8
+        }
+      }
+    },
+    {
+      "id": "1980636c2254",
+      "name": "Line / Space",
+      "pattern": "line_space",
+      "params": {
+        "width": 20,
+        "gap": 8,
+        "length": 160,
+        "count": 8
+      },
+      "polygons": [],
+      "x": 1120,
+      "y": 0,
+      "angle": 0,
+      "sx": 1,
+      "sy": 1,
+      "mirror": false,
+      "layer": 1,
+      "datatype": 0,
+      "metadata": {
+        "sweep": {
+          "width_nm": 20,
+          "gap_nm": 8
+        }
+      }
+    },
+    {
+      "id": "7cf2a0f9452a",
+      "name": "Line / Space",
+      "pattern": "line_space",
+      "params": {
+        "width": 8,
+        "gap": 12,
+        "length": 160,
+        "count": 8
+      },
+      "polygons": [],
+      "x": 0,
+      "y": 300,
+      "angle": 0,
+      "sx": 1,
+      "sy": 1,
+      "mirror": false,
+      "layer": 1,
+      "datatype": 0,
+      "metadata": {
+        "sweep": {
+          "width_nm": 8,
+          "gap_nm": 12
+        }
+      }
+    },
+    {
+      "id": "94f69eed8201",
+      "name": "Line / Space",
+      "pattern": "line_space",
+      "params": {
+        "width": 10,
+        "gap": 12,
+        "length": 160,
+        "count": 8
+      },
+      "polygons": [],
+      "x": 280,
+      "y": 300,
+      "angle": 0,
+      "sx": 1,
+      "sy": 1,
+      "mirror": false,
+      "layer": 1,
+      "datatype": 0,
+      "metadata": {
+        "sweep": {
+          "width_nm": 10,
+          "gap_nm": 12
+        }
+      }
+    },
+    {
+      "id": "cff38952e7e9",
+      "name": "Line / Space",
+      "pattern": "line_space",
+      "params": {
+        "width": 12,
+        "gap": 12,
+        "length": 160,
+        "count": 8
+      },
+      "polygons": [],
+      "x": 560,
+      "y": 300,
+      "angle": 0,
+      "sx": 1,
+      "sy": 1,
+      "mirror": false,
+      "layer": 1,
+      "datatype": 0,
+      "metadata": {
+        "sweep": {
+          "width_nm": 12,
+          "gap_nm": 12
+        }
+      }
+    },
+    {
+      "id": "42962baef7a5",
+      "name": "Line / Space",
+      "pattern": "line_space",
+      "params": {
+        "width": 16,
+        "gap": 12,
+        "length": 160,
+        "count": 8
+      },
+      "polygons": [],
+      "x": 840,
+      "y": 300,
+      "angle": 0,
+      "sx": 1,
+      "sy": 1,
+      "mirror": false,
+      "layer": 1,
+      "datatype": 0,
+      "metadata": {
+        "sweep": {
+          "width_nm": 16,
+          "gap_nm": 12
+        }
+      }
+    },
+    {
+      "id": "9afa1b3eb57c",
+      "name": "Line / Space",
+      "pattern": "line_space",
+      "params": {
+        "width": 20,
+        "gap": 12,
+        "length": 160,
+        "count": 8
+      },
+      "polygons": [],
+      "x": 1120,
+      "y": 300,
+      "angle": 0,
+      "sx": 1,
+      "sy": 1,
+      "mirror": false,
+      "layer": 1,
+      "datatype": 0,
+      "metadata": {
+        "sweep": {
+          "width_nm": 20,
+          "gap_nm": 12
+        }
+      }
+    },
+    {
+      "id": "a5c391711307",
+      "name": "Line / Space",
+      "pattern": "line_space",
+      "params": {
+        "width": 8,
+        "gap": 16,
+        "length": 160,
+        "count": 8
+      },
+      "polygons": [],
+      "x": 0,
+      "y": 600,
+      "angle": 0,
+      "sx": 1,
+      "sy": 1,
+      "mirror": false,
+      "layer": 1,
+      "datatype": 0,
+      "metadata": {
+        "sweep": {
+          "width_nm": 8,
+          "gap_nm": 16
+        }
+      }
+    },
+    {
+      "id": "c5199a4da826",
+      "name": "Line / Space",
+      "pattern": "line_space",
+      "params": {
+        "width": 10,
+        "gap": 16,
+        "length": 160,
+        "count": 8
+      },
+      "polygons": [],
+      "x": 280,
+      "y": 600,
+      "angle": 0,
+      "sx": 1,
+      "sy": 1,
+      "mirror": false,
+      "layer": 1,
+      "datatype": 0,
+      "metadata": {
+        "sweep": {
+          "width_nm": 10,
+          "gap_nm": 16
+        }
+      }
+    },
+    {
+      "id": "3aa4c3024a16",
+      "name": "Line / Space",
+      "pattern": "line_space",
+      "params": {
+        "width": 12,
+        "gap": 16,
+        "length": 160,
+        "count": 8
+      },
+      "polygons": [],
+      "x": 560,
+      "y": 600,
+      "angle": 0,
+      "sx": 1,
+      "sy": 1,
+      "mirror": false,
+      "layer": 1,
+      "datatype": 0,
+      "metadata": {
+        "sweep": {
+          "width_nm": 12,
+          "gap_nm": 16
+        }
+      }
+    },
+    {
+      "id": "a540eee6ae24",
+      "name": "Line / Space",
+      "pattern": "line_space",
+      "params": {
+        "width": 16,
+        "gap": 16,
+        "length": 160,
+        "count": 8
+      },
+      "polygons": [],
+      "x": 840,
+      "y": 600,
+      "angle": 0,
+      "sx": 1,
+      "sy": 1,
+      "mirror": false,
+      "layer": 1,
+      "datatype": 0,
+      "metadata": {
+        "sweep": {
+          "width_nm": 16,
+          "gap_nm": 16
+        }
+      }
+    },
+    {
+      "id": "3994e640d1f0",
+      "name": "Line / Space",
+      "pattern": "line_space",
+      "params": {
+        "width": 20,
+        "gap": 16,
+        "length": 160,
+        "count": 8
+      },
+      "polygons": [],
+      "x": 1120,
+      "y": 600,
+      "angle": 0,
+      "sx": 1,
+      "sy": 1,
+      "mirror": false,
+      "layer": 1,
+      "datatype": 0,
+      "metadata": {
+        "sweep": {
+          "width_nm": 20,
+          "gap_nm": 16
+        }
+      }
+    },
+    {
+      "id": "99f13940a42f",
+      "name": "Line / Space",
+      "pattern": "line_space",
+      "params": {
+        "width": 8,
+        "gap": 24,
+        "length": 160,
+        "count": 8
+      },
+      "polygons": [],
+      "x": 0,
+      "y": 900,
+      "angle": 0,
+      "sx": 1,
+      "sy": 1,
+      "mirror": false,
+      "layer": 1,
+      "datatype": 0,
+      "metadata": {
+        "sweep": {
+          "width_nm": 8,
+          "gap_nm": 24
+        }
+      }
+    },
+    {
+      "id": "0ac5d786a14c",
+      "name": "Line / Space",
+      "pattern": "line_space",
+      "params": {
+        "width": 10,
+        "gap": 24,
+        "length": 160,
+        "count": 8
+      },
+      "polygons": [],
+      "x": 280,
+      "y": 900,
+      "angle": 0,
+      "sx": 1,
+      "sy": 1,
+      "mirror": false,
+      "layer": 1,
+      "datatype": 0,
+      "metadata": {
+        "sweep": {
+          "width_nm": 10,
+          "gap_nm": 24
+        }
+      }
+    },
+    {
+      "id": "ff3d4e420897",
+      "name": "Line / Space",
+      "pattern": "line_space",
+      "params": {
+        "width": 12,
+        "gap": 24,
+        "length": 160,
+        "count": 8
+      },
+      "polygons": [],
+      "x": 560,
+      "y": 900,
+      "angle": 0,
+      "sx": 1,
+      "sy": 1,
+      "mirror": false,
+      "layer": 1,
+      "datatype": 0,
+      "metadata": {
+        "sweep": {
+          "width_nm": 12,
+          "gap_nm": 24
+        }
+      }
+    },
+    {
+      "id": "b7c451a8df89",
+      "name": "Line / Space",
+      "pattern": "line_space",
+      "params": {
+        "width": 16,
+        "gap": 24,
+        "length": 160,
+        "count": 8
+      },
+      "polygons": [],
+      "x": 840,
+      "y": 900,
+      "angle": 0,
+      "sx": 1,
+      "sy": 1,
+      "mirror": false,
+      "layer": 1,
+      "datatype": 0,
+      "metadata": {
+        "sweep": {
+          "width_nm": 16,
+          "gap_nm": 24
+        }
+      }
+    },
+    {
+      "id": "658da523008c",
+      "name": "Line / Space",
+      "pattern": "line_space",
+      "params": {
+        "width": 20,
+        "gap": 24,
+        "length": 160,
+        "count": 8
+      },
+      "polygons": [],
+      "x": 1120,
+      "y": 900,
+      "angle": 0,
+      "sx": 1,
+      "sy": 1,
+      "mirror": false,
+      "layer": 1,
+      "datatype": 0,
+      "metadata": {
+        "sweep": {
+          "width_nm": 20,
+          "gap_nm": 24
+        }
+      }
+    }
+  ],
+  "layers": [
+    {
+      "number": 1,
+      "datatype": 0,
+      "name": "主图形",
+      "color": "#3285b5",
+      "visible": true,
+      "locked": false
+    },
+    {
+      "number": 2,
+      "datatype": 0,
+      "name": "辅助 / Cut",
+      "color": "#d4973c",
+      "visible": true,
+      "locked": false
+    },
+    {
+      "number": 3,
+      "datatype": 0,
+      "name": "参考",
+      "color": "#8b78b4",
+      "visible": true,
+      "locked": false
+    }
+  ],
+  "grid": 1.0,
+  "constraint": "orthogonal",
+  "metadata": {}
+}

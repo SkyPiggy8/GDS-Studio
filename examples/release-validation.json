@@ -1,0 +1,31 @@
+{
+  "version": "0.2.0",
+  "tests_passed": 72,
+  "dataset_samples": 83,
+  "source_files": 337,
+  "source_zip_bytes": 5180293,
+  "package_bytes": 322246078,
+  "synthetic_large_file": {
+    "synthetic": true,
+    "bytes": 217601688,
+    "mb": 207.5211410522461,
+    "input_polygons": 3400000,
+    "layers": 40,
+    "cells": 1,
+    "generation_seconds": 5.818563899956644,
+    "index_seconds": 0.8737325000111014,
+    "roi_extraction_seconds": 1.156239999923855,
+    "roi_report": {
+      "added": 10,
+      "duplicates": 90,
+      "geometry_seen": 100,
+      "text_seen": 40,
+      "samples": 100,
+      "cells": 1,
+      "mode": "polygon",
+      "complete": true
+    },
+    "limitations": "Synthetic rectangles + 40 text labels, not a real foundry layout; full-library extraction not benchmarked"
+  },
+  "packaged_worker_verified": true
+}

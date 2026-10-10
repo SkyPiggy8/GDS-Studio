@@ -1,0 +1,22 @@
+{
+  "units": "nm",
+  "precision_nm": 0.1,
+  "polygon_count": 6,
+  "cell_count": 2,
+  "area_nm2": 11519.999999999998,
+  "gds_readback_verified": true,
+  "patterns": [
+    {
+      "cell": "P00000",
+      "id": "7633a1491dd0",
+      "name": "交错线端",
+      "pattern": "",
+      "params": {},
+      "metadata": {
+        "calibrated": true,
+        "library_id": 7
+      }
+    }
+  ],
+  "document_metadata": {}
+}

@@ -1,0 +1,22 @@
+{
+  "units": "nm",
+  "precision_nm": 0.1,
+  "polygon_count": 1,
+  "cell_count": 2,
+  "area_nm2": 24.5,
+  "gds_readback_verified": true,
+  "patterns": [
+    {
+      "cell": "P00000",
+      "id": "c56306c8c561",
+      "name": "论文 Fig4a 轮廓 29",
+      "pattern": "",
+      "params": {},
+      "metadata": {
+        "calibrated": false,
+        "library_id": 78
+      }
+    }
+  ],
+  "document_metadata": {}
+}

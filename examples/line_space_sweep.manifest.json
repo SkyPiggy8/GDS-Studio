@@ -1,0 +1,371 @@
+{
+  "units": "nm",
+  "precision_nm": 0.1,
+  "polygon_count": 160,
+  "cell_count": 21,
+  "area_nm2": 337919.9999999999,
+  "gds_readback_verified": true,
+  "patterns": [
+    {
+      "cell": "P00000",
+      "id": "26d895e4ae68",
+      "name": "Line / Space",
+      "pattern": "line_space",
+      "params": {
+        "width": 8,
+        "gap": 8,
+        "length": 160,
+        "count": 8
+      },
+      "metadata": {
+        "sweep": {
+          "width_nm": 8,
+          "gap_nm": 8
+        }
+      }
+    },
+    {
+      "cell": "P00001",
+      "id": "7ab13c6ce127",
+      "name": "Line / Space",
+      "pattern": "line_space",
+      "params": {
+        "width": 10,
+        "gap": 8,
+        "length": 160,
+        "count": 8
+      },
+      "metadata": {
+        "sweep": {
+          "width_nm": 10,
+          "gap_nm": 8
+        }
+      }
+    },
+    {
+      "cell": "P00002",
+      "id": "569ddd4000b6",
+      "name": "Line / Space",
+      "pattern": "line_space",
+      "params": {
+        "width": 12,
+        "gap": 8,
+        "length": 160,
+        "count": 8
+      },
+      "metadata": {
+        "sweep": {
+          "width_nm": 12,
+          "gap_nm": 8
+        }
+      }
+    },
+    {
+      "cell": "P00003",
+      "id": "af578dc9ade8",
+      "name": "Line / Space",
+      "pattern": "line_space",
+      "params": {
+        "width": 16,
+        "gap": 8,
+        "length": 160,
+        "count": 8
+      },
+      "metadata": {
+        "sweep": {
+          "width_nm": 16,
+          "gap_nm": 8
+        }
+      }
+    },
+    {
+      "cell": "P00004",
+      "id": "1980636c2254",
+      "name": "Line / Space",
+      "pattern": "line_space",
+      "params": {
+        "width": 20,
+        "gap": 8,
+        "length": 160,
+        "count": 8
+      },
+      "metadata": {
+        "sweep": {
+          "width_nm": 20,
+          "gap_nm": 8
+        }
+      }
+    },
+    {
+      "cell": "P00005",
+      "id": "7cf2a0f9452a",
+      "name": "Line / Space",
+      "pattern": "line_space",
+      "params": {
+        "width": 8,
+        "gap": 12,
+        "length": 160,
+        "count": 8
+      },
+      "metadata": {
+        "sweep": {
+          "width_nm": 8,
+          "gap_nm": 12
+        }
+      }
+    },
+    {
+      "cell": "P00006",
+      "id": "94f69eed8201",
+      "name": "Line / Space",
+      "pattern": "line_space",
+      "params": {
+        "width": 10,
+        "gap": 12,
+        "length": 160,
+        "count": 8
+      },
+      "metadata": {
+        "sweep": {
+          "width_nm": 10,
+          "gap_nm": 12
+        }
+      }
+    },
+    {
+      "cell": "P00007",
+      "id": "cff38952e7e9",
+      "name": "Line / Space",
+      "pattern": "line_space",
+      "params": {
+        "width": 12,
+        "gap": 12,
+        "length": 160,
+        "count": 8
+      },
+      "metadata": {
+        "sweep": {
+          "width_nm": 12,
+          "gap_nm": 12
+        }
+      }
+    },
+    {
+      "cell": "P00008",
+      "id": "42962baef7a5",
+      "name": "Line / Space",
+      "pattern": "line_space",
+      "params": {
+        "width": 16,
+        "gap": 12,
+        "length": 160,
+        "count": 8
+      },
+      "metadata": {
+        "sweep": {
+          "width_nm": 16,
+          "gap_nm": 12
+        }
+      }
+    },
+    {
+      "cell": "P00009",
+      "id": "9afa1b3eb57c",
+      "name": "Line / Space",
+      "pattern": "line_space",
+      "params": {
+        "width": 20,
+        "gap": 12,
+        "length": 160,
+        "count": 8
+      },
+      "metadata": {
+        "sweep": {
+          "width_nm": 20,
+          "gap_nm": 12
+        }
+      }
+    },
+    {
+      "cell": "P00010",
+      "id": "a5c391711307",
+      "name": "Line / Space",
+      "pattern": "line_space",
+      "params": {
+        "width": 8,
+        "gap": 16,
+        "length": 160,
+        "count": 8
+      },
+      "metadata": {
+        "sweep": {
+          "width_nm": 8,
+          "gap_nm": 16
+        }
+      }
+    },
+    {
+      "cell": "P00011",
+      "id": "c5199a4da826",
+      "name": "Line / Space",
+      "pattern": "line_space",
+      "params": {
+        "width": 10,
+        "gap": 16,
+        "length": 160,
+        "count": 8
+      },
+      "metadata": {
+        "sweep": {
+          "width_nm": 10,
+          "gap_nm": 16
+        }
+      }
+    },
+    {
+      "cell": "P00012",
+      "id": "3aa4c3024a16",
+      "name": "Line / Space",
+      "pattern": "line_space",
+      "params": {
+        "width": 12,
+        "gap": 16,
+        "length": 160,
+        "count": 8
+      },
+      "metadata": {
+        "sweep": {
+          "width_nm": 12,
+          "gap_nm": 16
+        }
+      }
+    },
+    {
+      "cell": "P00013",
+      "id": "a540eee6ae24",
+      "name": "Line / Space",
+      "pattern": "line_space",
+      "params": {
+        "width": 16,
+        "gap": 16,
+        "length": 160,
+        "count": 8
+      },
+      "metadata": {
+        "sweep": {
+          "width_nm": 16,
+          "gap_nm": 16
+        }
+      }
+    },
+    {
+      "cell": "P00014",
+      "id": "3994e640d1f0",
+      "name": "Line / Space",
+      "pattern": "line_space",
+      "params": {
+        "width": 20,
+        "gap": 16,
+        "length": 160,
+        "count": 8
+      },
+      "metadata": {
+        "sweep": {
+          "width_nm": 20,
+          "gap_nm": 16
+        }
+      }
+    },
+    {
+      "cell": "P00015",
+      "id": "99f13940a42f",
+      "name": "Line / Space",
+      "pattern": "line_space",
+      "params": {
+        "width": 8,
+        "gap": 24,
+        "length": 160,
+        "count": 8
+      },
+      "metadata": {
+        "sweep": {
+          "width_nm": 8,
+          "gap_nm": 24
+        }
+      }
+    },
+    {
+      "cell": "P00016",
+      "id": "0ac5d786a14c",
+      "name": "Line / Space",
+      "pattern": "line_space",
+      "params": {
+        "width": 10,
+        "gap": 24,
+        "length": 160,
+        "count": 8
+      },
+      "metadata": {
+        "sweep": {
+          "width_nm": 10,
+          "gap_nm": 24
+        }
+      }
+    },
+    {
+      "cell": "P00017",
+      "id": "ff3d4e420897",
+      "name": "Line / Space",
+      "pattern": "line_space",
+      "params": {
+        "width": 12,
+        "gap": 24,
+        "length": 160,
+        "count": 8
+      },
+      "metadata": {
+        "sweep": {
+          "width_nm": 12,
+          "gap_nm": 24
+        }
+      }
+    },
+    {
+      "cell": "P00018",
+      "id": "b7c451a8df89",
+      "name": "Line / Space",
+      "pattern": "line_space",
+      "params": {
+        "width": 16,
+        "gap": 24,
+        "length": 160,
+        "count": 8
+      },
+      "metadata": {
+        "sweep": {
+          "width_nm": 16,
+          "gap_nm": 24
+        }
+      }
+    },
+    {
+      "cell": "P00019",
+      "id": "658da523008c",
+      "name": "Line / Space",
+      "pattern": "line_space",
+      "params": {
+        "width": 20,
+        "gap": 24,
+        "length": 160,
+        "count": 8
+      },
+      "metadata": {
+        "sweep": {
+          "width_nm": 20,
+          "gap_nm": 24
+        }
+      }
+    }
+  ],
+  "document_metadata": {}
+}

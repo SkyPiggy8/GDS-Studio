@@ -1,0 +1,112 @@
+{
+  "units": "nm",
+  "precision_nm": 0.1,
+  "polygon_count": 47,
+  "cell_count": 9,
+  "area_nm2": 66864.0,
+  "gds_readback_verified": true,
+  "patterns": [
+    {
+      "cell": "P00000",
+      "id": "c5b54925d4fc",
+      "name": "Line / Space",
+      "pattern": "line_space",
+      "params": {
+        "width": 12,
+        "gap": 16,
+        "length": 160,
+        "count": 6
+      },
+      "metadata": {}
+    },
+    {
+      "cell": "P00001",
+      "id": "a47876c346d2",
+      "name": "锤头 Hammerhead",
+      "pattern": "hammerhead",
+      "params": {
+        "width": 12,
+        "length": 160
+      },
+      "metadata": {}
+    },
+    {
+      "cell": "P00002",
+      "id": "77870df5cf99",
+      "name": "Tip-to-Tip",
+      "pattern": "tip_tip",
+      "params": {
+        "width": 12,
+        "gap": 16,
+        "length": 160,
+        "count": 6
+      },
+      "metadata": {}
+    },
+    {
+      "cell": "P00003",
+      "id": "26d9542bd964",
+      "name": "Contact 阵列",
+      "pattern": "contact_array",
+      "params": {
+        "width": 12,
+        "gap": 16,
+        "count": 6,
+        "rows": 4
+      },
+      "metadata": {}
+    },
+    {
+      "cell": "P00004",
+      "id": "5486c0e71fa7",
+      "name": "L 型拐角",
+      "pattern": "l_corner",
+      "params": {
+        "width": 12,
+        "length": 160,
+        "height": 100
+      },
+      "metadata": {}
+    },
+    {
+      "cell": "P00005",
+      "id": "1c664b4ec215",
+      "name": "蛇形线",
+      "pattern": "serpentine",
+      "params": {
+        "width": 12,
+        "gap": 16,
+        "length": 160,
+        "count": 6
+      },
+      "metadata": {}
+    },
+    {
+      "cell": "P00006",
+      "id": "62687ed563b2",
+      "name": "狗骨 Dogbone",
+      "pattern": "dogbone",
+      "params": {
+        "width": 12,
+        "length": 160
+      },
+      "metadata": {}
+    },
+    {
+      "cell": "P00007",
+      "id": "3108df66112a",
+      "name": "矩形环",
+      "pattern": "ring",
+      "params": {
+        "width": 12,
+        "length": 160,
+        "height": 100
+      },
+      "metadata": {}
+    }
+  ],
+  "document_metadata": {
+    "purpose": "inspection_test_patterns",
+    "dimensions": "illustrative, editable; not foundry rules"
+  }
+}
