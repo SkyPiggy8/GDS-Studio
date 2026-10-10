@@ -1,19 +1,53 @@
-# 验证记录
+# 测试记录
 
-日期：2026-10-10；本机 Windows 11 / Python 3.12.7 / PySide6 6.8.3。该记录描述本次实际执行结果。
+记录日期：2026-10-10。环境：Windows 11、Python 3.12.7、PySide6 6.8.3。
 
-- **72 项测试通过**：原有 63 项，加上向量去重与孔洞 / 拓扑 / D4 / 缩放；来源保留；未标定策略；Cell、连通、递归区域、路径面积化；超限与取消撤回；训练分组；图库到编辑器修正；后台进程；真实 PDF 渲染入口。
-- 测试进程退出码 0；修复了 Qt 图层勾选期间销毁 tree item 的生命周期问题，并处理了应用退出时 Python MIME 数据释放顺序。
-- 真实生成 `starter.gds`、`catalog.gds`、`line_space_sweep.gds`、`trace_result.gds`，附工程与 manifest；KLayout 独立回读摘要在 `examples/independent_verification.json`。
-- `catalog.gds` 包含全部 41 类结构；`line_space_sweep.gds` 包含 20 个线宽/间距组合；`trace_result.gds` 对应示例输入图片，包含真实孔洞。
-- Windows 原生 Qt 渲染截图：`examples/ui-preview.png` 与 `examples/image-import-preview.png`。人工检查了中文字形、面板和数值字段、图像覆盖对齐、孔洞、标定与导入状态。
-- PyInstaller 目录桌面包启动退出码 0；`--self-check` 实际导出 47 个多边形、9 个 Cell、面积 66864 nm²，GDSTK 回读验证通过，并保存窗口截图。证据在源码目录 `userdata/packaged-check/desktop-check.json`。
-- `pip check` 通过。GUI 依赖曾因新版 DLL 导入问题失败，已固定 Qt 6.8.3 并验证源码与桌面包入口。
+## 自动测试
 
-v0.2 的额外验证：
+72 项测试通过，进程退出码为 0。覆盖以下流程：
 
-- 真实公开论文预印本 Figure 4(a) 提取 31 个闭合轮廓与一个完整结构；保存裁剪、mask、工程、GDS 和回读 manifest。未标定、待审核；不是实际 3 nm PDK。
-- 合成大文件 **217601688 字节 / 207.52 MiB / 3400000 个多边形 / 40 层 / 40 条文字备注**。生成 5.82 秒，层级索引 0.87 秒，ROI 读取和提取 1.16 秒。ROI 包含 100 个几何，10 个新样本 / 90 个尺寸重复。可复现 tools/large_layout_check.py，证据 userdata/large-check/report.json。
-- 源码与 PyInstaller 发行版实际运行「后台索引 → 递归 ROI 提取 → 样本库分页渲染」，退出码均 0；发行版使用上述 207.52 MiB 文件。证据 userdata/library-packaged-check/library-check.json 与两个窗口截图。
+- 41 类结构的 GDS 导出，以及 KLayout 独立回读的单位、图层、面积和边界检查。
+- 工程序列化、中文路径、孔洞、ROI、图像极性、方向规整、布尔运算和偏置。
+- 尺寸、旋转镜像和同形匹配，重复来源保留，未标定样本处理。
+- Cell、连通结构、递归区域提取、路径面积化、超限和取消时的事务撤回。
+- Qt 放置、拖动、缩放、参数和顶点编辑、复制、图层、阵列、扫描及撤销重做。
+- 图库到画布的修正流程、后台进程、PDF 页面渲染和数据集分组。
 
-未拿到用户真实大文件、检测程序输入规范或商业工艺 PDK，尚未完成这些输入上的集成验收。合成测试不保证复杂全芯片文件耗时；没有曝光 / 抗蚀剂 / 蚀刻 / CMP 仿真。
+```powershell
+.venv\Scripts\python.exe -m pytest -q
+.venv\Scripts\python.exe -m pip check
+```
+
+## 示例与桌面版
+
+`examples/` 中保存了 starter、catalog、line_space_sweep 和 trace_result 的工程、GDS 与 manifest。catalog 包含 41 类结构，参数扫描包含 20 个线宽/间距组合，图片示例包含孔洞。独立回读摘要见 `examples/independent_verification.json`。
+
+论文示例从公开预印本 Figure 4(a) 提取了 31 个闭合轮廓，另保存一个完整结构样本，均为未标定、待审核。来源和处理参数见 [论文示例说明](PAPER_SAMPLES.md)。
+
+PyInstaller 桌面版启动和退出正常。`--self-check` 导出 47 个多边形、9 个 Cell，面积为 66864 nm²，GDSTK 回读通过。源码和桌面版都跑过后台索引、递归 ROI 提取和图库渲染流程。界面截图放在 examples 中。
+
+## 大文件测试
+
+输入为合成矩形版图，不是实际工艺文件。
+
+| 项目 | 结果 |
+|---|---|
+| 文件大小 | 217601688 字节，207.52 MiB |
+| 多边形 | 3400000 个 |
+| 图层 / 文字备注 | 40 层 / 40 条 |
+| 生成耗时 | 5.82 秒 |
+| 层级索引耗时 | 0.87 秒 |
+| ROI 读取与提取耗时 | 1.16 秒 |
+| ROI 几何 / 入库结果 | 100 个几何；10 个新样本、90 个重复 |
+
+复现命令：
+
+```powershell
+.venv\Scripts\python.exe tools\large_layout_check.py
+```
+
+脚本会在 userdata/large-check 下生成约 208 MiB 的文件和报告。桌面版也使用这份文件检查过后台提取。结果取决于数据和运行环境，不能据此推算复杂全芯片版图的处理时间。
+
+## 尚未覆盖
+
+实际工艺大文件与检测程序的集成还需要更多数据。当前检查的是几何、文件格式和软件流程，不包含曝光、抗蚀剂、蚀刻或 CMP 的物理仿真。
