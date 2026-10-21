@@ -15,7 +15,7 @@ from .geometry import bounds,boolean,offset,validate,transform
 from .io import save_project,load_project,export_gds,inspect_cells,import_gds
 from .dialogs import ArrayDialog,SweepDialog,LayerDialog,number,source_browser
 from .image_dialog import TraceDialog
-from .cad import top_left, move_top_left, is_editable
+from .cad import top_left, move_top_left, is_editable, dimension_points, drive_dimension
 
 
 class DocumentCommand(QUndoCommand):
@@ -91,7 +91,7 @@ class MainWindow(QMainWindow):
     def make_ui(self):
         toolbar=QToolBar("绘图工具",self);toolbar.setMovable(False);self.addToolBar(toolbar)
         self.tool_group=QActionGroup(self);self.tool_group.setExclusive(True);self.tool_actions={}
-        for key,label,shortcut in [("select","选择","V"),("move","移动","G"),("rectangle","矩形","R"),("polygon","多边形","P"),("freehand","手绘","B"),("vertex","顶点","E"),("measure","测量","M")]:
+        for key,label,shortcut in [("select","选择","V"),("move","移动","G"),("rectangle","矩形","R"),("polygon","多边形","P"),("freehand","手绘","B"),("vertex","顶点","E"),("dimension","尺寸","D"),("measure","测量","M")]:
             a=QAction(label,self);a.setCheckable(True);a.setShortcut(QKeySequence(shortcut));a.setToolTip(f"{label} · {shortcut}")
             a.triggered.connect(lambda checked,k=key:self.choose_tool(k));self.tool_group.addAction(a);toolbar.addAction(a);self.tool_actions[key]=a
         self.tool_actions["select"].setChecked(True);toolbar.addSeparator();toolbar.addAction(self.fit_action);toolbar.addAction(self.array_action);toolbar.addAction(self.sweep_action)
@@ -127,8 +127,10 @@ class MainWindow(QMainWindow):
         self.canvas=LayoutCanvas();center_l.addWidget(self.canvas,1);self.splitter.addWidget(center)
         self.canvas.selectionChanged.connect(self.selection_changed);self.canvas.edited.connect(self.commit_canvas)
         self.canvas.toolChanged.connect(self.sync_tool)
+        self.canvas.dimensionRequested.connect(self.edit_dimension)
         self.canvas.shapeDrawn.connect(self.add_drawn);self.canvas.placeRequested.connect(self.place)
         self.canvas.notice.connect(lambda s:self.statusBar().showMessage(s,10000));self.canvas.coordinates.connect(self.update_coordinates)
+        snap=QCheckBox("几何吸附");snap.setChecked(True);snap.toggled.connect(lambda v:setattr(self.canvas,'smart_snap',v));options.addWidget(snap)
         for key,dx,dy in [(Qt.Key.Key_Left,-1,0),(Qt.Key.Key_Right,1,0),(Qt.Key.Key_Up,0,1),(Qt.Key.Key_Down,0,-1)]:
             shortcut=QShortcut(QKeySequence(key),self.canvas);shortcut.setContext(Qt.ShortcutContext.WidgetShortcut);shortcut.activated.connect(lambda dx=dx,dy=dy:self.nudge(dx,dy))
         self.inspector=QFrame();self.inspector.setObjectName("sidePanel");right_l=QVBoxLayout(self.inspector);right_l.setContentsMargins(15,12,15,12)
@@ -182,6 +184,7 @@ class MainWindow(QMainWindow):
         self.tool_actions[key].setChecked(True);self.canvas.set_tool(key);self.canvas.setFocus()
         tips={"polygon":"逐点绘制，Enter / 双击 / 右键闭合；Esc 取消。","freehand":"按住左键画封闭轮廓，松开后自动规整。","vertex":"先选择展开后的多边形，再拖动圆形顶点。","select":"拖动移动，框选多选；右下角方块缩放。","rectangle":"拖出矩形区域。","measure":"拖动两点测量距离。"}
         tips["move"]="选择图案后按 G，点击目标坐标放置左上角；多选保持相对位置。"
+        tips["dimension"]="依次选择两个顶点 / 平行边；单边选中后按 Enter。双击尺寸改数值；第一项固定，第二项移动。"
         self.statusBar().showMessage(tips[key])
 
     def sync_tool(self,key):
@@ -305,6 +308,25 @@ class MainWindow(QMainWindow):
         shapes=self.selected()
         if not shapes or not all(is_editable(self.document,s) for s in shapes):return
         self.mutate("按左上角移动",lambda:move_top_left(shapes,x,y),inspector=True)
+
+    def edit_dimension(self,refs,index=None):
+        from .sketch_dialog import DimensionDialog
+        try:
+            old=self.document.metadata.get('sketch_dimensions',[])[index] if index is not None else None
+            dialog=DimensionDialog(self.document,refs,old,self)
+            if dialog.exec():
+                if dialog.deleted:self.mutate("删除尺寸标注",lambda:self.document.metadata['sketch_dimensions'].pop(index))
+                else:self.apply_dimension(refs,dialog.value.value(),dialog.mode.currentData(),dialog.whole.isChecked(),index,dialog.reference.isChecked())
+        except ValueError as exc:self.error(str(exc))
+
+    def apply_dimension(self,refs,value,mode='aligned',whole=False,index=None,reference=False):
+        def fn():
+            if not reference:drive_dimension(self.document,refs,value,mode,whole)
+            dim=dict(refs=copy.deepcopy(refs),mode=mode)
+            dimensions=self.document.metadata.setdefault('sketch_dimensions',[])
+            if index is None:dimensions.append(dim)
+            else:dimensions[index]=dim
+        self.mutate("尺寸标注 / 驱动编辑",fn,inspector=True)
 
     def vertex_table(self,layout,s):
         layout.addWidget(heading("顶点坐标 · nm"))

@@ -7,7 +7,7 @@ from PySide6.QtGui import QColor, QPainter, QPainterPath, QPen, QPolygonF, QTran
 from PySide6.QtWidgets import QGraphicsView, QGraphicsScene, QGraphicsItem
 from .model import Shape
 from .geometry import bounds, rect, validate, regularize, constrain_segment
-from .cad import top_left, move_top_left, is_editable
+from .cad import top_left, move_top_left, is_editable, resolve, dimension_points
 
 
 def path_for(polys):
@@ -83,6 +83,7 @@ class LayoutCanvas(QGraphicsView):
     placeRequested=Signal(str,float,float)
     coordinates=Signal(float,float,float)
     notice=Signal(str)
+    dimensionRequested=Signal(list,object)
 
     def __init__(self,parent=None):
         super().__init__(parent)
@@ -102,6 +103,7 @@ class LayoutCanvas(QGraphicsView):
         self.points=[];self.pointer=QPointF();self.start_point=None
         self.pan_point=None;self.space_down=False;self.before=None;self.drag_action=None
         self.vertex=None;self.resize_model=None;self.resize_base=None
+        self.smart_snap=True;self.snap_hint=None;self.dimension_refs=[];self.dimension_labels=[]
         self.setSceneRect(-100000,-100000,200000,200000)
 
     def set_document(self,doc,selected=None):
@@ -134,6 +136,7 @@ class LayoutCanvas(QGraphicsView):
 
     def set_tool(self,tool,key=""):
         self.tool=tool;self.place_key=key;self.points=[];self.start_point=None
+        self.dimension_refs=[];self.snap_hint=None
         self.setDragMode(QGraphicsView.DragMode.RubberBandDrag if tool=="select" else QGraphicsView.DragMode.NoDrag)
         self.setCursor(Qt.CursorShape.ArrowCursor if tool in ("select","vertex") else Qt.CursorShape.CrossCursor)
         self.toolChanged.emit(tool)
@@ -162,6 +165,84 @@ class LayoutCanvas(QGraphicsView):
     def snap(self,p):
         grid=self.document.grid if self.document else 1
         return QPointF(round(p.x()/grid)*grid,round(p.y()/grid)*grid)
+
+    def pick_feature(self,pos,points_only=False,exclude=None):
+        """Prefer endpoints within 9 screen pixels, then midpoints / edge projections."""
+        scene=self.mapToScene(pos);scale=abs(self.transform().m11());tol=9/scale
+        vertices=[];edges=[]
+        for item in self.scene_.items(QRectF(scene.x()-tol,scene.y()-tol,2*tol,2*tol)):
+            if not isinstance(item,LayoutItem) or not item.isVisible():continue
+            s=item.model
+            for ei,(layer,datatype,polys) in enumerate(s.entries()):
+                if not self.document.layer_info(layer,datatype).visible:continue
+                for pi,poly in enumerate(polys):
+                    for vi,(x,y) in enumerate(poly):
+                        ref=dict(shape=s.id,entry=ei,poly=pi,index=vi,count=len(poly),kind='point')
+                        if exclude and (s.id,pi,vi)==exclude:continue
+                        dist=math.hypot(scene.x()-x,scene.y()+y)
+                        if dist<=tol:vertices.append((dist,ref,QPointF(x,-y)))
+                        if points_only:continue
+                        b=poly[(vi+1)%len(poly)];ax,ay=x,-y;bx,by=b[0],-b[1]
+                        den=(bx-ax)**2+(by-ay)**2
+                        if den<1e-12:continue
+                        t=max(0,min(1,((scene.x()-ax)*(bx-ax)+(scene.y()-ay)*(by-ay))/den))
+                        q=QPointF(ax+t*(bx-ax),ay+t*(by-ay));dist=math.hypot(q.x()-scene.x(),q.y()-scene.y())
+                        if dist<=tol:edges.append((dist,dict(ref,kind='edge'),q))
+        candidates=vertices or edges
+        return min(candidates,key=lambda c:c[0]) if candidates else None
+
+    def snapped_pointer(self,pos):
+        raw=self.mapToScene(pos);self.snap_hint=None
+        if self.smart_snap and self.tool in ('vertex','rectangle','polygon','freehand','measure','move','place'):
+            exclude=None
+            if self.vertex:exclude=(self.vertex[0].id,self.vertex[1],self.vertex[2])
+            hit=self.pick_feature(pos,exclude=exclude)
+            if hit:
+                self.snap_hint=hit
+                return hit[2]
+        return self.snap(raw)
+
+    def draw_dimensions(self,painter):
+        self.dimension_labels=[]
+        painter.save();painter.resetTransform();painter.setPen(QPen(QColor('#24749b'),1))
+        for index,dim in enumerate(self.document.metadata.get('sketch_dimensions',[])):
+            try:a,b,u,length=dimension_points(self.document,dim['refs'],dim.get('mode','aligned'))
+            except (ValueError,KeyError,IndexError):continue
+            pa=QPointF(self.mapFromScene(QPointF(a[0],-a[1])));pb=QPointF(self.mapFromScene(QPointF(b[0],-b[1])))
+            mode=dim.get('mode','aligned')
+            if mode=='horizontal':
+                y=min(pa.y(),pb.y())-30;qa=QPointF(pa.x(),y);qb=QPointF(pb.x(),y)
+            elif mode=='vertical':
+                x=max(pa.x(),pb.x())+35;qa=QPointF(x,pa.y());qb=QPointF(x,pb.y())
+            else:
+                normal=QPointF(u[1]*28,u[0]*28);qa=pa+normal;qb=pb+normal
+            painter.drawLine(pa,qa);painter.drawLine(pb,qb);painter.drawLine(qa,qb)
+            for q in (qa,qb):painter.drawEllipse(q,2,2)
+            text=f'{length:.3f}'.rstrip('0').rstrip('.')+' nm'
+            size=painter.fontMetrics().boundingRect(text);mid=(qa+qb)/2
+            box=QRectF(mid.x()-size.width()/2-5,mid.y()-size.height()-5,size.width()+10,size.height()+6)
+            painter.fillRect(box,QColor('#ffffff'));painter.drawText(box,Qt.AlignmentFlag.AlignCenter,text)
+            self.dimension_labels.append((box,index))
+        painter.restore()
+
+    def draw_rulers(self,painter):
+        scale=abs(self.transform().m11());target=90/scale
+        power=10**math.floor(math.log10(target));step=next(n*power for n in (1,2,5,10) if n*power>=target)
+        painter.save();painter.resetTransform();w=self.viewport().width();h=self.viewport().height()
+        painter.fillRect(QRectF(0,0,w,23),QColor('#eaf0f5'));painter.fillRect(QRectF(0,0,57,h),QColor('#eaf0f5'))
+        painter.setPen(QPen(QColor('#566a79'),1))
+        left=self.mapToScene(0,0).x();right=self.mapToScene(w,0).x()
+        for i in range(math.ceil(left/step),math.floor(right/step)+1):
+            x=self.mapFromScene(QPointF(i*step,0)).x()
+            if x<58:continue
+            painter.drawLine(x,18,x,23);painter.drawText(x+3,14,f'{i*step:g}')
+        low=-self.mapToScene(0,h).y();high=-self.mapToScene(0,0).y()
+        for i in range(math.ceil(low/step),math.floor(high/step)+1):
+            y=self.mapFromScene(QPointF(0,-i*step)).y()
+            if y<24:continue
+            painter.drawLine(51,y,57,y);painter.drawText(QRectF(1,y-8,48,16),Qt.AlignmentFlag.AlignRight|Qt.AlignmentFlag.AlignVCenter,f'{i*step:g}')
+        painter.fillRect(QRectF(0,0,57,23),QColor('#dbe5ed'));painter.drawText(8,16,'nm')
+        painter.restore()
 
     def drawBackground(self,painter,r):
         painter.fillRect(r,QColor("#f6f8fa"))
@@ -204,6 +285,16 @@ class LayoutCanvas(QGraphicsView):
         if self.start_point and self.tool in ("rectangle","measure"):
             if self.tool=="rectangle":painter.drawRect(QRectF(self.start_point,self.pointer).normalized())
             else:painter.drawLine(self.start_point,self.pointer)
+        refs=list(self.dimension_refs)
+        if self.snap_hint:refs.append(self.snap_hint[1])
+        for ref in refs:
+            try:_,a,b=resolve(self.document,ref)
+            except ValueError:continue
+            pen=QPen(QColor('#dc850c'),2);pen.setCosmetic(True);painter.setPen(pen)
+            if ref['kind']=='edge':painter.drawLine(QPointF(a[0],-a[1]),QPointF(b[0],-b[1]))
+            else:painter.drawEllipse(QPointF(a[0],-a[1]),radius*1.7,radius*1.7)
+        if self.document:
+            self.draw_dimensions(painter);self.draw_rulers(painter)
         # Screen-space scale ruler; readable at every zoom level.
         painter.save();painter.resetTransform()
         target=100/scale;power=10**math.floor(math.log10(target));length=min((1,2,5,10),key=lambda x:abs(x*power-target))*power
@@ -213,7 +304,7 @@ class LayoutCanvas(QGraphicsView):
         painter.drawText(x,y-8,f"{length:g} nm");painter.restore()
 
     def mousePressEvent(self,event):
-        p=self.snap(self.mapToScene(event.position().toPoint()));self.pointer=p
+        p=self.snapped_pointer(event.position().toPoint());self.pointer=p
         if event.button()==Qt.MouseButton.MiddleButton or (event.button()==Qt.MouseButton.LeftButton and self.space_down):
             self.pan_point=event.position().toPoint();self.setCursor(Qt.CursorShape.ClosedHandCursor);event.accept();return
         if event.button()==Qt.MouseButton.RightButton:
@@ -223,6 +314,14 @@ class LayoutCanvas(QGraphicsView):
         if event.button()!=Qt.MouseButton.LeftButton:return super().mousePressEvent(event)
         if self.tool=="place":
             self.placeRequested.emit(self.place_key,p.x(),-p.y());event.accept();return
+        if self.tool=="dimension":
+            hit=self.pick_feature(event.position().toPoint())
+            if hit:
+                self.dimension_refs.append(hit[1])
+                if len(self.dimension_refs)==2:
+                    refs=self.dimension_refs;self.dimension_refs=[];self.dimensionRequested.emit(refs,None)
+            else:self.notice.emit("请选择顶点或边；端点优先，按 Enter 标注单条边长度")
+            event.accept();self.viewport().update();return
         if self.tool=="move":
             shapes=[self.items_by_id[i].model for i in self.selected_ids()]
             if not shapes:
@@ -271,7 +370,8 @@ class LayoutCanvas(QGraphicsView):
         super().mousePressEvent(event)
 
     def mouseMoveEvent(self,event):
-        p=self.snap(self.mapToScene(event.position().toPoint()));self.pointer=p
+        p=self.snapped_pointer(event.position().toPoint());self.pointer=p
+        if self.tool=='dimension':self.snap_hint=self.pick_feature(event.position().toPoint())
         self.coordinates.emit(p.x(),-p.y(),abs(self.transform().m11()))
         if self.pan_point is not None:
             delta=event.position().toPoint()-self.pan_point;self.pan_point=event.position().toPoint()
@@ -301,7 +401,7 @@ class LayoutCanvas(QGraphicsView):
         super().mouseMoveEvent(event)
 
     def mouseReleaseEvent(self,event):
-        p=self.snap(self.mapToScene(event.position().toPoint()))
+        p=self.snapped_pointer(event.position().toPoint())
         if self.pan_point is not None:
             self.pan_point=None;self.setCursor(Qt.CursorShape.ArrowCursor);event.accept();return
         if self.drag_action=="vertex" and self.vertex:
@@ -346,12 +446,22 @@ class LayoutCanvas(QGraphicsView):
         self.points=[];self.start_point=None;self.viewport().update()
 
     def mouseDoubleClickEvent(self,event):
+        for box,index in self.dimension_labels:
+            if box.contains(event.position()):
+                dim=self.document.metadata['sketch_dimensions'][index]
+                self.dimensionRequested.emit(dim['refs'],index);event.accept();return
         if self.tool=="polygon":self.finish_polygon();event.accept()
         else:super().mouseDoubleClickEvent(event)
 
     def keyPressEvent(self,event):
         if event.key()==Qt.Key.Key_Space:self.space_down=True;event.accept();return
         if event.key()==Qt.Key.Key_Escape:self.set_tool("select");self.notice.emit("已取消绘制 / 放置");event.accept();return
+        if event.key() in (Qt.Key.Key_Return,Qt.Key.Key_Enter) and self.tool=='dimension' and len(self.dimension_refs)==1:
+            r=self.dimension_refs[0]
+            if r['kind']=='edge':
+                a=dict(r,kind='point');b=dict(a,index=(a['index']+1)%a['count'])
+                self.dimension_refs=[];self.dimensionRequested.emit([a,b],None)
+            event.accept();return
         if event.key() in (Qt.Key.Key_Return,Qt.Key.Key_Enter) and self.points:self.finish_polygon();event.accept();return
         super().keyPressEvent(event)
 

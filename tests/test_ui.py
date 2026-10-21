@@ -130,6 +130,37 @@ def test_anchor_coordinate_move_and_undo(window,app):
     assert top_left(w.selected())==pytest.approx((100,200),abs=2)
 
 
+def test_dimension_pick_edit_save_and_undo(window,app,tmp_path):
+    from gds_studio.cad import dimension_points
+    from gds_studio.io import save_project,load_project
+    w=window;s=Shape(polygons=[[[0,0],[100,0],[100,80],[0,80]]])
+    w.replace_document(Document(shapes=[s]));w.canvas.fit_all();app.processEvents();w.choose_tool('dimension')
+    picked=[];w.canvas.dimensionRequested.disconnect();w.canvas.dimensionRequested.connect(lambda refs,index:picked.append((refs,index)))
+    for x,y in [(0,40),(100,40)]:
+        QTest.mouseClick(w.canvas.viewport(),Qt.MouseButton.LeftButton,pos=w.canvas.mapFromScene(QPointF(x,-y)))
+    assert len(picked)==1;refs,index=picked[0];assert all(r['kind']=='edge' for r in refs)
+    w.apply_dimension(refs,30);app.processEvents()
+    assert dimension_points(w.document,refs)[3]==pytest.approx(30)
+    assert len(w.canvas.dimension_labels)==1
+    path=tmp_path/'dimension.gsproj';save_project(path,w.document);loaded=load_project(path)
+    assert dimension_points(loaded,loaded.metadata['sketch_dimensions'][0]['refs'])[3]==30
+    w.undo.undo();assert dimension_points(w.document,refs)[3]==100 and not w.document.metadata.get('sketch_dimensions')
+    w.undo.redo();app.processEvents()
+    box,_=w.canvas.dimension_labels[0]
+    QTest.mouseDClick(w.canvas.viewport(),Qt.MouseButton.LeftButton,pos=box.center().toPoint())
+    assert picked[-1][1]==0
+
+
+def test_geometry_snap_exact_endpoint_and_cancel(window,app):
+    w=window;s=Shape(polygons=[[[.3,.7],[100.3,.7],[100.3,80.7],[.3,80.7]]])
+    w.replace_document(Document(shapes=[s]));w.choose_tool('polygon');app.processEvents()
+    pos=w.canvas.mapFromScene(QPointF(.3,-.7))+QPoint(2,2)
+    snapped=w.canvas.snapped_pointer(pos)
+    assert (snapped.x(),-snapped.y())==pytest.approx((.3,.7))
+    w.choose_tool('dimension');QTest.keyClick(w.canvas,Qt.Key.Key_Escape)
+    assert not w.canvas.dimension_refs and w.canvas.tool=='select'
+
+
 def test_layer_lock_visibility_and_clipboard(window,app):
     w=window;id=w.document.shapes[0].id;w.canvas.select_ids([id]);w.copy_selection();w.paste();assert len(w.document.shapes)==9
     item=w.layers.topLevelItem(0);item.setCheckState(2,Qt.CheckState.Checked);app.processEvents()
