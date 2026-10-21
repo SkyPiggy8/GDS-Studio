@@ -116,6 +116,20 @@ def test_freehand_to_valid_polygon(window,app):
     assert len(w.document.shapes)==1;assert len(w.document.shapes[0].polygons[0])==4
 
 
+def test_anchor_coordinate_move_and_undo(window,app):
+    from gds_studio.cad import top_left
+    from PySide6.QtWidgets import QPushButton
+    w=window;s=w.document.shapes[1];w.canvas.select_ids([s.id])
+    old=top_left([s]);w.findChild(QDoubleSpinBox,"anchor_x").setValue(-71.2)
+    w.findChild(QDoubleSpinBox,"anchor_y").setValue(82.3)
+    w.findChild(QPushButton,"move_to_coordinate").click();app.processEvents()
+    assert top_left(w.selected())==pytest.approx((-71.2,82.3))
+    w.undo.undo();assert top_left(w.selected())==pytest.approx(old)
+    w.choose_tool("move");p=w.canvas.mapFromScene(QPointF(100,-200))
+    QTest.mouseClick(w.canvas.viewport(),Qt.MouseButton.LeftButton,pos=p);app.processEvents()
+    assert top_left(w.selected())==pytest.approx((100,200),abs=2)
+
+
 def test_layer_lock_visibility_and_clipboard(window,app):
     w=window;id=w.document.shapes[0].id;w.canvas.select_ids([id]);w.copy_selection();w.paste();assert len(w.document.shapes)==9
     item=w.layers.topLevelItem(0);item.setCheckState(2,Qt.CheckState.Checked);app.processEvents()

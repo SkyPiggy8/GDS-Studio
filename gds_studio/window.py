@@ -15,6 +15,7 @@ from .geometry import bounds,boolean,offset,validate,transform
 from .io import save_project,load_project,export_gds,inspect_cells,import_gds
 from .dialogs import ArrayDialog,SweepDialog,LayerDialog,number,source_browser
 from .image_dialog import TraceDialog
+from .cad import top_left, move_top_left, is_editable
 
 
 class DocumentCommand(QUndoCommand):
@@ -90,7 +91,7 @@ class MainWindow(QMainWindow):
     def make_ui(self):
         toolbar=QToolBar("绘图工具",self);toolbar.setMovable(False);self.addToolBar(toolbar)
         self.tool_group=QActionGroup(self);self.tool_group.setExclusive(True);self.tool_actions={}
-        for key,label,shortcut in [("select","选择","V"),("rectangle","矩形","R"),("polygon","多边形","P"),("freehand","手绘","B"),("vertex","顶点","E"),("measure","测量","M")]:
+        for key,label,shortcut in [("select","选择","V"),("move","移动","G"),("rectangle","矩形","R"),("polygon","多边形","P"),("freehand","手绘","B"),("vertex","顶点","E"),("measure","测量","M")]:
             a=QAction(label,self);a.setCheckable(True);a.setShortcut(QKeySequence(shortcut));a.setToolTip(f"{label} · {shortcut}")
             a.triggered.connect(lambda checked,k=key:self.choose_tool(k));self.tool_group.addAction(a);toolbar.addAction(a);self.tool_actions[key]=a
         self.tool_actions["select"].setChecked(True);toolbar.addSeparator();toolbar.addAction(self.fit_action);toolbar.addAction(self.array_action);toolbar.addAction(self.sweep_action)
@@ -160,7 +161,7 @@ class MainWindow(QMainWindow):
         self.canvas.fit_all()
 
     def editable(self):
-        return [s for s in self.selected() if not self.document.layer_info(s.layer,s.datatype).locked]
+        return [s for s in self.selected() if is_editable(self.document,s)]
 
     def choose_pattern(self,item):
         if not item:return
@@ -180,6 +181,7 @@ class MainWindow(QMainWindow):
     def choose_tool(self,key):
         self.tool_actions[key].setChecked(True);self.canvas.set_tool(key);self.canvas.setFocus()
         tips={"polygon":"逐点绘制，Enter / 双击 / 右键闭合；Esc 取消。","freehand":"按住左键画封闭轮廓，松开后自动规整。","vertex":"先选择展开后的多边形，再拖动圆形顶点。","select":"拖动移动，框选多选；右下角方块缩放。","rectangle":"拖出矩形区域。","measure":"拖动两点测量距离。"}
+        tips["move"]="选择图案后按 G，点击目标坐标放置左上角；多选保持相对位置。"
         self.statusBar().showMessage(tips[key])
 
     def sync_tool(self,key):
@@ -236,13 +238,14 @@ class MainWindow(QMainWindow):
         if s is None:
             layout.addWidget(heading("选择一个结构开始编辑" if not selected else f"已选择 {len(selected)} 个对象",True))
             if selected:
+                self.position_editor(layout,selected)
                 b=QPushButton("复制为阵列");b.clicked.connect(self.array);layout.addWidget(b)
                 b=QPushButton("合并为多边形");b.clicked.connect(lambda:self.boolean_op("or"));layout.addWidget(b)
             else:
                 layout.addWidget(heading("双击左侧结构并在画布点击放置。也可以使用矩形、多边形或手绘工具。",True))
                 b=QPushButton("导入论文截图");b.clicked.connect(self.import_image);layout.addWidget(b)
             layout.addStretch();return
-        pending=not selected;locked=not pending and self.document.layer_info(s.layer,s.datatype).locked
+        pending=not selected;locked=not pending and not is_editable(self.document,s)
         title=QLabel(s.name);title.setObjectName("panelTitle");layout.addWidget(title)
         layout.addWidget(heading("待放置 · 参数会用于下一次放置" if pending else "参数修改即时更新 · 支持撤销",True))
         form=QFormLayout();form.setHorizontalSpacing(12);form.setVerticalSpacing(9)
@@ -261,7 +264,8 @@ class MainWindow(QMainWindow):
                 box.setObjectName(f"param_{key}")
                 box.valueChanged.connect(lambda value,k=key:self.change_param(s,k,value,pending));form.addRow(p.label,box)
         if not pending:
-            for key,label,value,minimum,maximum in [("x","X 位置 · nm",s.x,-2e8,2e8),("y","Y 位置 · nm",s.y,-2e8,2e8),("angle","旋转 · °",s.angle,-36000,36000),("sx","X 缩放",s.sx,.01,1000),("sy","Y 缩放",s.sy,.01,1000)]:
+            self.position_editor(layout,selected)
+            for key,label,value,minimum,maximum in [("angle","旋转 · °",s.angle,-36000,36000),("sx","X 缩放",s.sx,.01,1000),("sy","Y 缩放",s.sy,.01,1000)]:
                 box=number(value,minimum,maximum);box.setObjectName(f"property_{key}");box.valueChanged.connect(lambda v,k=key:self.change_property(s.id,k,v));form.addRow(label,box)
         layout.addLayout(form)
         x0,y0,x1,y1=bounds(s.world_polygons());self.size_label=heading(f"外接尺寸  {x1-x0:.2f} × {y1-y0:.2f} nm",True);layout.addWidget(self.size_label)
@@ -285,6 +289,22 @@ class MainWindow(QMainWindow):
                 field=form.itemAt(i,QFormLayout.ItemRole.FieldRole)
                 if field and field.widget():field.widget().setEnabled(False)
         layout.addStretch()
+
+    def position_editor(self,layout,shapes):
+        layout.addWidget(heading("整体移动 · 左上角基准"))
+        layout.addWidget(heading("包围盒左上角：X 最小、Y 最大；多选整体移动。单位 nm。",True))
+        x,y=top_left(shapes);form=QFormLayout()
+        bx=number(x,-2e8,2e8);by=number(y,-2e8,2e8)
+        bx.setObjectName("anchor_x");by.setObjectName("anchor_y")
+        form.addRow("左上角 X",bx);form.addRow("左上角 Y",by);layout.addLayout(form)
+        button=QPushButton("移动到坐标");button.setObjectName("move_to_coordinate")
+        button.setEnabled(all(is_editable(self.document,s) for s in shapes))
+        button.clicked.connect(lambda:self.move_selection_to(bx.value(),by.value()));layout.addWidget(button)
+
+    def move_selection_to(self,x,y):
+        shapes=self.selected()
+        if not shapes or not all(is_editable(self.document,s) for s in shapes):return
+        self.mutate("按左上角移动",lambda:move_top_left(shapes,x,y),inspector=True)
 
     def vertex_table(self,layout,s):
         layout.addWidget(heading("顶点坐标 · nm"))

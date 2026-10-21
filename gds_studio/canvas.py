@@ -7,6 +7,7 @@ from PySide6.QtGui import QColor, QPainter, QPainterPath, QPen, QPolygonF, QTran
 from PySide6.QtWidgets import QGraphicsView, QGraphicsScene, QGraphicsItem
 from .model import Shape
 from .geometry import bounds, rect, validate, regularize, constrain_segment
+from .cad import top_left, move_top_left, is_editable
 
 
 def path_for(polys):
@@ -49,8 +50,8 @@ class LayoutItem(QGraphicsItem):
             local=[[[x-self.model.x,y-self.model.y] for x,y in p] for p in polys]
             path=path_for(local);self.paths.append((path,QColor(info.color)));self.outline.addPath(path)
         info=self.doc.layer_info(self.model.layer,self.model.datatype)
-        self.setFlag(QGraphicsItem.GraphicsItemFlag.ItemIsMovable,not info.locked)
-        self.setFlag(QGraphicsItem.GraphicsItemFlag.ItemIsSelectable,not info.locked)
+        self.setFlag(QGraphicsItem.GraphicsItemFlag.ItemIsMovable,is_editable(self.doc,self.model))
+        self.setFlag(QGraphicsItem.GraphicsItemFlag.ItemIsSelectable,is_editable(self.doc,self.model))
         self.setPos(self.model.x,-self.model.y)
         self.setVisible(bool(self.paths));self.update()
         self.signature=self.geometry_signature(self.model,self.doc)
@@ -182,6 +183,11 @@ class LayoutCanvas(QGraphicsView):
         pen=QPen(QColor("#277fae"),1.5);pen.setCosmetic(True);painter.setPen(pen)
         painter.setBrush(QColor("#ffffff"))
         selected=self.selected_ids()
+        if selected:
+            x,y=top_left([self.items_by_id[i].model for i in selected])
+            p=QPointF(x,-y)
+            painter.drawLine(p+QPointF(-radius*2,0),p+QPointF(radius*2,0))
+            painter.drawLine(p+QPointF(0,-radius*2),p+QPointF(0,radius*2))
         if self.tool=="select" and len(selected)==1:
             item=self.items_by_id[selected[0]]
             p=item.mapToScene(item.outline.boundingRect().bottomRight())
@@ -217,6 +223,16 @@ class LayoutCanvas(QGraphicsView):
         if event.button()!=Qt.MouseButton.LeftButton:return super().mousePressEvent(event)
         if self.tool=="place":
             self.placeRequested.emit(self.place_key,p.x(),-p.y());event.accept();return
+        if self.tool=="move":
+            shapes=[self.items_by_id[i].model for i in self.selected_ids()]
+            if not shapes:
+                item=self.itemAt(event.position().toPoint())
+                if isinstance(item,LayoutItem) and is_editable(self.document,item.model):self.select_ids([item.model.id])
+                self.notice.emit("已选择图案；再次点击目标位置放置左上角")
+            elif all(is_editable(self.document,s) for s in shapes):
+                before=self.document.to_dict();move_top_left(shapes,p.x(),-p.y())
+                self.edited.emit(before,"按左上角移动")
+            event.accept();return
         if self.tool in ("rectangle","measure"):
             self.start_point=p;event.accept();return
         if self.tool=="freehand":
@@ -309,9 +325,14 @@ class LayoutCanvas(QGraphicsView):
             self.finish_polygon(freehand=True);self.start_point=None;event.accept();return
         super().mouseReleaseEvent(event)
         if self.drag_action=="move" and self.before:
+            moved=[]
             for id,item in self.items_by_id.items():
                 if item.isSelected():
-                    pos=self.snap(item.pos());item.model.x=pos.x();item.model.y=-pos.y();item.setPos(pos)
+                    item.model.x=item.pos().x();item.model.y=-item.pos().y();moved.append(item.model)
+            if moved:
+                x,y=top_left(moved);anchor=self.snap(QPointF(x,-y))
+                move_top_left(moved,anchor.x(),-anchor.y())
+                for s in moved:self.items_by_id[s.id].rebuild()
             if self.document.to_dict()!=self.before:self.edited.emit(self.before,"移动图形")
             self.drag_action=None
 
