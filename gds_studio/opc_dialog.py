@@ -5,13 +5,14 @@ from PySide6.QtWidgets import (QDialog,QVBoxLayout,QHBoxLayout,QFormLayout,QLabe
 from .dialogs import number
 from .opc import OPCOptions,preview_opc
 from .canvas import path_for
+from .theme import COLORS,LAYER_COLORS
 
 
 class OPCDialog(QDialog):
     def __init__(self,doc,shapes,parent=None):
         super().__init__(parent);self.doc=doc;self.shapes=shapes;self.result_shapes=[];self.setWindowTitle('实验性 OPC · 未标定');self.resize(800,640)
         layout=QVBoxLayout(self)
-        note=QLabel('实验参数，不代表 7 nm 晶圆厂规则。蓝线为原图，橙色为校正掩模。\n预览通过后可替换所选图案，支持撤销；不代表晶圆成像结果。')
+        note=QLabel('实验参数，不代表 7 nm 晶圆厂规则。灰蓝虚线为原图，灰绿填充与黑色边线为校正掩模。\n预览通过后可替换所选图案，支持撤销；不代表晶圆成像结果。')
         note.setWordWrap(True);layout.addWidget(note);row=QHBoxLayout();form=QFormLayout();self.fields={}
         for key,label in [('bias_nm','边缘偏置（正扩张 / 负收缩）'),('end_extension_nm','长矩形线端延伸'),('hammerhead_nm','线端横向扩张'),('serif_nm','外凸角 serif 半宽'),('min_gap_nm','同层最小间距检查')]:
             box=number(getattr(OPCOptions(),key),-1000 if key=='bias_nm' else 0,1000);box.setSuffix(' nm');box.setSingleStep(.1)
@@ -32,9 +33,9 @@ class OPCDialog(QDialog):
         self.invalidate();self.scene.clear()
         try:
             self.result_shapes,reports=preview_opc(self.doc,self.shapes,OPCOptions(**{k:b.value() for k,b in self.fields.items()}))
-            path=path_for([p for s in self.result_shapes for p in s.world_polygons()]);pen=QPen(QColor('#cf8a35'),1);pen.setCosmetic(True)
-            self.scene.addPath(path,pen,QColor(238,162,61,110))
-            target=path_for([p for s in self.shapes for _,_,ps in s.entries() for p in ps]);pen=QPen(QColor('#2374a1'),1);pen.setCosmetic(True);self.scene.addPath(target,pen)
+            path=path_for([p for s in self.result_shapes for p in s.world_polygons()]);pen=QPen(QColor(COLORS['outline']),1.8);pen.setCosmetic(True)
+            fill=QColor(LAYER_COLORS[1]);fill.setAlpha(160);self.scene.addPath(path,pen,fill)
+            target=path_for([p for s in self.shapes for _,_,ps in s.entries() for p in ps]);pen=QPen(QColor(COLORS['accent']),1.5,Qt.PenStyle.DashLine);pen.setCosmetic(True);self.scene.addPath(target,pen)
             self.view.fitInView(self.scene.itemsBoundingRect().adjusted(-10,-10,10,10),Qt.AspectRatioMode.KeepAspectRatio)
             errors=[f"{r['layer']}/{r['datatype']}: {e}" for r in reports for e in r['errors']]
             skipped=sum(r['skipped_non_manhattan'] for r in reports)

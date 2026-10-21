@@ -9,6 +9,7 @@ from .model import Shape
 from .geometry import bounds, rect, validate, regularize, constrain_segment
 from .cad import top_left, move_top_left, is_editable, resolve, dimension_points
 from .units import format_length, nice_step
+from .theme import COLORS, display_layer_color
 
 
 def path_for(polys):
@@ -49,7 +50,7 @@ class LayoutItem(QGraphicsItem):
             if not info.visible:continue
             # The model's translation is represented by QGraphicsItem.pos().
             local=[[[x-self.model.x,y-self.model.y] for x,y in p] for p in polys]
-            path=path_for(local);self.paths.append((path,QColor(info.color)));self.outline.addPath(path)
+            path=path_for(local);self.paths.append((path,QColor(display_layer_color(info.color))));self.outline.addPath(path)
         info=self.doc.layer_info(self.model.layer,self.model.datatype)
         self.setFlag(QGraphicsItem.GraphicsItemFlag.ItemIsMovable,is_editable(self.doc,self.model))
         self.setFlag(QGraphicsItem.GraphicsItemFlag.ItemIsSelectable,is_editable(self.doc,self.model))
@@ -67,11 +68,13 @@ class LayoutItem(QGraphicsItem):
 
     def paint(self,painter,option,widget):
         for path,color in self.paths:
-            color.setAlpha(190 if self.isSelected() else 160)
-            pen=QPen(color.darker(115),1);pen.setCosmetic(True)
+            color=QColor(color);color.setAlpha(215 if self.isSelected() else 185)
+            # Cosmetic width is in screen pixels: borders stay clear when zooming.
+            pen=QPen(QColor(COLORS['outline']),2.2 if self.isSelected() else 1.8);pen.setCosmetic(True)
+            pen.setJoinStyle(Qt.PenJoinStyle.MiterJoin)
             painter.setPen(pen);painter.setBrush(color);painter.drawPath(path)
         if self.isSelected():
-            pen=QPen(QColor("#1d638b"),1,Qt.PenStyle.DashLine);pen.setCosmetic(True)
+            pen=QPen(QColor(COLORS['accent']),1.2,Qt.PenStyle.DashLine);pen.setCosmetic(True)
             painter.setPen(pen);painter.setBrush(Qt.BrushStyle.NoBrush)
             painter.drawRect(self.outline.boundingRect())
 
@@ -95,7 +98,7 @@ class LayoutCanvas(QGraphicsView):
         self.setResizeAnchor(QGraphicsView.ViewportAnchor.AnchorViewCenter)
         self.setDragMode(QGraphicsView.DragMode.RubberBandDrag)
         self.setFrameShape(QGraphicsView.Shape.NoFrame)
-        self.setBackgroundBrush(QColor("#f6f8fa"))
+        self.setBackgroundBrush(QColor(COLORS['canvas']))
         self.setMouseTracking(True)
         self.setHorizontalScrollBarPolicy(Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
         self.setVerticalScrollBarPolicy(Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
@@ -214,7 +217,7 @@ class LayoutCanvas(QGraphicsView):
 
     def draw_dimensions(self,painter):
         self.dimension_labels=[]
-        painter.save();painter.resetTransform();painter.setPen(QPen(QColor('#24749b'),1))
+        painter.save();painter.resetTransform();painter.setPen(QPen(QColor(COLORS['accent']),1.2))
         for index,dim in enumerate(self.document.metadata.get('sketch_dimensions',[])):
             try:a,b,u,length=dimension_points(self.document,dim['refs'],dim.get('mode','aligned'))
             except (ValueError,KeyError,IndexError):continue
@@ -236,7 +239,7 @@ class LayoutCanvas(QGraphicsView):
             text=format_length(length,self.display_unit)
             size=painter.fontMetrics().boundingRect(text);mid=(qa+qb)/2
             box=QRectF(mid.x()-size.width()/2-5,mid.y()-size.height()-5,size.width()+10,size.height()+6)
-            painter.fillRect(box,QColor('#ffffff'));painter.drawText(box,Qt.AlignmentFlag.AlignCenter,text)
+            painter.fillRect(box,QColor(COLORS['surface']));painter.drawText(box,Qt.AlignmentFlag.AlignCenter,text)
             self.dimension_labels.append((box,index))
         painter.restore()
 
@@ -245,8 +248,8 @@ class LayoutCanvas(QGraphicsView):
         step=nice_step(target);unit=self.display_unit
         if unit=='auto':unit='um' if step>=1000 else 'nm'
         painter.save();painter.resetTransform();w=self.viewport().width();h=self.viewport().height()
-        painter.fillRect(QRectF(0,0,w,23),QColor('#eaf0f5'));painter.fillRect(QRectF(0,0,57,h),QColor('#eaf0f5'))
-        painter.setPen(QPen(QColor('#566a79'),1))
+        painter.fillRect(QRectF(0,0,w,23),QColor(COLORS['ruler']));painter.fillRect(QRectF(0,0,57,h),QColor(COLORS['ruler']))
+        painter.setPen(QPen(QColor(COLORS['muted']),1))
         left=self.mapToScene(0,0).x();right=self.mapToScene(w,0).x()
         for i in range(math.ceil(left/step),math.floor(right/step)+1):
             x=self.mapFromScene(QPointF(i*step,0)).x()
@@ -257,28 +260,28 @@ class LayoutCanvas(QGraphicsView):
             y=self.mapFromScene(QPointF(0,-i*step)).y()
             if y<24:continue
             painter.drawLine(51,y,57,y);painter.drawText(QRectF(1,y-8,48,16),Qt.AlignmentFlag.AlignRight|Qt.AlignmentFlag.AlignVCenter,format_length(i*step,unit,False))
-        painter.fillRect(QRectF(0,0,57,23),QColor('#dbe5ed'));painter.drawText(8,16,'μm' if unit=='um' else 'nm')
+        painter.fillRect(QRectF(0,0,57,23),QColor(COLORS['ruler_corner']));painter.drawText(8,16,'μm' if unit=='um' else 'nm')
         painter.restore()
 
     def drawBackground(self,painter,r):
-        painter.fillRect(r,QColor("#f6f8fa"))
+        painter.fillRect(r,QColor(COLORS['canvas']))
         if not self.document:return
         scale=abs(self.transform().m11());step=self.document.grid
         while step*scale<16:step*=10
         if step*scale>200:return
-        pen=QPen(QColor("#e4e9ee"),1);pen.setCosmetic(True);painter.setPen(pen)
+        pen=QPen(QColor(COLORS['grid']),1);pen.setCosmetic(True);painter.setPen(pen)
         x=math.floor(r.left()/step)*step
         while x<r.right():painter.drawLine(QPointF(x,r.top()),QPointF(x,r.bottom()));x+=step
         y=math.floor(r.top()/step)*step
         while y<r.bottom():painter.drawLine(QPointF(r.left(),y),QPointF(r.right(),y));y+=step
-        pen=QPen(QColor("#bccad4"),1);pen.setCosmetic(True);painter.setPen(pen)
+        pen=QPen(QColor(COLORS['axis']),1);pen.setCosmetic(True);painter.setPen(pen)
         painter.drawLine(QPointF(0,r.top()),QPointF(0,r.bottom()))
         painter.drawLine(QPointF(r.left(),0),QPointF(r.right(),0))
 
     def drawForeground(self,painter,r):
         scale=abs(self.transform().m11());radius=4/scale
-        pen=QPen(QColor("#277fae"),1.5);pen.setCosmetic(True);painter.setPen(pen)
-        painter.setBrush(QColor("#ffffff"))
+        pen=QPen(QColor(COLORS['accent']),1.5);pen.setCosmetic(True);painter.setPen(pen)
+        painter.setBrush(QColor(COLORS['surface']))
         selected=self.selected_ids()
         if selected:
             x,y=top_left([self.items_by_id[i].model for i in selected])
@@ -306,7 +309,7 @@ class LayoutCanvas(QGraphicsView):
         for ref in refs:
             try:_,a,b=resolve(self.document,ref)
             except ValueError:continue
-            pen=QPen(QColor('#dc850c'),2);pen.setCosmetic(True);painter.setPen(pen)
+            pen=QPen(QColor(COLORS['snap']),2);pen.setCosmetic(True);painter.setPen(pen)
             if ref['kind']=='edge':painter.drawLine(QPointF(a[0],-a[1]),QPointF(b[0],-b[1]))
             else:painter.drawEllipse(QPointF(a[0],-a[1]),radius*1.7,radius*1.7)
         if self.document:
@@ -315,7 +318,7 @@ class LayoutCanvas(QGraphicsView):
         painter.save();painter.resetTransform()
         length=nice_step(100/scale)
         pixels=length*scale;x=76;y=self.viewport().height()-28
-        painter.setPen(QPen(QColor("#566a79"),1));painter.drawLine(QPointF(x,y),QPointF(x+pixels,y))
+        painter.setPen(QPen(QColor(COLORS['muted']),1));painter.drawLine(QPointF(x,y),QPointF(x+pixels,y))
         painter.drawLine(x,y-4,x,y+4);painter.drawLine(QPointF(x+pixels,y-4),QPointF(x+pixels,y+4))
         painter.drawText(x,y-8,format_length(length,self.display_unit));painter.restore()
 

@@ -17,6 +17,7 @@ from .dialogs import ArrayDialog,SweepDialog,LayerDialog,number,source_browser
 from .image_dialog import TraceDialog
 from .cad import top_left, move_top_left, is_editable, dimension_points, drive_dimension
 from .units import format_length, SCALE_PRESETS_NM
+from .theme import COLORS, LAYER_COLORS, display_layer_color
 
 
 class DocumentCommand(QUndoCommand):
@@ -38,7 +39,7 @@ def icon_for(pattern):
     path=path_for(pattern.generate(pattern.defaults()));b=path.boundingRect()
     if b.width()>0 and b.height()>0:
         scale=min(48/b.width(),38/b.height());painter.translate(30,25);painter.scale(scale,scale);painter.translate(-b.center())
-        pen=QPen(QColor("#2c7da8"),1);pen.setCosmetic(True);painter.setPen(pen);painter.setBrush(QColor("#73afd0"));painter.drawPath(path)
+        pen=QPen(QColor(COLORS['outline']),1.4);pen.setCosmetic(True);painter.setPen(pen);painter.setBrush(QColor(LAYER_COLORS[0]));painter.drawPath(path)
     painter.end();return QIcon(pix)
 
 
@@ -122,7 +123,7 @@ class MainWindow(QMainWindow):
         add=QPushButton("添加图层");add.clicked.connect(self.add_layer);tree_l.addWidget(add)
         tree_l.addWidget(heading("画布对象"));self.objects=QListWidget();self.objects.setSelectionMode(QAbstractItemView.SelectionMode.ExtendedSelection);self.objects.itemSelectionChanged.connect(self.objects_selected);tree_l.addWidget(self.objects,2)
         self.tabs.addTab(tree,"图层 / 对象");left.setMinimumWidth(230);left.setMaximumWidth(380);self.splitter.addWidget(left)
-        center=QWidget();center_l=QVBoxLayout(center);center_l.setContentsMargins(0,0,0,0);center_l.setSpacing(0)
+        center=QWidget();center.setObjectName('canvasPanel');center_l=QVBoxLayout(center);center_l.setContentsMargins(0,0,0,0);center_l.setSpacing(0)
         options=QHBoxLayout();options.setContentsMargins(12,3,12,8);self.doc_label=QLabel();self.doc_label.setObjectName("muted");options.addWidget(self.doc_label,1)
         options.addWidget(QLabel("网格"));self.grid=number(1,.1,10000);self.grid.setFixedWidth(90);self.grid.setSuffix(" nm");self.grid.valueChanged.connect(self.set_grid);options.addWidget(self.grid)
         self.constraint=QComboBox();self.constraint.addItems(["横平竖直","允许 45°","自由方向"]);self.constraint.currentIndexChanged.connect(self.set_constraint);options.addWidget(self.constraint);center_l.addLayout(options)
@@ -211,7 +212,7 @@ class MainWindow(QMainWindow):
         self.layers.blockSignals(True);self.layers.clear()
         for l in self.document.layers:
             item=QTreeWidgetItem([f"{l.number}/{l.datatype}  {l.name}","",""]);item.setData(0,Qt.ItemDataRole.UserRole,(l.number,l.datatype))
-            item.setForeground(0,QColor(l.color));item.setCheckState(1,Qt.CheckState.Checked if l.visible else Qt.CheckState.Unchecked);item.setCheckState(2,Qt.CheckState.Checked if l.locked else Qt.CheckState.Unchecked);self.layers.addTopLevelItem(item)
+            item.setForeground(0,QColor(display_layer_color(l.color)));item.setCheckState(1,Qt.CheckState.Checked if l.visible else Qt.CheckState.Unchecked);item.setCheckState(2,Qt.CheckState.Checked if l.locked else Qt.CheckState.Unchecked);self.layers.addTopLevelItem(item)
         self.layers.blockSignals(False);self.objects.blockSignals(True);self.objects.clear();selected=set(self.canvas.selected_ids())
         for s in self.document.shapes:
             item=QListWidgetItem(f"{s.name}   ·   {s.layer}/{s.datatype}");item.setData(Qt.ItemDataRole.UserRole,s.id);self.objects.addItem(item);item.setSelected(s.id in selected)

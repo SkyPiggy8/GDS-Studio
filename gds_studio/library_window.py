@@ -196,7 +196,9 @@ class SampleWindow(QMainWindow):
         # Separate previews avoid suggesting a non-computed overlay alignment.
         for i,s in enumerate([current,other]):
             path=path_for(s["polygons"]);b=path.boundingRect();f=130/max(b.width(),b.height())
-            item=self.preview_scene.addPath(path,QPen(QColor("#3581a7"),0),QColor("#7fb5cd"));item.setScale(f);item.setPos(i*180-b.left()*f,-b.top()*f)
+            from .theme import COLORS,LAYER_COLORS
+            pen=QPen(QColor(COLORS['outline']),1.8);pen.setCosmetic(True)
+            item=self.preview_scene.addPath(path,pen,QColor(LAYER_COLORS[0]));item.setScale(f);item.setPos(i*180-b.left()*f,-b.top()*f)
             label=self.preview_scene.addText(f"#{s['id']}");label.setPos(i*180,140)
         self.preview.fitInView(self.preview_scene.itemsBoundingRect().adjusted(-10,-10,10,10),Qt.AspectRatioMode.KeepAspectRatio)
 
