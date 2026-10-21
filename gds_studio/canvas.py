@@ -8,6 +8,7 @@ from PySide6.QtWidgets import QGraphicsView, QGraphicsScene, QGraphicsItem
 from .model import Shape
 from .geometry import bounds, rect, validate, regularize, constrain_segment
 from .cad import top_left, move_top_left, is_editable, resolve, dimension_points
+from .units import format_length, nice_step
 
 
 def path_for(polys):
@@ -104,7 +105,8 @@ class LayoutCanvas(QGraphicsView):
         self.pan_point=None;self.space_down=False;self.before=None;self.drag_action=None
         self.vertex=None;self.resize_model=None;self.resize_base=None
         self.smart_snap=True;self.snap_hint=None;self.dimension_refs=[];self.dimension_labels=[]
-        self.setSceneRect(-100000,-100000,200000,200000)
+        self.display_unit='auto'
+        self.setSceneRect(-1e9,-1e9,2e9,2e9)
 
     def set_document(self,doc,selected=None):
         self.document=doc
@@ -147,17 +149,22 @@ class LayoutCanvas(QGraphicsView):
         r=QRectF()
         for a in visible:r=r.united(a)
         if r.isEmpty():r=QRectF(0,-600,1000,600)
-        self.fitInView(r.adjusted(-80,-80,80,80),Qt.AspectRatioMode.KeepAspectRatio)
+        scale=min(max(1,self.viewport().width()-160)/max(1,r.width()),max(1,self.viewport().height()-100)/max(1,r.height()))
+        self.fitInView(r.adjusted(-80/scale,-50/scale,80/scale,50/scale),Qt.AspectRatioMode.KeepAspectRatio)
         self.viewport().update()
 
     def zoom(self,factor,anchor=None):
         anchor=anchor or self.viewport().rect().center()
         old=self.mapToScene(anchor)
         scale=abs(self.transform().m11())
-        factor=max(.002/scale,min(1000/scale,factor))
+        factor=max(.00001/scale,min(1000/scale,factor))
         self.scale(factor,factor)
         new=self.mapToScene(anchor);delta=new-old
         self.translate(delta.x(),delta.y());self.viewport().update()
+
+    def set_scale_length(self,nm):
+        if not math.isfinite(nm) or nm<=0:raise ValueError('比例尺必须大于零')
+        self.zoom((100/nm)/abs(self.transform().m11()))
 
     def wheelEvent(self,event):
         self.zoom(1.2 if event.angleDelta().y()>0 else 1/1.2,event.position().toPoint());event.accept()
@@ -186,7 +193,10 @@ class LayoutCanvas(QGraphicsView):
                         den=(bx-ax)**2+(by-ay)**2
                         if den<1e-12:continue
                         t=max(0,min(1,((scene.x()-ax)*(bx-ax)+(scene.y()-ay)*(by-ay))/den))
-                        q=QPointF(ax+t*(bx-ax),ay+t*(by-ay));dist=math.hypot(q.x()-scene.x(),q.y()-scene.y())
+                        q=QPointF(ax+t*(bx-ax),ay+t*(by-ay))
+                        midpoint=QPointF((ax+bx)/2,(ay+by)/2)
+                        if math.hypot(midpoint.x()-scene.x(),midpoint.y()-scene.y())<=tol:q=midpoint
+                        dist=math.hypot(q.x()-scene.x(),q.y()-scene.y())
                         if dist<=tol:edges.append((dist,dict(ref,kind='edge'),q))
         candidates=vertices or edges
         return min(candidates,key=lambda c:c[0]) if candidates else None
@@ -210,15 +220,20 @@ class LayoutCanvas(QGraphicsView):
             except (ValueError,KeyError,IndexError):continue
             pa=QPointF(self.mapFromScene(QPointF(a[0],-a[1])));pb=QPointF(self.mapFromScene(QPointF(b[0],-b[1])))
             mode=dim.get('mode','aligned')
-            if mode=='horizontal':
-                y=min(pa.y(),pb.y())-30;qa=QPointF(pa.x(),y);qb=QPointF(pb.x(),y)
-            elif mode=='vertical':
-                x=max(pa.x(),pb.x())+35;qa=QPointF(x,pa.y());qb=QPointF(x,pb.y())
+            same=dim['refs'][0]['shape']==dim['refs'][1]['shape']
+            item=self.items_by_id.get(dim['refs'][0]['shape']) if same else None
+            box=item.sceneBoundingRect() if item else None
+            if mode=='horizontal' or (same and abs(u[1])<1e-8):
+                y=(self.mapFromScene(box.topLeft()).y() if box else min(pa.y(),pb.y()))-30
+                qa=QPointF(pa.x(),y);qb=QPointF(pb.x(),y)
+            elif mode=='vertical' or (same and abs(u[0])<1e-8):
+                x=(self.mapFromScene(box.topRight()).x() if box else max(pa.x(),pb.x()))+35
+                qa=QPointF(x,pa.y());qb=QPointF(x,pb.y())
             else:
                 normal=QPointF(u[1]*28,u[0]*28);qa=pa+normal;qb=pb+normal
             painter.drawLine(pa,qa);painter.drawLine(pb,qb);painter.drawLine(qa,qb)
             for q in (qa,qb):painter.drawEllipse(q,2,2)
-            text=f'{length:.3f}'.rstrip('0').rstrip('.')+' nm'
+            text=format_length(length,self.display_unit)
             size=painter.fontMetrics().boundingRect(text);mid=(qa+qb)/2
             box=QRectF(mid.x()-size.width()/2-5,mid.y()-size.height()-5,size.width()+10,size.height()+6)
             painter.fillRect(box,QColor('#ffffff'));painter.drawText(box,Qt.AlignmentFlag.AlignCenter,text)
@@ -227,7 +242,8 @@ class LayoutCanvas(QGraphicsView):
 
     def draw_rulers(self,painter):
         scale=abs(self.transform().m11());target=90/scale
-        power=10**math.floor(math.log10(target));step=next(n*power for n in (1,2,5,10) if n*power>=target)
+        step=nice_step(target);unit=self.display_unit
+        if unit=='auto':unit='um' if step>=1000 else 'nm'
         painter.save();painter.resetTransform();w=self.viewport().width();h=self.viewport().height()
         painter.fillRect(QRectF(0,0,w,23),QColor('#eaf0f5'));painter.fillRect(QRectF(0,0,57,h),QColor('#eaf0f5'))
         painter.setPen(QPen(QColor('#566a79'),1))
@@ -235,13 +251,13 @@ class LayoutCanvas(QGraphicsView):
         for i in range(math.ceil(left/step),math.floor(right/step)+1):
             x=self.mapFromScene(QPointF(i*step,0)).x()
             if x<58:continue
-            painter.drawLine(x,18,x,23);painter.drawText(x+3,14,f'{i*step:g}')
+            painter.drawLine(x,18,x,23);painter.drawText(x+3,14,format_length(i*step,unit,False))
         low=-self.mapToScene(0,h).y();high=-self.mapToScene(0,0).y()
         for i in range(math.ceil(low/step),math.floor(high/step)+1):
             y=self.mapFromScene(QPointF(0,-i*step)).y()
             if y<24:continue
-            painter.drawLine(51,y,57,y);painter.drawText(QRectF(1,y-8,48,16),Qt.AlignmentFlag.AlignRight|Qt.AlignmentFlag.AlignVCenter,f'{i*step:g}')
-        painter.fillRect(QRectF(0,0,57,23),QColor('#dbe5ed'));painter.drawText(8,16,'nm')
+            painter.drawLine(51,y,57,y);painter.drawText(QRectF(1,y-8,48,16),Qt.AlignmentFlag.AlignRight|Qt.AlignmentFlag.AlignVCenter,format_length(i*step,unit,False))
+        painter.fillRect(QRectF(0,0,57,23),QColor('#dbe5ed'));painter.drawText(8,16,'μm' if unit=='um' else 'nm')
         painter.restore()
 
     def drawBackground(self,painter,r):
@@ -297,11 +313,11 @@ class LayoutCanvas(QGraphicsView):
             self.draw_dimensions(painter);self.draw_rulers(painter)
         # Screen-space scale ruler; readable at every zoom level.
         painter.save();painter.resetTransform()
-        target=100/scale;power=10**math.floor(math.log10(target));length=min((1,2,5,10),key=lambda x:abs(x*power-target))*power
-        pixels=length*scale;x=28;y=self.viewport().height()-28
+        length=nice_step(100/scale)
+        pixels=length*scale;x=76;y=self.viewport().height()-28
         painter.setPen(QPen(QColor("#566a79"),1));painter.drawLine(QPointF(x,y),QPointF(x+pixels,y))
         painter.drawLine(x,y-4,x,y+4);painter.drawLine(QPointF(x+pixels,y-4),QPointF(x+pixels,y+4))
-        painter.drawText(x,y-8,f"{length:g} nm");painter.restore()
+        painter.drawText(x,y-8,format_length(length,self.display_unit));painter.restore()
 
     def mousePressEvent(self,event):
         p=self.snapped_pointer(event.position().toPoint());self.pointer=p

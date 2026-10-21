@@ -16,6 +16,7 @@ from .io import save_project,load_project,export_gds,inspect_cells,import_gds
 from .dialogs import ArrayDialog,SweepDialog,LayerDialog,number,source_browser
 from .image_dialog import TraceDialog
 from .cad import top_left, move_top_left, is_editable, dimension_points, drive_dimension
+from .units import format_length, SCALE_PRESETS_NM
 
 
 class DocumentCommand(QUndoCommand):
@@ -83,6 +84,7 @@ class MainWindow(QMainWindow):
         shape.addSeparator()
         for label,op in [("合并 Union","or"),("相减（第一对象减其余）","not"),("交集 Intersection","and"),("异或 XOR","xor")]:shape.addAction(action(label,lambda op=op:self.boolean_op(op)))
         shape.addAction(action("边缘扩张 / 收缩…",self.bias))
+        shape.addAction(action("实验性 OPC 预览…",self.open_opc))
         samples=menu.addMenu("样本库");self.samples_action=action("打开版图样本库",self.open_samples,"Ctrl+L");samples.addAction(self.samples_action)
         view=menu.addMenu("视图");self.fit_action=action("适应全部",lambda:self.canvas.fit_all(),"F");view.addAction(self.fit_action)
         view.addAction(action("放大",lambda:self.canvas.zoom(1.2),"Ctrl++"));view.addAction(action("缩小",lambda:self.canvas.zoom(1/1.2),"Ctrl+-"))
@@ -131,6 +133,16 @@ class MainWindow(QMainWindow):
         self.canvas.shapeDrawn.connect(self.add_drawn);self.canvas.placeRequested.connect(self.place)
         self.canvas.notice.connect(lambda s:self.statusBar().showMessage(s,10000));self.canvas.coordinates.connect(self.update_coordinates)
         snap=QCheckBox("几何吸附");snap.setChecked(True);snap.toggled.connect(lambda v:setattr(self.canvas,'smart_snap',v));options.addWidget(snap)
+        scale_options=QHBoxLayout();scale_options.setContentsMargins(12,0,12,6)
+        scale_options.addWidget(QLabel('显示单位'))
+        self.unit_box=QComboBox()
+        for label,key in [('自动 nm / μm','auto'),('nm','nm'),('μm','um')]:self.unit_box.addItem(label,key)
+        self.unit_box.currentIndexChanged.connect(self.set_display_unit);scale_options.addWidget(self.unit_box)
+        scale_options.addWidget(QLabel('比例尺（约 100 px）'))
+        self.scale_box=QComboBox();self.scale_box.setObjectName('scale_presets');self.scale_box.addItem('选择比例尺',None)
+        for nm in SCALE_PRESETS_NM:self.scale_box.addItem(format_length(nm,'um'),nm)
+        self.scale_box.activated.connect(self.apply_scale_preset);scale_options.addWidget(self.scale_box)
+        scale_options.addStretch();center_l.insertLayout(1,scale_options)
         for key,dx,dy in [(Qt.Key.Key_Left,-1,0),(Qt.Key.Key_Right,1,0),(Qt.Key.Key_Up,0,1),(Qt.Key.Key_Down,0,-1)]:
             shortcut=QShortcut(QKeySequence(key),self.canvas);shortcut.setContext(Qt.ShortcutContext.WidgetShortcut);shortcut.activated.connect(lambda dx=dx,dy=dy:self.nudge(dx,dy))
         self.inspector=QFrame();self.inspector.setObjectName("sidePanel");right_l=QVBoxLayout(self.inspector);right_l.setContentsMargins(15,12,15,12)
@@ -204,6 +216,11 @@ class MainWindow(QMainWindow):
         for s in self.document.shapes:
             item=QListWidgetItem(f"{s.name}   ·   {s.layer}/{s.datatype}");item.setData(Qt.ItemDataRole.UserRole,s.id);self.objects.addItem(item);item.setSelected(s.id in selected)
         self.objects.blockSignals(False);self.updating=False
+        if not inspector and self.selected():
+            x,y=top_left(self.selected())
+            for name,value in [('anchor_x',x),('anchor_y',y)]:
+                box=self.scroll.widget().findChild(QDoubleSpinBox,name) if self.scroll.widget() else None
+                if box:box.setValue(value)
         if inspector:self.show_inspector()
         self.update_title()
 
@@ -279,6 +296,7 @@ class MainWindow(QMainWindow):
                 for text,fn in [("复制",self.duplicate),("旋转",self.rotate),("镜像",self.mirror)]:b=QPushButton(text);b.clicked.connect(fn);row.addWidget(b)
                 layout.addLayout(row)
                 bake=QPushButton("展开为多边形 / 编辑顶点");bake.clicked.connect(self.bake);layout.addWidget(bake)
+                opc=QPushButton("实验性 OPC 预览…");opc.clicked.connect(self.open_opc);layout.addWidget(opc)
                 if not s.pattern and s.x==s.y==s.angle==0 and s.sx==s.sy==1 and not s.mirror:self.vertex_table(layout,s)
             else:
                 button=QPushButton("放置此结构");button.setObjectName("primaryButton");button.clicked.connect(lambda:self.prepare_place(self.catalog.currentItem()));layout.addWidget(button)
@@ -524,6 +542,21 @@ class MainWindow(QMainWindow):
             self.mutate("边缘偏置",fn,[s.id for s in new],True)
         except Exception as exc:self.error(str(exc))
 
+    def open_opc(self):
+        from .opc_dialog import OPCDialog
+        shapes=self.selected()
+        if not shapes:return
+        dialog=OPCDialog(self.document,shapes,self)
+        if dialog.exec() and dialog.result_shapes:
+            self.apply_opc(shapes,dialog.result_shapes)
+
+    def apply_opc(self,shapes,result):
+        if not all(is_editable(self.document,s) for s in shapes):return
+        if any(s.metadata.get('opc',{}).get('report',{}).get('errors') for s in result):return
+        ids={s.id for s in shapes}
+        def fn():self.document.shapes=[s for s in self.document.shapes if s.id not in ids]+result
+        self.mutate("应用实验性 OPC",fn,[s.id for s in result],True)
+
     def set_grid(self,value):
         if not self.updating:self.mutate("调整网格",lambda:setattr(self.document,"grid",value))
 
@@ -559,7 +592,16 @@ class MainWindow(QMainWindow):
         if any((x.number,x.datatype)==(l.number,l.datatype) for x in self.document.layers):self.error("该 Layer / Datatype 已存在");return
         self.mutate("添加图层",lambda:self.document.layers.append(l),inspector=True)
 
-    def update_coordinates(self,x,y,scale):self.coordinate_label.setText(f"X {x:.1f}   Y {y:.1f} nm   ·   {scale:.2f} px/nm")
+    def set_display_unit(self):
+        self.canvas.display_unit=self.unit_box.currentData();self.canvas.viewport().update()
+
+    def apply_scale_preset(self,index):
+        value=self.scale_box.itemData(index)
+        if value:self.canvas.set_scale_length(value)
+
+    def update_coordinates(self,x,y,scale):
+        unit=self.canvas.display_unit
+        self.coordinate_label.setText(f"X {format_length(x,unit)}   Y {format_length(y,unit)}   ·   网格 {format_length(self.document.grid,unit)}")
 
     def update_title(self,*args):self.setWindowTitle(f"{'● ' if not self.undo.isClean() else ''}{self.document.name} — GDS Studio")
 

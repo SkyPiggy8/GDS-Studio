@@ -161,6 +161,29 @@ def test_geometry_snap_exact_endpoint_and_cancel(window,app):
     assert not w.canvas.dimension_refs and w.canvas.tool=='select'
 
 
+def test_scale_presets_units_and_opc_apply_undo(window,app,tmp_path):
+    from gds_studio.units import SCALE_PRESETS_NM,format_length
+    from gds_studio.opc import preview_opc,OPCOptions
+    from gds_studio.opc_dialog import OPCDialog
+    from gds_studio.geometry import rect
+    from gds_studio.io import export_gds
+    w=window
+    for nm in SCALE_PRESETS_NM:
+        w.canvas.set_scale_length(nm);app.processEvents()
+        assert w.canvas.transform().m11()==pytest.approx(100/nm)
+    assert format_length(10,'um')=='0.01 μm' and format_length(30)=='30 nm'
+    w.unit_box.setCurrentIndex(2);assert w.canvas.display_unit=='um'
+    s=Shape(polygons=[rect(0,0,200,30)]);w.replace_document(Document(shapes=[s]))
+    before=w.document.to_dict();dialog=OPCDialog(w.document,[s],w);dialog.show();app.processEvents()
+    assert dialog.apply_button.isEnabled() and dialog.result_shapes
+    dialog.fields['bias_nm'].setValue(2);assert not dialog.apply_button.isEnabled()
+    dialog.generate();assert dialog.apply_button.isEnabled();assert w.document.to_dict()==before
+    w.apply_opc([s],dialog.result_shapes);dialog.reject();app.processEvents()
+    assert w.document.shapes[0].id!=s.id
+    assert export_gds(tmp_path/'opc.gds',w.document)['gds_readback_verified']
+    w.undo.undo();assert w.document.to_dict()==before
+
+
 def test_layer_lock_visibility_and_clipboard(window,app):
     w=window;id=w.document.shapes[0].id;w.canvas.select_ids([id]);w.copy_selection();w.paste();assert len(w.document.shapes)==9
     item=w.layers.topLevelItem(0);item.setCheckState(2,Qt.CheckState.Checked);app.processEvents()

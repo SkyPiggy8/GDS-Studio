@@ -1,7 +1,7 @@
 import logging
 import sys
 from pathlib import Path
-from PySide6.QtGui import QFont
+from PySide6.QtGui import QFont,QFontDatabase
 from PySide6.QtWidgets import QApplication,QMessageBox
 from .style import STYLE
 from .catalog import load_plugins
@@ -16,7 +16,11 @@ def main():
     freeze_support()
     root=workspace_root();logs=root/"userdata";logs.mkdir(exist_ok=True)
     logging.basicConfig(filename=logs/"studio.log",level=logging.INFO,encoding="utf-8")
-    app=QApplication(sys.argv);app.setApplicationName("GDS Studio");app.setOrganizationName("GDS Studio");app.setFont(QFont("Microsoft YaHei UI",9));app.setStyle("Fusion");app.setStyleSheet(STYLE)
+    app=QApplication(sys.argv);app.setApplicationName("GDS Studio");app.setOrganizationName("GDS Studio")
+    # Explicitly register installed Windows fonts, including in packaged / offscreen runs.
+    for font_path in (Path('C:/Windows/Fonts/msyh.ttc'),Path('C:/Windows/Fonts/segoeui.ttf')):
+        if font_path.exists():QFontDatabase.addApplicationFont(str(font_path))
+    app.setFont(QFont("Microsoft YaHei",9));app.setStyle("Fusion");app.setStyleSheet(STYLE)
     # Release Python-owned MIME data before Qt and Python shutdown ordering.
     def release_clipboard():
         clipboard=app.clipboard()
